@@ -1,34 +1,85 @@
 \chapter{Introducción}
 \label{ch:intro}
 
-\todo{Motivación y necesidades del proyecto}
-
-\todo{Objetivos. Objetivo de todo el trabajo y luego desgranar en sub-objetivos (4 o 5)}
-
-\todo{Planificacion}
 
 
-\todo{Análisis del coste del proyecto}
+\subsection{Motivación y necesidades del proyecto}
 
-\todo{Estructura de la memoria: El resto de la memoria se estructura de la siguiente forma. El capitulo 2 se trata de ..., 3 dice ....}
+Los servicios de video bajo demanda se encuentra en una fase de crecimiento continuo y altísima intensidad de uso, con YouTube, TikTok, Netflix y los Reels de Meta siendo las principales plataformas dominantes del sector. Esto es confirmado con los datos de Google \cite{alphabet2025results} el cual reportó que los ingresos de YouTube por publicidad y suscripciones superaron los 60 mil millones de dólares en 2025, teniendo un alcance publicitario mensual de 2.53 mil millones de usuarios a inicios de 2025, como fue demostrado por DataReportal. Asimismo, en abril de ese mismo año YouTube informó que la plataforma acumulaba más de 20 mil millones de videos subidos, que recibía más de 20 millones de videos nuevos al día,, y que en 2024 promedió más de 100 millones de comentarios diarios y más de 3.5 mil millones de “likes” por día. Esto demuestra no sólo la escala, sino también de la intensidad de uso de las plataformas de este estilo.  %$ (https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf)$
+
+De forma similar, TikTok \cite{tiktok_europe_200m} confirmó que en 2025 ya superaba los 200 millones de usuarios mensuales en Europa. Por otro lado, estimaciones de eMarketer exponían el tiempo promedio que destinaba un usuario en la plataforma por día, con cifras que rondaban los 52 minutos diarios por usuario. %$(https://newsroom.tiktok.com/tiktok-community-in-europe-tops-200-million?from_seo_redirect=1&lang=en-150)$
+
+Netflix, por su parte, informó \cite{netflix_q42025_shareholder} que recibió más de 325 millones de membresías pagadas y 96 mil millones de horas vistas en el segundo semestre de 2025. Eso equivale a aproximadamente 522 millones de horas reproducidas por día durante ese semestre, lo cual es un signo claro de la persistencia de consumo y la alta inversión temporal que dedican los usuarios.  %$(https://s22.q4cdn.com/959853165/files/doc_financials/2025/q4/FINAL-Q4-25-Shareholder-Letter.pdf )$
+
+En Meta,la situación es similar. La empresa \cite{meta_q42025_results} reportó  3.58 mil millones de personas activas por día en su familia de aplicaciones en diciembre de 2025 y comunicó, adicionalmente, que en Estados Unidos el tiempo de visualización de video en Facebook creció más de 20 por ciento interanual, lo que refleja el consumo masivo de videos en línea y el dominio del video de formato corto basado en algoritmos que priorizan el contenido dinámico.  %$(https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Reports-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx)$
+ 
+Es importante destacar, el impacto medioambiental que tiene este consumo masivo de contenido en línea. Un estudio realizado por La Agencia Internacional de la Energía \cite{iea_energy_ai_2025} estimó que los centros de datos consumieron alrededor de 415 TWh en 2024, equivalentes a cerca de 47.4 GW de demanda media lo cual se aproxima a 1.5\% del consumo mundial de electricidad. Aunque esa cifra no se puede atribuir exclusivamente al contenido de video en línea, un estudio de Global Internet Phenomena de AppLogic confirmó que el streaming de video continúa siendo la principal fuente de tráfico en internet, con 38\% del total global y que las aplicaciones de redes sociales de videos en línea y entretenimiento dominan el volumen de red por internet. %$ (https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai )$
+
+Estos datos, demuestran el estado actual de las plataformas de streaming de video bajo demanda, el alcance masivo que tienen y su elevadísima frecuencia de uso. No son solo aplicaciones de entretenimiento sino, servicios digitales con infraestructuras extremadamente complejas capaces de concentrar a miles de millones de personas, acumular millones de horas de video y moldear los hábitos de entretenimiento de la sociedad. 
+
+No obstante, cuanto más dominantes se han vuelto estas plataformas, más visibles se han hecho las quejas y los descontentos de sus usuarios. 
+
+En cuanto al sesgo, las cámaras de eco y la sensación de encierro algorítmico, los datos son significativos. Ofcom \cite{ofcom_media_use_attitudes_2025} encontró que alrededor de un tercio de los usuarios manifiesta incomodidad explícita con los algoritmos de recomendación y que, a su vez, los algoritmos no suelen favorecer las opiniones con las que discrepa un usuario.  %(https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/media-literacy-research/adults/adults-media-use-and-attitudes-2025/adults-media-use-and-attitudes-report-2025.pdf?v=396240) 
+
+Con respecto al contenido producido por IA, contenido inapropiado y desinformación, la escala del malestar es incluso más apreciable. Ofcom  \cite{ofcom_online_nations_2025} reportó que 41\% de los adultos usuarios de internet en el Reino Unido encontró desinformación en las cuatro semanas previas a la encuesta, 22\% vio imágenes o videos falsos o engañosos, y 25\% dijo haber quedado realmente molesto u ofendido por el daño más reciente encontrado online. Además, 47\% nunca había visto herramientas, etiquetas o íconos que le ayudaran a entender si un contenido había sido creado o editado con IA, aunque 85\% consideró importante que las plataformas lo informaran.  %(https://www.ofcom.org.uk/siteassets/resources/documents/research-and-data/online-research/online-nation/2025/online-nations-report-2025.pdf?v=409837) 
+
+Asimismo, un estudio académico publicado en European Journal of Operational Research en 2025 \cite{lu2025adblockers},  demuestra un malestar significativo de los usuarios frente a la sobrecarga publicitaria en redes sociales de video. Tomando datos globales sobre uso de bloqueadores de anuncios, señala que las razones más frecuentes para bloquear anuncios son la cantidad excesiva de anuncios (62.1\%) y su carácter intrusivo (54.2\%), lo que constituye una señal clara de fatiga publicitaria en entornos digitales de streaming de video. A ello se suma que el estudio global Media Reactions 2025 de Kantar muestra que la percepción de una plataforma mejora cuando sus anuncios son vistos como menos intrusivos, como ocurrió con Snapchat. Esto confirma que la intrusividad publicitaria es un criterio central de evaluación para los usuarios de plataformas sociales de video y un motivo de malestar muy frecuente para los mismos.  %$ (https://www.sciencedirect.com/science/article/abs/pii/S037872062500120X?utm_source=chatgpt.com)  $
+
+Inspirado en la necesidad de resolver estos problemas entendiendo que existe una oportunidad de mercado, nace la idea de \textit{Booster} como una plataforma de videos alternativa cuyo algoritmo particular y enfoque a la experiencia de usuario permita minimizar los problemas presentados. En definitiva, \textit{Booster} no se plantea, como una réplica de las plataformas existentes, sino como una respuesta tecnológica a necesidades no resueltas del mercado, con el fin de ofrecer un entorno, más equilibrado y más confiable tanto para quienes consumen contenido como para quienes lo producen
 
 
-
-El verano pasado, mi hermano comenzó a subir vídeos a YouTube regularmente  y de repente, uno de sus vídeos se hizo viral. En cuestión de horas, su canal pasó de tener unos pocos suscriptores a cerca de 30 mil, y su vídeo alcanzó 10 millones de visualizaciones. 
-Al momento de monetizar su canal, YouTube le impuso restricciones y no le permitió ganar dinero con su contenido lo cual resultó en una gran decepción para él.
-
-Este suceso sumado a mi propia frustración con la plataforma, tanto como usuario como creador de contenido, me llevó a investigar más sobre alternativas a YouTube y los problemas que encontraban los usuarios y creadores en esta plataforma. Me di cuenta de que no era un caso aislado, sino que muchos otros usuarios y creadores también se enfrentaban a problemas similares, como la excesiva cantidad de anuncios, censuras injustas de ciertos vídeos, dificultad de monetización, dificultad para llegar a una audiencia más amplia, baja calidad de contenido, un algoritmo que favorece el contenido hecho en su mayor parte por inteligencia artificial, baja participación de los usuarios en comunidades, dificultad para encontrar contenido nuevo de calidad, entre otros.
-
-Esto me llevó a la conclusión de que había una necesidad real de una plataforma alternativa a YouTube que ofreciera una mejor experiencia de usuario, más justa, y que abordara estos problemas de manera efectiva. 
+\subsection{Objetivos}
 
 
+El objetivo de \textit{Booster} es diseñar y desarrollar una plataforma de video web sustentada en un algoritmo de recomendación impulsado por la participación activa de los usuarios en la plataforma, nuevos métodos de moderación, una disminución de la cantidad de anuncios y la posibilidad de ver anuncios voluntarios, una experiencia de usuario basada en métodos de gamificación y la habilidad de crear y encontrar comunidades de usuarios y contenido más fácilmente. 
 
-Además, se introdujeron nuevas funcionalidades que no se encuentran en YouTube. Algunas de estas son: la posibilidad de crear comunidades de usuarios con intereses similares, un sistema de gamificación, anuncios voluntarios y leaderboards de usuarios y creadores.
+De esta forma, \textit{Booster} está orientado a responder a una necesidad creciente del servicios de video bajo demanda, con el objetivo de ofrecer a creadores y usuarios un entorno más transparente, y más eficiente que las plataformas dominantes actuales.
+
+Esta necesidad surge de la acumulación de problemas que afectan tanto la experiencia de consumo como la de la creación de contenidos, entre ellos las dificultades de monetización para los creadores, la opacidad algorítmica en la distribución de contenidos, la formación de cámaras de eco, la reproducción de sesgos en los sistemas de recomendación, la abundancia de contenido generado por inteligencia artificial sin mecanismos suficientes de identificación y la percepción de censura injustificada derivada de procesos de moderación poco claros. En este contexto, \textit{Booster} se propone como una solución tecnológica capaz de abordar dichos problemas mediante un algoritmo que optimice la personalización y el descubrimiento de contenido. 
+
+En consecuencia, \textit{Booster} no se plantea únicamente como una nueva plataforma de distribución audiovisual, sino como una propuesta de arquitectura digital orientada a resolver necesidades reales del mercado.
 
 
+\subsection{Estructura de la memoria}
+
+El trabajo fin de grado se organiza en una secuencia de capítulos que conduce al lector desde la comprensión del problema hasta la formulación, diseño y validación de la solución propuesta.
+
+\begin{itemize}
+  \item \textbf{Capítulo 1 - Introducción}: Este capítulo presenta el contexto del trabajo, el estado actual de las plataformas de video bajo demanda, los problemas que enfrentan los usuarios y creadores, y los objetivos que se persiguen con el desarrollo de \textit{Booster}.
+  
+  \item \textbf{Capítulo 2 - Estado del Arte}: En este capítulo se realiza un análisis detallado de las plataformas de video bajo demanda existentes, prestando atención al dominante YouTube así como otras alternativas como Rumble, Odysee y Peertube. Se pretende identificar las fortalezas y debilidades de cada una, las tecnologías que emplean, y las oportunidades de mejora.
+  
+  \item \textbf{Capítulo 3 - Tecnologías Estudiadas}: En este capítulo se detalla el análisis tecnológico que fundamenta al proyecto \textit{Booster}. Se describen las principales tecnologías web seleccionadas y las descartadas para el objetivo del proyecto, un análisis de proveedores de servicios, elecciones de terceros. La finalidad es mostrar que las decisiones técnicas adoptadas responden a criterios de escalabilidad y usabilidad.
+  
+  \item \textbf{Capítulo 4 - Requisitos del Sistema}: En este capítulo se indican los requisitos funcionales y no funcionales de \textit{Booster}. Se especifican las capacidades mínimas que ofrece la plataforma, las condiciones de rendimiento esperadas, las restricciones del sistema y las necesidades de usuarios y creadores.
+  
+  \item \textbf{Capítulo 5 - Innovaciones}: Se describen las innovaciones tecnológicas, de diseño y de experiencia de usuario que se han implementado para solventar los problemas identificados. Se detallan los aspectos novedosos de la plataforma y su factor diferencial frente a las alternativas existentes.
+  
+  \item \textbf{Capítulo 6 - Diseño y Arquitectura}: En este capítulo se presenta la arquitectura general de \textit{Booster} y el de procesamiento y transcodificación de vídeos, los componentes principales del sistema, su interacción y el diseño de la interfaz de usuario.Aquí se explican, entre otros elementos, el algoritmo de recomendación, los sistemas de interacción como comentarios y XP, la moderación de contenidos y la experiencia general de usuario, búsqueda semántica de videos.
+  
+  \item \textbf{Capítulo 7 - Desarrollo}: Se detalla la implementación de ciertos componentes de la aplicación y su integración, los retos técnicos enfrentados y las soluciones adoptadas.
+  
+  \item \textbf{Capítulo 8 - Pruebas, Validación y Riesgos de Seguridad Detectados}: Este capítulo recoge las pruebas realizadas sobre la plataforma, tanto desde el punto de vista funcional como de seguridad, desempeño y experiencia de usuario. Se detallan medidas de seguridad tomadas, ataques reales detectados y mitigados, y se presentan los resultados de las pruebas.
+  
+  \item \textbf{Capítulo 9 - Conclusiones}: Se sintetizan los principales resultados del trabajo, evaluando qué se ha conseguido  con el desarrollo de \textit{Booster} según los objetivos planteados. Asimismo, se valoran las aportaciones del proyecto, sus limitaciones y las posibles mejora o ampliaciones de la plataforma.
+  
+  \item \textbf{Capítulo 10 - Impacto}: Se realiza un análisis del impacto del proyecto, considerando sus posibles implicaciones tecnológicas, económicas y medioambientales.
+\end{itemize}
 
 
 \begin{comment}
+
+INTROducc:
+1. Situación actual plataformas web
+2. Problemas que surgen con las plataformas actuales
+3. 
+
+$$
+2 \cdot (2  + 2) + \dots = 
+$$
+
+
+
 El capítulo de introducción debe servir para que los profesores que evalúan el trabajo puedan comprender el contexto en el que se realiza el mismo, y los objetivos que se plantean.
 
 Esta plantilla muestra la estructura básica de la memoria final de un trabajo fin de grado (TFG), así como algunas instrucciones de formato. En el caso de una tesis de master el tutor del mismo deberá ofrecerte indicaciones más precisas.
