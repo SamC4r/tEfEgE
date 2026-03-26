@@ -1,0 +1,31 @@
+{
+    "cSpell.language": "es",
+    "cSpell.defaultLanguage": "es",
+    "cSpell.enableFiletypes": ["latex", "tex", "markdown"],
+    "cSpell.minWordLength": 1,
+    "[tex]": {
+        "editor.defaultFormatter": null
+    },
+    "cSpell.ignoreRegExpList": [
+        "\\\\[a-z]+",
+        "\\\\{[^}]*\\}",
+        "%.*$",
+        "\\\\begin\\{comment\\}[^}]*?\\\\end\\{comment\\}",
+        "\\\\begin\\s*\\{\\s*comment\\s*\\}[\\s\\S]*?\\\\end\\s*\\{\\s*comment\\s*\\}"
+    ],
+    "cSpell.words": [
+        "a",
+        "e",
+        "gamificación",
+        "hermano",
+        "monetización",
+        "monetizar",
+        "o",
+        "u",
+        "verano",
+        "vídeos",
+        "y",
+        "YouTube"
+    ],
+    "ltex.enabled": false
+}
