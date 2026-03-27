@@ -6,9 +6,15 @@ Este capítulo constituye una recopilación de diversas tecnologías disponibles
 
 En esta sección se hace un análisis de las herramientas más comunes para procesar, almacenar, transcodificar y entregar los videos en la plataforma. 
 
+
+
 \subsection{FFmpeg}
 
+
+
 FFmpeg es una herramienta de código abierto utilizada para el procesamiento de contenido multimedia, en particular audio y video. Es empleada en una amplia variedad de tareas y aplicaciones como:
+
+
 
 \begin{itemize}
     \item   \textbf{Transcodificación}: FFmpeg puede convertir videos entre distintos formato, códecs \footnote{Se entiende por códec a aquella tecnología software o hardware que permite comprimir o descomprimir archivos multimedia. } y resoluciones, lo que es esencial para garantizar la compatibilidad con diferentes dispositivos y plataformas. Por ejemplo, se puede convertir un video en formato \lstinline|.mov| a \lstinline|.mp4|, o extraer el audio de un archivo \lstinline|.mp4| a \lstinline|.mp3|.
@@ -16,7 +22,14 @@ FFmpeg es una herramienta de código abierto utilizada para el procesamiento de 
     \item \textbf{Edición de video}: Permite realizar tareas básicas de edición como recortar la duración, unir varios videos, rotar, etc.
     \item \textbf{Streaming}: FFmpeg puede ser utilizado para transmitir video en tiempo real a través de protocolos como RTP o UDP.
     
+
 \end{itemize}
+
+\begin{figure}[h]
+    \centering
+\includegraphics[width=0.2\linewidth]{portada/FFmpeg_icon.svg.png} 
+\caption{Logo de FFmpeg}
+\end{figure}
 
 
 \subsection{MPEG-DASH}
@@ -37,7 +50,41 @@ El contenido multimedia, en particular los videos, suelen ocupar un gran espacio
 
 Una Content Delivery Network (CDN) \cite{cdn} es una red de servidores distribuidos geográficamente que trabajan juntos para entregar contenido de manera rápida y eficiente a los usuarios finales. Un usuario, al solicitar un video, es atendido por el servidor más cercano a su ubicación, con el objetivo de reducir la latencia, aumentar la escalabilidad y mejorar el rendimiento del servicio. Su uso, se vuelve necesario en plataformas con alta demanda y con usuarios distribuidos geográficamente, donde depender exclusivamente del servidor de origen generaría mayores tiempos de respuesta, mayores costos de salida y una sobrecarga innecesaria sobre la infraestructura principal. 
 
-De este modo, las CDN funcionan como cache de contenido de los object stores, replicando o almacenando temporalmente los archivos en distintos nodos de la red para servirlos de manera más eficiente a los usuarios finales. Por tanto, el object store cumple la función de almacenamiento central del contenido, mientras la CDN asume la función de distribución acelerada.
+De este modo, las CDN funcionan como una caché de contenido de los object stores, replicando o almacenando temporalmente los archivos en distintos nodos de la red para servirlos de manera más eficiente a los usuarios finales. Por tanto, el object store cumple la función de almacenamiento central del contenido, mientras la CDN asume la función de distribución acelerada.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.80\linewidth]{portada/cdn_image.png}
+  \caption{Diagrama de un CDN}
+  \label{fig:escudo}
+\end{figure}
+
+
+\subsection{Colas de Procesamiento}
+
+El procesamiento y la transcodificación de video son tareas que suelen tomar un largo tiempo en completarse. Por esa razón, cuando un usuario sube un video, en vez de forzarlo a esperar, se utilizan colas de procesamiento. En vez de hacer las operaciones lentas en la misma petición HTTP, el sistema registra un trabajo pendiente en una cola y esta espera a ser atendida por un worker. A continuación, se realiza la tarea pesada y se reportan los resultados al finalizar. Así, se consigue desacoplar procesos lentos que de lo contrario, causarían una mala experiencia de usuario. 
+
+En el contexto de procesamiento de video el esquema sería el siguiente:
+
+\begin{itemize}
+    \item 1. El usuario sube el video
+    \item 2. El sistema guarda el archivo en un Object Store
+    \item 3. Se crea un job en la cola de procesamiento
+    \item 4. Un worker toma el trabajo pendiente 
+    \item 5. Se ejecuta la transcodificación de video, se generan copias del video, se comprime, etc.
+    \item 6. Al terminar se notifica al sistema
+\end{itemize}
+
+Existen diversas formas de implementar una cola de procesamiento. Por ejemplo, RabbitMQ, Kafka, Amazon SQS (Simple Queue Service) suelen ser opciones comunes. 
+
+\textbf{Ventajas}
+
+La ventaja principal es que mejoran la experiencia de usuario. La subida de video suele ser un proceso rápido pero la transcodificación puede tardar minutos e incluso horas en terminar. Además, este modelo de cola permite responder de forma efectiva ante picos de alta demanda sin colapsar el backend porque los trabajos se mantienen esperando en la cola. Para evitar que haya una gran cantidad de trabajos pendientes de ser atendidos, una solución común es añadir más workers en periodos de alta demanda. Las colas de procesamiento facilitan la escalabilidad. Por otra parte, también favorecen la priorización de trabajos, por ejemplo, dando paso a videos Premium o urgentes antes que los demás.
+
+\textbf{Desventajas}
+
+La desventaja más clara es que las colas de prioridad añaden complejidad a la arquitectura. Esto quiere decir que además de operar con las APIs y las bases de datos, ahora es necesario gestionar workers, reintentos, resolver duplicados, timeouts, entre otros. 
+
 
 
 
