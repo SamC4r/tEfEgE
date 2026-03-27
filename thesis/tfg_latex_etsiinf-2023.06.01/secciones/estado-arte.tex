@@ -1,1 +1,55 @@
 \chapter{Estado del Arte}
+
+Este capítulo constituye una recopilación de diversas tecnologías disponibles para implementar un servicio web de streaming de videos. Asimismo, se exploran distintos modelos de arquitectura empleados por las aplicaciones que ya brindan este servicio. 
+
+\section{Procesamiento, Transcodificación y Entrega de Video}
+
+En esta sección se hace un análisis de las herramientas más comunes para procesar, almacenar, transcodificar y entregar los videos en la plataforma. 
+
+\subsection{FFmpeg}
+
+FFmpeg es una herramienta de código abierto utilizada para el procesamiento de contenido multimedia, en particular audio y video. Es empleada en una amplia variedad de tareas y aplicaciones como:
+
+\begin{itemize}
+    \item   \textbf{Transcodificación}: FFmpeg puede convertir videos entre distintos formato, códecs \footnote{Se entiende por códec a aquella tecnología software o hardware que permite comprimir o descomprimir archivos multimedia. } y resoluciones, lo que es esencial para garantizar la compatibilidad con diferentes dispositivos y plataformas. Por ejemplo, se puede convertir un video en formato \lstinline|.mov| a \lstinline|.mp4|, o extraer el audio de un archivo \lstinline|.mp4| a \lstinline|.mp3|.
+    \item \textbf{Compresión y Optimización}: Permite reducir el tamaño de archivos sin perder calidad significativa ajustando la resolución, códec  y el bitrate \footnote{Se entiende por bitrate (tasa de bits) como la cantidad de información que se transmite por unidad de tiempo.}. Esto es esencial para mejorar la experiencia de usuario. Por ejemplo, en este tipo de servicios se suele utilizar \textbf{Adaptive Bitrate}. Esto consiste en guardar varias copias del mismo video con diferentes calidades y tamaños y, de esta forma, el reproductor puede seleccionar la versión más adecuada según la velocidad de conexión del usuario. 
+    \item \textbf{Edición de video}: Permite realizar tareas básicas de edición como recortar la duración, unir varios videos, rotar, etc.
+    \item \textbf{Streaming}: FFmpeg puede ser utilizado para transmitir video en tiempo real a través de protocolos como RTP o UDP.
+    
+\end{itemize}
+
+
+\subsection{MPEG-DASH}
+
+\textbf{MPEG-DASH} \cite{dash} (Dynamic Adaptive Streaming over HTTP) es un estándar internacional de transmisión de video sobre HTTP, enfocado en una distribución eficiente. Para ello, implementa técnicas de \textbf{Adaptive Bitrate} las cuales permiten ajustar automáticamente la calidad de reproducción, cambiando parámetros como el bitrate y la resolución del video según las condiciones de red y las capacidades del dispositivo del usuario. De esta  forma, se garantiza una experiencia de visualización fluida y sin interrupciones, incluso en conexiones lentas e inestables. 
+
+\subsection{HLS}
+
+De forma similar a MPEG-DASH, \textbf{HLS} \cite{hls} (HTTP Live Streaming) es un protocolo de transmisión de video desarrollado por Apple. HLS también implementa técnicas de \textbf{Adaptive Bitrate} y utilizado para la distribución de contenido audiovisual bajo demanda y en directo fundamentalmente en dispositivos Apple, aunque también es compatible con otros sistemas operativos.
+
+Cabe destacar que, en ambos protocolos HLS y MPEG-DASH, el video no se descarga por completo de una vez, sino que el reproductor va solicitando pequeños segmentos o fragmentos al servidor conforme avanza la reproducción. En otras palabras, el video está almacenado en partes pequeñas en el servidor cada una con diferentes calidades y el reproductor le solicita la parte que mejor se adapte a las condiciones de red del usuario en cada momento. Así, se evitan transmitir grandes cantidades de datos innecesarios por la red y se puede implementar un Adaptive Bitrate eficiente.
+
+\subsection{Object Storage}
+
+El contenido multimedia, en particular los videos, suelen ocupar un gran espacio de almacenamiento. Además, con las técnicas de \textbf{Adaptive Bitrate} es necesario almacenar varias copias del mismo video con diferentes calidades y tamaños lo cual incrementa el uso de espacio de forma considerable. Por ello, es fundamental contar con un sistema de almacenamiento eficiente y escalable. Por esa razón, se suelen emplear sistemas de almacenamiento de objetos \textbf{Object Storage} \cite{object_storage} como Google Cloud Storage, Amazon S3 Buckets o Azure Blob Storage que permiten almacenar grandes cantidades de datos de forma escalable y con alta disponibilidad. Esto es esencial para garantizar un acceso rápido y confiable a los videos por parte de los usuarios.
+
+\subsection{CDN - Content Delivery Network}
+
+Una Content Delivery Network (CDN) \cite{cdn} es una red de servidores distribuidos geográficamente que trabajan juntos para entregar contenido de manera rápida y eficiente a los usuarios finales. Un usuario, al solicitar un video, es atendido por el servidor más cercano a su ubicación, con el objetivo de reducir la latencia, aumentar la escalabilidad y mejorar el rendimiento del servicio. Su uso, se vuelve necesario en plataformas con alta demanda y con usuarios distribuidos geográficamente, donde depender exclusivamente del servidor de origen generaría mayores tiempos de respuesta, mayores costos de salida y una sobrecarga innecesaria sobre la infraestructura principal. 
+
+De este modo, las CDN funcionan como cache de contenido de los object stores, replicando o almacenando temporalmente los archivos en distintos nodos de la red para servirlos de manera más eficiente a los usuarios finales. Por tanto, el object store cumple la función de almacenamiento central del contenido, mientras la CDN asume la función de distribución acelerada.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

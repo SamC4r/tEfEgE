@@ -292,6 +292,130 @@
       \verb https://www.sciencedirect.com/science/article/abs/pii/S037872062500120X
       \endverb
     \endentry
+    \entry{dash}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=9988b1d8a770677b8ba24111dbef6dc6}{%
+           family={{MPEG}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{fullhash}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{fullhashraw}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{bibnamehash}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{authorbibnamehash}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{authornamehash}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{authorfullhash}{9988b1d8a770677b8ba24111dbef6dc6}
+      \strng{authorfullhashraw}{9988b1d8a770677b8ba24111dbef6dc6}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MPEG-DASH}
+      \field{urlday}{26}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mpeg.org/standards/MPEG-DASH/
+      \endverb
+      \verb{url}
+      \verb https://www.mpeg.org/standards/MPEG-DASH/
+      \endverb
+    \endentry
+    \entry{hls}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3325b015fbae57ba74629a53f1ead961}{%
+           family={{Apple Inc.}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3325b015fbae57ba74629a53f1ead961}
+      \strng{fullhash}{3325b015fbae57ba74629a53f1ead961}
+      \strng{fullhashraw}{3325b015fbae57ba74629a53f1ead961}
+      \strng{bibnamehash}{3325b015fbae57ba74629a53f1ead961}
+      \strng{authorbibnamehash}{3325b015fbae57ba74629a53f1ead961}
+      \strng{authornamehash}{3325b015fbae57ba74629a53f1ead961}
+      \strng{authorfullhash}{3325b015fbae57ba74629a53f1ead961}
+      \strng{authorfullhashraw}{3325b015fbae57ba74629a53f1ead961}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{HTTP Live Streaming}
+      \field{urlday}{26}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.apple.com/streaming/
+      \endverb
+      \verb{url}
+      \verb https://developer.apple.com/streaming/
+      \endverb
+    \endentry
+    \entry{object_storage}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=57f3af2a3d1051c172ab3c3db7d5409d}{%
+           family={{Google Cloud}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{fullhashraw}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{bibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorbibnamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authornamehash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhash}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \strng{authorfullhashraw}{57f3af2a3d1051c172ab3c3db7d5409d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Google Cloud Storage}
+      \field{urlday}{26}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://cloud.google.com/learn/what-is-object-storage
+      \endverb
+      \verb{url}
+      \verb https://cloud.google.com/learn/what-is-object-storage
+      \endverb
+    \endentry
+    \entry{cdn}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3f07179a07b2a7661e37a3fd0e652a07}{%
+           family={{Cloudflare}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{fullhash}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{fullhashraw}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{bibnamehash}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{authorbibnamehash}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{authornamehash}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{authorfullhash}{3f07179a07b2a7661e37a3fd0e652a07}
+      \strng{authorfullhashraw}{3f07179a07b2a7661e37a3fd0e652a07}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a CDN?}
+      \field{urlday}{26}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cloudflare.com/learning/cdn/what-is-a-cdn/
+      \endverb
+      \verb{url}
+      \verb https://www.cloudflare.com/learning/cdn/what-is-a-cdn/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

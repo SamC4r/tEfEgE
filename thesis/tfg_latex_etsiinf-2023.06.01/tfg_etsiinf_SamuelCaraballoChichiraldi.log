@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  26 MAR 2026 19:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  27 MAR 2026 13:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -921,7 +921,7 @@ Package hyperref Info: Link coloring OFF on input line 109.
 
 \c@lstlisting=\count484
  (portada/portada.tex
-<portada/escudo_upm.png, id=90, 245.91875pt x 200.75pt>
+<portada/escudo_upm.png, id=114, 245.91875pt x 200.75pt>
 File: portada/escudo_upm.png Graphic file (type png)
 <use portada/escudo_upm.png>
 Package pdftex.def Info: portada/escudo_upm.png  used on input line 6.
@@ -943,7 +943,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 13.
-<portada/escudo_etsiinf.png, id=92, 160.6pt x 170.6375pt>
+<portada/escudo_etsiinf.png, id=116, 160.6pt x 170.6375pt>
 File: portada/escudo_etsiinf.png Graphic file (type png)
 <use portada/escudo_etsiinf.png>
 Package pdftex.def Info: portada/escudo_etsiinf.png  used on input line 17.
@@ -1002,19 +1002,25 @@ LaTeX Info: Redefining \% on input line 3.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 4.
 
-Overfull \hbox (1.75185pt too wide) detected at line 27
+Overfull \hbox (1.75185pt too wide) detected at line 33
 \T1/pbk/db/n/10.95 10. 
  []
 
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
-(Font)              Font shape `T1/pbk/db/n' tried instead on input line 29.
-)
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 35.
+
+Underfull \vbox (badness 1205) has occurred while \output is active []
+
+ [5])
 \tf@toc=\write6
 \openout6 = `tfg_etsiinf_SamuelCaraballoChichiraldi.toc'.
 
- [5] [6
-
-] (secciones/intro.tex
+LaTeX Info: Redefining \sptext on input line 121.
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 121.
+ [6] (secciones/intro.tex
 Cap\'{\i }tulo 1.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -1023,93 +1029,125 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 l.19 
       [1
 
+
 ]
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 30.
 LaTeX Info: Redefining \sptext on input line 31.
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 31.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.31 
       [2]
-LaTeX Info: Redefining \sptext on input line 53.
-LaTeX Info: Redefining \. on input line 53.
-LaTeX Info: Redefining \% on input line 53.
- [3]) (secciones/estado-arte.tex
+LaTeX Info: Redefining \sptext on input line 52.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+ [3]
+LaTeX Info: Redefining \sptext on input line 70.
+LaTeX Info: Redefining \. on input line 70.
+LaTeX Info: Redefining \% on input line 70.
+ [4]) (secciones/estado-arte.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [4]
-Cap\'{\i }tulo 2.
-) (secciones/tecnologias.tex [5
+ [5] [6
 
-] [6
+]
+Cap\'{\i }tulo 2.
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <8> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 14.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 14.
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <6> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 14.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 14.
+(C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 14.
+ [7]
+LaTeX Info: Redefining \sptext on input line 39.
+LaTeX Info: Redefining \. on input line 39.
+LaTeX Info: Redefining \% on input line 39.
+ [8]) (secciones/tecnologias.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [9] [10
 
 ]
 Cap\'{\i }tulo 3.
-) (secciones/requisitos.tex [7] [8
+) (secciones/requisitos.tex [11] [12
 
 ]
 Cap\'{\i }tulo 4.
-) (secciones/innovaciones.tex [9] [10
+) (secciones/innovaciones.tex [13] [14
 
 ]
 Cap\'{\i }tulo 5.
-) (secciones/diseno-arquitectura.tex [11] [12
+) (secciones/diseno-arquitectura.tex [15] [16
 
 ]
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [13] [14
+) (secciones/desarrollo.tex [17] [18
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [15]
+) (secciones/pruebas.tex [19]
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [16]
+ [20]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [17
+) (secciones/conclusiones.tex [21
 
-] [18
+] [22
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [19] [20
+) (secciones/impacto.tex [23] [24
 
 ]
 Cap\'{\i }tulo 10.
-LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <8> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 2.
-LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <6> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 2.
-) [21] [22
+) [25] [26
 
 ]
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 176.
- (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-Overfull \hbox (24.46613pt too wide) in paragraph at lines 177--177
-\T1/pbk/l/n/10.95 mar. de 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / newsroom . tiktok . com / tiktok -[] community -[]
+Overfull \hbox (7.39021pt too wide) in paragraph at lines 177--177
+\T1/pbk/l/n/10.95 di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / s22 . q4cdn . com / 959853165 / files / doc _ financials /
  []
 
-[23
 
-] [24
+Overfull \hbox (4.1522pt too wide) in paragraph at lines 177--177
+\T1/pbk/l/n/10.95 sults^^T, vi-si-ta-do 26 de mar. de 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / investor . atmeta .
+ []
 
-] [25] [26] (secciones/anexo1.tex
+
+Overfull \hbox (0.74391pt too wide) in paragraph at lines 177--177
+\T1/pbk/l/n/10.95 ción: []$\T1/pcr/m/n/10.95 https : / / www . ofcom . org . uk / siteassets / resources / documents /
+ []
+
+
+Overfull \hbox (1.00604pt too wide) in paragraph at lines 177--177
+\T1/pcr/m/n/10.95 research -[] and -[] data / online -[] research / online -[] nation / 2025 / online -[]
+ []
+
+[27
+
+]
+LaTeX Info: Redefining \sptext on input line 181.
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+ [28] [29
+
+] [30] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [27
+) [31
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1124,23 +1162,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: 08FE27D34A3A981465829BBF35797A60;3442.
+(rerunfilecheck)             Checksum: BF7BF707C12D9FFEA09FD2D40582AC91;4405.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32719 strings out of 467871
- 624957 string characters out of 5419344
- 1550135 words of memory out of 5000000
- 60969 multiletter control sequences out of 15000+600000
- 655824 words of font info for 88 fonts, out of 8000000 for 9000
+ 33071 strings out of 467871
+ 628158 string characters out of 5419344
+ 1552331 words of memory out of 5000000
+ 61303 multiletter control sequences out of 15000+600000
+ 656561 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,11n,121p,1237b,2700s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (35 pages, 224539 bytes).
+<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (39 pages, 250713 bytes).
 PDF statistics:
- 353 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
- 191 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 428 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 239 words of extra memory for PDF output out of 10000 (max. 10000000)
 
