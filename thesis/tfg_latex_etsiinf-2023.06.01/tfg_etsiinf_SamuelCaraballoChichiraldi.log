@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  28 MAR 2026 12:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  28 MAR 2026 18:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1081,71 +1081,82 @@ File: portada/FFmpeg_icon.svg.png Graphic file (type png)
 <use portada/FFmpeg_icon.svg.png>
 Package pdftex.def Info: portada/FFmpeg_icon.svg.png  used on input line 30.
 (pdftex.def)             Requested size: 85.35696pt x 85.33813pt.
-LaTeX Info: Redefining \sptext on input line 54.
-LaTeX Info: Redefining \. on input line 54.
-LaTeX Info: Redefining \% on input line 54.
+LaTeX Info: Redefining \sptext on input line 52.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
  [8 <./portada/FFmpeg_icon.svg.png>]
 LaTeX Info: Redefining \sptext on input line 79.
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
  [9]
-<portada/cdn_image.png, id=264, 1405.25pt x 790.955pt>
+LaTeX Info: Redefining \sptext on input line 106.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [10]
+LaTeX Info: Redefining \sptext on input line 131.
+LaTeX Info: Redefining \. on input line 131.
+LaTeX Info: Redefining \% on input line 131.
+ [11]
+<portada/cdn_image.png, id=274, 1405.25pt x 790.955pt>
 File: portada/cdn_image.png Graphic file (type png)
 <use portada/cdn_image.png>
-Package pdftex.def Info: portada/cdn_image.png  used on input line 99.
+Package pdftex.def Info: portada/cdn_image.png  used on input line 155.
 (pdftex.def)             Requested size: 341.43437pt x 192.17445pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \sptext on input line 108.
-LaTeX Info: Redefining \. on input line 108.
-LaTeX Info: Redefining \% on input line 108.
-[10]
-LaTeX Info: Redefining \sptext on input line 125.
-LaTeX Info: Redefining \. on input line 125.
-LaTeX Info: Redefining \% on input line 125.
- [11 <./portada/cdn_image.png>]) (secciones/tecnologias.tex
+
+Underfull \vbox (badness 1383) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 164.
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
+ [12]
+LaTeX Info: Redefining \sptext on input line 183.
+LaTeX Info: Redefining \. on input line 183.
+LaTeX Info: Redefining \% on input line 183.
+ [13 <./portada/cdn_image.png>]) (secciones/tecnologias.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [12]
+ [14]
 Cap\'{\i }tulo 3.
-) (secciones/requisitos.tex [13
+) (secciones/requisitos.tex [15
 
-] [14
+] [16
 
 ]
 Cap\'{\i }tulo 4.
-) (secciones/innovaciones.tex [15] [16
+) (secciones/innovaciones.tex [17] [18
 
 ]
 Cap\'{\i }tulo 5.
-) (secciones/diseno-arquitectura.tex [17] [18
+) (secciones/diseno-arquitectura.tex [19] [20
 
 ]
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [19] [20
+) (secciones/desarrollo.tex [21] [22
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [21]
+) (secciones/pruebas.tex [23]
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [22]
+ [24]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [23
+) (secciones/conclusiones.tex [25
 
-] [24
+] [26
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [25] [26
+) (secciones/impacto.tex [27] [28
 
 ]
 Cap\'{\i }tulo 10.
-) [27] [28
+) [29] [30
 
 ]
 Overfull \hbox (7.39021pt too wide) in paragraph at lines 180--180
@@ -1172,7 +1183,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 180--180
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[29
+[31
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 180--180
@@ -1182,11 +1193,11 @@ Overfull \hbox (10.61328pt too wide) in paragraph at lines 180--180
 LaTeX Info: Redefining \sptext on input line 181.
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
-[30] [31
+[32] [33
 
-] [32] (secciones/anexo1.tex
+] [34] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [33
+) [35
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1207,17 +1218,17 @@ Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi
 
  ) 
 Here is how much of TeX's memory you used:
- 33185 strings out of 467871
- 630424 string characters out of 5419344
- 1552839 words of memory out of 5000000
+ 33187 strings out of 467871
+ 630438 string characters out of 5419344
+ 1552830 words of memory out of 5000000
  61405 multiletter control sequences out of 15000+600000
  656561 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,11n,121p,1237b,2696s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,12n,121p,1237b,2696s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (41 pages, 1198925 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (43 pages, 1204577 bytes).
 PDF statistics:
- 458 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
+ 467 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
  257 words of extra memory for PDF output out of 10000 (max. 10000000)
 
