@@ -31,6 +31,22 @@ FFmpeg es una herramienta de código abierto utilizada para el procesamiento de 
 \caption{Logo de FFmpeg}
 \end{figure}
 
+\textbf{Ventajas}
+
+La principal ventaja de FFmpeg es su versatilidad y flexibilidad. Puede aplicar filtros complejos, producir salidas en distintos formatos, ajustar la resolución, bitrate, códecs, frame rate y parámetros de la codificación dentro del mismo flujo de trabajo. Eso lo vuelve muy útil para transcodificación, remuxing, extracción de audio, recortes, subtítulo, entre otros casos de uso en el procesamiento de video.
+
+Es una herramienta \textit{open source} lo que implica que reduce la dependencia de un tercero, está disponible gratuitamente y está bien documentada. Todo esto facilita su integración en cualquier tipo de proyecto, evitando así el \textit{vendor lock-in}. 
+
+La herramienta destaca por ser veloz y eficiente, implementando algoritmos avanzados de procesamiento de video. Además, es compatible con una amplia variedad de formatos y códecs y tiene soporte para diversos sistemas operativos. Por estas razones, FFmpeg es una opción popular y altamente utilizada en la industria para el procesamiento de video.
+
+\textbf{Desventajas}
+
+La principal desventaja de la herramienta es su complejidad. Requiere un conocimiento técnico profundo para su uso efectivo. A esto, se le suma su sintaxis compleja y la gran cantidad de opciones disponibles, lo que puede resultar abrumador para los usuarios sin experiencia.
+
+FFmpeg es el ganador en términos de flexibilidad y control, pero sin embargo, cuando el objetivo es la velocidad extrema o el ahorro masivo de energía, el hardware dedicado o las soluciones implementadas desde cero pueden superar a FFmpeg. Por ejemplo, el chip personalizado de Google Argos VCU (Video Coding Unit) supera a FFmpeg en velocidad, eficiencia de cómputo y ahorro energético optimizando la capacidad de los centros de datos de YouTube. \cite{google-vcu}  
+
+
+
 
 \subsection{MPEG-DASH}
 
@@ -38,7 +54,33 @@ FFmpeg es una herramienta de código abierto utilizada para el procesamiento de 
 
 \subsection{HLS}
 
-De forma similar a MPEG-DASH, \textbf{HLS} \cite{hls} (HTTP Live Streaming) es un protocolo de transmisión de video desarrollado por Apple. HLS también implementa técnicas de \textbf{Adaptive Bitrate} y utilizado para la distribución de contenido audiovisual bajo demanda y en directo fundamentalmente en dispositivos Apple, aunque también es compatible con otros sistemas operativos.
+De forma similar a MPEG-DASH, \textbf{HLS} \cite{hls} (HTTP Live Streaming) también es un protocolo de transmisión de video desarrollado por Apple. HLS implementa técnicas de \textbf{Adaptive Bitrate} y es utilizado para la distribución de contenido audiovisual bajo demanda y en directo fundamentalmente en dispositivos Apple, aunque es compatible con otros sistemas operativos. 
+
+\textbf{Ventajas}
+
+Usualmente, este protocolo divide el video en segmentos pequeños y en formato de archivo \lstinline|.m3u8| que permite entregar el contenido de forma eficiente por HTTP usando CDNs y servidores web. El reproductor de video solicita los segmentos más adecuados teniendo en cuenta la calidad de conexión del usuario  mejorando la experiencia de visualización. 
+
+Además, HLS es altamente escalable. Esto lo hace ideal para la distribución de contenido a gran escala siendo una opción popular para servicios de streaming en vivo y bajo demanda con momentos de elevado tráfico.
+
+HLS, es compatible con una amplia variedad de dispositivos especialmente con los dispositivos Apple, lo que lo convierte en una opción preferida para la distribución de contenido a usuarios de iOS y macOS.
+
+\textbf{Desventajas}
+
+Una de las desventajas más notorias de este protocolo es la falta de soporte en algunos dispositivos y navegadores, especialmente en aquellos que no son de Apple. Esto puede limitar su adopción en ciertos entornos y requerir la implementación de soluciones alternativas para garantizar la compatibilidad con una audiencia más amplia. \cite{hls-support}
+
+Adicionalmente, HLS puede ser inadecuado para circunstancias en las que se requiera una latencia extremadamente baja, como en llamadas de video en tiempo real. Debido a su arquitectura, para este tipo de aplicaciones, otros protocolos como WebRTC podrían ser más apropiados. \cite{hls-latency}
+
+\textbf{Servicios que implementan HLS}
+
+La gran mayoría de actores principales en el mercado de streaming implementan este protocolo. Este es el caso de:
+
+\begin{itemize}
+    \item Apple, siendo el creador del protocolo e implementándolo en sus dispositivos y servicios de streaming.
+    \item AWS, en su servicio de live streaming
+    \item Mux, un proveedor de infraestructura de streaming que ofrece soporte para HLS.
+    \item Cloudflare, que también ofrece servicios de streaming con soporte para HLS.
+\end{itemize}
+
 
 Cabe destacar que, en ambos protocolos HLS y MPEG-DASH, el video no se descarga por completo de una vez, sino que el reproductor va solicitando pequeños segmentos o fragmentos al servidor conforme avanza la reproducción. En otras palabras, el video está almacenado en partes pequeñas en el servidor cada una con diferentes calidades y el reproductor le solicita la parte que mejor se adapte a las condiciones de red del usuario en cada momento. Así, se evitan transmitir grandes cantidades de datos innecesarios por la red y se puede implementar un Adaptive Bitrate eficiente.
 

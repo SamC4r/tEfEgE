@@ -2382,10 +2382,13 @@
     <bcf:citekey order="6" intorder="1">ofcom_media_use_attitudes_2025</bcf:citekey>
     <bcf:citekey order="7" intorder="1">ofcom_online_nations_2025</bcf:citekey>
     <bcf:citekey order="8" intorder="1">lu2025adblockers</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">dash</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">hls</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">object_storage</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">cdn</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">google-vcu</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">dash</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">hls</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">hls-support</bcf:citekey>
+    <bcf:citekey order="13" intorder="1">hls-latency</bcf:citekey>
+    <bcf:citekey order="14" intorder="1">object_storage</bcf:citekey>
+    <bcf:citekey order="15" intorder="1">cdn</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

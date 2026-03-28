@@ -292,6 +292,51 @@
       \verb https://www.sciencedirect.com/science/article/abs/pii/S037872062500120X
       \endverb
     \endentry
+    \entry{google-vcu}{online}{}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{3}{}{%
+        {{hash=d86fc34f3ab2eed537ffd62d45ef9244}{%
+           family={Ranganathan},
+           familyi={R\bibinitperiod},
+           given={Parthasarathy},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5dac2793ab45a7065dec22e3b78dba7b}{%
+           family={Stodolsky},
+           familyi={S\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=02bee4da39cf87c3bc95ea5d511955bd}{%
+           family={Calow},
+           familyi={C\bibinitperiod},
+           given={Jeff},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b8a20817f2f0ea8102e790d0cbed8c5}
+      \strng{fullhash}{cab40aaea01bca63f7315f06cdd4a73d}
+      \strng{fullhashraw}{cab40aaea01bca63f7315f06cdd4a73d}
+      \strng{bibnamehash}{cab40aaea01bca63f7315f06cdd4a73d}
+      \strng{authorbibnamehash}{cab40aaea01bca63f7315f06cdd4a73d}
+      \strng{authornamehash}{0b8a20817f2f0ea8102e790d0cbed8c5}
+      \strng{authorfullhash}{cab40aaea01bca63f7315f06cdd4a73d}
+      \strng{authorfullhashraw}{cab40aaea01bca63f7315f06cdd4a73d}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Warehouse-Scale Video Acceleration: Co-design and Deployment in the Wild}
+      \field{urlday}{28}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://gwern.net/doc/cs/hardware/2021-ranganathan.pdf
+      \endverb
+      \verb{url}
+      \verb https://gwern.net/doc/cs/hardware/2021-ranganathan.pdf
+      \endverb
+    \endentry
     \entry{dash}{online}{}{}
       \name{author}{1}{}{%
         {{hash=9988b1d8a770677b8ba24111dbef6dc6}{%
@@ -306,8 +351,8 @@
       \strng{authornamehash}{9988b1d8a770677b8ba24111dbef6dc6}
       \strng{authorfullhash}{9988b1d8a770677b8ba24111dbef6dc6}
       \strng{authorfullhashraw}{9988b1d8a770677b8ba24111dbef6dc6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{MPEG-DASH}
@@ -352,6 +397,72 @@
       \endverb
       \verb{url}
       \verb https://developer.apple.com/streaming/
+      \endverb
+    \endentry
+    \entry{hls-support}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=3f2e15519fa52a5e17529178e00ca1ec}{%
+           family={{Mux Video}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{fullhash}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{fullhashraw}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{bibnamehash}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{authorbibnamehash}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{authornamehash}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{authorfullhash}{3f2e15519fa52a5e17529178e00ca1ec}
+      \strng{authorfullhashraw}{3f2e15519fa52a5e17529178e00ca1ec}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Play your Videos | Mux}
+      \field{urlday}{26}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mux.com/docs/guides/play-your-videos
+      \endverb
+      \verb{url}
+      \verb https://www.mux.com/docs/guides/play-your-videos
+      \endverb
+    \endentry
+    \entry{hls-latency}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8c5257fb1152c8812ef6b1aa6ce4dd9f}{%
+           family={{Casper Haems}},
+           familyi={C\bibinitperiod},
+           given={{Hannes\bibnamedelimb Mareen}\bibnamedelimb {Peter\bibnamedelimb Steenkiste}\bibnamedelimb {Glenn\bibnamedelimb Van\bibnamedelimb Wallendael}\bibnamedelimb {Tim\bibnamedelimb Wauters}\bibnamedelima {Filip\bibnamedelimb De\bibnamedelimb TurckAuthors\bibnamedelimb Info\bibnamedelimb &\bibnamedelimb Claims}},
+           giveni={H\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim G\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim F\bibinitperiod},
+           suffix={{Jeroen van der Hooft}},
+           suffixi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{fullhash}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{fullhashraw}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{bibnamehash}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{authorbibnamehash}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{authornamehash}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{authorfullhash}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \strng{authorfullhashraw}{8c5257fb1152c8812ef6b1aa6ce4dd9f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Hybrid Unicast–Broadcast Video Delivery for Scalable Low-Latency Live Streaming}
+      \field{urlday}{26}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{27 Feb, 2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3742868
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3742868
       \endverb
     \endentry
     \entry{object_storage}{online}{}{}
