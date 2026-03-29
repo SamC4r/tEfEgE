@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  28 MAR 2026 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  29 MAR 2026 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -928,7 +928,7 @@ Package hyperref Info: Link coloring OFF on input line 110.
 
 \c@lstlisting=\count485
  (portada/portada.tex
-<portada/escudo_upm.png, id=118, 245.91875pt x 200.75pt>
+<portada/escudo_upm.png, id=134, 245.91875pt x 200.75pt>
 File: portada/escudo_upm.png Graphic file (type png)
 <use portada/escudo_upm.png>
 Package pdftex.def Info: portada/escudo_upm.png  used on input line 6.
@@ -950,7 +950,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 13.
-<portada/escudo_etsiinf.png, id=120, 160.6pt x 170.6375pt>
+<portada/escudo_etsiinf.png, id=136, 160.6pt x 170.6375pt>
 File: portada/escudo_etsiinf.png Graphic file (type png)
 <use portada/escudo_etsiinf.png>
 Package pdftex.def Info: portada/escudo_etsiinf.png  used on input line 17.
@@ -1009,13 +1009,14 @@ LaTeX Info: Redefining \% on input line 3.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 4.
 
-Overfull \hbox (1.75185pt too wide) detected at line 34
+Overfull \hbox (1.75185pt too wide) detected at line 38
 \T1/pbk/db/n/10.95 10. 
  []
 
+[5]
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
-(Font)              Font shape `T1/pbk/db/n' tried instead on input line 36.
-[5])
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 40.
+)
 \tf@toc=\write6
 \openout6 = `tfg_etsiinf_SamuelCaraballoChichiraldi.toc'.
 
@@ -1076,7 +1077,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 20.
  [7]
-<portada/FFmpeg_icon.svg.png, id=241, 3854.4pt x 3854.4pt>
+<portada/FFmpeg_icon.svg.png, id=261, 3854.4pt x 3854.4pt>
 File: portada/FFmpeg_icon.svg.png Graphic file (type png)
 <use portada/FFmpeg_icon.svg.png>
 Package pdftex.def Info: portada/FFmpeg_icon.svg.png  used on input line 30.
@@ -1097,7 +1098,7 @@ LaTeX Info: Redefining \sptext on input line 131.
 LaTeX Info: Redefining \. on input line 131.
 LaTeX Info: Redefining \% on input line 131.
  [11]
-<portada/cdn_image.png, id=274, 1405.25pt x 790.955pt>
+<portada/cdn_image.png, id=294, 1405.25pt x 790.955pt>
 File: portada/cdn_image.png Graphic file (type png)
 <use portada/cdn_image.png>
 Package pdftex.def Info: portada/cdn_image.png  used on input line 155.
@@ -1109,54 +1110,71 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 Underfull \vbox (badness 1383) has occurred while \output is active []
 
-LaTeX Info: Redefining \sptext on input line 164.
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
+LaTeX Info: Redefining \sptext on input line 160.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
  [12]
-LaTeX Info: Redefining \sptext on input line 183.
-LaTeX Info: Redefining \. on input line 183.
-LaTeX Info: Redefining \% on input line 183.
- [13 <./portada/cdn_image.png>]) (secciones/tecnologias.tex
+LaTeX Info: Redefining \sptext on input line 175.
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
+ [13 <./portada/cdn_image.png>]
+LaTeX Info: Redefining \sptext on input line 209.
+LaTeX Info: Redefining \. on input line 209.
+LaTeX Info: Redefining \% on input line 209.
+ [14]
+LaTeX Info: Redefining \sptext on input line 249.
+LaTeX Info: Redefining \. on input line 249.
+LaTeX Info: Redefining \% on input line 249.
+ [15]
+<portada/aws.png, id=315, 10673.72308pt x 6003.96924pt>
+File: portada/aws.png Graphic file (type png)
+<use portada/aws.png>
+Package pdftex.def Info: portada/aws.png  used on input line 252.
+(pdftex.def)             Requested size: 170.71393pt x 96.0105pt.
+LaTeX Info: Redefining \sptext on input line 280.
+LaTeX Info: Redefining \. on input line 280.
+LaTeX Info: Redefining \% on input line 280.
+ [16 <./portada/aws.png>]) (secciones/tecnologias.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [14]
-Cap\'{\i }tulo 3.
-) (secciones/requisitos.tex [15
+ [17] [18
 
-] [16
+]
+Cap\'{\i }tulo 3.
+) (secciones/requisitos.tex [19] [20
 
 ]
 Cap\'{\i }tulo 4.
-) (secciones/innovaciones.tex [17] [18
+) (secciones/innovaciones.tex [21] [22
 
 ]
 Cap\'{\i }tulo 5.
-) (secciones/diseno-arquitectura.tex [19] [20
+) (secciones/diseno-arquitectura.tex [23] [24
 
 ]
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [21] [22
+) (secciones/desarrollo.tex [25] [26
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [23]
+) (secciones/pruebas.tex [27]
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [24]
+ [28]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [25
+) (secciones/conclusiones.tex [29
 
-] [26
+] [30
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [27] [28
+) (secciones/impacto.tex [31] [32
 
 ]
 Cap\'{\i }tulo 10.
-) [29] [30
+) [33] [34
 
 ]
 Overfull \hbox (7.39021pt too wide) in paragraph at lines 180--180
@@ -1183,7 +1201,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 180--180
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[31
+[35
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 180--180
@@ -1193,11 +1211,11 @@ Overfull \hbox (10.61328pt too wide) in paragraph at lines 180--180
 LaTeX Info: Redefining \sptext on input line 181.
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
-[32] [33
+[36] [37
 
-] [34] (secciones/anexo1.tex
+] [38] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [35
+) [39
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1212,23 +1230,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: D45A547D8447FDB554BA2540BAB70884;4583.
+(rerunfilecheck)             Checksum: 939048BCA16DB7177B709AD2D5CD3592;5231.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33187 strings out of 467871
- 630438 string characters out of 5419344
- 1552830 words of memory out of 5000000
- 61405 multiletter control sequences out of 15000+600000
+ 33256 strings out of 467871
+ 631679 string characters out of 5419344
+ 1553971 words of memory out of 5000000
+ 61464 multiletter control sequences out of 15000+600000
  656561 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1237b,2696s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (43 pages, 1204577 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (47 pages, 1315005 bytes).
 PDF statistics:
- 467 PDF objects out of 1000 (max. 8388607)
- 101 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 510 PDF objects out of 1000 (max. 8388607)
+ 111 named destinations out of 1000 (max. 500000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 

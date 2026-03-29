@@ -429,9 +429,9 @@ INPUT .\tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 INPUT .\tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 INPUT tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkd8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8r.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
 OUTPUT tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkd8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8r.tfm
@@ -480,6 +480,13 @@ INPUT .\portada\cdn_image.png
 INPUT .\portada\cdn_image.png
 INPUT .\portada\cdn_image.png
 INPUT .\portada\cdn_image.png
+INPUT .\portada\aws.png
+INPUT .\portada\aws.png
+INPUT .\portada\aws.png
+INPUT .\portada\aws.png
+INPUT .\portada\aws.png
+INPUT .\portada\aws.png
+INPUT .\portada\aws.png
 INPUT .\secciones\tecnologias.tex
 INPUT .\secciones\tecnologias.tex
 INPUT .\secciones\tecnologias.tex
