@@ -310,15 +310,15 @@ Mux es un proveedor de infraestructura de streaming de video orientada a desarro
 
 Reduce el tiempo de desarrollo, los recursos necesarios y la complejidad de la implementación. Mux, se encarga de resolver los problemas de almacenamiento, entrega y procesamiento de video, lo que permite a los desarrolladores centrarse en otras áreas del proyecto.
 
-Mux, ofrece una documentación clara y una API flexible y fácil de usar con una gran variedad de funcionalidades. Tiene soporte para una amplia variedad de tecnologías web, lenguajes de programación y frameworks facilitando su integración en cualquier tipo de proyecto. Esto lo hace ideal para equipos pequeños o para demostrar un producto mínimo viable (MVP) de forma rápida y barata. 
+Mux, ofrece una documentación clara y una API flexible y fácil de usar con una gran variedad de funcionalidades. Tiene soporte para una amplia variedad de tecnologías web, lenguajes de programación y frameworks, facilitando su integración en cualquier tipo de proyecto. Esto lo hace ideal para equipos pequeños o para demostrar un producto mínimo viable (MVP) de forma rápida y barata. 
 
-A su vez, Mux ofrece características adicionales como visitas del video, análisis de tiempo de retención, geolocalización de los usuarios, entre otras estadísticas de video. 
+A su vez, Mux ofrece características adicionales como un contador de visitas de los videos, análisis del tiempo de retención, geolocalización de las visualizaciones, entre otras estadísticas de video. 
 
 \textbf{Desventajas}
 
 Al depender de un proveedor externo, se pierde el control sobre la arquitectura de procesamiento de los videos o posibles optimizaciones personalizadas que se deseen implementar. 
 
-Puede resultar en una opción costosa a largo plazo, en especial para proyectos de gran escala o aquellos que esperen un crecimiento importante en el tráfico, volumen de datos, o videos subidos. Además, al ser un servicio de terceros, se está sujeto a las políticas de precios o cambios en la plataforma. 
+Puede resultar una opción costosa a largo plazo, en especial para proyectos de gran escala o aquellos que esperen un crecimiento importante en el tráfico, volumen de datos, o videos subidos. Además, al ser un servicio de terceros, se está sujeto a las políticas de precios o cambios en la plataforma. 
 
 
 \textbf{Servicios que emplean Mux}
@@ -397,8 +397,54 @@ Tomando los mismos supuestos que en el caso de Mux o AWS y los datos publicados 
 
 El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 = \$15.24$ al mes, lo que la convierte en una opción increíblemente económica en comparación con otras alternativas. Asimismo, si elegimos una calidad de video superior, el precio no se vería tan afectado como en el caso de Mux.     
 
+\pagebreak
 
+\subsection{Tabla comparativa de proveedores}
 
+\begin{table}[!htbp]
+    \centering
+    \footnotesize
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\tabcolsep}{6pt}
+    \begin{tabularx}{\textwidth}{|>{\Centering\arraybackslash}p{3.8cm}|>{\Centering\arraybackslash}X|>{\Centering\arraybackslash}X|>{\Centering\arraybackslash}X|}
+        \hline
+        \textbf{Criterio} & \textbf{Amazon Web Services} & \textbf{Mux.com} & \textbf{Bunny.net} \\
+        \hline
+        Facilidad de implementación & Baja & Alta & Media \\
+        \hline
+        Flexibilidad e integración con distintas tecnologías & Alta & Alta & Media \\
+        \hline
+        Escalabilidad & Alta & Media & Media \\
+        \hline
+        Costos & Medios & Altos & Bajos \\
+        \hline
+        Soporte & Alto & Alto & Alto \\
+        \hline
+        Documentación & Alta & Alta & Media \\
+        \hline
+        Personalización & Alta & Media & Baja \\
+        \hline
+        Popularidad & Alta & Alta & Baja \\
+        \hline
+        Funcionalidades y características adicionales 
+        & No incluye características directas adicionales para streaming, por lo que su implementación debe realizarse desde cero.
+        & Ofrece una amplia variedad de funcionalidades, como reproductor de video, subtítulos, estadísticas y moderación de contenido.
+        & Ofrece diversas funcionalidades, incluyendo subtítulos, reproductor de video con opciones avanzadas y estadísticas. \\
+        \hline
+        Principal ventaja 
+        & Personalización extrema y control absoluto sobre la arquitectura.
+        & Resuelve la complejidad del desarrollo.
+        & Resuelve la complejidad del desarrollo con precios bajos. \\
+        \hline
+        Principal desventaja 
+        & Mayor complejidad, ya que requiere más recursos, tiempo de desarrollo, un equipo de DevOps y mantenimiento continuo.
+        & Costos elevados y pérdida de control sobre aspectos de la arquitectura.
+        & Pérdida de control en la arquitectura y dependencia de un tercero. \\
+        \hline
+    \end{tabularx}
+    \caption{Tabla comparativa de los proveedores y servicios considerados durante el desarrollo del proyecto}
+    \label{tab:comparativa-proveedores}
+\end{table}
 
 
 
