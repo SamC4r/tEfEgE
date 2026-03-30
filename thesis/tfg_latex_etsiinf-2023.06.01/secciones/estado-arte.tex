@@ -446,6 +446,119 @@ El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 =
     \label{tab:comparativa-proveedores}
 \end{table}
 
+\section{Modelos de Arquitectura}
+
+En esta sección se describen y analizan los tres principales modelos de arquitectura que se pueden emplear en un servicio de streaming de video. Estos incluyen el modelo centralizado, el modelo federado y el modelo peer-to-peer (P2P). Se explican las características de cada uno, sus ventajas, desventajas o debilidades, tecnologías típicas asociadas a cada modelo y ejemplos de servicios que integran alguno de estos en su arquitectura. 
+
+\subsection{Modelo Centralizado}
+
+
+La arquitectura centralizada es el modelo más común y tradicional para plataformas de streaming de video, redes sociales y otros servicios web. En este modelo, una sola organización controla y gestiona los componentes fundamentales del sistema. Esto incluye la autenticación de usuarios, las bases de datos, la transcodificación de videos, el almacenamiento, la entrega de contenido, la moderación de contenido y los algoritmos de recomendación. 
+
+En otras palabras, esto quiere decir que la plataforma centralizada recibe los videos en servidores propios o contratados, los procesa con su infraestructura y finalmente, los entrega a la audiencia a través de su propia red de distribución. 
+
+Desde un punto de vista más técnico, la arquitectura centralizada se caracteriza por tener un backend monolítico o basado en microservicios, donde cada componente del sistema está gestionado por la misma organización.  Además, no siempre es un único servidor central, sino que puede haber copias del mismo distribuidas geográficamente, pero el control y la gestión de los servicios está siempre bajo la misma entidad.
+
+Normalmente, este tipo de plataformas se compone de una cadena de servicios que trabajan juntos para controlar de extremo a extremo el almacenamiento, procesamiento y la entrega del contenido. 
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{portada/centralizado.png   }
+  \caption{Diagrama de un modelo centralizado}
+\end{figure}
+
+\textbf{Flujo de operación del procesamiento de video}
+
+El flujo comienza cuando un usuario sube un video a la plataforma. Se carga un archivo desde el \textit{frontend} de la aplicación web o móvil hacia un servidor backend. A continuación, el servidor registra los metadatos del video (identificador, titulo, descripción, tags, visibilidad, duración, etc.) en una base de datos e intenta almacenar el video en un sistema de Object Storage. 
+
+Posteriormente, el archivo subido pasa a una cola de procesamiento, donde espera a ser atendido por un worker para ejecutar tareas de transcodificación. Herramientas como FFmpeg juegan un papel fundamental en esta etapa permitiendo convertir el video a diferentes formatos, resoluciones y bitrates y segmentarlo para adaptarlo a HLS o MPEG-DASH. En paralelo, se suelen generar miniaturas, extraer metadatos adicionales, generar subtítulos, entre otras tareas.
+
+Una vez, el video fue procesado, se distribuyen los segmentos a través de un CDN. De este modo, el video se entrega de forma eficiente a los usuarios finales. 
+
+Con los metadatos del video recién creado, un algoritmo de recomendación se encarga de sugerir el video a usuarios que podrían estar interesados en él. No obstante, en una plataforma de videos convencional, el sistema de moderación se asegura de revisar que el contenido cumpla con las políticas de la plataforma antes de ser mostrado a usuarios finales. 
+
+
+
+
+\textbf{Ventajas}
+
+La principal ventaja es su alto nivel de control. La organización responsable es la encargada de definir cómo se almacenan los datos, qué políticas de moderación se utilizan, cómo funciona el algoritmo de recomendación, cómo se optimiza el rendimiento, políticas de seguridad, monetización.
+
+Asimismo, comparado con otros modelos,la arquitectura centralizada es más fácil de diseñar, implementar, escalar y mantener.
+
+
+\textbf{Desventajas}
+
+Uno de los puntos débiles de este modelo es su fuerte dependencia de la infraestructura centralizada, que suele crear 'puntos únicos de fallo'. Si el servidor central o la infraestructura de almacenamiento experimenta problemas, el servicio puede verse degradado.
+
+Por otra parte, en servicios de streaming de video, una arquitectura de este tipo puede generar altos costos de infraestructura y mantenimiento, especialmente a medida que la plataforma crece y atrae a más usuarios. Esto es debido principalmente a que el almacenamiento, procesamiento y la distribución tienen un alto consumo de recursos. 
+
+\textbf{Servicios que implementan este modelo}
+
+La mayor parte de los servicios de streaming y redes sociales utilizan este tipo de modelo, aunque cada una con sus propias variaciones. Entre estos destacan: YouTube, Rumble, Vimeo, Twitch, Instagram, Netflix, entre otros. También suele ser una opción popular para startups ya que es más fácil de implementar e integrar frontend, backend, procesamiento y distribución de video. 
+
+\pagebreak
+
+\subsection{Modelo Federado}
+
+La arquitectura federada no suele ser un modelo común en servicios de streaming de video, aunque es una opción realmente interesante. Aquí, múltiples servidores independientes llamados nodos o instancias, operan de forma autónoma aunque pueden comunicarse entre ellos mediante protocolos. Al contrario del modelo centralizado, en este caso no existe una única entidad que controle todo el sistema. Cada nodo es responsable de gestionar sus propios usuarios, almacenamiento, procesamiento, base de datos y políticas de moderación. Sin embargo, esto no significa que los nodos estén aislados: un usuario registrado en una instancia puede acceder y descubrir contenido que se encuentre en otra si ambas hablan el mismo protocolo de federación.
+
+Desde un punto de vista técnico, cuando un usuario sube un video a una instancia, este se procesa y almacena en ese mismo nodo. Este, también se encarga de gestionar la autenticación, moderación de contenido y el procesamiento de video. Por ello, se podría considerar a cada nodo como una pequeña arquitectura centralizada e independiente. 
+
+Lo especial de este modelo es su protocolo de comunicación o federación. Esto permite que un nodo anuncie de su existencia a otros y que intercambie información. Un protocolo común es \textbf{ActivityPub}, diseñado para redes sociales federadas y que forma el \textbf{Fediverse} \cite{activitypub}.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{portada/fediverse.png   }
+  \caption{Diagrama de un modelo federado}
+\end{figure}
+
+
+\textbf{Flujo de Operación del procesamiento de video}
+
+El flujo comienza cuando un usuario sube un video a una instancia de la red. Se carga un archivo desde el \textit{frontend} de la aplicación hacia el backend de esa instancia. Esta se debió encargar de la autenticación del usuario primero y luego, el registro de los metadatos del video que se desea cargar. Además, esta misma capa se encarga de almacenar, procesar y entregar el contenido. 
+
+Una vez el video fue cargado, se sigue un flujo similar al del modelo centralizado, utilizando herramientas como FFmpeg y formatos de streaming como HLS o MPEG-DASH.
+
+Una vez procesado el contenido, este queda disponible en la instancia donde fue subido. Gracias al protocolo de federación, este nodo anuncia sobre la existencia del nuevo video a otros nodos de la red \textbf{Fediverse}. Un protocolo usado con frecuencia es \textbf{ActivityPub}. 
+
+Cuando un usuario de otra instancia quiere acceder a ese video, se puede recuperar la referencia con el protocolo de federación y solicitar el contenido al nodo origen. Se pueden utilizar tecnologías como WebTorrent para la distribución del contenido o simplemente, crear un enlace al recurso original. 
+
+
+
+\textbf{Ventajas}
+
+La ventaja más significativa es la distribución del control. No existe una única entidad que controle todo el sistema y que tenga poder absoluto sobre los datos, usuarios y contenido. Cada instancia es independiente y decide su gestión. 
+
+Otro aspecto importante a resaltar es la flexibilidad. Cada nodo puede adaptar el sistema a sus necesidades, utilizar sus propios criterios de moderación, decidir su arquitectura interna y mantener un mayor control sobre privacidad, gobernanza y gestión de datos.
+
+\textbf{Desventajas}
+
+Evidentemente, su principal desventaja es la complejidad técnica que añade. Además de gestionar el funcionamiento interno de cada instancia, se deben solucionar problemas de comunicación, sincronización y la interoperabilidad. Esto implica un esfuerzo de desarrollo adicional. 
+
+Los problemas de consistencia y disponibilidad también pueden ser un desafío. Si una instancia deja de responder, ciertos contenidos o interacciones pueden volverse inaccesibles. 
+
+Como cada instancia define sus políticas y recursos, la experiencia de usuario puede verse comprometida, a diferencia de un modelo centralizado. 
+
+\textbf{Servicios que implementan este modelo}
+
+Este modelo no es común en servicios de streaming de videos. Sin embargo, existen aplicaciones que implementan este enfoque. El ejemplo más reconocido es PeerTube. 
+En general, este enfoque suele ser adoptado por comunidades que priorizan descentralización, soberanía digital, independencia tecnológica y control local sobre la infraestructura.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{portada/peertubelogo.png  }
+  \caption{Logo de PeerTube}
+\end{figure}
+
+
+\subsection{Modelo P2P}
+
+
+
+
 
 
 

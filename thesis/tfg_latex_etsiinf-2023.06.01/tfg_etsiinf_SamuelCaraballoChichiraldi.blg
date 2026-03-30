@@ -1,0 +1,17 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'tfg_etsiinf_SamuelCaraballoChichiraldi.blg'
+[105] biber-MSWIN64:342> INFO - === 
+[148] Biber.pm:421> INFO - Reading 'tfg_etsiinf_SamuelCaraballoChichiraldi.bcf'
+[251] Biber.pm:1002> INFO - Found 18 citekeys in bib section 0
+[266] Biber.pm:4487> INFO - Processing section 0
+[277] Biber.pm:4678> INFO - Looking for bibtex file 'secciones/biblio.bib' for section 0
+[318] bibtex.pm:1713> INFO - LaTeX decoding ...
+[332] bibtex.pm:1519> INFO - Found BibTeX data source 'secciones/biblio.bib'
+[418] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[418] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[419] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[433] bbl.pm:676> INFO - Writing 'tfg_etsiinf_SamuelCaraballoChichiraldi.bbl' with encoding 'UTF-8'
+[440] bbl.pm:779> INFO - Output to tfg_etsiinf_SamuelCaraballoChichiraldi.bbl
+[441] Biber.pm:132> WARN - legacy year field '27 Feb, 2026' in entry 'hls-latency' is not an integer - this will probably not sort properly.
+[441] Biber.pm:132> WARN - BibTeX subsystem: warning: too many commas in name (removing extras)
+[441] Biber.pm:134> INFO - WARNINGS: 2
