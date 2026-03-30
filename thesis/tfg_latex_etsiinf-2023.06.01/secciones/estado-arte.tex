@@ -2,7 +2,11 @@
 
 Este capítulo constituye una recopilación de diversas tecnologías disponibles para implementar un servicio web de streaming de videos. Asimismo, se exploran distintos modelos de arquitectura empleados por las aplicaciones que ya brindan este servicio. 
 
+
 \section{Procesamiento, Transcodificación y Entrega de Video}
+
+\label{2.1}
+
 
 En esta sección se hace un análisis de las herramientas más comunes para procesar, almacenar, transcodificar y entregar los videos en la plataforma. 
 
@@ -85,7 +89,7 @@ DASH es un estándar abierto y empleado en gran cantidad de servicios de streami
     \item Brightcove, una empresa proveedora de servicios de software en la nube especializada en el alojamiento, distribución y gestión de video online, también ha informado que utiliza MPEG-DASH para la entrega de contenido multimedia.
     \item Bitmovin, otro proveedor de infraestructura de streaming, también ha confirmado que emplea MPEG-DASH en su plataforma para la entrega de video,.
     \item Vimeo, una plataforma de alojamiento de videos similar a YouTube, también ha confirmado que utiliza MPEG-DASH e implementa Adaptive Bitrate.
-    \item Odysee y Peertube, plataformas de videos descentralizadas y basadas en tecnologías blockchain, adoptan también MPEG-DASH para la entrega de contenido multimedia.
+    \item Odysee y \textit{PeerTube}, plataformas de videos descentralizadas y basadas en tecnologías blockchain, adoptan también MPEG-DASH para la entrega de contenido multimedia.
 \end{itemize}
 
 \subsection{HLS}
@@ -205,7 +209,7 @@ Existen diversas formas de implementar una cola de procesamiento. Por ejemplo, R
 
 La ventaja principal es que mejoran la experiencia de usuario. La subida de video suele ser un proceso rápido mientras que la transcodificación puede tardar minutos e incluso horas en finalizar. 
 
-Además, las colas de procesamiento facilitan la escalabilidad. Este modelo permite responder de forma efectiva ante picos de alta demanda sin colapsar el backend: los trabajos permanecen en un estado de espera en la cola. Para evitar que haya saturaciones o una gran cantidad de trabajos pendientes en ser atendidos, una solución común es añadir más workers según sea necesario. 
+Además, las colas de procesamiento facilitan la escalabilidad. Este modelo permite responder de forma efectiva ante picos de alta demanda sin colapsar el \textit{backend}: los trabajos permanecen en un estado de espera en la cola. Para evitar que haya saturaciones o una gran cantidad de trabajos pendientes en ser atendidos, una solución común es añadir más workers según sea necesario. 
 
 Por otra parte, también favorecen la priorización de trabajos, por ejemplo, dando paso a videos Premium o urgentes antes que el resto.
 
@@ -224,8 +228,8 @@ Cada servicio de streaming suele implementar su propia solución de colas de pro
 \end{itemize}
 
 
-
 \section{Análisis de Proveedores}
+\label{2.2}
 
 En esta sección se hace un estudio de los principales proveedores de infraestructura de streaming que se han considerado e implementado en el proyecto. Se analizan sus características, ventajas, desventajas, costos, facilidad de implementación e integración, entre otros aspectos relevantes. 
 
@@ -446,18 +450,23 @@ El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 =
     \label{tab:comparativa-proveedores}
 \end{table}
 
+
+
 \section{Modelos de Arquitectura}
 
-En esta sección se describen y analizan los tres principales modelos de arquitectura que se pueden emplear en un servicio de streaming de video. Estos incluyen el modelo centralizado, el modelo federado y el modelo peer-to-peer (P2P). Se explican las características de cada uno, sus ventajas, desventajas o debilidades, tecnologías típicas asociadas a cada modelo y ejemplos de servicios que integran alguno de estos en su arquitectura. 
+
+En esta sección se describen y analizan los tres principales modelos de arquitectura que se pueden emplear en un servicio de streaming de video. Estos incluyen el modelo centralizado y el modelo federado y el modelo peer-to-peer (P2P). Se explican las características de cada uno, sus ventajas, desventajas o debilidades, tecnologías típicas asociadas a cada modelo y ejemplos de servicios que integran alguno de estos en su arquitectura. 
 
 \subsection{Modelo Centralizado}
+
+\label{2.3.1}
 
 
 La arquitectura centralizada es el modelo más común y tradicional para plataformas de streaming de video, redes sociales y otros servicios web. En este modelo, una sola organización controla y gestiona los componentes fundamentales del sistema. Esto incluye la autenticación de usuarios, las bases de datos, la transcodificación de videos, el almacenamiento, la entrega de contenido, la moderación de contenido y los algoritmos de recomendación. 
 
 En otras palabras, esto quiere decir que la plataforma centralizada recibe los videos en servidores propios o contratados, los procesa con su infraestructura y finalmente, los entrega a la audiencia a través de su propia red de distribución. 
 
-Desde un punto de vista más técnico, la arquitectura centralizada se caracteriza por tener un backend monolítico o basado en microservicios, donde cada componente del sistema está gestionado por la misma organización.  Además, no siempre es un único servidor central, sino que puede haber copias del mismo distribuidas geográficamente, pero el control y la gestión de los servicios está siempre bajo la misma entidad.
+Desde un punto de vista más técnico, la arquitectura centralizada se caracteriza por tener un \textit{backend} monolítico o basado en microservicios, donde cada componente del sistema está gestionado por la misma organización.  Además, no siempre es un único servidor central, sino que puede haber copias del mismo distribuidas geográficamente, pero el control y la gestión de los servicios está siempre bajo la misma entidad.
 
 Normalmente, este tipo de plataformas se compone de una cadena de servicios que trabajan juntos para controlar de extremo a extremo el almacenamiento, procesamiento y la entrega del contenido. 
 
@@ -470,7 +479,7 @@ Normalmente, este tipo de plataformas se compone de una cadena de servicios que 
 
 \textbf{Flujo de operación del procesamiento de video}
 
-El flujo comienza cuando un usuario sube un video a la plataforma. Se carga un archivo desde el \textit{frontend} de la aplicación web o móvil hacia un servidor backend. A continuación, el servidor registra los metadatos del video (identificador, titulo, descripción, tags, visibilidad, duración, etc.) en una base de datos e intenta almacenar el video en un sistema de Object Storage. 
+El flujo comienza cuando un usuario sube un video a la plataforma. Se carga un archivo desde el \textit{frontend} de la aplicación web o móvil hacia un servidor \textit{backend}. A continuación, el servidor registra los metadatos del video (identificador, titulo, descripción, tags, visibilidad, duración, etc.) en una base de datos e intenta almacenar el video en un sistema de Object Storage. 
 
 Posteriormente, el archivo subido pasa a una cola de procesamiento, donde espera a ser atendido por un worker para ejecutar tareas de transcodificación. Herramientas como FFmpeg juegan un papel fundamental en esta etapa permitiendo convertir el video a diferentes formatos, resoluciones y bitrates y segmentarlo para adaptarlo a HLS o MPEG-DASH. En paralelo, se suelen generar miniaturas, extraer metadatos adicionales, generar subtítulos, entre otras tareas.
 
@@ -496,11 +505,12 @@ Por otra parte, en servicios de streaming de video, una arquitectura de este tip
 
 \textbf{Servicios que implementan este modelo}
 
-La mayor parte de los servicios de streaming y redes sociales utilizan este tipo de modelo, aunque cada una con sus propias variaciones. Entre estos destacan: YouTube, Rumble, Vimeo, Twitch, Instagram, Netflix, entre otros. También suele ser una opción popular para startups ya que es más fácil de implementar e integrar frontend, backend, procesamiento y distribución de video. 
+La mayor parte de los servicios de streaming y redes sociales utilizan este tipo de modelo, aunque cada una con sus propias variaciones. Entre estos destacan: YouTube, Rumble, Vimeo, Twitch, Instagram, Netflix, entre otros. También suele ser una opción popular para startups ya que es más fácil de implementar e integrar \textit{frontend}, \textit{backend}, procesamiento y distribución de video. 
 
 \pagebreak
 
 \subsection{Modelo Federado}
+
 
 La arquitectura federada no suele ser un modelo común en servicios de streaming de video, aunque es una opción realmente interesante. Aquí, múltiples servidores independientes llamados nodos o instancias, operan de forma autónoma aunque pueden comunicarse entre ellos mediante protocolos. Al contrario del modelo centralizado, en este caso no existe una única entidad que controle todo el sistema. Cada nodo es responsable de gestionar sus propios usuarios, almacenamiento, procesamiento, base de datos y políticas de moderación. Sin embargo, esto no significa que los nodos estén aislados: un usuario registrado en una instancia puede acceder y descubrir contenido que se encuentre en otra si ambas hablan el mismo protocolo de federación.
 
@@ -518,7 +528,7 @@ Lo especial de este modelo es su protocolo de comunicación o federación. Esto 
 
 \textbf{Flujo de Operación del procesamiento de video}
 
-El flujo comienza cuando un usuario sube un video a una instancia de la red. Se carga un archivo desde el \textit{frontend} de la aplicación hacia el backend de esa instancia. Esta se debió encargar de la autenticación del usuario primero y luego, el registro de los metadatos del video que se desea cargar. Además, esta misma capa se encarga de almacenar, procesar y entregar el contenido. 
+El flujo comienza cuando un usuario sube un video a una instancia de la red. Se carga un archivo desde el \textit{frontend} de la aplicación hacia el \textit{backend} de esa instancia. Esta se debió encargar de la autenticación del usuario primero y luego, el registro de los metadatos del video que se desea cargar. Además, esta misma capa se encarga de almacenar, procesar y entregar el contenido. 
 
 Una vez el video fue cargado, se sigue un flujo similar al del modelo centralizado, utilizando herramientas como FFmpeg y formatos de streaming como HLS o MPEG-DASH.
 
@@ -544,30 +554,59 @@ Como cada instancia define sus políticas y recursos, la experiencia de usuario 
 
 \textbf{Servicios que implementan este modelo}
 
-Este modelo no es común en servicios de streaming de videos. Sin embargo, existen aplicaciones que implementan este enfoque. El ejemplo más reconocido es PeerTube. 
+Este modelo no es común en servicios de streaming de videos. Sin embargo, existen aplicaciones que implementan este enfoque. El ejemplo más reconocido es \textit{PeerTube}. 
 En general, este enfoque suele ser adoptado por comunidades que priorizan descentralización, soberanía digital, independencia tecnológica y control local sobre la infraestructura.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.5\linewidth]{portada/peertubelogo.png  }
-  \caption{Logo de PeerTube}
+  \caption{Logo de \textit{PeerTube}}
 \end{figure}
 
 
-\subsection{Modelo P2P}
+\subsection{Modelo Peer-to-Peer (P2P)}
+
+Esta arquitectura, aunque menos convencional, es otra alternativa para implementar una red social o un servicio streaming de videos. Este es un modelo distribuido en el que cada cliente o nodo de la red puede actuar como consumidor o proveedor de contenido. Es distinto a la arquitectura centralizada en el modo de operación. La entrega de contenido de distribuye entre varias instancias independientes y no hay una dependencia con una organización que controle toda la infraestructura principal. Por otra parte, se diferencia del modelo federado debido a los protagonistas que forman parte de la red. En el federado, la red se compone de servidores independientes y autónomas que se comunican entre sí, mientras que en el P2P, son los propios pares de la red los que toman un papel más importante.
+
+Esto quiere decir que en P2P, los usuarios comparten fragmentos de video o archivos directamente entre ellos. Esto contrasta con el modelo centralizado donde se recibe el contenido desde la infraestructura principal controlada por la organización y además, con el federado, donde el contenido depende del nodo que lo almacena. 
+
+Normalmente, los archivos de videos en este tipo de arquitecturas se dividen en bloques o fragmentos que pueden descargarse desde varios nodos a la vez. Es decir, partes de un mismo video pueden estar distribuidas en distintos nodos de la red.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{portada/p2p.png }
+  \caption{Diagrama de una red Peer-To-Peer}
+\end{figure}
 
 
+\textbf{Flujo de procesamiento de video}
 
+El flujo comienza cuando un usuario publica un video dentro de la red. Dependiendo de las implementaciones, este archivo puede almacenarse en uno o varios nodos a la vez y dividirse en fragmentos entre ellos para facilitar su distribución. A continuación, la red utiliza mecanismos de descubrimiento para que otros pares puedan localizar el contenido y los nodos que lo tienen. 
 
+Cuando un usuario intenta acceder al video, no siempre lo descarga desde una única fuente, ya que este puede estar fragmentado en varios nodos al mismo tiempo. Por tanto, el cliente se encarga de reconstruir el contenido a medida que recibe la información. Esto claramente se diferencia de los dos métodos anteriores en donde se tiene un origen claramente identificable. 
 
+Las tecnologías más populares para este modelos son BitTorrent, WebTorrent y IPFS. Estas, intentan distribuir los datos entre los pares de la red (clientes) mientras que el federado lo hace entre instancias (servidores independientes y autónomos) de la red.
 
+\textbf{Ventajas}
 
+Se reduce la dependencia de una infraestructura central para distribuir el contenido, lo cual puede significar una disminución en costos e incrementar la tolerancia a fallos. 
 
+Además, este modelo tiene una escalabilidad elevada. Cuantos más clientes accedan a un mismo contenido, más pares lo tendrán y lo distribuirán. A diferencia del modelo centralizado donde un aumento de la demanda incrementa la carga de un servidor central, en esta arquitectura esta carga de distribuye entre los nodos de la red. 
 
+\textbf{Desventajas}
 
+La disponibilidad del contenido depende de la cantidad de pares conectados. Si pocos usuarios comparten un archivo, el acceso se volverá lento e inestable arruinando la experiencia de usuario. 
 
+Asimismo, la moderación y eliminación de contenido resulta más difícil que en los otros modelos. En los otros casos, la moderación dependía de las políticas establecidas por un servidor mientras que en este caso no.
 
+Implementar una solución P2P añade más complejidad y esfuerzo de desarrollo que un modelo centralizado. Además del procesamiento, se deben sincronizar datos entre pares, distribuir fragmentos de archivos, recopilar información y localización del contenido distribuido por varias partes de la red, entre otros problemas de sincronización y comunicación.
 
+\textbf{Servicios que utilizan P2P}
 
+No existen servicios de streaming de videos que utilicen P2P puro. Sin embargo, una plataforma ampliamente reconocida que usa una base P2P es \textit{Odysee}, una alternativa a YouTube descentralizada.
 
-
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{portada/odysee.png }
+  \caption{Logo de \textit{Odysee}}
+\end{figure}
