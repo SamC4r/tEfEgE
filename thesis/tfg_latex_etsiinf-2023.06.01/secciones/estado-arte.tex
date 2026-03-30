@@ -271,7 +271,7 @@ Uno tendería a pensar que esta solución es más eficiente en términos de cost
 
 \textbf{Servicios que emplean AWS}
 
-Algunos Servicios de streaming que emplean AWS o utilizan servicos de AWS para su infraestructura son:
+Algunos Servicios de streaming que emplean AWS o utilizan servicios de AWS para su infraestructura son:
 
 \begin{itemize}
     \item Netflix, para su infraestructura de streaming, utiliza AWS para almacenar y entregar su contenido multimedia.
@@ -283,15 +283,120 @@ Algunos Servicios de streaming que emplean AWS o utilizan servicos de AWS para s
 
 \textbf{Análisis de Costos}
 
+Para calcular es costo aproximado de esta solución, se deben considerar cada uno de los componentes del proceso por separado. Aunque más tarde, se detallará el funcionamiento y la razón de uso de cada uno de estos servicios, a continuación se hace un desglose de los costos aproximados para cada uno de los servicios:
 
+\begin{itemize}
+    \item Amazon S3 Buckets: Suponiendo $500$ GB de datos almacenados cada mes y tomando el precio para la región de España de un S3 Bucket Standard (\$ $0.023$ por GB) el costo total es: $500 \text{ GB } \cdot 0.023 \$ \text{ por GB} = \$11.5 $ al mes.
+    \item Amazon EC2: Suponiendo un \lstinline|t3.medium| que trabaja 24 horas por día, y tomando el precio por hora de \$ $0.0416$ el costo total es: $0.0416 \$ \text{ por hora} \cdot 24 \text{ horas por día} \cdot 30 \text{ días por mes} = \$29.95$ al mes.
+    \item Amazon SQS: Suponiendo 2 millones de solicitudes al mes, y tomando  \$ $0.40$ como el precio estándar por cada millón de solicitudes, el costo total es: $2 \text{ millones de solicitudes} \cdot 0.40 \$ \text{ por millón de solicitudes} = \$0.80$ al mes.
+    \item Amazon CloudFront: Si entrego 2TB de datos al mes y tomando el precio para la región de Europa de \$ $0.09$ por GB, el costo total es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.09 \$ \text{ por GB} = \$184.32$ al mes.
+\end{itemize}
 
-
+Sumando cada uno de estos costos, el costo total aproximado para esta solución es: $\$11.5 + \$29.95 + \$0.80 + \$184.32 = \$226.57$ al mes.
 
 
 
 \subsection{Mux.com}
 
+Mux es un proveedor de infraestructura de streaming de video orientada a desarrolladores. Permite subir videos, procesarlos, entregarlos, almacenarlos, gestionarlos, acceder a estadísticas, entre otras funcionalidades. Mux, facilita el proceso de desarrollo ya que se encarga de gestionar y mantener la infraestructura de streaming. Por esta razón, es una opción común para aquellos equipos que no dispongan de los recursos o el tiempo necesario para implementar una solución propia.  
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\linewidth]{portada/mux-logo.png}
+  \caption{Logo de Mux}
+\end{figure}
+
+\textbf{Ventajas}
+
+Reduce el tiempo de desarrollo, los recursos necesarios y la complejidad de la implementación. Mux, se encarga de resolver los problemas de almacenamiento, entrega y procesamiento de video, lo que permite a los desarrolladores centrarse en otras áreas del proyecto.
+
+Mux, ofrece una documentación clara y una API flexible y fácil de usar con una gran variedad de funcionalidades. Tiene soporte para una amplia variedad de tecnologías web, lenguajes de programación y frameworks facilitando su integración en cualquier tipo de proyecto. Esto lo hace ideal para equipos pequeños o para demostrar un producto mínimo viable (MVP) de forma rápida y barata. 
+
+A su vez, Mux ofrece características adicionales como visitas del video, análisis de tiempo de retención, geolocalización de los usuarios, entre otras estadísticas de video. 
+
+\textbf{Desventajas}
+
+Al depender de un proveedor externo, se pierde el control sobre la arquitectura de procesamiento de los videos o posibles optimizaciones personalizadas que se deseen implementar. 
+
+Puede resultar en una opción costosa a largo plazo, en especial para proyectos de gran escala o aquellos que esperen un crecimiento importante en el tráfico, volumen de datos, o videos subidos. Además, al ser un servicio de terceros, se está sujeto a las políticas de precios o cambios en la plataforma. 
+
+
+\textbf{Servicios que emplean Mux}
+
+Mux resulta un proveedor de infraestructura de streaming popular en el sector, en particular para proyectos pequeños, startups o empresas medianas. Algunos de los servicios que emplean Mux son: 
+
+\begin{itemize}
+    \item Patreon, una plataforma de membresías, lo utiliza para integrar videos nativos en su plataforma
+    \item Typeform, una plataforma diseñada para crear encuestas, emplea este servicio para incluir preguntas en video u otras funciones de videos en sus cuestionarios.
+    \item Shopify, una empresa de \textit{e-commerce}, utiliza en ciertas circunstancias la infraestructura de Mux para mostrar videos sobre los productos que vende.   
+\end{itemize}
+
+
+\textbf{Análisis de Costos}
+
+Según la página oficial de precios de Mux \cite{mux-pricing} y tomando como supuestos las cantidades de almacenamiento y transferencia anteriores:
+
+\begin{itemize}
+    \item El tipo de recurso a transmitir es \textit{On Demand Video}
+    \item La resolución máxima es 1080p
+    \item La calidad de video es \textit{Basic}
+    \item La cantidad de GB almacenados por mes son $500 \text{ GB }$.
+    \item La cantidad de datos transferidos por mes son 2 TB.  
+    \item La cantidad de GB procesados por mes son 500 GB. 
+\end{itemize}
+
+Con estas estimaciones, el costo aproximado por mes es $\$ 20.00$. Sin embargo, cabe destacar que si se considera usar una calidad de video superior como \textit{Plus}, el precio se vería disparado hasta $\$ 321.64$ por mes.
+
+
 \subsection{Bunny.net}
+
+Bunny.net es una plataforma que ofrece varios servicios. Entre ellos, se encuentra la entrega de contenido mediante CDNs, almacenamiento de objetos, streaming de videos, optimización de imágenes, seguridad contra ataques DDoS. El principal punto fuerte de Bunny.net es su precio competitivo en comparación con otros proveedores de infraestructura de streaming. Sin embargo, su integración requiere un mayor esfuerzo de desarrollo.  
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\linewidth]{portada/bunnynet-logo.png   }
+  \caption{Logo de Bunny.net}
+\end{figure}
+
+\textbf{Ventajas}
+
+La principal ventaja de Bunny.net son sus precios reducidos. El almacenamiento, procesamiento y distribución de contenido multimedia es costoso, pero sorprendentemente, Bunny.net ofrece una solución barata en comparación con una solución propia u otros proveedores de infraestructura de streaming. Esto lo hace ideal para proyectos con una escala pequeña o para entregar un producto mínimo viable (MVP) de forma rápida y barata.
+
+BunnyStream, el servicio de streaming de Bunny.net, integra CDN, transcodificación, procesamiento de video, almacenamiento, estadísticas avanzadas, subtítulos automáticos, personalización del reproductor, entre otras funcionalidades. Esto lo convierte en una opción interesante para startups que busquen una solución completa y económica para su servicio de streaming.
+
+
+
+
+\textbf{Desventajas}
+
+De forma similar a Mux, al depender de un proveedor externo, se pierde control sobre la arquitectura de procesamiento de los videos, incluyendo optimizaciones personalizadas. Para una escala más grande, puede resultar ineficiente y en este caso, sería más recomendable implementar una solución propia con servicios de AWS o similares.
+
+Asimismo, en comparación con Mux, Bunny.net tiene una documentación más limitada y no tan exhaustiva como en el caso de Mux. Esto dificulta la integración y el uso de algunas de sus funcionalidades. Emplear Bunny.net, requiere más tiempo, recursos y esfuerzos de desarrollo que Mux, lo que puede no ser ideal para equipos pequeños o con recursos limitados. 
+
+Otro aspecto importante a destacar es que Bunny.net ofrece menos personalización que Mux. BunnyStream incorpora un reproductor de video con diversas opciones pero no siempre se puede adaptar el estilo del reproductor de forma completa y sencilla a las necesidades de una empresa. 
+
+\textbf{Servicios que emplean Bunny.net}
+
+Bunny.net es una alternativa menos conocida que otras, siendo una opción más común para proyectos pequeños o medianos. Algunos de los servicios que emplean Bunny.net son:
+
+\begin{itemize}
+    \item Younity, una aplicación de desarrollo personal, integra BunnyStream para streaming de sus cursos en vivo y bajo demanda.
+    \item STIRR, un servicio americano de streaming de TV y películas, emplea Bunny.net para la entrega de su contenido multimedia.
+    \item Circle.so, una plataforma de comunidades online, utiliza Bunny.net para la entrega de videos. 
+\end{itemize}
+
+\textbf{Análisis de Costos}
+
+Tomando los mismos supuestos que en el caso de Mux o AWS y los datos publicados en la web oficial de Bunny.net \cite{bunny-pricing}, el desglose de los costos aproximados es el siguiente.
+
+\begin{itemize}
+    \item Almacenando $500$ GB por mes, con un precio de \$ $0.01$ por GB, el costo total es: $500 \text{ GB} \cdot 0.01 \$ \text{ por GB} = \$5.00$ al mes.
+    \item Para un procesamiento básico de video \footnote{Un procesamiento básico incluye funcionalidades como transcodificación, Adaptive Bitrate, salidas con códecs x264 y resoluciones configurables desde 240p hasta 2160p. El plan básico no tiene códecs más avanzados ni prioridades en las colas de procesamiento. } Bunny.net no cobra. Por tanto para el supuesto de $500 GB$ procesados por mes el costo es \$ $0.00$ al mes.
+    \item Los costos de transferencia varían según la cantidad de CDNs utilizados y cuáles. Utilizando 3 CDNs se obtiene $0.005$ \$ por GB. Por tanto, el precio por mes para $2$ TB de entrega de datos es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.005 \$ \text{ por GB} = \$10.24$
+\end{itemize}
+
+El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 = \$15.24$ al mes, lo que la convierte en una opción increíblemente económica en comparación con otras alternativas. Asimismo, si elegimos una calidad de video superior, el precio no se vería tan afectado como en el caso de Mux.     
+
 
 
 
