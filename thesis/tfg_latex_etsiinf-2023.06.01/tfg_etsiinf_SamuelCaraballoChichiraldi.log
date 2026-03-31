@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  31 MAR 2026 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  31 MAR 2026 20:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1374,39 +1374,94 @@ File: portada/neondb.png Graphic file (type png)
 <use portada/neondb.png>
 Package pdftex.def Info: portada/neondb.png  used on input line 93.
 (pdftex.def)             Requested size: 170.71393pt x 56.61966pt.
+
+Underfull \vbox (badness 1924) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 106.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+ [32 <./portada/PostgreSQL.png> <./portada/neondb.png>]
+<portada/supabase.png, id=712, 200.75pt x 69.25874pt>
+File: portada/supabase.png Graphic file (type png)
+<use portada/supabase.png>
+Package pdftex.def Info: portada/supabase.png  used on input line 113.
+(pdftex.def)             Requested size: 170.71393pt x 58.89978pt.
+LaTeX Info: Redefining \sptext on input line 134.
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
+ [33 <./portada/supabase.png>]
+<portada/drizzle-orm.png, id=723, 129.48375pt x 38.39343pt>
+File: portada/drizzle-orm.png Graphic file (type png)
+<use portada/drizzle-orm.png>
+Package pdftex.def Info: portada/drizzle-orm.png  used on input line 152.
+(pdftex.def)             Requested size: 170.71393pt x 50.62381pt.
+LaTeX Info: Redefining \sptext on input line 169.
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+ [34 <./portada/drizzle-orm.png>]
+<portada/trpc-logo.png, id=732, 861.2175pt x 256.96pt>
+File: portada/trpc-logo.png Graphic file (type png)
+<use portada/trpc-logo.png>
+Package pdftex.def Info: portada/trpc-logo.png  used on input line 188.
+(pdftex.def)             Requested size: 170.71393pt x 50.93626pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Font shape `T1/pbk/b/it' in size <10.95> not available
+(Font)              Font shape `T1/pbk/db/it' tried instead on input line 195.
+LaTeX Info: Redefining \sptext on input line 197.
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+[35]
+<portada/prefetch-diagram.png, id=738, 1806.75pt x 1606.0pt>
+File: portada/prefetch-diagram.png Graphic file (type png)
+<use portada/prefetch-diagram.png>
+Package pdftex.def Info: portada/prefetch-diagram.png  used on input line 203.
+(pdftex.def)             Requested size: 426.79135pt x 379.3705pt.
+LaTeX Info: Redefining \sptext on input line 208.
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
+ [36 <./portada/trpc-logo.png> <./portada/prefetch-diagram.png (PNG copy)>]
+LaTeX Info: Redefining \sptext on input line 230.
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+ [37]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 233.
 ) (secciones/innovaciones.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [32 <./portada/PostgreSQL.png> <./portada/neondb.png>]
+ [38]
 Cap\'{\i }tulo 4.
-) (secciones/requisitos.tex [33
+) (secciones/requisitos.tex [39
 
-] [34
+] [40
 
 ]
 Cap\'{\i }tulo 5.
-) (secciones/diseno-arquitectura.tex [35] [36
+) (secciones/diseno-arquitectura.tex [41] [42
 
 ]
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [37] [38
+) (secciones/desarrollo.tex [43] [44
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [39] [40
+) (secciones/pruebas.tex [45] [46
 
 ]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [41] [42
+) (secciones/conclusiones.tex [47] [48
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [43] [44
+) (secciones/impacto.tex [49] [50
 
 ]
 Cap\'{\i }tulo 10.
-) [45] [46
+) [51] [52
 
 ]
 Overfull \hbox (7.39021pt too wide) in paragraph at lines 191--191
@@ -1433,26 +1488,21 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 191--191
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[47
+[53
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 191--191
 []\T1/pbk/l/n/10.95 H. P. G. T. F. Cas-per Haems Je-roen van der Hooft. ^^S  Hy-brid Uni-cast^^UBroadcast
  []
 
-
-Overfull \hbox (5.07603pt too wide) in paragraph at lines 191--191
-[]$\T1/pcr/m/n/10.95 https : / / neon . com / docs / extensions / pgvector ? utm _ source = chatgpt .
- []
-
 LaTeX Info: Redefining \sptext on input line 192.
 LaTeX Info: Redefining \. on input line 192.
 LaTeX Info: Redefining \% on input line 192.
-[48] [49
+[54] [55
 
-] [50] (secciones/anexo1.tex
+] [56] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [51
+) [57
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1467,23 +1517,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: 9588ACDE2FE4B83302020925AD6D017A;15315.
+(rerunfilecheck)             Checksum: 7158EE351712E8B41D25C86B9F6DB3C0;15316.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34546 strings out of 467871
- 651599 string characters out of 5419344
- 1581460 words of memory out of 5000000
- 62622 multiletter control sequences out of 15000+600000
- 660036 words of font info for 100 fonts, out of 8000000 for 9000
+ 34640 strings out of 467871
+ 653702 string characters out of 5419344
+ 1581958 words of memory out of 5000000
+ 62697 multiletter control sequences out of 15000+600000
+ 662750 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1296b,2662s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (61 pages, 3422265 bytes).
+<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (67 pages, 3568322 bytes).
 PDF statistics:
- 920 PDF objects out of 1000 (max. 8388607)
- 205 named destinations out of 1000 (max. 500000)
- 744 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 981 PDF objects out of 1000 (max. 8388607)
+ 221 named destinations out of 1000 (max. 500000)
+ 764 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -647,10 +647,103 @@
       \field{year}{2022}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://neon.com/docs/extensions/pgvector?utm_source=chatgpt.com
+      \verb https://neon.com/docs/extensions/pgvector
       \endverb
       \verb{url}
-      \verb https://neon.com/docs/extensions/pgvector?utm_source=chatgpt.com
+      \verb https://neon.com/docs/extensions/pgvector
+      \endverb
+    \endentry
+    \entry{drizzle}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=5bfc42ce7717172f6e1f5ebc6d413a93}{%
+           family={{Drizzle}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{fullhash}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{fullhashraw}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{bibnamehash}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{authorbibnamehash}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{authornamehash}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{authorfullhash}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \strng{authorfullhashraw}{5bfc42ce7717172f6e1f5ebc6d413a93}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Drizzle ORM - Why Drizzle?}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://orm.drizzle.team/docs/overview
+      \endverb
+      \verb{url}
+      \verb https://orm.drizzle.team/docs/overview
+      \endverb
+    \endentry
+    \entry{trpc-concepts}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=2efeea76f44048574b585433ea90c5bc}{%
+           family={{tRPC}},
+           familyi={t\bibinitperiod}}}%
+      }
+      \strng{namehash}{2efeea76f44048574b585433ea90c5bc}
+      \strng{fullhash}{2efeea76f44048574b585433ea90c5bc}
+      \strng{fullhashraw}{2efeea76f44048574b585433ea90c5bc}
+      \strng{bibnamehash}{2efeea76f44048574b585433ea90c5bc}
+      \strng{authorbibnamehash}{2efeea76f44048574b585433ea90c5bc}
+      \strng{authornamehash}{2efeea76f44048574b585433ea90c5bc}
+      \strng{authorfullhash}{2efeea76f44048574b585433ea90c5bc}
+      \strng{authorfullhashraw}{2efeea76f44048574b585433ea90c5bc}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Concepts | tRPC}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://trpc.io/docs/concepts
+      \endverb
+      \verb{url}
+      \verb https://trpc.io/docs/concepts
+      \endverb
+    \endentry
+    \entry{nextjs-app}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=93e33013fe43f0e2af530834675b7b43}{%
+           family={{Next.Js}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{93e33013fe43f0e2af530834675b7b43}
+      \strng{fullhash}{93e33013fe43f0e2af530834675b7b43}
+      \strng{fullhashraw}{93e33013fe43f0e2af530834675b7b43}
+      \strng{bibnamehash}{93e33013fe43f0e2af530834675b7b43}
+      \strng{authorbibnamehash}{93e33013fe43f0e2af530834675b7b43}
+      \strng{authornamehash}{93e33013fe43f0e2af530834675b7b43}
+      \strng{authorfullhash}{93e33013fe43f0e2af530834675b7b43}
+      \strng{authorfullhashraw}{93e33013fe43f0e2af530834675b7b43}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Next.Js Docs: App Router}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{March 31, 2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://nextjs.org/docs/app
+      \endverb
+      \verb{url}
+      \verb https://nextjs.org/docs/app
       \endverb
     \endentry
   \enddatalist
