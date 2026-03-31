@@ -2392,6 +2392,7 @@
     <bcf:citekey order="16" intorder="1">mux-pricing</bcf:citekey>
     <bcf:citekey order="17" intorder="1">bunny-pricing</bcf:citekey>
     <bcf:citekey order="18" intorder="1">activitypub</bcf:citekey>
+    <bcf:citekey order="19" intorder="1">pgvector</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

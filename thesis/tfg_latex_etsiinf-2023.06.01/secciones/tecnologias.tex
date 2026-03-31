@@ -1,18 +1,110 @@
 \chapter{Tecnologías Empleadas}
 
-
 Debido a la facilidad de implementación y a sus ventajas, se ha empleado una arquitectura centralizada para el desarrollo del proyecto según se describe en \ref{2.3.1}. No obstante, sería interesante explorar soluciones distribuidas como posibles ampliaciones. 
 
-En cuanto al procesamiento, transcodificación y entrega de video se probaron las tres alternativas mencionadas en \ref{2.2}. Para la solución propia se hizo uso de los servicios de Amazon Web Service con las tecnologías descritas en \ref{2.1} 
+En cuanto al procesamiento, transcodificación y entrega de video se probaron las tres alternativas mencionadas en \ref{2.2}. Para la solución propia se hizo uso de los servicios de Amazon Web Service con las tecnologías descritas en \ref{2.1}.
 
 Para la creación de un Producto Mínimo Viable se ha decido implementar una página web debido a su facilidad de acceso desde cualquier dispositivo y a la adecuación de los \textit{frameworks} y tecnologías web a los objetivos del proyecto. Por ese motivo, a continuación se presentan las tecnologías utilizadas.
 
 
 \section{Backend}
 
-\subsection{Typescript como lenguaje de programación}
+El backend es el conjunto de componentes que gestionan la lógica de negocio de una aplicación software, procesan datos, interactúan con la base de datos y administran la seguridad. Existe una amplia gama de tecnologías disponibles para seleccionar, especialmente en un entorno web. En esta sección, se analizarán las tecnologías preferidas y empleadas para la implementación de este servicio de streaming de videos en formato web.  
 
+\subsection{TypeScript como lenguaje de programación}
+
+TypeScript es un lenguaje de programación desarrollado por Microsoft y es una extensión de JavaScript. Lo especial de este es que incorpora tipado estático y mejores herramientas para detectar errores durante el desarrollo y no en producción. Esto ayuda a estructurar y crear proyectos software de forma más efectiva, permitiendo un mantenimiento del código más fácil.
+
+En el caso del proyecto Booster, TypeScript resulta una herramienta útil debido a que el sistema integra múltiples capas de lógica como gestión de usuario, publicación y edición de metadatos de videos, autenticación, creación de comunidades y relación con la base de datos y el servidor. Por tanto, en este tipo de aplicaciones con un gran número de objetos de datos estructurados y bien definidos (usuario, videos, comunidades), el uso de tipado fuerte ayuda a reducir inconsistencias, detectar errores más fácilmente y mejorar la mantenibilidad del código. 
+
+Más técnicamente, a diferencia de JavaScript, en TypeScript se pueden definir estructuras complejas y detectar errores de forma más clara. A modo de ejemplo, se pueden declarar variables de la siguiente forma:
+
+
+\begin{lstlisting}[language=c]
+    // con ':' se indica el tipo de la variable 
+    //a diferencia de JavaScript donde solo se incluye un let. 
+    saludos: string = "Hola"; 
+    contador: number = 42;
+    isFun: boolean = true;
+    notas: number[] = [10,10,9.8];
+
+    const user = {
+        firstName: "Samuel",
+        lastName: "Caraballo",
+        role: "Autor",
+    }
+
+    
+    console.log(user.name) // Property 'name' does not exist on type
+                          //  '{ firstName: string; lastName: string; 
+                          //role: string; }'.
+
+\end{lstlisting}
+
+
+De esta forma, se pueden detectar errores durante el desarrollo que por el contrario, serían más complejos de identificar. Es común, olvidarse del tipo de una variable e intentar hacer operaciones no permitidas para ese tipo. TypeScript, lo detecta automáticamente pero JavaScript, no es consciente de esto y en consecuencia se generan errores difíciles de detectar.  
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.2\linewidth]{portada/typescript.png }
+  \caption{Logo de TypeScript}
+\end{figure}
+
+\pagebreak
+\textbf{Ventajas}
+
+Su principal ventaja es la detección temprana de errores. Esto es importante en proyectos con una base de código grande, donde un pequeño fallo en la estructura de datos puede provocar errores más importantes y arruinar el servicio. 
+
+Asimismo, el uso de typescript mejora la escalabilidad del proyecto permitiendo mantener un código más consistente y legible. 
+
+El uso de TypeScript es importante en la industria y por esa razón, tiene una gran integración con herramientas modernas de desarrollo de aplicaciones web como Next.Js, Drizzle, tRPC, entre otros. 
+
+\textbf{Desventajas}
+
+Emplear TypeScript, requiere destinar más tiempo a la definición de tipos, lo cual incrementa el tiempo de desarrollo porque requiere mantener precisión y consistencia en todo el proyecto. Por tanto, esto añade complejidad adicional en comparación con JavaScript.
+
+\textbf{Uso de Typescript}
+
+TypeScript, se ha consolidad como una de las tecnologías más utilizadas en el desarrollo web actual. Es el lenguaje por excelencia para la capa \textit{backend} en plataformas SaaS, redes sociales y otras aplicaciones. La necesidad de compartir modelos de datos es un requerimiento frecuente en proyectos grandes y que utilizan tecnologías modernas como React.Js, Next.Js, Node.js, Express, entre otros. 
+
+En Booster, al ser un proyecto de código abierto, TypeScript se emplea como lenguaje principal de programación para la integración de las distintas tecnologías, garantizar precisión y consistencia, detectar errores tempranos, mejorar la mantenibilidad y mantener la coherencia entre \textit{backend} y \textit{frontend}. 
 \subsection{Base de Datos}
+
+La base de datos es uno de los componentes más importantes en las aplicaciones software. Esto se debe a que constituye el sistema encargado de almacenar, consultar y actualizar la información del servicio. Para los objetivos de Booster, la base de datos debe permitir realizar consultas complejas de forma eficiente, integrarse con tecnologías modernas y soportar funcionalidades avanzadas como embeddings para implementar la búsqueda semántica de videos. 
+
+Por estas razones, Booster integra una base de datos \textbf{PostgreSQL} como sistema principal. Este es un gestor de base de datos relacionales ampliamente utilizado en aplicaciones de todo tipo. Su funcionamiento está basado en el modelo relacional, donde la información se ordena y almacena en tablas, filas y columnas. Las relaciones, se modelas mediante claves primarias y foráneas. Este enfoque es el más adecuado para Booster ya que la información de usuarios, videos, comunidades es claramente estructurada. Además, este gestor de base de datos ofrece una gran cantidad de funcionalidades avanzadas, integridad referencial, un gran rendimiento en producción y una buena escalabilidad.
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\linewidth]{portada/PostgreSQL.png }
+  \caption{Logo de PostgreSQL}
+\end{figure}
+
+\textbf{Uso de PostgreSQL - NeonDB}
+
+En Booster, PostgreSQL se integra a través de una plataforma de base de datos moderna y serverless diseñada para la nube conocida como \textbf{NeonDB}.
+
+NeonDB ofrece una arquitectura que separa almacenamiento y cómputo para ofrecer un escalado más flexible y administrar mejor la base de datos. Además, está especialmente diseñada para soportar funcionalidades de \textbf{Inteligencia Artificial}. En el caso de Booster, se han empleado extensiones como \lstinline|pgvector| para almacenar embeddings y realizar búsquedas semánticas de los títulos y descripciones de los videos. \cite{pgvector} Esta capacidad, permite realizar búsquedas más inteligentes en comparación a las búsquedas literales. Con esto, se puede encontrar contenido relacionado por significado y mejorar el sistema de recomendación ante una búsqueda en lenguaje natural. 
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.4\linewidth]{portada/neondb.png }
+  \caption{Logo de NeonDB}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
 
 \subsection{ORMs}
 

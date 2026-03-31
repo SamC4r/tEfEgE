@@ -622,6 +622,37 @@
       \verb https://activitypub.rocks/
       \endverb
     \endentry
+    \entry{pgvector}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=7a5ea03d401ee10e7b9dfe5648d07816}{%
+           family={{Neon}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{fullhash}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{fullhashraw}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{bibnamehash}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{authorbibnamehash}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{authornamehash}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{authorfullhash}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \strng{authorfullhashraw}{7a5ea03d401ee10e7b9dfe5648d07816}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The pgvector extension}
+      \field{urlday}{31}
+      \field{urlmonth}{3}
+      \field{urlyear}{2026}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://neon.com/docs/extensions/pgvector?utm_source=chatgpt.com
+      \endverb
+      \verb{url}
+      \verb https://neon.com/docs/extensions/pgvector?utm_source=chatgpt.com
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

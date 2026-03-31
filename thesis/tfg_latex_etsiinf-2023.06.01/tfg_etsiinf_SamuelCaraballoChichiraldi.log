@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  30 MAR 2026 21:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  31 MAR 2026 14:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -920,12 +920,12 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-LaTeX Font Info:    Trying to load font information for T1+pbk on input line 118.
+LaTeX Font Info:    Trying to load font information for T1+pbk on input line 121.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pbk.fd
 File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
 )
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <10.95> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 118.
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 121.
  (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -936,26 +936,26 @@ LaTeX Info: Redefining \% on input line 16.
 )
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 118.
-LaTeX Font Info:    ... okay on input line 118.
-LaTeX Info: Redefining \. on input line 118.
-LaTeX Info: Redefining \% on input line 118.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 121.
+LaTeX Font Info:    ... okay on input line 121.
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1009,8 +1009,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tfg_etsiinf_SamuelCaraballoChichiraldi.bbl' found.
  (tfg_etsiinf_SamuelCaraballoChichiraldi.bbl)
-Package biblatex Info: Reference section=0 on input line 118.
-Package biblatex Info: Reference segment=0 on input line 118.
+Package biblatex Info: Reference section=0 on input line 121.
+Package biblatex Info: Reference segment=0 on input line 121.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count496
@@ -1030,7 +1030,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 118.
+Package hyperref Info: Link coloring OFF on input line 121.
  (tfg_etsiinf_SamuelCaraballoChichiraldi.out) (tfg_etsiinf_SamuelCaraballoChichiraldi.out)
 \@outlinefile=\write5
 \openout5 = `tfg_etsiinf_SamuelCaraballoChichiraldi.out'.
@@ -1126,9 +1126,9 @@ LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
 \tf@toc=\write6
 \openout6 = `tfg_etsiinf_SamuelCaraballoChichiraldi.toc'.
 
-LaTeX Info: Redefining \sptext on input line 130.
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
+LaTeX Info: Redefining \sptext on input line 133.
+LaTeX Info: Redefining \. on input line 133.
+LaTeX Info: Redefining \% on input line 133.
  [7] [8
 
 ] (secciones/intro.tex
@@ -1330,83 +1330,129 @@ LaTeX Info: Redefining \% on input line 1.
 
 ]
 Cap\'{\i }tulo 3.
-) (secciones/innovaciones.tex
+[29] (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+Overfull \hbox (19.97226pt too wide) in paragraph at lines 38--39
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.54231pt too wide) in paragraph at lines 39--40
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<portada/typescript.png, id=670, 1284.8pt x 1284.8pt>
+File: portada/typescript.png Graphic file (type png)
+<use portada/typescript.png>
+Package pdftex.def Info: portada/typescript.png  used on input line 49.
+(pdftex.def)             Requested size: 85.35696pt x 85.33813pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+LaTeX Info: Redefining \sptext on input line 54.
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+ [30 <./portada/typescript.png>]
+<portada/PostgreSQL.png, id=696, 612.2875pt x 281.05pt>
+File: portada/PostgreSQL.png Graphic file (type png)
+<use portada/PostgreSQL.png>
+Package pdftex.def Info: portada/PostgreSQL.png  used on input line 80.
+(pdftex.def)             Requested size: 170.71393pt x 78.35895pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 86.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
+[31]
+<portada/neondb.png, id=702, 451.6875pt x 149.8097pt>
+File: portada/neondb.png Graphic file (type png)
+<use portada/neondb.png>
+Package pdftex.def Info: portada/neondb.png  used on input line 93.
+(pdftex.def)             Requested size: 170.71393pt x 56.61966pt.
+) (secciones/innovaciones.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [30]
+ [32 <./portada/PostgreSQL.png> <./portada/neondb.png>]
 Cap\'{\i }tulo 4.
-) (secciones/requisitos.tex [31
+) (secciones/requisitos.tex [33
 
-] [32
+] [34
 
 ]
 Cap\'{\i }tulo 5.
-) (secciones/diseno-arquitectura.tex [33] [34
+) (secciones/diseno-arquitectura.tex [35] [36
 
 ]
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [35] [36
+) (secciones/desarrollo.tex [37] [38
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [37] [38
+) (secciones/pruebas.tex [39] [40
 
 ]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [39] [40
+) (secciones/conclusiones.tex [41] [42
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [41] [42
+) (secciones/impacto.tex [43] [44
 
 ]
 Cap\'{\i }tulo 10.
-) [43] [44
+) [45] [46
 
 ]
-Overfull \hbox (7.39021pt too wide) in paragraph at lines 188--188
+Overfull \hbox (7.39021pt too wide) in paragraph at lines 191--191
 \T1/pbk/l/n/10.95 di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / s22 . q4cdn . com / 959853165 / files / doc _ financials /
  []
 
 
-Overfull \hbox (4.1522pt too wide) in paragraph at lines 188--188
+Overfull \hbox (4.1522pt too wide) in paragraph at lines 191--191
 \T1/pbk/l/n/10.95 sults^^T, vi-si-ta-do 26 de mar. de 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / investor . atmeta .
  []
 
 
-Overfull \hbox (0.74391pt too wide) in paragraph at lines 188--188
+Overfull \hbox (0.74391pt too wide) in paragraph at lines 191--191
 \T1/pbk/l/n/10.95 ción: []$\T1/pcr/m/n/10.95 https : / / www . ofcom . org . uk / siteassets / resources / documents /
  []
 
 
-Overfull \hbox (1.00604pt too wide) in paragraph at lines 188--188
+Overfull \hbox (1.00604pt too wide) in paragraph at lines 191--191
 \T1/pcr/m/n/10.95 research -[] and -[] data / online -[] research / online -[] nation / 2025 / online -[]
  []
 
 
-Overfull \hbox (28.08347pt too wide) in paragraph at lines 188--188
+Overfull \hbox (28.08347pt too wide) in paragraph at lines 191--191
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[45
+[47
 
 ]
-Overfull \hbox (10.61328pt too wide) in paragraph at lines 188--188
+Overfull \hbox (10.61328pt too wide) in paragraph at lines 191--191
 []\T1/pbk/l/n/10.95 H. P. G. T. F. Cas-per Haems Je-roen van der Hooft. ^^S  Hy-brid Uni-cast^^UBroadcast
  []
 
-LaTeX Info: Redefining \sptext on input line 189.
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
-[46] [47
 
-] [48] (secciones/anexo1.tex
+Overfull \hbox (5.07603pt too wide) in paragraph at lines 191--191
+[]$\T1/pcr/m/n/10.95 https : / / neon . com / docs / extensions / pgvector ? utm _ source = chatgpt .
+ []
+
+LaTeX Info: Redefining \sptext on input line 192.
+LaTeX Info: Redefining \. on input line 192.
+LaTeX Info: Redefining \% on input line 192.
+[48] [49
+
+] [50] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [49
+) [51
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1421,23 +1467,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: 4AD0E31DB396DE4C1FAC6E82AD009F74;15315.
+(rerunfilecheck)             Checksum: 9588ACDE2FE4B83302020925AD6D017A;15315.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34358 strings out of 467871
- 648551 string characters out of 5419344
- 1573521 words of memory out of 5000000
- 62465 multiletter control sequences out of 15000+600000
- 659415 words of font info for 98 fonts, out of 8000000 for 9000
+ 34546 strings out of 467871
+ 651599 string characters out of 5419344
+ 1581460 words of memory out of 5000000
+ 62622 multiletter control sequences out of 15000+600000
+ 660036 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1296b,2662s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (59 pages, 3339920 bytes).
+<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (61 pages, 3422265 bytes).
 PDF statistics:
- 871 PDF objects out of 1000 (max. 8388607)
- 181 named destinations out of 1000 (max. 500000)
- 729 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 920 PDF objects out of 1000 (max. 8388607)
+ 205 named destinations out of 1000 (max. 500000)
+ 744 words of extra memory for PDF output out of 10000 (max. 10000000)
 
