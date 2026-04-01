@@ -207,6 +207,8 @@ El \textit{prefetch} consiste en cargar datos por adelantados antes de que el cl
 Existen varias formas de aplicar el \textit{prefetch}. En el desarrollo de esta plataforma se ejecuta una pre-carga en el servidor antes de renderizar la página para que los datos estén disponibles cuando llegue al cliente. En Booster, esta técnica tiene un gran valor. Los usuarios están constantemente navegando entre listados de video, usuarios o comentarios por tanto, si los datos se cargan anticipadamente, el tiempo de espera disminuye creando la apariencia de una interfaz reactiva e inmediata. De esta forma tRPC tiene un doble uso: capa tipada de comunicación y un 'acelerador' de la interfaz de usuario. Por estas razones, se ha decidido utilizar tRPC para la comunicación cliente-servidor. 
 
 \subsection{Next.js - backend}
+\label{Next.Js backend}
+
 
 \textbf{Next.js} es, junto con tRPC otra de las tecnologías fundamentales de este proyecto. Este es un framework de desarrollo web basado en \ref{React.Js} que permite construir aplicaciones \textit{full-stack} modernas, gestionando la interfaz de usuario y la lógica de negocio dentro de un mismo repositorio. En Booster, Next.Js se emplea para cumplir ambos de estos propósitos. Por un lado, se aprovechan sus habilidades de \textit{frontend} pero también, se hace uso de sus capacidades de backend facilitando la experiencia de desarrollo. 
 
@@ -226,7 +228,7 @@ Además Next.Js contiene métodos de optimización como: incorporación de cach�
 
 \textbf{Ventajas}
 
-Su principal ventaja es su integración \textit{full-stack}. Se puede desarrollar el cliente y el servidor en un mismo repositorio facilitando el proceso de desarrollo y despliegue. Además, emplea reglas, formatos y mejores prácticas que simplifican  la creación de aplicaciones web. Su integración con TypeScript y otras herramientas modernas lo convierte en una opción ideal para Booster. 
+Su principal ventaja es su integración \textit{full-stack}. Se puede construir el cliente y el servidor en un mismo repositorio facilitando el proceso de desarrollo y despliegue. Además, emplea reglas, formatos y mejores prácticas que simplifican  la creación de aplicaciones web. Su integración con TypeScript y otras herramientas modernas lo convierte en una opción ideal para Booster. 
 
 Contiene una gran variedad de elementos de optimización para mejorar el rendimiento de la aplicación. En una plataforma como Booster, esto es importante ya que mejora la experiencia de usuario de forma significativa. 
 
@@ -234,24 +236,114 @@ Otro aspecto importante a destacar es que como Next.Js utiliza pre-renderizado e
 
 \textbf{Desventajas}
 
-Al concentrar \textit{frontend} y \textit{backend} en un mismo lugar, la complejidad de los proyectos suele considerar de forma considerable. 
+Al concentrar \textit{frontend} y \textit{backend} en un mismo lugar, la complejidad de los proyectos suele aumentar de forma considerable. Por el contrario, si se separa la lógica de negocio con la interfaz de usuario podría ser más fácil gestionar el proyecto por separado. 
 
-Otro aspecto importante a mencionar es su elevada curva de aprendizaje. Con los años se han añadido un gran número de operaciones y optimizaciones incrementando la cantidad de conceptos y técnicas lo que puede resultar dominar Next.Js en una tarea más difícil. 
+Otro aspecto importante a mencionar es su elevada curva de aprendizaje. Con los años se han añadido un gran número de operaciones y optimizaciones incrementando la cantidad de conceptos y técnicas. Esto puede significar que dominar Next.Js sea una tarea difícil. 
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\linewidth]{portada/nextjs.png}
+  \caption{Logo de Next.Js}
+\end{figure}
 
+\pagebreak
 
+\subsection{Autenticación - ClerkAuth}
 
+La autenticación de usuarios es también un proceso fundamental en cualquier aplicación software. Para este proyecto se han evaluado distintas formas de gestionarlo. Entre ellas destacan la utilización de librerías como \textbf{BetterAuth} y \textbf{NextAuth}. Sin embargo, para facilitar el desarrollo, se ha optado por incluir un proveedor de autenticación y gestión de usuario llamado \textbf{Clerk} \cite{clerk}. 
 
+\textbf{Clerk} es una plataforma de autenticación y gestión de usuarios que cuenta con funcionalidades como: registro de usuario e inicio de sesión con distintas opciones, controladores de estados de sesión, perfiles de usuario, modificación de fotos de perfil, un dashboard de administración, códigos de seguridad y \textit{multi-factor authenticacion}. Es una solución completa y bien preparada para poner en marcha la autenticación en una aplicación software de forma rápida y con poco esfuerzo de desarrollo.
 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\linewidth]{portada/clerk.png }
+  \caption{Logo de Clerk}
+\end{figure}
 
+\textbf{Ventajas}
 
+Su principal ventaja es su facilidad de incorporación en proyectos software. Permite añadir una autenticación completa y profesional en poco tiempo y es ideal para proyectos construidos con Next.Js. 
+
+Gracias a su panel de control, la experiencia de administración es buena y fácil de realizar. Clerk permite revisar usuarios, eliminarlos, gestionar sus datos y aplicarles sanciones. Por otro lado, también cuenta con una gran variedad de opciones distintas y admite personalizar los componentes de inicio o registro de sesión que vienen por defecto, ahorrando así tiempo de desarrollo. 
+
+En definitiva, Clerk incluye una amplia gama de funcionalidades y opciones lo que reduce el tiempo de desarrollo de forma significativa y evita tener que construir desde cero los procedimientos relacionados con la gestión de usuarios, sesiones y seguridad. 
+
+\textbf{Desventajas}
+
+A pesar de todas las fortalezas de Clerk, su principal debilidad es su elevado costo. Aunque ofrece un plan básico gratis de hasta 10.000 MAU (Monthly Active Users), a partir de ese momento esta opción se vuelve cara. Por esa razón, suele ser utilizado para demostrar un MVP, donde no hay un número elevado de usuarios. De los contrario, se vuelve inviable para equipos pequeños o con recursos limitados y otras opciones como \textit{Firebase} son más razonables.
+
+\textbf{Uso de Clerk}
+
+En Booster, Clerk se emplea para ofrecer el servicio de autenticación. Esto es debido a su buena integración con el \textit{stack} tecnológico seleccionado y por su \textit{dashboard} de administración que facilita la gestión de usuarios y configuraciones. Sin embargo, a medida que el proyecto escale puede resultar necesario migrar a otra alternativa para ahorrar costos. 
 
 
 \section{Frontend}
 
+Se define al \textit{Frontend} como la capa software encargada de la interacción directa con los usuarios. Esto puede incluir el diseño de la interfaz de usuario, botones, menús y navegación programados con HTML, CSS y JavaScript. Estos módulos, se suelen ejecutar en el lado del cliente, para el caso del proyecto, en el navegador. 
+
+En esta sección se presentan las tecnologías seleccionadas para diseñar esta capa software recopilando herramientas modernas y compatibles con lo seleccionado en la sección anterior. 
+
 \subsection{React.Js}
 \label{React.Js}
 
+React.Js es una biblioteca de JavaScript desarrollada por FaceBook en 2013 utilizada en gran medida para la construcción de interfaces de usuario (UI) mediante componentes reutilizable. Esencialmente, se basa en dividir la interfaz en pequeñas partes independientes, cada una con su lógica y representación visual y por tanto, se consiguen crear páginas por componentes separados en lugar de hacerlo todo al mismo tiempo. Además, estos elementos pueden ser reutilizados en otras partes según sea necesario. Por ejemplo, es común construir componentes para barras de navegación, botones o formularios los cuales se combinan para formar la interfaz. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.2\linewidth]{portada/react.png}
+  \caption{Logo de React.Js}
+\end{figure}
+
+\textbf{Ventajas}
+
+La principal ventaja de React.Js es la reutilización de componentes. Esto ayuda a mantener una estructura escalable, limpia y fácil de mantener de la interfaz de usuario y el proyecto. Con esto, se logran abstraer las distintas secciones de la página web y la construcción del proyecto se vuelve más ágil y flexible.
+
+\textbf{Desventajas}
+
+React.Js no es una solución completa por sí misma. Esto quiere decir que necesita integrarse con otras herramientas para que sea útil en un proyecto. 
+
+Presenta una curva de aprendizaje significativa lo que puede resultar en un mayor tiempo de desarrollo para equipos inexpertos con esta tecnología. Además, requiere el conocimiento y dominio de JavaScript, HTML, CSS, Node.Js e incluso TypeScript. 
+
+\textbf{Uso de React.Js}
+
+En Booster, se emplea React.Js para el desarrollo de las interfaces de usuario. Gracias a esta herramienta, se pueden reutilizar por toda la aplicación elementos como el reproductor de video, comentarios y barras de navegación mejorando así, la organización del código 
+y su mantenibilidad.  
+
 \subsection{Next.Js - frontend}
 
-\subsection{Tailwindcss y Shadcn}
+Next.Js es una tecnología muy poderosa que ya se analizó en secciones anteriores (\ref{Next.Js backend}). Aquí, se estudió su utilidad para tareas de \textit{backend} pero también se integra bien con tareas de \textit{frontend}. 
+
+Su funcionamiento consiste en apoyarse en componentes de React pero además, añade herramientas nuevas para el enrutamiento, generación de páginas, distintas formas de renderizado, más optimizaciones, entre otros. En cuanto al \textit{frontend}, facilita algunas tareas y mejora la organización del proyecto ya que dispone de un sistema de rutas y páginas bien definidas con patrones claros y estructurados. Así, se consigue un código más legible, limpio y mantenible. 
+
+Booster utiliza Next.Js en el frontend para organizar los componentes y la aplicación de manera profesional y escalable. Con esto, se consigue gestionar la navegación entre vistas, mejorar el rendimiento general del sitio y su presencia en la web. Además, cuenta con una documentación extensa y clara. Otro aspecto positivo es que se integra bien con una amplia gama de tecnologías diferentes haciendo que el proyecto tenga mayor flexibilidad. 
+
+
+\subsection{TailwindCSS y Shadcn}
+
+Normalmente, las aplicaciones web suelen mejorar su interfaz de usuario mediante CSS (Cascading Style Sheets), un lenguaje de diseño gráfico para definir la apariencia y el estilo de los documentos HTML. Sin embargo, para este proyecto se ha optado por utilizar \textbf{TailwindCSS}, una herramienta más moderna basado en utilidades de CSS para aplicar estilos a componentes HTML. 
+
+Su funcionamiento consiste en aplicar directamente en un atributo  \lstinline|class| o \lstinline|className| en HTML propiedades CSS (\textit{utiliy classes)} predefinidas que representan características visuales específicas. Por ejemplo, el siguiente código pone a rojo el color del texto a rojo
+
+\begin{lstlisting}[language=html]
+  ...
+  <p class="text-red-200">Texto rojo. </p>
+  ...
+\end{lstlisting}
+
+\textbf{Ventajas}
+
+La principal fortaleza de Tailwind es la rapidez con la que se pueden construir interfaces. Además, las utilidades están bien definidas y con ellas se consiguen desarrollar interfaces modernas, coherentes y visualmente atractivas.
+
+A su vez, como los estilos se aplican directamente como atributo de los componentes HTML, esto evita tener archivos de estilos específicos para distintas partes de la aplicación. Esto mejora la organización del código en el proyecto. 
+
+Con este framework, es posible además mantener una paleta de colores consistentes con la marca a lo largo de toda la aplicación y de una forma clara y sencilla. Con estas clases además, se puede construir una aplicación visualmente responsiva para distintos tipos de dimensiones de dispositivos, mejorando así la experiencia de usuario en distintas plataformas.
+
+\textbf{Desventajas}
+
+TailwindCSS suele ser una gran opción para el desarrollo moderno de interfaces. No obstante, puede hacer que el código de los componentes HTML esté más sobrecargado. Como las clases se escriben directamente en los elementos HTML, es común tener una gran variedad de atributos distintos para un único elemento. Esto puede dificultar la lectura y la comprensión de la apariencia del componente. 
+
+\textbf{Uso de TailwindCSS}
+
+Booster hace uso de las capacidades de TailwindCSS para el diseño de la plataforma. Se utiliza principalmente para mejorar y modernizar la apariencia visual de los elementos en pantalla. Asimismo, se definen colores, tamaños, tipografías y comportamientos responsivos. 
+
+Complementariamente a Tailwind, Booster incorpora \textbf{shadcn/ui}, un sistema de componentes R reutilizables y personalizables como botones, barras laterales, avatares, menús, diálogos, toasts, formularios, tablas, entre otros. Gracias a esto, se utilizan elementos de interfaz ya elaborados y con una apariencia muy moderna y atractiva. Esto permite, ofrecer una experiencia de usuario más profesional y mejora la \textbf{usabilidad} de la aplicación. El uso de esta librería es importante en Booster ya que se consigue una interfaz limpia, moderna y funcional sin dedicar demasiado tiempo al desarrollo de cada componente desde cero. 

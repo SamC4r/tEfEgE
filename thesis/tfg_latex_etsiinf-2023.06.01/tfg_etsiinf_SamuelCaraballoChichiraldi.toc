@@ -31,57 +31,58 @@
 \contentsline {subsubsection}{Prisma}{34}{section*.7}%
 \contentsline {subsection}{\numberline {3.1.4}Comunicación Cliente Servidor - tRPC}{35}{subsection.3.1.4}%
 \contentsline {subsection}{\numberline {3.1.5}Next.js - backend}{37}{subsection.3.1.5}%
-\contentsline {section}{\numberline {3.2}Frontend}{38}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}React.Js}{38}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Next.Js - frontend}{38}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Tailwindcss y Shadcn}{38}{subsection.3.2.3}%
-\contentsline {chapter}{\numberline {4}Innovaciones}{39}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Problemas detectados y la solución de Booster}{39}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Problemas con el algoritmo de recomendación}{39}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Problemas en encontrar comunidades}{39}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Mejoras e Innovaciones}{39}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Mejoras en la interfaz de usuario}{39}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Mejoras en los métodos de moderación}{39}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Mejoras en los comentarios}{39}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Mejoras en los canales de usuario}{39}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Mejoras en las comunidades}{39}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Incorporación de gamificación}{39}{subsection.4.2.6}%
-\contentsline {chapter}{\numberline {5}Análisis}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Requisitos Funcionales}{41}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Requisitos No Funcionales}{41}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Actores}{41}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Casos de uso}{41}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Diagramas de secuencia}{41}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Diagrama Entidad Relación}{41}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Diseño y Arquitectura}{43}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Patrones y mejores prácticas}{43}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Diseño de la Autenticación}{43}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{43}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Arquitectura de procesamiento propia}{43}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Arquitectura de procesamiento con un proveedor}{43}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Diseño de la interfaz de usuario}{43}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Comentarios}{43}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Interfaz de Video}{43}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Secciones de Video}{43}{subsection.6.6.3}%
-\contentsline {section}{\numberline {6.7}Diseño del Algoritmo de Recomendación}{43}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Diseño de la búsqueda semántica de videos}{43}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Desarrollo}{45}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Implementación del procesamiento de videos propio}{45}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos con proveedor}{45}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Implementación de los comentarios}{45}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Patrones y mejores prácticas en código}{45}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{45}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{45}{section.7.6}%
-\contentsline {section}{\numberline {7.7}Medidas de seguridad}{45}{section.7.7}%
-\contentsline {subsection}{\numberline {7.7.1}Protección acceso a rutas}{45}{subsection.7.7.1}%
-\contentsline {subsection}{\numberline {7.7.2}Protección acceso y modificación de videos}{45}{subsection.7.7.2}%
-\contentsline {subsection}{\numberline {7.7.3}Limitaciones de uso (Rate Limits)}{45}{subsection.7.7.3}%
-\contentsline {chapter}{\numberline {8}Pruebas, Validación y Riesgos de Seguridad Detectados}{47}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{47}{section.8.1}%
-\contentsline {section}{\numberline {8.2}FeedBack de Usuarios}{47}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Vulnerabilidades detectadas y medidas tomadas}{47}{section.8.3}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{49}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Análisis de Impacto}{51}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{53}{section*.10}%
-\contentsline {part}{Anexos}{57}{part*.12}%
-\contentsline {chapter}{\numberline {A}Primer anexo}{57}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {3.1.6}Autenticación - ClerkAuth}{39}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}Frontend}{40}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}React.Js}{40}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Next.Js - frontend}{41}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}TailwindCSS y Shadcn}{41}{subsection.3.2.3}%
+\contentsline {chapter}{\numberline {4}Innovaciones}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Problemas detectados y la solución de Booster}{43}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Problemas con el algoritmo de recomendación}{43}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Problemas en encontrar comunidades}{43}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Mejoras e Innovaciones}{43}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Mejoras en la interfaz de usuario}{43}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Mejoras en los métodos de moderación}{43}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Mejoras en los comentarios}{43}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Mejoras en los canales de usuario}{43}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Mejoras en las comunidades}{43}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Incorporación de gamificación}{43}{subsection.4.2.6}%
+\contentsline {chapter}{\numberline {5}Análisis}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Requisitos Funcionales}{45}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Requisitos No Funcionales}{45}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Actores}{45}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Casos de uso}{45}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Diagramas de secuencia}{45}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Diagrama Entidad Relación}{45}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Diseño y Arquitectura}{47}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Patrones y mejores prácticas}{47}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Diseño de la Autenticación}{47}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{47}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Arquitectura de procesamiento propia}{47}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Arquitectura de procesamiento con un proveedor}{47}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Diseño de la interfaz de usuario}{47}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Comentarios}{47}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Interfaz de Video}{47}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Secciones de Video}{47}{subsection.6.6.3}%
+\contentsline {section}{\numberline {6.7}Diseño del Algoritmo de Recomendación}{47}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Diseño de la búsqueda semántica de videos}{47}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Desarrollo}{49}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Implementación del procesamiento de videos propio}{49}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos con proveedor}{49}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Implementación de los comentarios}{49}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Patrones y mejores prácticas en código}{49}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{49}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{49}{section.7.6}%
+\contentsline {section}{\numberline {7.7}Medidas de seguridad}{49}{section.7.7}%
+\contentsline {subsection}{\numberline {7.7.1}Protección acceso a rutas}{49}{subsection.7.7.1}%
+\contentsline {subsection}{\numberline {7.7.2}Protección acceso y modificación de videos}{49}{subsection.7.7.2}%
+\contentsline {subsection}{\numberline {7.7.3}Limitaciones de uso (Rate Limits)}{49}{subsection.7.7.3}%
+\contentsline {chapter}{\numberline {8}Pruebas, Validación y Riesgos de Seguridad Detectados}{51}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{51}{section.8.1}%
+\contentsline {section}{\numberline {8.2}FeedBack de Usuarios}{51}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Vulnerabilidades detectadas y medidas tomadas}{51}{section.8.3}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{53}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Análisis de Impacto}{55}{chapter.10}%
+\contentsline {chapter}{Bibliografía}{57}{section*.10}%
+\contentsline {part}{Anexos}{61}{part*.12}%
+\contentsline {chapter}{\numberline {A}Primer anexo}{61}{appendix.Alph1}%
