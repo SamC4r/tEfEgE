@@ -777,6 +777,37 @@
       \verb https://clerk.com/docs
       \endverb
     \endentry
+    \entry{shadcn}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=49b788bfea3793b507afdf191708dba0}{%
+           family={{shadcn | Vercel}},
+           familyi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{49b788bfea3793b507afdf191708dba0}
+      \strng{fullhash}{49b788bfea3793b507afdf191708dba0}
+      \strng{fullhashraw}{49b788bfea3793b507afdf191708dba0}
+      \strng{bibnamehash}{49b788bfea3793b507afdf191708dba0}
+      \strng{authorbibnamehash}{49b788bfea3793b507afdf191708dba0}
+      \strng{authornamehash}{49b788bfea3793b507afdf191708dba0}
+      \strng{authorfullhash}{49b788bfea3793b507afdf191708dba0}
+      \strng{authorfullhashraw}{49b788bfea3793b507afdf191708dba0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Foundation for your Design System}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ui.shadcn.com/
+      \endverb
+      \verb{url}
+      \verb https://ui.shadcn.com/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
