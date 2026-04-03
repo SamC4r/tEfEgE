@@ -808,6 +808,68 @@
       \verb https://ui.shadcn.com/
       \endverb
     \endentry
+    \entry{europa-alg}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a1b813a6e85874b4c945aec2cdbea74c}{%
+           family={{European Commission}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{fullhash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{fullhashraw}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{bibnamehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authorbibnamehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authornamehash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authorfullhash}{a1b813a6e85874b4c945aec2cdbea74c}
+      \strng{authorfullhashraw}{a1b813a6e85874b4c945aec2cdbea74c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Commission sends requests for information to YouTube, Snapchat, and TikTok on recommender systems under the Digital Services Act}
+      \field{urlday}{1}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{02 October 2024}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://digital-strategy.ec.europa.eu/en/news/commission-sends-requests-information-youtube-snapchat-and-tiktok-recommender-systems-under-digital
+      \endverb
+      \verb{url}
+      \verb https://digital-strategy.ec.europa.eu/en/news/commission-sends-requests-information-youtube-snapchat-and-tiktok-recommender-systems-under-digital
+      \endverb
+    \endentry
+    \entry{rmn-ad}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b4cdc31c215d85b1b279db55b3565201}{%
+           family={{Raman Media Network}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{fullhash}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{fullhashraw}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{bibnamehash}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{authorbibnamehash}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{authornamehash}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{authorfullhash}{b4cdc31c215d85b1b279db55b3565201}
+      \strng{authorfullhashraw}{b4cdc31c215d85b1b279db55b3565201}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{YouTube Faces User Backlash Over Ad Overload, Threatening Platform's Future}
+      \field{urlday}{3}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{Julio 31 2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ramanmedianetwork.com/youtube-faces-user-backlash-over-ad-overload-threatening-platforms-future/
+      \endverb
+      \verb{url}
+      \verb https://www.ramanmedianetwork.com/youtube-faces-user-backlash-over-ad-overload-threatening-platforms-future/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

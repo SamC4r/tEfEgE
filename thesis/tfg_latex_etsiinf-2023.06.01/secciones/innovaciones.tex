@@ -1,14 +1,89 @@
 \chapter{Innovaciones}
 
+En este capítulo se analizan con más detalle los problemas más significativos que tienen las plataformas de streaming de videos actuales y las soluciones que plantea Booster. En particular, se examinan las dificultades que experimentan algunos usuarios en encontrar comunidades de videos y usuarios destinadas a intereses específicos; la dependencia de los algoritmo de recomendación que suelen premiar contenido para maximizar retención y, la gran cantidad de anuncios que arruinan la experiencia de usuarios.  
+
+Asimismo, se explican algunas de las mejoras y nuevas incorporaciones a este tipo de aplicaciones, tomando en cuenta nuevos enfoques a la moderación, la interacción en la plataforma e incorporando gamificación. 
 
 %Mencionar problemas mas significativos y brevemente cómo se ha solucionado
 \section{Problemas detectados y la solución de Booster}
 
+En esta sección se detallan algunos de los problemas más relevantes que presentan las plataformas de streaming de videos actuales. Se analizan y se proponen medidas que implementa Booster para solventar estos inconvenientes. Los problemas más notorios están relacionados con los algoritmos de recomendación, las sugerencias de videos y la gran cantidad de anuncios mostrados. Booster intenta darle un nuevo enfoque a las plataformas de este estilo para mejorar la experiencia de los usuarios.  
+
 \subsection{Problemas con el algoritmo de recomendación}
+
+Uno de los problemas más grandes que presentan las plataformas de videos actuales y motivo de discusiones y quejas por parte de los usuarios es el funcionamiento de los algoritmos de recomendación. En muchos servicios estos están diseñados para priorizar el contenido con mayor capacidad para generar \textit{clics} y tiempo de retención. Esto es discutido en gran medida porque puede favorecer la difusión de contenido adictivo o de baja calidad y ocultar otros que merecen más reconocimiento. 
+
+En 2024, la comisión europea \cite{europa-alg} mencionó que las plataformas deben evaluar y mitigar los riesgos que surgen de sus sistemas de recomendación incluyendo riesgos a la salud mental y la difusión de contenido dañino debido al diseño de los algoritmos que promueven la retención. Además, indica que muchas plataformas usan estas técnicas sin ofrecer controles claros al usuarios y que se puede priorizar el contenido perjudicial generando efectos negativos, especialmente en menores. 
+
+Desde el punto de vista del usuario, esto tiene implicaciones negativas. En primer lugar, puede encerrar al usuario en un bucle de consumo limitando así el descubrimiento de nuevos temas. Por otra parte, reduce la transparencia dado que no se demuestra por qué se recomiendo un tipo de contenido y no otro. 
+
+Desde el punto de vista del creador de contenido, esto también puede generar varios problemas. Los creadores nuevos y pequeños son los más afectador por el algoritmo de recomendación ya que el contenido más popular o con mayores niveles de retención suele ser el que se muestre a los usuarios preferentemente. 
+
+\textbf{Soluciones}
+
+Booster plantea un modelo de recomendación más simple, transparente y comprensible. Para abordar estos problemas se introduce un nuevo concepto en la plataforma denominado \textbf{puntos de Boost} para darle otro enfoque a las sugerencias de contenido. 
+Los \textbf{puntos de Boost} permiten reflejar la valoración y el apoyo que reciben los videos de un creador de contenido. Esencialmente, este es el mecanismo con el que los usuarios apoyan activamente a creadores, canales y comunidades dentro de Booster. A diferencia de otros métodos que se basan en variables difíciles de interpretar, esta mejora permite que la participación de los espectadores tenga un rol más importante en la distribución de contenido. Estos puntos, determinados por los usuarios que han contribuido a un creador, definen su \textbf{Nivel de canal}. A medida que sube, se desbloquean beneficios para los seguidores y además, los videos de esos canales serán recomendados con mayor frecuencia en la plataforma y de esta forma, el usuario tiene un rol más importante en el descubrimiento de contenido. 
+
+Además, de los puntos de Boost y el nivel de canal, el algoritmo también tiene en cuenta otros factores como son: visualizaciones, valoraciones promedio del video según los usuarios, número de comentarios, categorías del video, antigüedad y si el usuario es seguidor del canal. Todo esto, se modela mediante una fórmula matemática que se adapta al espectador y el cual se publica en la plataforma. En capítulos posteriores se analizará más en detalle su funcionamiento \todo{poner ref a explicaicon del algo}. De esta forma, se consigue una mayor transparencia en los algoritmos de recomendación y se premia al contenido favorito del usuario.  
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\linewidth]{portada/alg-rec.png}
+  \caption{Fragmento de la plataforma donde se explica el funcionamiento del algoritmo de recomendación}
+\end{figure}
+
+
+
+
 
 \subsection{Problemas en encontrar comunidades}
 
+Otro problema importante y ligado al anterior es la dificultad para encontrar comunidades específicas. Aunque la mayoría de estos sistemas permiten descubrir contenido mediante búsquedas o sugerencias, no siempre facilitan la localización de espacios centrados en intereses concretos. En muchos casos, estos videos aparecen dispersos y no existe una estructura comunitaria clara. 
+
+Este problema es significativo para creadores pequeños, comunidades emergentes o áreas de interés muy específicas porque los algoritmos de recomendación, priorizan el contenido con mayor facilidad para atraer a un gran número de audiencia. En consecuencia, ciertos usuarios se pueden ver en la dificultad para encontrar contenido de nicho en la plataforma. Igualmente, los creadores también sufren ya que les puede resultar más complejo encontrar a su público objetivo.  
+
+\textbf{Soluciones}
+
+Booster propone una solución a esta problema mediante la incorporación de un \textbf{sistema de comunidades}. De esta manera, cualquier usuario es libre de crear su propia comunidad en torno a un tema o interés concreto, generando así un área dedicada a este tipo de contenido. Otros usuarios, pueden enlazar videos relacionados a la comunidad agrupando y organizando el material audiovisual lo cual facilita su descubrimiento. El creador de la comunidad tiene la habilidad de eliminar contenido que no esté relacionado y dotar a otros usuarios de esta capacidad, convirtiéndolos en moderadores del contenido en la comunidad.  
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{portada/comunidades.png}
+  \caption{Sección de comunidades en la plataforma}
+\end{figure}
+
+
+Esta innovación añade una nueva forma de organizar los videos en la plataforma según un tema específico. En lugar de depender únicamente del algoritmo de recomendación, Booster permite estructurar el contenido por temas y comunidades. Por consiguiente, se mejora el acceso a algunos videos y se reúnen a usuarios con intereses comunes. 
+
+\pagebreak
+\subsection{Problemas con los anuncios}
+
+Uno de los problemas más grandes desde el punto de vista de los consumidores de contenido es la gran cantidad de anuncios con los que se ven bombardeados cada vez que utilizan la aplicación. Un estudio publicado por \textit{Raman Media Network} \cite{rmn-ad} señala que en YouTube, la sobre-exposición de anuncios aumenta la fatiga de los usuarios y daña significativamente la confianza en la empresa. Aquí se demuestra que los anuncios repetitivos causan descontento en los consumidores. Según se indica, ver un anuncio repetido 6 veces en una hora produce un 92\% de reconocimiento de la marca, existe un aumento del 48\% en sentimientos de molestias. En general, aunque los usuarios aceptan ver anuncios a cambio de un costo menor, la frecuencia excesiva de los mismos icnrementa las sensaciones negativas hacia la plataforma e incluso el abandono y la adopción de bloqueadores de anuncios. 
+
+Como se puede observar, el problema no solo reside en la existencia de la publicidad, sino que también, en la poca capacidad de elección que presenta el espectador aparte de su carácter intrusivo y forzado. Esto provoca una experiencia menos fluida y degrada la calidad del servicio percibida por los usuarios derivando en tasas de abandono o en la utilización de bloqueadores de anuncios.  
+
+\textbf{Soluciones}
+
+Aunque los anuncios no se pueden eliminar ya que son la fuente de ingresos principal de una plataforma de este estilo, Booster plantea una alternativa para mejorar la experiencia de los espectadores. Esta se trata en la incorporación de un sistema de anuncios voluntarios con recompensa. En lugar de basarse únicamente en anuncios forzados, la plataforma tiene un mecanismo por el cual los usuarios pueden decidir ver determinados anuncios de forma opcional y recibir un premio dentro de la plataforma. 
+
+Esto se conecta y da lugar al sistema de \textbf{puntos de experiencia (XP)} de la plataforma. La \textbf{XP}, es una moneda virtual que se emplea en la plataforma y que cada usuario puede obtener mediante la visualización de anuncios voluntarios o integrados y utilizarla después para adquirir elementos de personalización, apoyar a creadores y comunidades, obtener recompensas, adquirir preferencias de uso, entre otros. Por tanto, la solución consiste en convertir la experiencia forzada e intrusiva de los anuncios en un sistema más participativo, donde el usuario recibe una compensación que puede intercambiar para obtener premios dentro de la plataforma. 
+
+
+
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.9\linewidth]{portada/xp.png}
+  \caption{XP de un Usuario}
+\end{figure}
+
+
+
+
 \section{Mejoras e Innovaciones}
+
+En esta sección se presentan las innovaciones y mejoras que incorpora Booster con respecto a las plataformas de videos actuales. Se detallan algunas de las decisiones más importantes tomadas para diferenciar Booster de otras alternativas y mejorar la experiencia de usuario. 
 
 \subsection{Mejoras en la interfaz de usuario}
 
@@ -18,9 +93,6 @@
 
 %
 \subsection{Mejoras en los canales de usuario}
-
-\subsection{Mejoras en las comunidades}
-
 
 
 %Leaderboards globales y de comunidad, XP, Donar XP
