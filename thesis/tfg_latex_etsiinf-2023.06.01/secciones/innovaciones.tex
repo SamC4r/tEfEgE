@@ -87,9 +87,72 @@ En esta sección se presentan las innovaciones y mejoras que incorpora Booster c
 
 \subsection{Mejoras en la interfaz de usuario}
 
+Uno de los factores diferenciales de Booster es su interfaz moderna y consistente. Como se estudió en capítulos anteriores se están empleando tecnologías de interfaz de usuario muy completas y con una capacidad para construir apariencias atractivas en la aplicación. Booster se divide por distintas secciones y en cada una de ellas se utilizan técnicas y componentes claros para mejorar la experiencia de usuario.
+
+\textbf{Página principal}
+
+Un ejemplo claro de esto es la página principal. Aquí, se muestran videos en formato de cuadrícula, similar a otras plataformas. Sin embargo, también se emplea un componente para modificar la estructura. Con este, se puede filtrar por videos sugeridos por el algoritmo de recomendación, acceder a los videos más recientes añadidos a una comunidad y ver el contenido más actual de creadores de contenido específicos. 
+
+Por otra parte, el usuario también tiene un mayor grado de libertad al elegir la disposición de la interfaz. Por el momento, se ha implementando una función que ayuda a filtrar videos verticales y por tanto, estos no aparecerán en la página principal. Además, los anuncios voluntarios que se encuentran en la primera fila de la cuadrícula pueden ser ocultos mediante los ajustes de usuario. 
+
+En la página principal se hace uso de un \textit{Carousel} para filtrar con mayor facilidad entre las distintas categorías de video más comunes. Cuando hay un elemento seleccionado, este se ve claramente reflejado mediante un botón llamativo con los colores de la plataforma. 
+
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}[c]{1\linewidth}
+        \centering
+        \includegraphics[width=1\linewidth]{portada/explorer-1.png}
+    \end{minipage}
+    
+    \begin{minipage}[c]{1\linewidth}
+        \centering
+        \includegraphics[width=1\linewidth]{portada/explorer-2.png}
+    \end{minipage}
+    \caption{Página principal de Booster}
+\end{figure}
+
+
+Los videos mostrados en la cuadrícula presentan una mejor descripción. Cada video es un rectángulo con esquinas redondeadas y con una etiqueta superpuesta que indica la duración. Además, al arrastrar el ratón sobre un video, se empieza a reproducir un gif del mismo y se observan estadísticas de popularidad sobre él como las visitas y la calificación promedio.
+\footnote{Para Booster, se ha optado por cambiar los métodos de calificación de videos como el 'me gusta' por una calificación entre 1 y 5. }. Estos detalles, junto con el título, la antigüedad y el creador, se pueden observar debajo del video.  
+
+Además, otra mejora visual con respecto a otras plataformas es la inclusión de una etiqueta 'AI' para aquellos videos que hayan sido creados mediante herramientas de inteligencia artificial. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.5\linewidth]{portada/ia-video.png}
+  \caption{Video marcado con etiqueta IA}
+\end{figure}
+
+Es importante resaltar que esta sección es responsiva, es decir, se adapta la interfaz de usuario según el tamaño de la pantalla del usuario para evitar arruinar componentes y la estructura de la página en otros escenarios. 
+
+
+\textbf{Vista de Videos}
+
+En otra sección donde se han incorporado numerosas mejoras ha sido en la vista de videos. Cuando un usuario mira un video, este aparece en modo ventana a la izquierda del monitor y ocupando aproximadamente $\frac{2}{3}$ de la anchura de la página en ese momento. El tercio restante, se aprovecha para incluir información adicional o relacionada. Las plataformas de video actuales suelen incorporar todos estos datos extra de forma desordenada y poco compacto. Booster intenta organizar las distintas partes consiguiendo así una interfaz más limpia y ordenada como se puede observar en la figura. 
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=1\linewidth]{portada/video-view-1.png}
+  \caption{Vista de Video - Descripción}
+\end{figure}
+
+A la derecha de un video aparece en primer lugar, el creador del mismo. Adicionalmente, se incluye información sobre el nivel del canal del usuario y los puntos de Boost que este tiene. Esto viene acompañado de un componente de barra de progreso para comunicar de forma más visual esta información. Abajo de este bloque comienza una sección donde el usuario puede filtrar por 
+\begin{itemize}
+  \item \textbf{Más Información}: Se muestran más detalles sobre el video como la descripción (la cual se puede colapsar), la fecha de carga del video y su popularidad.
+  \item \textbf{Videos}: En esta sección aparecen más videos relacionados al que ya se está reproduciendo. El algoritmo de recomendación toma en cuenta los datos del video actual y selecciona al usuario los mejores candidatos para ver a continuación
+  \item \textbf{Comentarios}: Se accede a los comentarios asociados al video donde se pueden ver, crear y responder. 
+\end{itemize}
+
+\textbf{Barra lateral}
+
+
+
+
 \subsection{Mejoras en los métodos de moderación}
 
 \subsection{Mejoras en los comentarios}
+
+
 
 %
 \subsection{Mejoras en los canales de usuario}

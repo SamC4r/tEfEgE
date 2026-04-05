@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  3 APR 2026 17:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  5 APR 2026 18:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1528,35 +1528,70 @@ File: portada/xp.png Graphic file (type png)
 <use portada/xp.png>
 Package pdftex.def Info: portada/xp.png  used on input line 77.
 (pdftex.def)             Requested size: 384.1096pt x 54.36464pt.
-) (secciones/requisitos.tex
+LaTeX Info: Redefining \sptext on input line 97.
+LaTeX Info: Redefining \. on input line 97.
+LaTeX Info: Redefining \% on input line 97.
+ [47 <./portada/xp.png>]
+<portada/explorer-1.png, id=843, 958.782pt x 485.4135pt>
+File: portada/explorer-1.png Graphic file (type png)
+<use portada/explorer-1.png>
+Package pdftex.def Info: portada/explorer-1.png  used on input line 105.
+(pdftex.def)             Requested size: 426.79135pt x 216.07869pt.
+<portada/explorer-2.png, id=844, 975.645pt x 487.8225pt>
+File: portada/explorer-2.png Graphic file (type png)
+<use portada/explorer-2.png>
+Package pdftex.def Info: portada/explorer-2.png  used on input line 110.
+(pdftex.def)             Requested size: 426.79135pt x 213.39948pt.
+LaTeX Info: Redefining \sptext on input line 119.
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
+ [48 <./portada/explorer-1.png> <./portada/explorer-2.png>]
+<portada/ia-video.png, id=854, 237.88875pt x 240.9pt>
+File: portada/ia-video.png Graphic file (type png)
+<use portada/ia-video.png>
+Package pdftex.def Info: portada/ia-video.png  used on input line 123.
+(pdftex.def)             Requested size: 213.39568pt x 216.1059pt.
+<portada/video-view-1.png, id=855, 1144.87724pt x 513.117pt>
+File: portada/video-view-1.png Graphic file (type png)
+<use portada/video-view-1.png>
+Package pdftex.def Info: portada/video-view-1.png  used on input line 135.
+(pdftex.def)             Requested size: 426.79135pt x 191.28311pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 143.
+LaTeX Info: Redefining \. on input line 143.
+LaTeX Info: Redefining \% on input line 143.
+[49 <./portada/ia-video.png>]) (secciones/requisitos.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [47 <./portada/xp.png>] [48
-
-]
+ [50 <./portada/video-view-1.png>]
 Cap\'{\i }tulo 5.
-) (secciones/diseno-arquitectura.tex [49] [50
+) (secciones/diseno-arquitectura.tex [51
+
+] [52
 
 ]
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [51] [52
+) (secciones/desarrollo.tex [53] [54
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [53] [54
+) (secciones/pruebas.tex [55] [56
 
 ]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [55] [56
+) (secciones/conclusiones.tex [57] [58
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [57] [58
+) (secciones/impacto.tex [59] [60
 
 ]
 Cap\'{\i }tulo 10.
-) [59] [60
+) [61] [62
 
 ]
 Overfull \hbox (7.39021pt too wide) in paragraph at lines 191--191
@@ -1583,7 +1618,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 191--191
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[61
+[63
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 191--191
@@ -1598,15 +1633,15 @@ Overfull \hbox (2.00604pt too wide) in paragraph at lines 191--191
 LaTeX Info: Redefining \sptext on input line 188.
 LaTeX Info: Redefining \. on input line 188.
 LaTeX Info: Redefining \% on input line 188.
-[62]
+[64]
 LaTeX Info: Redefining \sptext on input line 192.
 LaTeX Info: Redefining \. on input line 192.
 LaTeX Info: Redefining \% on input line 192.
- [63] [64
+ [65] [66
 
-] [65] [66] (secciones/anexo1.tex
+] [67] [68] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [67
+) [69
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1627,17 +1662,17 @@ Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi
 
  ) 
 Here is how much of TeX's memory you used:
- 34961 strings out of 467871
- 658749 string characters out of 5419344
+ 34995 strings out of 467871
+ 659612 string characters out of 5419344
  1581355 words of memory out of 5000000
- 62987 multiletter control sequences out of 15000+600000
+ 63015 multiletter control sequences out of 15000+600000
  662750 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,121p,1296b,2662s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (77 pages, 3886121 bytes).
+<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (79 pages, 7615028 bytes).
 PDF statistics:
- 1078 PDF objects out of 1200 (max. 8388607)
- 248 named destinations out of 1000 (max. 500000)
- 812 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1107 PDF objects out of 1200 (max. 8388607)
+ 254 named destinations out of 1000 (max. 500000)
+ 832 words of extra memory for PDF output out of 10000 (max. 10000000)
 
