@@ -52,6 +52,37 @@
       \verb https://s206.q4cdn.com/479360582/files/doc_financials/2025/q4/2025q4-alphabet-earnings-release.pdf
       \endverb
     \endentry
+    \entry{data-reportal}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=521cd76c97ca2b4cb17c6aa8d1e02001}{%
+           family={DataReportal},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{fullhash}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{fullhashraw}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{bibnamehash}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{authorbibnamehash}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{authornamehash}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{authorfullhash}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \strng{authorfullhashraw}{521cd76c97ca2b4cb17c6aa8d1e02001}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Digital 2025: Global Overview Report}
+      \field{urlday}{12}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{5 February 2025}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://datareportal.com/reports/digital-2025-global-overview-report
+      \endverb
+      \verb{url}
+      \verb https://datareportal.com/reports/digital-2025-global-overview-report
+      \endverb
+    \endentry
     \entry{tiktok_europe_200m}{online}{}{}
       \name{author}{1}{}{%
         {{hash=d7a9a3e2a98999afaa77e64983165058}{%
@@ -66,8 +97,8 @@
       \strng{authornamehash}{d7a9a3e2a98999afaa77e64983165058}
       \strng{authorfullhash}{d7a9a3e2a98999afaa77e64983165058}
       \strng{authorfullhashraw}{d7a9a3e2a98999afaa77e64983165058}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{TikTok's community in Europe Tops 200 Million}
@@ -99,8 +130,8 @@
       \strng{authornamehash}{aa8bd0eb5dae95de902fdd4bcb3d18e3}
       \strng{authorfullhash}{aa8bd0eb5dae95de902fdd4bcb3d18e3}
       \strng{authorfullhashraw}{aa8bd0eb5dae95de902fdd4bcb3d18e3}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{FINAL Q4 25 Shareholder Letter}
@@ -132,8 +163,8 @@
       \strng{authornamehash}{8be4bc579e714ed92aa654e9ef52d376}
       \strng{authorfullhash}{8be4bc579e714ed92aa654e9ef52d376}
       \strng{authorfullhashraw}{8be4bc579e714ed92aa654e9ef52d376}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Meta Reports Fourth Quarter and Full Year 2025 Results}
@@ -163,8 +194,8 @@
       \strng{authornamehash}{b33b47b3008c8c47f90a77e0c2dd3060}
       \strng{authorfullhash}{b33b47b3008c8c47f90a77e0c2dd3060}
       \strng{authorfullhashraw}{b33b47b3008c8c47f90a77e0c2dd3060}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Energy and AI}
@@ -195,8 +226,8 @@
       \strng{authorfullhash}{f4ac6c71617233031e82dfdd4638d71c}
       \strng{authorfullhashraw}{f4ac6c71617233031e82dfdd4638d71c}
       \field{extraname}{1}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Adults' Media Use and Attitudes 2025}
@@ -227,8 +258,8 @@
       \strng{authorfullhash}{f4ac6c71617233031e82dfdd4638d71c}
       \strng{authorfullhashraw}{f4ac6c71617233031e82dfdd4638d71c}
       \field{extraname}{2}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Online Nations Report 2025}
@@ -275,8 +306,8 @@
       \strng{authornamehash}{010416362fbd7f2e17a883acd18f9d97}
       \strng{authorfullhash}{5b73683bb046e0cc3a59a6b4bbd92a4b}
       \strng{authorfullhashraw}{5b73683bb046e0cc3a59a6b4bbd92a4b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Allow or not? Strategic choices of competing platforms in response to ad blockers}
@@ -320,8 +351,8 @@
       \strng{authornamehash}{0b8a20817f2f0ea8102e790d0cbed8c5}
       \strng{authorfullhash}{cab40aaea01bca63f7315f06cdd4a73d}
       \strng{authorfullhashraw}{cab40aaea01bca63f7315f06cdd4a73d}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Warehouse-Scale Video Acceleration: Co-design and Deployment in the Wild}
@@ -636,8 +667,8 @@
       \strng{authornamehash}{7a5ea03d401ee10e7b9dfe5648d07816}
       \strng{authorfullhash}{7a5ea03d401ee10e7b9dfe5648d07816}
       \strng{authorfullhashraw}{7a5ea03d401ee10e7b9dfe5648d07816}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{The pgvector extension}

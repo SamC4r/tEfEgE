@@ -1,6 +1,6 @@
 \chapter{Estado del Arte}
 
-Este capítulo constituye una recopilación de diversas tecnologías disponibles para implementar un servicio web de streaming de videos. Asimismo, se exploran distintos modelos de arquitectura empleados por las aplicaciones que ya brindan este servicio. 
+Este capítulo constituye un estudio técnico exhaustivo para identificar fortalezas y oportunidades de mejora en las tecnologías más conocidas para implementar la infraestructura de procesamiento de audiovisuales. Asimismo, integra un análisis de los principales proveedores disponibles en el mercado teniendo en cuenta aspectos técnicos y financieros. Finalmente, se exploran distintos modelos de arquitectura empleados por las aplicaciones que brindan este servicio. 
 
 
 \section{Procesamiento, Transcodificación y Entrega de Video}
@@ -8,7 +8,7 @@ Este capítulo constituye una recopilación de diversas tecnologías disponibles
 \label{2.1}
 
 
-En esta sección se hace un análisis de las herramientas más comunes para procesar, almacenar, transcodificar y entregar los videos en la plataforma. 
+En esta sección se hace un análisis de las herramientas más utilizadas para procesar, almacenar, transcodificar y entregar el contenido multimedia en la plataforma. 
 
 
 
@@ -21,8 +21,8 @@ FFmpeg es una herramienta de código abierto utilizada para el procesamiento de 
 
 
 \begin{itemize}
-    \item   \textbf{Transcodificación}: FFmpeg puede convertir videos entre distintos formato, códecs \footnote{Se entiende por códec a aquella tecnología software o hardware que permite comprimir o descomprimir archivos multimedia. } y resoluciones, lo que es esencial para garantizar la compatibilidad con diferentes dispositivos y plataformas. Por ejemplo, se puede convertir un video en formato \lstinline|.mov| a \lstinline|.mp4|, o extraer el audio de un archivo \lstinline|.mp4| a \lstinline|.mp3|.
-    \item \textbf{Compresión y Optimización}: Permite reducir el tamaño de archivos sin perder calidad significativa ajustando la resolución, códec  y el bitrate \footnote{Se entiende por bitrate (tasa de bits) como la cantidad de información que se transmite por unidad de tiempo.}. Esto es esencial para mejorar la experiencia de usuario. Por ejemplo, en este tipo de servicios se suele utilizar \textbf{Adaptive Bitrate}. Esto consiste en guardar varias copias del mismo video con diferentes calidades y tamaños y, de esta forma, el reproductor puede seleccionar la versión más adecuada según la velocidad de conexión del usuario. 
+    \item   \textbf{Transcodificación}: FFmpeg puede convertir videos entre distintos formatos, códecs \footnote{Se entiende por códec a aquella tecnología software o hardware que permite comprimir o descomprimir archivos multimedia. } y resoluciones, lo que es esencial para garantizar la compatibilidad con diferentes dispositivos y plataformas. Por ejemplo, se puede convertir un video en formato \lstinline|.mov| a \lstinline|.mp4|, o extraer el audio de un archivo \lstinline|.mp4| a \lstinline|.mp3|.
+    \item \textbf{Compresión y Optimización}: Permite reducir el tamaño de archivos sin perder calidad significativa ajustando la resolución, códec  y el \textit{bitrate} \footnote{Se entiende por bitrate (tasa de bits) como la cantidad de información que se transmite por unidad de tiempo.}. Esto es esencial para mejorar la experiencia de usuario. Por ejemplo, en este tipo de servicios se suele utilizar \textbf{Adaptive Bitrate}. Esto consiste en guardar varias copias del mismo contenido con diferentes calidades y tamaños y, de esta forma, el reproductor puede seleccionar la versión más adecuada según la velocidad de conexión del usuario. 
     \item \textbf{Edición de video}: Permite realizar tareas básicas de edición como recortar la duración, unir varios videos, rotar, etc.
     \item \textbf{Streaming}: FFmpeg puede ser utilizado para transmitir video en tiempo real a través de protocolos como RTP o UDP.
     
@@ -39,15 +39,15 @@ FFmpeg es una herramienta de código abierto utilizada para el procesamiento de 
 
 La principal ventaja de FFmpeg es su versatilidad y flexibilidad. Puede aplicar filtros complejos, producir salidas en distintos formatos, ajustar la resolución, bitrate, códecs, frame rate y parámetros de la codificación dentro del mismo flujo de trabajo. Eso lo vuelve muy útil para transcodificación, remuxing, extracción de audio, recortes, subtítulo, entre otros casos de uso en el procesamiento de video.
 
-Es una herramienta \textit{open source} lo que implica que reduce la dependencia de un tercero, está disponible gratuitamente y está bien documentada. Todo esto facilita su integración en cualquier tipo de proyecto, evitando así el \textit{vendor lock-in}. 
+Es una herramienta \textit{open source} lo que implica que reduce la dependencia de un tercero. Está disponible gratuitamente y está bien documentada. Todo esto facilita su integración en cualquier tipo de proyecto, evitando así el \textit{vendor lock-in}. 
 
-La herramienta destaca por ser veloz y eficiente, implementando algoritmos avanzados de procesamiento de video. Además, es compatible con una amplia variedad de formatos y códecs y tiene soporte para diversos sistemas operativos. Por estas razones, FFmpeg es una opción popular y altamente utilizada en la industria para el procesamiento de video.
+La herramienta destaca por su velocidad y eficiencia, implementando algoritmos avanzados de procesamiento de video. Además, es compatible con una amplia variedad de formatos y códecs y tiene soporte para diversos sistemas operativos. Por estas razones, FFmpeg es una opción popular y altamente utilizada en la industria para el procesamiento de videos.
 
 \textbf{Desventajas}
 
 La principal desventaja de la herramienta es su complejidad. Requiere un conocimiento técnico profundo para su uso efectivo. A esto, se le suma su sintaxis compleja y la gran cantidad de opciones disponibles, lo que puede resultar abrumador para los usuarios sin experiencia.
 
-FFmpeg es el ganador en términos de flexibilidad y control, pero sin embargo, cuando el objetivo es la velocidad extrema o el ahorro masivo de energía, el hardware dedicado o las soluciones implementadas desde cero pueden superar a FFmpeg. Por ejemplo, el chip personalizado de Google Argos VCU (Video Coding Unit) supera a FFmpeg en velocidad, eficiencia de cómputo y ahorro energético optimizando la capacidad de los centros de datos de YouTube. \cite{google-vcu}  
+FFmpeg es el ganador en términos de flexibilidad y control. Sin embargo, cuando el objetivo es la velocidad extrema o el ahorro masivo de energía, el hardware dedicado o las soluciones implementadas desde cero pueden superar a FFmpeg. Por ejemplo, el chip personalizado de Google Argos VCU (Video Coding Unit) supera a FFmpeg en velocidad, eficiencia de cómputo y ahorro energético optimizando la capacidad de los centros de datos de YouTube. \cite{google-vcu}  
 
 
 \textbf{Servicios que emplean FFmpeg}
@@ -57,13 +57,13 @@ FFmpeg es el ganador en términos de flexibilidad y control, pero sin embargo, c
     \item Youtube, que incorpora FFmpeg y tecnologías personalizadas basadas en FFmpeg para procesar contenido multimedia.
     \item Meta, que también emplea FFmpeg para la transcodificación en plataformas como Facebook e Instagram.
     \item TikTok, que también utiliza FFmpeg para procesar los videos junto con tecnologías personalizadas.
-    \item Nasa, utiliza FFmpeg en algunos de sus rovers marcianos para comprimir los videos capturados por las cámaras de estos robots antes de ser enviados a la Tierra.
+    \item NASA, utiliza FFmpeg en algunos de sus rovers marcianos para comprimir los videos capturados por las cámaras de estos robots antes de ser enviados a la Tierra.
 \end{itemize}
 
 
 \subsection{MPEG-DASH}
 
-\textbf{MPEG-DASH} \cite{dash} (Dynamic Adaptive Streaming over HTTP) es un estándar internacional de transmisión de video sobre HTTP, enfocado en una distribución eficiente definido en la familia \textbf{ISO/IEC 23009}. Para ello, implementa técnicas de \textbf{Adaptive Bitrate} las cuales permiten ajustar automáticamente la calidad de reproducción, cambiando parámetros como el bitrate y la resolución del video según las condiciones de red y las capacidades del dispositivo del usuario. De esta  forma, se garantiza una experiencia de visualización fluida y sin interrupciones, incluso en conexiones lentas e inestables. 
+\textbf{MPEG-DASH} \cite{dash} (Dynamic Adaptive Streaming over HTTP) es un estándar internacional de transmisión de video sobre HTTP, enfocado en una distribución eficiente definido en la familia \textbf{ISO/IEC 23009}. Para esto, implementa técnicas de \textbf{Adaptive Bitrate} las cuales permiten ajustar automáticamente la calidad de reproducción, cambiando parámetros como el bitrate y la resolución del video según las condiciones de red y las capacidades del dispositivo del usuario. De esta  forma, se garantiza una experiencia de visualización fluida y sin interrupciones, incluso en conexiones lentas e inestables. 
 
 \textbf{Ventajas}
 
@@ -79,7 +79,7 @@ Aunque DASH funciona bien para la transmisión de video, no es la mejor opción 
 
 Otra desventaja importante es que este protocolo no tiene soporte nativo en Apple, lo que limita su incorporación en este tipo de dispositivos. 
 
-\pagebreak
+
 \textbf{Servicios que implementan DASH}
 
 DASH es un estándar abierto y empleado en gran cantidad de servicios de streaming. Algunos de estos son:
@@ -87,7 +87,7 @@ DASH es un estándar abierto y empleado en gran cantidad de servicios de streami
 \begin{itemize}
     \item YouTube es uno de los casos más importantes. Google informa a los desarrolladores que YouTube utiliza MPEG-DASH en su plataforma HTML5 para implementar Adaptive Bitrate. 
     \item Brightcove, una empresa proveedora de servicios de software en la nube especializada en el alojamiento, distribución y gestión de video online, también ha informado que utiliza MPEG-DASH para la entrega de contenido multimedia.
-    \item Bitmovin, otro proveedor de infraestructura de streaming, también ha confirmado que emplea MPEG-DASH en su plataforma para la entrega de video,.
+    \item Bitmovin, otro proveedor de infraestructura de streaming, también ha confirmado que emplea MPEG-DASH en su plataforma para la entrega de video.
     \item Vimeo, una plataforma de alojamiento de videos similar a YouTube, también ha confirmado que utiliza MPEG-DASH e implementa Adaptive Bitrate.
     \item Odysee y \textit{PeerTube}, plataformas de videos descentralizadas y basadas en tecnologías blockchain, adoptan también MPEG-DASH para la entrega de contenido multimedia.
 \end{itemize}
@@ -98,15 +98,15 @@ De forma similar a MPEG-DASH, \textbf{HLS} \cite{hls} (HTTP Live Streaming) tamb
 
 \textbf{Ventajas}
 
-Usualmente, este protocolo divide el video en segmentos pequeños y en formato de archivo \lstinline|.m3u8| que permite entregar el contenido de forma eficiente por HTTP usando CDNs y servidores web. El reproductor de video solicita los segmentos más adecuados teniendo en cuenta la calidad de conexión del usuario  mejorando la experiencia de visualización. 
+Usualmente, este protocolo divide el video en segmentos pequeños y en formato de archivo \lstinline|.m3u8| que permite entregar el contenido de forma eficiente por HTTP usando CDNs y servidores web. El reproductor de video solicita los segmentos más adecuados teniendo en cuenta la calidad de conexión del usuario mejorando así la experiencia de visualización. 
 
-Además, HLS es altamente escalable. Esto lo hace ideal para la distribución de contenido a gran escala siendo una opción popular para servicios de streaming en vivo y bajo demanda con momentos de elevado tráfico.
+Además, HLS es altamente escalable. Esto lo hace ideal para la distribución de contenido a gran escala siendo una opción popular para los servicios de streaming en vivo y bajo demanda durante momentos de elevado tráfico.
 
 HLS, es compatible con una amplia variedad de dispositivos especialmente con los dispositivos Apple, lo que lo convierte en una opción preferida para la distribución de contenido a usuarios de iOS y macOS.
 
 \textbf{Desventajas}
 
-Una de las desventajas más notorias de este protocolo es la falta de soporte en algunos dispositivos y navegadores, especialmente en aquellos que no son de Apple. Esto puede limitar su adopción en ciertos entornos y requerir la implementación de soluciones alternativas para garantizar la compatibilidad con una audiencia más amplia. \cite{hls-support}
+Una de las desventajas más notorias de este protocolo es la falta de soporte en algunos dispositivos y navegadores, especialmente en aquellos que no responden a las configuraciones Apple. Esto puede limitar su adopción en ciertos entornos y requerir la implementación de soluciones alternativas para garantizar la compatibilidad con una audiencia más amplia. \cite{hls-support}
 
 Adicionalmente, HLS puede ser inadecuado para circunstancias en las que se requiera una latencia extremadamente baja, como en llamadas de video en tiempo real. Debido a su arquitectura, para este tipo de aplicaciones, otros protocolos como WebRTC podrían ser más apropiados. \cite{hls-latency}
 
@@ -122,15 +122,15 @@ La gran mayoría de actores principales en el mercado de streaming implementan e
 \end{itemize}
 
 
-Cabe destacar que, en ambos protocolos HLS y MPEG-DASH, el video no se descarga por completo de una vez, sino que el reproductor va solicitando pequeños segmentos o fragmentos al servidor conforme avanza la reproducción. En otras palabras, el video está almacenado en partes pequeñas en el servidor cada una con diferentes calidades y el reproductor le solicita la parte que mejor se adapte a las condiciones de red del usuario en cada momento. Así, se evitan transmitir grandes cantidades de datos innecesarios por la red y se puede implementar un Adaptive Bitrate eficiente.
+Cabe destacar que, en ambos protocolos HLS y MPEG-DASH, el video no se descarga por completo en una única acción, sino que el reproductor va solicitando pequeños segmentos o fragmentos al servidor conforme avanza la reproducción. En otras palabras, el video está almacenado en partes pequeñas en el servidor, cada una con diferentes calidades, y el reproductor le solicita la parte que mejor se adapte a las condiciones de red del usuario en cada momento. Así, se evitan transmitir grandes cantidades de datos innecesarios por la red y se puede implementar un Adaptive Bitrate eficiente.
 
 \subsection{Object Storage}
 
-El contenido multimedia, en particular los videos, suelen ocupar un gran espacio de almacenamiento. Además, con las técnicas de \textbf{Adaptive Bitrate} es necesario almacenar varias copias del mismo video con diferentes calidades y tamaños lo cual incrementa el uso de espacio de forma considerable. Por ello, es fundamental contar con un sistema de almacenamiento eficiente y escalable. Por esa razón, se suelen emplear sistemas de almacenamiento de objetos \textbf{Object Storage} \cite{object_storage} como Google Cloud Storage, Amazon S3 Buckets o Azure Blob Storage que permiten almacenar grandes cantidades de datos de forma escalable y con alta disponibilidad. Esto es esencial para garantizar un acceso rápido y confiable a los videos por parte de los usuarios.
+El contenido multimedia, en particular los videos, suelen ocupar un gran espacio de almacenamiento. Además, con las técnicas de \textbf{Adaptive Bitrate} es necesario almacenar varias copias del mismo video con diferentes calidades y tamaños, lo cual incrementa el uso de espacio de forma considerable. Por ello, es fundamental contar con un sistema de almacenamiento eficiente y escalable. Por esa razón, se suelen emplear sistemas de almacenamiento de objetos \textbf{Object Storage} \cite{object_storage} como Google Cloud Storage, Amazon S3 Buckets o Azure Blob Storage que permiten almacenar grandes cantidades de datos de forma escalable y con alta disponibilidad. Esto es esencial para garantizar un acceso rápido y confiable a los videos por parte de los usuarios.
 
 \textbf{Ventajas}
 
-La mayor ventaja es su escalabilidad. Amazon S3 o Google Cloud Storage, son servicios de almacenamiento en la nube que permiten almacenar y recuperar cantidades masivas de datos solucionándole al usuario complicaciones con la gestión de particiones, discos, entre otros.
+La mayor ventaja es su escalabilidad. Amazon S3 o Google Cloud Storage, son servicios de almacenamiento en la nube que permiten guardar y recuperar cantidades masivas de datos solucionándole al usuario complicaciones con la gestión de particiones, discos, entre otros.
 
 Estos servicios suelen ofrecer una alta disponibilidad y durabilidad, lo que prácticamente garantiza que los datos estarán siempre accesibles y protegidos contra pérdidas. 
 
@@ -140,7 +140,7 @@ Aunque son capaces de almacenar grandes cantidades de datos, el acceso a los mis
 
 \textbf{Servicios de Object Storage}
 
-Todos las grandes plataformas de streaming emplean Object Storage para almacenar los videos. Los servicios más comunes para implementar esta tecnología son:
+Todos las grandes plataformas de streaming emplean Object Storage para almacenar sus videos. Los servicios más comunes para implementar esta tecnología son:
 
 \begin{itemize}
     \item Amazon S3 Buckets, es el ejemplo más conocido y es extensivamente usado por empresas y servicios como Netflix, Disney+, Twitch, Hulu y Prime Video para almacenar su contenido.  
@@ -152,7 +152,7 @@ Todos las grandes plataformas de streaming emplean Object Storage para almacenar
 
 Un Content Delivery Network (CDN) \cite{cdn} es una red de servidores distribuidos geográficamente que trabajan juntos para entregar contenido de manera rápida y eficiente a los usuarios finales. Un usuario, al solicitar un video, es atendido por el servidor más cercano a su ubicación, con el objetivo de reducir la latencia, aumentar la escalabilidad y mejorar el rendimiento del servicio. Su uso, se vuelve necesario en plataformas con alta demanda y con usuarios distribuidos geográficamente, donde depender exclusivamente del servidor de origen generaría mayores tiempos de respuesta, mayores costos y una sobrecarga innecesaria sobre la infraestructura principal. 
 
-De este modo, las CDN funcionan como una caché de contenido de los Object Storage, replicando o almacenando temporalmente los archivos en distintos nodos de la red para servirlos de manera más eficiente a los usuarios finales. Por tanto, los Object Storage cumplen la función de almacenamiento central del contenido, mientras que la CDN asume la función de distribución acelerada.
+De este modo, las CDNs funcionan como una caché de contenido de los Object Storage, replicando o almacenando temporalmente los archivos en distintos nodos de la red para servirlos de manera más eficiente a los usuarios finales. Por tanto, los Object Storage cumplen la función de almacenamiento central del contenido, mientras que las CDN asumen la función de distribución acelerada.
 
 \begin{figure}[h]
   \centering
@@ -163,7 +163,7 @@ De este modo, las CDN funcionan como una caché de contenido de los Object Stora
 \pagebreak
 \textbf{Ventajas}
 
-Claramente, la principal ventaja de los CDNs es que reducen la latencia y mejora el rendimiento del servicio. Como los servidores están distribuidos geográficamente, el usuario accede al servidor más cercano y esto, reduce el tiempo de carga, mejorando la experiencia de usuario.
+Claramente, la principal ventaja de los CDNs es que reducen la latencia y mejoran el rendimiento del servicio. Como los servidores están distribuidos geográficamente, el usuario accede al servidor más cercano y esto, reduce el tiempo de carga, mejorando la experiencia de usuario.
 
 Además, el uso de CDNs reduce la carga en los servidores de origen y en los Object Storage. Al servir contenido desde los nodos de la CDN, el servidor principal recibe menos solicitudes directas, cumpliendo así una función de caché que alivia la infraestructura principal.
 
@@ -175,7 +175,7 @@ Por otra parte, un gran número de CDNs suelen ofrecer capacidades adicionales d
 
 La desventaja más evidente es el costo. Aunque mejora la experiencia de usuario, facilita la escalabilidad y ofrece seguridad adicional, los CDNs suelen tener precios por transferencia, almacenamiento y solicitudes elevados, lo que puede resultar costoso para servicios con grandes volúmenes de tráfico y contenido.
 
-Asimismo, los CDNs introducen complejidad adicional en la arquitectura del servicio. Se deben definir políticas de caché, gestionar la invalidación de contenido y configurar adecuadamente la distribución del contenido entre los distintos nodos. Incluso, puede existir la posibilidad de servir contenido obsoleto o incorrecto si no se gestiona adecuadamente la sincronización entre el servidor de origen y los nodos de la CDN. Por tanto, el uso de CDNs requiera una gestión constante y una planificación rigurosa añadiendo complejidad a la arquitectura. 
+Asimismo, los CDNs introducen complejidad adicional en la arquitectura del servicio. Se deben definir políticas de caché, gestionar la invalidación de contenido y configurar adecuadamente la distribución del contenido entre los distintos nodos. Incluso, puede existir la posibilidad de servir contenido obsoleto o incorrecto si no se gestiona adecuadamente la sincronización entre el servidor de origen y los nodos de la CDN. Por tanto, el uso de CDNs requiera una gestión constante y una planificación rigurosa añadiendo complejidad a la arquitectura y a la operación. 
 
 \textbf{Servicios que emplean CDNs}
 
@@ -190,9 +190,9 @@ A pesar de sus desventajas, el uso de CDNs es muy común en la industria, especi
 
 \subsection{Colas de Procesamiento}
 
-El procesamiento y la transcodificación de video son tareas que suelen tomar un largo tiempo en completarse. Por esa razón, cuando un usuario sube un video, en lugar de forzarlo a esperar, se utilizan colas de procesamiento. En vez de hacer las operaciones lentas en la misma petición HTTP, el sistema registra un trabajo pendiente en una cola y este espera a ser atendido por un worker. A continuación, se realiza este trabajo y se reportan los resultados al finalizar. Así, se consiguen desacoplar procesos lentos de otros más rápidos que de lo contrario, causarían una mala experiencia de usuario. 
+El procesamiento y la transcodificación de video son tareas que suelen tomar un largo tiempo en completarse. Por esa razón, cuando un usuario sube un video, en lugar de forzarlo a esperar, se utilizan colas de procesamiento. En vez de hacer las operaciones lentas en la misma petición HTTP, el sistema registra un trabajo pendiente en una cola y este espera a ser atendido por un worker. A continuación, se realiza este trabajo y se reportan los resultados al finalizar. Así, se consigue desacoplar procesos lentos de otros más rápidos que de lo contrario causarían una mala experiencia de usuario. 
 
-En el contexto de procesamiento de video el esquema sería el siguiente:
+En el contexto de procesamientos de videos el esquema es el siguiente:
 
 \begin{itemize}
     \item 1. El usuario sube el video
@@ -209,9 +209,9 @@ Existen diversas formas de implementar una cola de procesamiento. Por ejemplo, R
 
 La ventaja principal es que mejoran la experiencia de usuario. La subida de video suele ser un proceso rápido mientras que la transcodificación puede tardar minutos e incluso horas en finalizar. 
 
-Además, las colas de procesamiento facilitan la escalabilidad. Este modelo permite responder de forma efectiva ante picos de alta demanda sin colapsar el \textit{backend}: los trabajos permanecen en un estado de espera en la cola. Para evitar que haya saturaciones o una gran cantidad de trabajos pendientes en ser atendidos, una solución común es añadir más workers según sea necesario. 
+Además, las colas de procesamiento facilitan la escalabilidad. Este modelo permite responder de forma efectiva ante picos de alta demanda sin colapsar el \textit{backend} porque los trabajos permanecen en un estado de espera en la cola. Para evitar que haya saturaciones o una gran cantidad de trabajos pendientes en ser atendidos, una solución común es añadir más workers según sea necesario. 
 
-Por otra parte, también favorecen la priorización de trabajos, por ejemplo, dando paso a videos Premium o urgentes antes que el resto.
+Por otra parte, también favorecen la priorización de trabajos. Por ejemplo, dando paso a videos Premium o urgentes antes que al resto.
 
 \textbf{Desventajas}
 
@@ -243,13 +243,14 @@ En esta sección se hace un estudio de los principales proveedores de infraestru
 %TABLA:
 %ROWS: Proveedor, Facilidad implementacion o Integracion, Flexibilidad, Escalabilidad, Costos, Soporte, Personalizacion, Popularidad, Caracteristicas adicionales, Problemas / Inconvenientes, Otros.
 
-\subsection{Amazon Web Services y solución propia}
+\subsection{Amazon Web Services}
 
-Esta alternativa consiste en implementar una solución propia utilizando los servicios de Amazon Web Services (AWS) para cada una de las etapas del proceso. Esto implica, implementar desde cero la lógica para el almacenamiento, entrega de video, transcodificación y procesamiento, generación de miniaturas y carga de videos al servidor.
 
-En este proyecto, se ha implementado una solución propia utilizando AWS la cual será descrita más en detalle en el capítulo de arquitectura \todo{poner capitulo arquitectura y donde Explico Docker?} en donde se utilizan todas las tecnologías expuestas en la sección anterior. Esta solución, aunque es más compleja, permite un control total sobre el funcionamiento del servicio. 
+Amazon Web Services es una proveedor de infraestructura en la nube que permite al cliente implementar soluciones propias utilizando servicios modulares según la necesidad. Esto le aporta al cliente la posibilidad de crear desde cero la lógica para el almacenamiento, entrega de video, transcodificación y procesamiento, generación de miniaturas y carga de videos al servidor. Esta solución, aunque es más compleja, permite un control total sobre el funcionamiento del servicio. 
 
-Además, es útil entender cómo los servicios proveedores de infraestructura de streaming como Mux o Bunny.net, implementan su solución.
+Las funcionalidades de este proveedor serán desarrolladas en detalle en el capítulo de arquitectura donde se describe el diseño de una pipeline propio mediante los servicios de AWS y con las tecnologías expuestas en el capítulo anterior.
+ \todo{poner capitulo arquitectura y donde Explico Docker?}.
+
 
 \begin{figure}[h]
   \centering
@@ -259,7 +260,7 @@ Además, es útil entender cómo los servicios proveedores de infraestructura de
 
 \textbf{Ventajas}
 
-La principal ventaja de utilizar un pipeline propio es que se tiene un control total sobre el funcionamiento del servicio. Esto permite ajustar cada etapa a las necesidades específicas del proyecto. Por ejemplo, se pueden ajustar los servicios de AWS para que se ajusten a la escala del proyecto, realizar el procesamiento de video de forma personalizada, entre otros. 
+La principal ventaja que tiene Amazon Web Services es que permite diseñar un pipeline propio que facilita tener un control total sobre el funcionamiento del servicio. Esto permite ajustar cada etapa a las necesidades específicas del proyecto. Por ejemplo, se pueden ajustar los servicios de AWS para que se adapten a la escala, realizar el procesamiento de video de forma personalizada, entre otros. 
 
 A su vez, se evita la dependencia de un proveedor de infraestructura de streaming separado. Con esto se evita el \textit{vendor lock-in} y se tiene la libertad de cambiar o ajustar los servicios de AWS según sea necesario sin depender de las limitaciones de un proveedor externo. 
 
@@ -267,7 +268,7 @@ Asimismo, AWS es un servicio usado extensivamente en la industria, con una dispo
 
 \textbf{Desventajas}
 
-Evidentemente, la principal desventaja es la complejidad que añade. Implementar esta solución implica gestionar y configurar cada uno de los servicios de AWS. Además, requiere saber sobre cada una de las etapas del proceso en detalle y su integración. Un proveedor externo suele resolver todos los problemas de mantenimiento, almacenamiento, colas, procesamiento, mantenimiento y seguridad, mientras que con esta solución, el equipo de desarrollo es el responsable de gestionar cada uno de estos aspectos. En consecuencia, los recursos y el tiempo de implementación son mayores. 
+Evidentemente, la principal desventaja es la complejidad que añade. Implementar esta solución implica gestionar y configurar cada uno de los servicios de AWS. Además, requiere saber sobre cada una de las etapas del proceso en detalle y su integración. Un proveedor externo suele resolver todos los problemas de mantenimiento, almacenamiento, colas, procesamiento y seguridad, mientras que con esta solución, el equipo de desarrollo es el responsable de gestionar cada uno de estos aspectos. En consecuencia, los recursos y el tiempo de implementación son mayores. 
 
 Uno tendería a pensar que esta solución es más eficiente en términos de costos, pero no siempre es así, como se demostrará más adelante.  
 
@@ -287,22 +288,22 @@ Algunos Servicios de streaming que emplean AWS o utilizan servicios de AWS para 
 
 \textbf{Análisis de Costos}
 
-Para calcular es costo aproximado de esta solución, se deben considerar cada uno de los componentes del proceso por separado. Aunque más tarde, se detallará el funcionamiento y la razón de uso de cada uno de estos servicios, a continuación se hace un desglose de los costos aproximados para cada uno de los servicios:
+Para calcular el costo aproximado de esta solución, se deben considerar cada uno de los componentes del proceso por separado. Aunque más tarde, se detallará el funcionamiento y la razón de uso de cada uno de estos servicios, a continuación se hace un desglose de los costos aproximados para cada uno de los servicios:
 
 \begin{itemize}
     \item Amazon S3 Buckets: Suponiendo $500$ GB de datos almacenados cada mes y tomando el precio para la región de España de un S3 Bucket Standard (\$ $0.023$ por GB) el costo total es: $500 \text{ GB } \cdot 0.023 \$ \text{ por GB} = \$11.5 $ al mes.
     \item Amazon EC2: Suponiendo un \lstinline|t3.medium| que trabaja 24 horas por día, y tomando el precio por hora de \$ $0.0416$ el costo total es: $0.0416 \$ \text{ por hora} \cdot 24 \text{ horas por día} \cdot 30 \text{ días por mes} = \$29.95$ al mes.
     \item Amazon SQS: Suponiendo 2 millones de solicitudes al mes, y tomando  \$ $0.40$ como el precio estándar por cada millón de solicitudes, el costo total es: $2 \text{ millones de solicitudes} \cdot 0.40 \$ \text{ por millón de solicitudes} = \$0.80$ al mes.
-    \item Amazon CloudFront: Si entrego 2TB de datos al mes y tomando el precio para la región de Europa de \$ $0.09$ por GB, el costo total es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.09 \$ \text{ por GB} = \$184.32$ al mes.
+    \item Amazon CloudFront: Si se entregan 2TB de datos al mes y tomando el precio para la región de Europa de \$ $0.09$ por GB, el costo total es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.09 \$ \text{ por GB} = \$184.32$ al mes.
 \end{itemize}
 
-Sumando cada uno de estos costos, el costo total aproximado para esta solución es: $\$11.5 + \$29.95 + \$0.80 + \$184.32 = \$226.57$ al mes.
+Sumando cada uno de estos costos, el costo total aproximado con este proveedor es: $\$11.5 + \$29.95 + \$0.80 + \$184.32 = \$226.57$ al mes.
 
 
 
 \subsection{Mux.com}
 
-Mux es un proveedor de infraestructura de streaming de video orientada a desarrolladores. Permite subir videos, procesarlos, entregarlos, almacenarlos, gestionarlos, acceder a estadísticas, entre otras funcionalidades. Mux, facilita el proceso de desarrollo ya que se encarga de gestionar y mantener la infraestructura de streaming. Por esta razón, es una opción común para aquellos equipos que no dispongan de los recursos o el tiempo necesario para implementar una solución propia.  
+Mux es un proveedor de infraestructura de streaming de video orientado a desarrolladores. Permite subir videos, procesarlos, entregarlos, almacenarlos, gestionarlos, acceder a estadísticas, entre otras funcionalidades. Mux, facilita el proceso de desarrollo ya que se encarga de gestionar y mantener la infraestructura de streaming. Por esta razón, es una opción común para aquellos equipos que no disponen de los recursos o el tiempo necesario para implementar una solución propia.  
 
 \begin{figure}[h]
   \centering
@@ -322,7 +323,7 @@ A su vez, Mux ofrece características adicionales como un contador de visitas de
 
 Al depender de un proveedor externo, se pierde el control sobre la arquitectura de procesamiento de los videos o posibles optimizaciones personalizadas que se deseen implementar. 
 
-Puede resultar una opción costosa a largo plazo, en especial para proyectos de gran escala o aquellos que esperen un crecimiento importante en el tráfico, volumen de datos, o videos subidos. Además, al ser un servicio de terceros, se está sujeto a las políticas de precios o cambios en la plataforma. 
+Puede resultar una opción costosa a largo plazo, en especial para proyectos de gran escala o aquellos que esperan un crecimiento importante en el tráfico, volumen de datos, o videos subidos. Además, al ser un servicio de terceros, se está sujeto a las políticas de precios o cambios en la plataforma. 
 
 
 \textbf{Servicios que emplean Mux}
@@ -349,12 +350,12 @@ Según la página oficial de precios de Mux \cite{mux-pricing} y tomando como su
     \item La cantidad de GB procesados por mes son 500 GB. 
 \end{itemize}
 
-Con estas estimaciones, el costo aproximado por mes es $\$ 20.00$. Sin embargo, cabe destacar que si se considera usar una calidad de video superior como \textit{Plus}, el precio se vería disparado hasta $\$ 321.64$ por mes.
+Con estas estimaciones, el costo aproximado por mes es $\$ 20.00$. Sin embargo, cabe destacar que si se considera usar una calidad de video superior como \textit{Plus}, el precio ascendería hasta $\$ 321.64$ por mes.
 
 
 \subsection{Bunny.net}
 
-Bunny.net es una plataforma que ofrece varios servicios. Entre ellos, se encuentra la entrega de contenido mediante CDNs, almacenamiento de objetos, streaming de videos, optimización de imágenes, seguridad contra ataques DDoS. El principal punto fuerte de Bunny.net es su precio competitivo en comparación con otros proveedores de infraestructura de streaming. Sin embargo, su integración requiere un mayor esfuerzo de desarrollo.  
+Bunny.net es una plataforma que ofrece varios servicios. Entre estos, se encuentra la entrega de contenido mediante CDNs, almacenamiento de objetos, streaming de videos, optimización de imágenes y seguridad contra ataques DDoS. El principal punto fuerte de Bunny.net es su precio competitivo en comparación con otros proveedores de infraestructura de streaming. Sin embargo, su integración requiere un mayor esfuerzo de desarrollo.  
 
 \begin{figure}[h]
   \centering
@@ -366,18 +367,18 @@ Bunny.net es una plataforma que ofrece varios servicios. Entre ellos, se encuent
 
 La principal ventaja de Bunny.net son sus precios reducidos. El almacenamiento, procesamiento y distribución de contenido multimedia es costoso, pero sorprendentemente, Bunny.net ofrece una solución barata en comparación con una solución propia u otros proveedores de infraestructura de streaming. Esto lo hace ideal para proyectos con una escala pequeña o para entregar un producto mínimo viable (MVP) de forma rápida y barata.
 
-BunnyStream, el servicio de streaming de Bunny.net, integra CDN, transcodificación, procesamiento de video, almacenamiento, estadísticas avanzadas, subtítulos automáticos, personalización del reproductor, entre otras funcionalidades. Esto lo convierte en una opción interesante para startups que busquen una solución completa y económica para su servicio de streaming.
+BunnyStream, el servicio de streaming de Bunny.net, integra CDN, transcodificación, procesamiento de video, almacenamiento, estadísticas avanzadas, subtítulos automáticos, personalización del reproductor, entre otras funcionalidades. Esto lo convierte en una opción para startups que busquen una solución completa y económica para su servicio de streaming.
 
 
 
 
 \textbf{Desventajas}
 
-De forma similar a Mux, al depender de un proveedor externo, se pierde control sobre la arquitectura de procesamiento de los videos, incluyendo optimizaciones personalizadas. Para una escala más grande, puede resultar ineficiente y en este caso, sería más recomendable implementar una solución propia con servicios de AWS o similares.
+De forma similar a Mux, al depender de un proveedor externo, se pierde el control sobre la arquitectura de procesamiento de los videos, incluyendo optimizaciones personalizadas. Para una escala más grande, puede resultar ineficiente y en este caso, sería más recomendable implementar una solución propia con servicios de AWS o similares.
 
-Asimismo, en comparación con Mux, Bunny.net tiene una documentación más limitada y no tan exhaustiva como en el caso de Mux. Esto dificulta la integración y el uso de algunas de sus funcionalidades. Emplear Bunny.net, requiere más tiempo, recursos y esfuerzos de desarrollo que Mux, lo que puede no ser ideal para equipos pequeños o con recursos limitados. 
+Asimismo, en comparación con Mux, Bunny.net tiene una documentación más limitada y no tan exhaustiva como en el caso de Mux. Esto dificulta la integración y el uso de algunas de sus funcionalidades. Emplear BunnyStream, requiere más tiempo, recursos y esfuerzos de desarrollo que Mux, lo que puede no ser ideal para equipos pequeños o con recursos limitados. 
 
-Otro aspecto importante a destacar es que Bunny.net ofrece menos personalización que Mux. BunnyStream incorpora un reproductor de video con diversas opciones pero no siempre se puede adaptar el estilo del reproductor de forma completa y sencilla a las necesidades de una empresa. 
+Otro aspecto importante a destacar es que Bunny.net ofrece menos personalización que Mux. BunnyStream incorpora un reproductor de video con diversas opciones, pero no siempre se puede adaptar el estilo del reproductor de forma completa y sencilla a las necesidades de una empresa. 
 
 \textbf{Servicios que emplean Bunny.net}
 
@@ -391,15 +392,15 @@ Bunny.net es una alternativa menos conocida que otras, siendo una opción más c
 
 \textbf{Análisis de Costos}
 
-Tomando los mismos supuestos que en el caso de Mux o AWS y los datos publicados en la web oficial de Bunny.net \cite{bunny-pricing}, el desglose de los costos aproximados es el siguiente.
+Tomando los mismos supuestos que en el caso de Mux, AWS y los datos publicados en la web oficial de Bunny.net \cite{bunny-pricing}, el desglose de los costos aproximados es el siguiente.
 
 \begin{itemize}
     \item Almacenando $500$ GB por mes, con un precio de \$ $0.01$ por GB, el costo total es: $500 \text{ GB} \cdot 0.01 \$ \text{ por GB} = \$5.00$ al mes.
     \item Para un procesamiento básico de video \footnote{Un procesamiento básico incluye funcionalidades como transcodificación, Adaptive Bitrate, salidas con códecs x264 y resoluciones configurables desde 240p hasta 2160p. El plan básico no tiene códecs más avanzados ni prioridades en las colas de procesamiento. } Bunny.net no cobra. Por tanto para el supuesto de $500 GB$ procesados por mes el costo es \$ $0.00$ al mes.
-    \item Los costos de transferencia varían según la cantidad de CDNs utilizados y cuáles. Utilizando 3 CDNs se obtiene $0.005$ \$ por GB. Por tanto, el precio por mes para $2$ TB de entrega de datos es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.005 \$ \text{ por GB} = \$10.24$
+    \item Los costos de transferencia varían según la cantidad y topología de CDNs utilizados. Utilizando 3 CDNs se obtiene $0.005$ \$ por GB. Por tanto, el precio por mes para $2$ TB de entrega de datos es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.005 \$ \text{ por GB} = \$10.24$
 \end{itemize}
 
-El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 = \$15.24$ al mes, lo que la convierte en una opción increíblemente económica en comparación con otras alternativas. Asimismo, si elegimos una calidad de video superior, el precio no se vería tan afectado como en el caso de Mux.     
+El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 = \$15.24$ al mes, lo que la convierte en una opción económica en comparación con otras alternativas. Asimismo, si se elige una calidad de video superior, el precio no se vería afectado como en el caso de Mux.     
 
 \pagebreak
 
