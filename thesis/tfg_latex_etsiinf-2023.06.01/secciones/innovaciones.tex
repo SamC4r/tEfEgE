@@ -139,11 +139,54 @@ En otra sección donde se han incorporado numerosas mejoras ha sido en la vista 
 A la derecha de un video aparece en primer lugar, el creador del mismo. Adicionalmente, se incluye información sobre el nivel del canal del usuario y los puntos de Boost que este tiene. Esto viene acompañado de un componente de barra de progreso para comunicar de forma más visual esta información. Abajo de este bloque comienza una sección donde el usuario puede filtrar por 
 \begin{itemize}
   \item \textbf{Más Información}: Se muestran más detalles sobre el video como la descripción (la cual se puede colapsar), la fecha de carga del video y su popularidad.
-  \item \textbf{Videos}: En esta sección aparecen más videos relacionados al que ya se está reproduciendo. El algoritmo de recomendación toma en cuenta los datos del video actual y selecciona al usuario los mejores candidatos para ver a continuación
-  \item \textbf{Comentarios}: Se accede a los comentarios asociados al video donde se pueden ver, crear y responder. 
+  \item \textbf{Videos}: En esta sección aparecen videos similares al que ya se está reproduciendo. El algoritmo de recomendación toma en cuenta los datos del video actual y le muestra al usuario los mejores candidatos para ver a continuación.
+  \item \textbf{Comentarios}: Se acceden a la sección de comentarios donde se pueden crear, ver y responder. 
 \end{itemize}
 
 \textbf{Barra lateral}
+
+La barra lateral también presenta mejoras. Esta es visible en todas las rutas dentro de la aplicación. Sin embargo, en la vista de videos esta desaparece. Para volver a mostrarla, es necesario presionar un botón y aparecerá en modo flotante.
+
+Además, se divide en varias secciones y permite navegar por toda la aplicación de forma rápida y accesible. Los primeros 6 componentes corresponden a las rutas más importantes dentro de la plataforma incluyendo:
+
+\begin{itemize}
+  \item \textbf{Next Up}: Vista de videos rápidos donde el usuario puede arrastrar su cursor para pasar al siguiente.
+  \item \textbf{Explorer}: Página principal de la aplicación donde los videos se muestran en formato de cuadrícula. Se pueden filtrar, buscar y acceder a la sección de videos recientes en comunidades y creadores.
+  \item \textbf{Following}: Lista de los canales a los que el usuario sigue
+  \item \textbf{Market}: Espacio reservado para la compra de puntos de experiencia, compra de artículos, recepción de premios, desbloqueo de \textit{assets}, entre otros ítems de personalización.
+  \item \textbf{Communities}: Zona destinada a la creación y búsqueda de comunidades.
+  \item \textbf{Top Channels}: Clasificación de los mejores canales en la plataforma. Se puede filtrar por puntos de experiencia o por cantidad de seguidores.
+\end{itemize}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.23\textwidth]{portada/sidebar.png}
+    \caption{Barra lateral de Booster}
+\end{figure}
+
+Estos 6 componentes determinan el flujo habitual de uso de la aplicación. En la parte inferior, hay más secciones, pero estas son dependientes del usuario. Aquí, se muestran 5 canales que el usuario esté siguiendo y con cargas más recientes de video. De esta forma, se tiene un acceso rápido a las nuevas actualizaciones.
+
+Finalmente, se incluyen apartados destinados a explicar el funcionamiento de la plataforma así como las reglas y las pautas de la comunidad. Asimismo, se ha implementado un apartado que permite realizar ajustes de usuario sobre el algoritmo de recomendación. Posteriormente, se ampliarán las opciones de tal forma que mediante esta sección, se cambien más opciones.
+
+Como se observa en la figura, la barra lateral tiene íconos para mejorar la usabilidad y además, el apartado seleccionado tiene señales visuales de activación con la paleta de color de la marca de la plataforma y con esquinas redondeadas.
+
+
+\textbf{Comentarios}
+
+Los comentarios de un video, también presentan mejoras visuales y estructurales. A diferencia de la gran mayoría de plataformas de streaming, los comentarios en Booster están organizados en formato de hilo o árbol de respuestas similar a aplicaciones como \textit{Reddit}. Asimismo, el diseño de los mismos es moderno y atractivo lo cual se consigue con las tecnologías web modernas de diseño como \textit{Tailwindcss} y además, se incluyen iconos de \textit{Lucide-React-Icons} para mejorar la usabilidad.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{portada/comentarios.png}
+  \caption{Comentarios de un video}
+\end{figure}
+
+Como se puede observar en la figura, los comentarios pueden tener respuestas. Esto requirió crear una estructura de árbol para modelar los comentarios que dependen de otros. En la implementación elegida, cada comentario principal es la raíz de un árbol. Al añadir una respuesta se crea un nuevo vértice, se indica el nodo ancestro y se añade una arista entre ellos. Al cargar la vista de los comentarios, la aplicación obtiene la raíz de cada árbol. Posteriormente, si el usuario quiere ver respuestas, selecciona la opción para desplegar los hijos adyacentes de un nodo y la aplicación obtiene de la base de datos los descendientes \footnote{Se ha considerado que el ancestro de un nodo raíz es él mismo.}. 
+
+Los comentarios no solo se cargan bajo demanda, sino que también se ordenan y priorizan según su popularidad. Cada comentario dispone de un botón de \textit{like} lo cual cambia su relevancia. Al cargar los comentarios principales (nodos raíz), la aplicación los organiza por cantidad de \textit{likes} en orden descendiente. Las respuestas, se ordenan de la misma forma. Como futura ampliación, se podrían implementar algoritmos un poco más sofisticados de recomendación de comentarios que tengan en cuenta el nivel de interacción, la antigüedad, el tono del mensaje, el contexto del mensaje, entre otros.
+
+De esta forma, se consigue una interfaz más clara y moderna de los comentarios de los usuarios. Cabe destacar, que la profundidad máxima se ha limitado a 3 hijos para evitar que los componentes se superpongan y se desborden.
+
 
 
 
