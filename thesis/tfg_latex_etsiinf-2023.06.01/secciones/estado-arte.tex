@@ -456,7 +456,7 @@ El costo total aproximado para esta alternativa es: $\$5.00 + \$0.00 + \$10.24 =
 \section{Modelos de Arquitectura}
 
 
-En esta sección se describen y analizan los tres principales modelos de arquitectura que se pueden emplear en un servicio de streaming de video. Estos incluyen el modelo centralizado y el modelo federado y el modelo peer-to-peer (P2P). Se explican las características de cada uno, sus ventajas, desventajas o debilidades, tecnologías típicas asociadas a cada modelo y ejemplos de servicios que integran alguno de estos en su arquitectura. 
+En esta sección se describen y analizan los tres principales modelos de arquitectura que se pueden emplear en un servicio de streaming de video. Estos incluyen el modelo centralizado, el modelo federado y el modelo peer-to-peer (P2P). Se explican las características de cada uno, sus ventajas, desventajas o debilidades, tecnologías típicas asociadas a cada modelo y ejemplos de servicios que integran alguno de estos en su arquitectura. 
 
 \subsection{Modelo Centralizado}
 
@@ -467,9 +467,9 @@ La arquitectura centralizada es el modelo más común y tradicional para platafo
 
 En otras palabras, esto quiere decir que la plataforma centralizada recibe los videos en servidores propios o contratados, los procesa con su infraestructura y finalmente, los entrega a la audiencia a través de su propia red de distribución. 
 
-Desde un punto de vista más técnico, la arquitectura centralizada se caracteriza por tener un \textit{backend} monolítico o basado en microservicios, donde cada componente del sistema está gestionado por la misma organización.  Además, no siempre es un único servidor central, sino que puede haber copias del mismo distribuidas geográficamente, pero el control y la gestión de los servicios está siempre bajo la misma entidad.
+Desde un punto de vista más técnico, la arquitectura centralizada se caracteriza por tener un \textit{backend} monolítico \footnote{Se entiende por \textit{backend} monolítico a aquella arquitectura software donde toda la aplicación se desarrolla y despliega como una única unidad.} o basado en microservicios, donde cada componente del sistema está gestionado por la misma organización.  Además, no siempre es un único servidor central, sino que puede haber copias del mismo distribuidas geográficamente, pero el control y la gestión de los servicios está siempre bajo la misma entidad.
 
-Normalmente, este tipo de plataformas se compone de una cadena de servicios que trabajan juntos para controlar de extremo a extremo el almacenamiento, procesamiento y la entrega del contenido. 
+Normalmente, este tipo de plataformas se compone de una cadena de servicios que trabajan juntos para controlar de extremo a extremo el almacenamiento, procesamiento y la entrega de contenido. 
 
 
 \begin{figure}[h]
@@ -482,40 +482,40 @@ Normalmente, este tipo de plataformas se compone de una cadena de servicios que 
 
 El flujo comienza cuando un usuario sube un video a la plataforma. Se carga un archivo desde el \textit{frontend} de la aplicación web o móvil hacia un servidor \textit{backend}. A continuación, el servidor registra los metadatos del video (identificador, titulo, descripción, tags, visibilidad, duración, etc.) en una base de datos e intenta almacenar el video en un sistema de Object Storage. 
 
-Posteriormente, el archivo subido pasa a una cola de procesamiento, donde espera a ser atendido por un worker para ejecutar tareas de transcodificación. Herramientas como FFmpeg juegan un papel fundamental en esta etapa permitiendo convertir el video a diferentes formatos, resoluciones y bitrates y segmentarlo para adaptarlo a HLS o MPEG-DASH. En paralelo, se suelen generar miniaturas, extraer metadatos adicionales, generar subtítulos, entre otras tareas.
+Posteriormente, el archivo subido pasa a una cola de procesamiento, donde espera a ser atendido por un worker para ejecutar tareas de transcodificación. Herramientas como FFmpeg juegan un papel fundamental en esta etapa permitiendo convertir el video a diferentes formatos, resoluciones y bitrates, y segmentarlo para adaptarlo a HLS o MPEG-DASH. En paralelo, se suelen generar miniaturas, extraer metadatos adicionales, crear subtítulos, entre otras tareas.
 
 Una vez, el video fue procesado, se distribuyen los segmentos a través de un CDN. De este modo, el video se entrega de forma eficiente a los usuarios finales. 
 
-Con los metadatos del video recién creado, un algoritmo de recomendación se encarga de sugerir el video a usuarios que podrían estar interesados en él. No obstante, en una plataforma de videos convencional, el sistema de moderación se asegura de revisar que el contenido cumpla con las políticas de la plataforma antes de ser mostrado a usuarios finales. 
+Con los metadatos del video recién creado, un algoritmo de recomendación se encarga de sugerir el video a usuarios que podrían estar interesados en este. No obstante, en una plataforma de videos convencional, el sistema de moderación se asegura de revisar que el contenido cumpla con las políticas de la plataforma antes de ser mostrado a usuarios finales. 
 
 
 
 
 \textbf{Ventajas}
 
-La principal ventaja es su alto nivel de control. La organización responsable es la encargada de definir cómo se almacenan los datos, qué políticas de moderación se utilizan, cómo funciona el algoritmo de recomendación, cómo se optimiza el rendimiento, políticas de seguridad, monetización.
+La principal ventaja es su alto nivel de control. La organización responsable es la encargada de definir cómo se almacenan los datos, qué políticas de moderación se utilizan, cómo funciona el algoritmo de recomendación, cómo se optimiza el rendimiento, las políticas de seguridad, la monetización.
 
-Asimismo, comparado con otros modelos,la arquitectura centralizada es más fácil de diseñar, implementar, escalar y mantener.
+Asimismo, comparado con otros modelos, la arquitectura centralizada es más fácil de diseñar, implementar, escalar y mantener.
 
 
 \textbf{Desventajas}
 
-Uno de los puntos débiles de este modelo es su fuerte dependencia de la infraestructura centralizada, que suele crear 'puntos únicos de fallo'. Si el servidor central o la infraestructura de almacenamiento experimenta problemas, el servicio puede verse degradado.
+Uno de los puntos débiles de este modelo es su fuerte dependencia de la infraestructura centralizada, que suele crear "puntos únicos de fallo". Es decir, si el servidor central o la infraestructura de almacenamiento experimenta problemas, el servicio puede verse degradado.
 
 Por otra parte, en servicios de streaming de video, una arquitectura de este tipo puede generar altos costos de infraestructura y mantenimiento, especialmente a medida que la plataforma crece y atrae a más usuarios. Esto es debido principalmente a que el almacenamiento, procesamiento y la distribución tienen un alto consumo de recursos. 
 
 \textbf{Servicios que implementan este modelo}
 
-La mayor parte de los servicios de streaming y redes sociales utilizan este tipo de modelo, aunque cada una con sus propias variaciones. Entre estos destacan: YouTube, Rumble, Vimeo, Twitch, Instagram, Netflix, entre otros. También suele ser una opción popular para startups ya que es más fácil de implementar e integrar \textit{frontend}, \textit{backend}, procesamiento y distribución de video. 
+La mayor parte de los servicios de streaming y redes sociales utilizan este tipo de modelo, aunque cada una con sus propias variantes. Entre estos destacan YouTube, Rumble, Vimeo, Twitch, Instagram, Netflix, entre otros. También suele ser una opción popular para startups ya que es más fácil de implementar e integrar \textit{frontend}, \textit{backend}, procesamiento y distribución de video. 
 
 \pagebreak
 
 \subsection{Modelo Federado}
 
 
-La arquitectura federada no suele ser un modelo común en servicios de streaming de video, aunque es una opción realmente interesante. Aquí, múltiples servidores independientes llamados nodos o instancias, operan de forma autónoma aunque pueden comunicarse entre ellos mediante protocolos. Al contrario del modelo centralizado, en este caso no existe una única entidad que controle todo el sistema. Cada nodo es responsable de gestionar sus propios usuarios, almacenamiento, procesamiento, base de datos y políticas de moderación. Sin embargo, esto no significa que los nodos estén aislados: un usuario registrado en una instancia puede acceder y descubrir contenido que se encuentre en otra si ambas hablan el mismo protocolo de federación.
+La arquitectura federada no suele ser un modelo común en servicios de streaming de video, aunque es una opción a considerar. Aquí, múltiples servidores independientes llamados nodos o instancias, operan de forma autónoma aunque pueden comunicarse entre ellos mediante protocolos. Al contrario del modelo centralizado, en este caso no existe una única entidad que controle todo el sistema. Cada nodo es responsable de gestionar sus propios usuarios, almacenamiento, procesamiento, base de datos y políticas de moderación. Sin embargo, esto no significa que los nodos estén aislados. Un usuario registrado en una instancia puede acceder y descubrir contenido que se encuentre en otro servidor autónomo si ambas instancias hablan el mismo protocolo de federación.
 
-Desde un punto de vista técnico, cuando un usuario sube un video a una instancia, este se procesa y almacena en ese mismo nodo. Este, también se encarga de gestionar la autenticación, moderación de contenido y el procesamiento de video. Por ello, se podría considerar a cada nodo como una pequeña arquitectura centralizada e independiente. 
+Desde un punto de vista técnico, cuando un usuario sube un video a una instancia, este se procesa y almacena en ese mismo nodo. Este, también se encarga de gestionar la autenticación, moderación de contenido y el procesamiento de video. Por lo tanto, se podría considerar a cada nodo como una pequeña arquitectura centralizada e independiente. 
 
 Lo especial de este modelo es su protocolo de comunicación o federación. Esto permite que un nodo anuncie de su existencia a otros y que intercambie información. Un protocolo común es \textbf{ActivityPub}, diseñado para redes sociales federadas y que forma el \textbf{Fediverse} \cite{activitypub}.
 
@@ -567,9 +567,9 @@ En general, este enfoque suele ser adoptado por comunidades que priorizan descen
 
 \subsection{Modelo Peer-to-Peer (P2P)}
 
-Esta arquitectura, aunque menos convencional, es otra alternativa para implementar una red social o un servicio streaming de videos. Este es un modelo distribuido en el que cada cliente o nodo de la red puede actuar como consumidor o proveedor de contenido. Es distinto a la arquitectura centralizada en el modo de operación. La entrega de contenido de distribuye entre varias instancias independientes y no hay una dependencia con una organización que controle toda la infraestructura principal. Por otra parte, se diferencia del modelo federado debido a los protagonistas que forman parte de la red. En el federado, la red se compone de servidores independientes y autónomas que se comunican entre sí, mientras que en el P2P, son los propios pares de la red los que toman un papel más importante.
+Esta arquitectura, aunque menos convencional, es otra alternativa para implementar una red social o un servicio de streaming de videos. Este es un modelo distribuido en el que cada cliente o nodo de la red puede actuar como consumidor o proveedor de contenido. Es distinto a la arquitectura centralizada en el modo de operación. La entrega de contenido se distribuye entre varias instancias independientes y no hay una dependencia con una organización que controle toda la infraestructura principal. Por otra parte, se diferencia del modelo federado debido a los protagonistas que forman parte de la red. En el federado, la red se compone de servidores independientes y autónomos que se comunican entre sí, mientras que en el P2P, son los propios pares de la red o clientes los que asumen un rol más activo.
 
-Esto quiere decir que en P2P, los usuarios comparten fragmentos de video o archivos directamente entre ellos. Esto contrasta con el modelo centralizado donde se recibe el contenido desde la infraestructura principal controlada por la organización y además, con el federado, donde el contenido depende del nodo que lo almacena. 
+En otras palabras en P2P, los usuarios comparten fragmentos de video o archivos directamente entre ellos. Esto contrasta con el modelo centralizado donde se recibe el contenido desde la infraestructura principal controlada por la organización y además, con el federado, donde el contenido depende del nodo que lo almacena. 
 
 Normalmente, los archivos de videos en este tipo de arquitecturas se dividen en bloques o fragmentos que pueden descargarse desde varios nodos a la vez. Es decir, partes de un mismo video pueden estar distribuidas en distintos nodos de la red.
 
@@ -582,29 +582,29 @@ Normalmente, los archivos de videos en este tipo de arquitecturas se dividen en 
 
 \textbf{Flujo de procesamiento de video}
 
-El flujo comienza cuando un usuario publica un video dentro de la red. Dependiendo de las implementaciones, este archivo puede almacenarse en uno o varios nodos a la vez y dividirse en fragmentos entre ellos para facilitar su distribución. A continuación, la red utiliza mecanismos de descubrimiento para que otros pares puedan localizar el contenido y los nodos que lo tienen. 
+El flujo comienza cuando un usuario publica un video dentro de la red. Dependiendo de las implementaciones, este archivo puede almacenarse en uno o varios nodos a la vez y dividirse en fragmentos para facilitar su distribución. A continuación, la red utiliza mecanismos de descubrimiento para que otros pares puedan localizar el contenido y los nodos que lo tienen. 
 
 Cuando un usuario intenta acceder al video, no siempre lo descarga desde una única fuente, ya que este puede estar fragmentado en varios nodos al mismo tiempo. Por tanto, el cliente se encarga de reconstruir el contenido a medida que recibe la información. Esto claramente se diferencia de los dos métodos anteriores en donde se tiene un origen claramente identificable. 
 
-Las tecnologías más populares para este modelos son BitTorrent, WebTorrent y IPFS. Estas, intentan distribuir los datos entre los pares de la red (clientes) mientras que el federado lo hace entre instancias (servidores independientes y autónomos) de la red.
+Las tecnologías más populares para este modelos son BitTorrent, WebTorrent e IPFS. Estas, intentan distribuir los datos entre los pares de la red (clientes) mientras que el federado lo hace entre instancias (servidores independientes y autónomos) de la red.
 
 \textbf{Ventajas}
 
 Se reduce la dependencia de una infraestructura central para distribuir el contenido, lo cual puede significar una disminución en costos e incrementar la tolerancia a fallos. 
 
-Además, este modelo tiene una escalabilidad elevada. Cuantos más clientes accedan a un mismo contenido, más pares lo tendrán y lo distribuirán. A diferencia del modelo centralizado donde un aumento de la demanda incrementa la carga de un servidor central, en esta arquitectura esta carga de distribuye entre los nodos de la red. 
+Además, este modelo tiene una escalabilidad elevada. Cuantos más clientes accedan a un mismo contenido, más pares lo tendrán y lo distribuirán. A diferencia del modelo centralizado, en el cual un aumento de la demanda incrementa la carga del servidor central, en esta arquitectura de P2P la carga se distribuye entre los nodos de la red. 
 
 \textbf{Desventajas}
 
-La disponibilidad del contenido depende de la cantidad de pares conectados. Si pocos usuarios comparten un archivo, el acceso se volverá lento e inestable arruinando la experiencia de usuario. 
+La disponibilidad del contenido depende de la cantidad de pares conectados. Si pocos usuarios comparten un archivo, el acceso se volverá lento e inestable perjudicando la experiencia de usuario. 
 
-Asimismo, la moderación y eliminación de contenido resulta más difícil que en los otros modelos. En los otros casos, la moderación dependía de las políticas establecidas por un servidor mientras que en este caso no.
+Asimismo, la moderación y eliminación de contenido resulta más compleja que en los otros modelos. En los otros casos, la moderación depende de las políticas establecidas por un servidor mientras que en este caso no.
 
-Implementar una solución P2P añade más complejidad y esfuerzo de desarrollo que un modelo centralizado. Además del procesamiento, se deben sincronizar datos entre pares, distribuir fragmentos de archivos, recopilar información y localización del contenido distribuido por varias partes de la red, entre otros problemas de sincronización y comunicación.
+Implementar una solución P2P añade más complejidad y esfuerzo de desarrollo que un modelo centralizado. Además del procesamiento, se deben sincronizar datos entre pares, distribuir fragmentos de archivos, recopilar información, y localizar el contenido distribuido por varias partes de la red, entre otros problemas de sincronización y comunicación.
 
 \textbf{Servicios que utilizan P2P}
 
-No existen servicios de streaming de videos que utilicen P2P puro. Sin embargo, una plataforma ampliamente reconocida que usa una base P2P es \textit{Odysee}, una alternativa a YouTube descentralizada.
+En el proceso de investigación no se han identificado servicios de streaming de videos que utilicen P2P puro. Sin embargo, una plataforma ampliamente reconocida que usa una base P2P es \textit{Odysee}, una alternativa a YouTube descentralizada.
 
 \begin{figure}[h]
   \centering

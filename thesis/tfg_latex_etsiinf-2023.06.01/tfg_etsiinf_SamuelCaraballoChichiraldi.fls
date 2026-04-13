@@ -433,15 +433,10 @@ INPUT .\secciones\resumen.tex
 INPUT secciones\resumen.tex
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8t.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pbk.fd
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pbk.fd
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\psnfss\ts1pbk.fd
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8c.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkd8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8r.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkl8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8r.tfm
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkl8c.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8t.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkl8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8r.tfm
@@ -526,6 +521,7 @@ INPUT .\portada\bunnynet-logo.png
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkd8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8r.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8t.tfm
 INPUT .\portada\centralizado.png
 INPUT .\portada\centralizado.png
 INPUT .\portada\centralizado.png
@@ -533,6 +529,8 @@ INPUT .\portada\centralizado.png
 INPUT .\portada\centralizado.png
 INPUT .\portada\centralizado.png
 INPUT .\portada\centralizado.png
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkli8t.vf
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8r.tfm
 INPUT .\portada\fediverse.png
 INPUT .\portada\fediverse.png
 INPUT .\portada\fediverse.png
