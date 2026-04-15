@@ -171,9 +171,36 @@ Finalmente, se incluyen apartados destinados a explicar el funcionamiento de la 
 Como se observa en la figura, la barra lateral tiene íconos para mejorar la usabilidad y además, el apartado seleccionado tiene señales visuales de activación con la paleta de color de la marca de la plataforma y con esquinas redondeadas.
 
 
-\textbf{Comentarios}
 
-Los comentarios de un video, también presentan mejoras visuales y estructurales. A diferencia de la gran mayoría de plataformas de streaming, los comentarios en Booster están organizados en formato de hilo o árbol de respuestas similar a aplicaciones como \textit{Reddit}. Asimismo, el diseño de los mismos es moderno y atractivo lo cual se consigue con las tecnologías web modernas de diseño como \textit{Tailwindcss} y además, se incluyen iconos de \textit{Lucide-React-Icons} para mejorar la usabilidad.
+\subsection{Mejoras en los métodos de moderación}
+
+En Booster también se han hecho mejoras en los métodos de moderación. A diferencia de las plataformas de streaming convencionales, donde el control del contenido lo hace la propia aplicación, aquí se permite a los usuarios reportar videos y participar en votaciones de moderación. Cuando un espectador considera que el video es inapropiado o infringe alguno de las políticas establecidas por la aplicación, puede seleccionar una opción debajo de cada video para reportar el contenido. Una vez se presiona este botón, se crea un \textit{modal} en donde se debe seleccionar la razón que el usuarios considera que el video incumple, como se puede ver en la figura. 
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{portada/report-modal.png}
+  \caption{Ventana flotante con opciones para reportar un video}
+\end{figure}
+
+A  continuación, después de que el usuario haya seleccionado el motivo que infringe el video, junto con una descripción opcional, se crea un evento de votación debajo de la descripción del video como se observa en la figura y queda registrado en el sistema. Esto, es visible para todos los usuarios que ingresan al video y se les permite votar si están de acuerdo. Particularmente, si un usuario observa que el video fue denunciado por contenido inapropiado, puede dar su opinión al respecto y votar a favor o en contra. 
+
+Cuando una gran mayoría de usuarios están de acuerdo en una misma decisión, automáticamente se toma acción en algunos casos. En otros, se informa a los administradores del reporte y de esta forma, se puede tomar acción inmediata con videos que rompen las normas de comunidad.
+
+Por tanto, este nuevo sistema de moderación tiene una doble función. Por un lado, constituye un mecanismo más justo para controlar el contenido de la aplicación; por otro, dado el carácter público de las votaciones, cumple el propósito de informar al usuario de aquel contenido que, posiblemente incumple las reglas de comunidad. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{portada/report-vote.png}
+  \caption{Votación de incumplimiento}
+\end{figure}
+
+En esta figura, se muestra un reporte sobre contenido hecho con IA para el video actual. Como se observa, el usuario está de acuerdo y ha votado a favor. Como la gran mayoría de usuarios está de acuerdo en una misma decisión, en este caso, se toma acción inmediata. Esto implica, aplicarle una etiqueta \textit{AI generated} al video. Esto revela de forma explícita, que fue creado en su mayor parte con herramientas de inteligencia artificial.
+
+
+\subsection{Mejoras en los comentarios}
+
+Los comentarios de un video, también presentan mejoras visuales y estructurales. A diferencia de la gran mayoría de plataformas de streaming, los comentarios en Booster están organizados en formato de hilo o árbol de respuestas similar a aplicaciones como \textit{Reddit}. Asimismo, el diseño de los mismos es moderno y atractivo debido a las tecnologías web modernas de diseño empleadas como \textit{Tailwindcss}. Además, se incluyen iconos de \textit{Lucide-React-Icons} para mejorar la usabilidad.
 
 \begin{figure}[htbp]
   \centering
@@ -181,20 +208,11 @@ Los comentarios de un video, también presentan mejoras visuales y estructurales
   \caption{Comentarios de un video}
 \end{figure}
 
-Como se puede observar en la figura, los comentarios pueden tener respuestas. Esto requirió crear una estructura de árbol para modelar los comentarios que dependen de otros. En la implementación elegida, cada comentario principal es la raíz de un árbol. Al añadir una respuesta se crea un nuevo vértice, se indica el nodo ancestro y se añade una arista entre ellos. Al cargar la vista de los comentarios, la aplicación obtiene la raíz de cada árbol. Posteriormente, si el usuario quiere ver respuestas, selecciona la opción para desplegar los hijos adyacentes de un nodo y la aplicación obtiene de la base de datos los descendientes \footnote{Se ha considerado que el ancestro de un nodo raíz es él mismo.}. 
+Como se puede observar en la figura, los comentarios pueden tener respuestas. Esto requirió crear una estructura de árbol para modelar los mensajes que dependen de otros. En la implementación elegida, cada comentario principal es la raíz de un árbol. Al añadir una respuesta se crea un nuevo vértice, se indica el nodo ancestro y se añade una arista entre ellos. Al cargar la vista de los comentarios, la aplicación obtiene la raíz de cada árbol. Posteriormente, si el usuario quiere ver respuestas, selecciona la opción para desplegar los hijos adyacentes de un nodo y la aplicación obtiene de la base de datos los descendientes \footnote{Se ha considerado que el ancestro de un nodo raíz es él mismo.}. 
 
-Los comentarios no solo se cargan bajo demanda, sino que también se ordenan y priorizan según su popularidad. Cada comentario dispone de un botón de \textit{like} lo cual cambia su relevancia. Al cargar los comentarios principales (nodos raíz), la aplicación los organiza por cantidad de \textit{likes} en orden descendiente. Las respuestas, se ordenan de la misma forma. Como futura ampliación, se podrían implementar algoritmos un poco más sofisticados de recomendación de comentarios que tengan en cuenta el nivel de interacción, la antigüedad, el tono del mensaje, el contexto del mensaje, entre otros.
+Los comentarios se cargan bajo demanda, y también se ordenan y priorizan según su popularidad. Cada comentario dispone de un botón de \textit{like} lo cual cambia su relevancia. Al cargar los comentarios principales (nodos raíz), la aplicación los organiza por número de \textit{likes} en orden descendente. Las respuestas, se ordenan de la misma forma. Como futura ampliación, se podrían implementar algoritmos más sofisticados de recomendación de comentarios que tengan en cuenta el nivel de interacción, la antigüedad, el tono del mensaje, el contexto del mensaje, entre otros aspectos.
 
 De esta forma, se consigue una interfaz más clara y moderna de los comentarios de los usuarios. Cabe destacar, que la profundidad máxima se ha limitado a 3 hijos para evitar que los componentes se superpongan y se desborden.
-
-
-
-
-
-\subsection{Mejoras en los métodos de moderación}
-
-\subsection{Mejoras en los comentarios}
-
 
 
 %
