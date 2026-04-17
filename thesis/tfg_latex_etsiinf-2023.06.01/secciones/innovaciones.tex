@@ -67,7 +67,7 @@ Como se puede observar, el problema no solo reside en la existencia de la public
 
 Aunque los anuncios no se pueden eliminar ya que son la fuente de ingresos principal de una plataforma de este estilo, Booster plantea una alternativa para mejorar la experiencia de los espectadores. Esta se trata en la incorporación de un sistema de anuncios voluntarios con recompensa. En lugar de basarse únicamente en anuncios forzados, la plataforma tiene un mecanismo por el cual los usuarios pueden decidir ver determinados anuncios de forma opcional y recibir un premio dentro de la plataforma. 
 
-Esto se conecta y da lugar al sistema de \textbf{puntos de experiencia (XP)} de la plataforma. La \textbf{XP}, es una moneda virtual que se emplea en la plataforma y que cada usuario puede obtener mediante la visualización de anuncios voluntarios o integrados y utilizarla después para adquirir elementos de personalización, apoyar a creadores y comunidades, obtener recompensas, adquirir preferencias de uso, entre otros. Por tanto, la solución consiste en convertir la experiencia forzada e intrusiva de los anuncios en un sistema más participativo, donde el usuario recibe una compensación que puede intercambiar para obtener premios dentro de la plataforma. 
+Esto se conecta y da lugar al sistema de \textbf{puntos de experiencia (XP)} de la plataforma. La \textbf{XP}, es una moneda virtual que se emplea en la plataforma y que cada usuario puede obtener mediante la visualización de anuncios voluntarios o integrados y utilizarlos después para adquirir elementos de personalización, apoyar a creadores y comunidades, obtener recompensas, adquirir preferencias de uso, entre otros. Por tanto, la solución consiste en convertir la experiencia forzada e intrusiva de los anuncios en un sistema más participativo, donde el usuario recibe una compensación que puede intercambiar para obtener premios dentro de la plataforma. 
 
 
 
@@ -195,7 +195,7 @@ Por tanto, este nuevo sistema de moderación tiene una doble función. Por un la
   \caption{Votación de incumplimiento}
 \end{figure}
 
-En esta figura, se muestra un reporte sobre contenido hecho con IA para el video actual. Como se observa, el usuario está de acuerdo y ha votado a favor. Como la gran mayoría de usuarios está de acuerdo en una misma decisión, en este caso, se toma acción inmediata. Esto implica, aplicarle una etiqueta \textit{AI generated} al video. Esto revela de forma explícita, que fue creado en su mayor parte con herramientas de inteligencia artificial.
+En esta figura, se muestra un reporte sobre contenido hecho con IA para el video actual. Algún espectador anterior creó esta votación y según se observa, el usuario actual ha votado a favor. Como la gran mayoría de usuarios está de acuerdo en una misma decisión, en este caso, se toma acción inmediata. Esto implica, aplicarle una etiqueta \textit{AI generated} al video. Esto revela de forma explícita, que fue creado en su mayor parte con herramientas de inteligencia artificial. En otros escenarios, es necesario que los administradores del sistema hagan una revisión manual para aplicarle las sanciones al video o al creador de contenido.
 
 
 \subsection{Mejoras en los comentarios}
@@ -214,11 +214,60 @@ Los comentarios se cargan bajo demanda, y también se ordenan y priorizan según
 
 De esta forma, se consigue una interfaz más clara y moderna de los comentarios de los usuarios. Cabe destacar, que la profundidad máxima se ha limitado a 3 hijos para evitar que los componentes se superpongan y se desborden.
 
-
 %
 \subsection{Mejoras en los canales de usuario}
 
+Los canales de usuario en \textit{Booster} también presentan mejoras. Estos no se limitan únicamente a mostrar un perfil básico del contenido del creador sino que también, se incluye una estructura más completa con componentes que facilitan la visibilidad de la marca personal , la personalización y la interacción con sus seguidores. 
 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.65\textwidth]{portada/channel-videos.png}
+  \caption{Canal de usuario. Punto de vista del propietario}
+  \label{Figura-4.11}
+\end{figure}
+
+En la Figura \ref{Figura-4.11} se observa la vista básica del canal de un usuario en \textit{Booster} cuando el propietario ha iniciado sesión. En este caso, no se ofrecen las opciones de seguimiento ni \textit{Boost} para evitar el auto-impulso. En cambio, se sustituyen por ajustes de personalización y un acceso directo al \textit{studio}, sección donde se administran, gestionan y se consultan las estadísticas del canal. 
+
+Como se puede observar, en la parte superior de la interfaz se encuentra la información principal del creador. Aquí, se muestran datos como el nombre del canal, su foto de perfil, su nombre de usuario, el número de videos publicados, el número de seguidores y el total de visitas en todos sus videos. Asimismo, en la parte derecha, se observan los \textbf{puntos de Boost} del canal junto con su \textbf{Nivel de Canal}. Esta barra de progreso indica la cantidad de \textbf{puntos de experiencia (XP)} que son necesarios invertir para alcanzar el siguiente nivel. Estas inversiones de XP son donadas por los espectadores que desean impulsar la visibilidad del creador en la plataforma y participar en las recompensas asociadas al incremento de nivel. 
+
+En la figura \ref{4.12}, se observa la información que un espectador del canal se encuentra. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{portada/channel-viewer.png}
+  \caption{Canal de usuario. Punto de vista del espectador}
+  \label{4.12}
+\end{figure}
+
+Aquí se permite seguir al creador haciendo clic en \textit{Follow}. Además, dispone de la opción para realizar un \textit{Boost}. Es decir, al presionar este botón, el usuario puede invertir una cierta cantidad de puntos de experiencia aumentando así los puntos de Boost del canal. De esta forma, el usuario pierde puntos pero colabora en la visibilidad y éxito del creador, además de recibir premios cuando el nivel de canal aumente. En la figura \ref{4.13} se observa el \textit{modal} desplegado cuando un usuario desea invertir puntos en un canal. Se dan distintas opciones de cantidades. En caso de que el usuario no disponga de la suficiente cantidad de puntos (XP), se genera un error. Por el contrario, el creador de contenido aumenta sus puntos de Boost y se le restan al usuario que invirtió. Cuando el nivel de usuario ha incrementado recientemente, se muestra una insignia pública durante 24 horas para indicar a todos los visitantes del ascenso, como se observa en la figura \ref{4.14}. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{portada/channel-boost.png}
+  \caption{Comentarios de un video}
+  \label{4.13}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{portada/channel-level.png}
+  \caption{Comentarios de un video}
+  \label{4.14}
+\end{figure}
+
+Al invertir puntos en un canal, el usuario entra automáticamente en una clasificación global. Como se muestra en la figura \ref{4.15}, este ranking ordena a los participantes de mayor a menor cantidad de XP invertida a lo largo del tiempo en ese canal.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{portada/channel-leaderboard.png}
+  \caption{Comentarios de un video}
+  \label{4.15}
+\end{figure}
+
+En la figura \ref{4.15} se muestra una clasificación de 7 usuarios. Además, si el usuario en sesión está dentro del ranking, se incluye una etiqueta que lo destaca de los demás y en la parte baja, se indica la posición, la cantidad de puntos de experiencia donados y el centil superior. 
+
+\pagebreak
 %Leaderboards globales y de comunidad, XP, Donar XP
 \subsection{Incorporación de gamificación}
 
