@@ -2401,6 +2401,8 @@
     <bcf:citekey order="25" intorder="1">shadcn</bcf:citekey>
     <bcf:citekey order="26" intorder="1">europa-alg</bcf:citekey>
     <bcf:citekey order="27" intorder="1">rmn-ad</bcf:citekey>
+    <bcf:citekey order="28" intorder="1">shrestha2024darkmode</bcf:citekey>
+    <bcf:citekey order="29" intorder="1">android-darktheme</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

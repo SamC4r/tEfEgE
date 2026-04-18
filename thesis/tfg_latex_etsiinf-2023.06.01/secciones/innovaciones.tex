@@ -143,13 +143,19 @@ A la derecha de un video aparece en primer lugar, el creador del mismo. Adiciona
   \item \textbf{Comentarios}: Se acceden a la sección de comentarios donde se pueden crear, ver y responder. 
 \end{itemize}
 
+\Needspace{35\baselineskip}
 \textbf{Barra lateral}
+
+\noindent
+\begin{minipage}[t]{0.72\textwidth}
+\vspace{0pt}
 
 La barra lateral también presenta mejoras. Esta es visible en todas las rutas dentro de la aplicación. Sin embargo, en la vista de videos esta desaparece. Para volver a mostrarla, es necesario presionar un botón y aparecerá en modo flotante.
 
 Además, se divide en varias secciones y permite navegar por toda la aplicación de forma rápida y accesible. Los primeros 6 componentes corresponden a las rutas más importantes dentro de la plataforma incluyendo:
 
 \begin{itemize}
+  \setlength{\itemsep}{0.35em}
   \item \textbf{Next Up}: Vista de videos rápidos donde el usuario puede arrastrar su cursor para pasar al siguiente.
   \item \textbf{Explorer}: Página principal de la aplicación donde los videos se muestran en formato de cuadrícula. Se pueden filtrar, buscar y acceder a la sección de videos recientes en comunidades y creadores.
   \item \textbf{Following}: Lista de los canales a los que el usuario sigue
@@ -158,17 +164,66 @@ Además, se divide en varias secciones y permite navegar por toda la aplicación
   \item \textbf{Top Channels}: Clasificación de los mejores canales en la plataforma. Se puede filtrar por puntos de experiencia o por cantidad de seguidores.
 \end{itemize}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.23\textwidth]{portada/sidebar.png}
-    \caption{Barra lateral de Booster}
-\end{figure}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth,height=0.78\textheight,keepaspectratio]{portada/sidebar.png}
+\captionof{figure}{Barra lateral de Booster}
+\label{fig:sidebar}
+\end{minipage}
+
+\vspace{0.8em}
 
 Estos 6 componentes determinan el flujo habitual de uso de la aplicación. En la parte inferior, hay más secciones, pero estas son dependientes del usuario. Aquí, se muestran 5 canales que el usuario esté siguiendo y con cargas más recientes de video. De esta forma, se tiene un acceso rápido a las nuevas actualizaciones.
 
 Finalmente, se incluyen apartados destinados a explicar el funcionamiento de la plataforma así como las reglas y las pautas de la comunidad. Asimismo, se ha implementado un apartado que permite realizar ajustes de usuario sobre el algoritmo de recomendación. Posteriormente, se ampliarán las opciones de tal forma que mediante esta sección, se cambien más opciones.
 
 Como se observa en la figura, la barra lateral tiene íconos para mejorar la usabilidad y además, el apartado seleccionado tiene señales visuales de activación con la paleta de color de la marca de la plataforma y con esquinas redondeadas.
+
+\textbf{Temas de interfaz}
+
+En \textit{Booster} la personalización es un componente importante. Por esa razón, se permite al usuario seleccionar una apariencia de interfaz que desee y ajustar la aplicación a sus gustos. Por el momento, la plataforma cuenta con 3 tipos distintos de temas de usuario. Estos son el tema claro, el tema oscuro y el tema "retro". Con tecnologías web como Tailwind CSS, esta clase de personalización puede implementarse de forma estructurada mediante clases utilitarias como \texttt{dark:} o \texttt{retro:}, lo que facilita la construcción de interfaces consistentes, mantenibles y adaptables, mejorando así la experiencia de desarrollo.
+
+Estos ajustes se pueden modificar desde el canal de usuario, presionando sobre la opción de Personalizar Canal y dirigiéndose a la opción de apariencia de la aplicación, como se observa en la figura \ref{4.8}. 
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=1\textwidth]{portada/theme-selector.png}
+    \caption{Seleccionador de temas de interfaz}
+    \label{4.8}
+\end{figure}
+
+El modo negro es el tema principal de la aplicación. Esta decisión se debe a que una parte importante de los usuarios muestra una preferencia por las interfaces oscuras. Esto lo evidencia un estudio académico el cual reportó que el 79.7\% de los participantes prefería el modo oscuro en sus teléfonos móviles \cite{shrestha2024darkmode}. Adicionalmente, las guías oficiales de diseño de Android indican que las interfaces oscuras mejoran la visibilidad para personas con sensibilidad a la luz y facilitan el uso en entornos con baja luminosidad \cite{android-darktheme}.
+\begin{figure}[!htbp]
+    \centering
+    
+    \begin{subfigure}[t]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{portada/dark.png}
+        \caption{Vista de Videos - Tema oscuro}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.7\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{portada/white.png}
+        \caption{Vista de Videos - Tema claro}
+    \end{subfigure}
+    
+    \vspace{0.5em}
+    
+    \begin{subfigure}[t]{0.70\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{portada/retro.png}
+        \caption{Vista de Videos - Tema retro}
+    \end{subfigure}
+    
+    \caption{Variantes de temas de interfaz en la vista de videos}
+    \label{fig:temas-booster}
+\end{figure}
+
+
+El tema oscuro es el principal en \textit{Booster}, aunque también se permite cambiar a un tema claro. El tema "retro", se puede adquirir con puntos de experiencia a través de la sección de \textit{marketplace}. 
 
 
 
@@ -245,32 +300,80 @@ Aquí se permite seguir al creador haciendo clic en \textit{Follow}. Además, di
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{portada/channel-boost.png}
-  \caption{Comentarios de un video}
+  \caption{\textit{Modal} para seleccionar cantidades de puntos a donar}
   \label{4.13}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{portada/channel-level.png}
-  \caption{Comentarios de un video}
+  \includegraphics[width=1\textwidth]{portada/channel-level.png}
+  \caption{Ascenso de nivel reciente en un canal}
   \label{4.14}
 \end{figure}
 
-Al invertir puntos en un canal, el usuario entra automáticamente en una clasificación global. Como se muestra en la figura \ref{4.15}, este ranking ordena a los participantes de mayor a menor cantidad de XP invertida a lo largo del tiempo en ese canal.
+Al invertir puntos en un canal, el usuario entra automáticamente en una clasificación global. Como se muestra en la figura \ref{4.15}, este ranking ordena a los participantes de mayor a menor cantidad de XP invertida a lo largo del tiempo en ese canal. Se encuentra fácilmente accesible con la pestaña de \textit{Leaderboard}.  
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=0.8\textwidth]{portada/channel-leaderboard.png}
-  \caption{Comentarios de un video}
+  \caption{Clasificación de un canal de usuario}
   \label{4.15}
 \end{figure}
 
 En la figura \ref{4.15} se muestra una clasificación de 7 usuarios. Además, si el usuario en sesión está dentro del ranking, se incluye una etiqueta que lo destaca de los demás y en la parte baja, se indica la posición, la cantidad de puntos de experiencia donados y el centil superior. 
 
-\pagebreak
+Cada canal de usuario tiene una indicación visual del nivel alcanzado junto con las recompensas desbloqueados hasta el momento. Esta información es accesible con la pestaña de \textit{Rewards} como se observa en la figura \ref{4.16}. Durante esta etapa de desarrollo no se han implementado premios asociados a un canal pero se contempla como ampliación para el futuro. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{portada/channel-rewards.png}
+  \caption{Recompensas y nivel del canal}
+  \label{4.16}
+\end{figure}
+
+Por otro lado, también se incluye más información personal del usuario en la pestaña \textit{About}. En esta, se indica información sobre redes sociales adicionales como YouTube, Instagram, Discord, Facebook, TikTok, entre otros. Además, el usuario puede añadir una descripción de su canal la cual se mostrará en esta sección como se ve en la figura \ref{4.17}. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{portada/channel-about.png}
+  \caption{Información adicional de un canal}
+  \label{4.17}
+\end{figure}
+
+
+Finalmente, una funcionalidad nueva que no presentan las plataformas de streaming de videos es un \textit{chat} de comunidad del canal. Este es accesible mediante la pestaña \textit{Chat} como se ve en la figura \ref{4.18}. En este, cada seguidor del canal puede enviar mensajes e interactuar directamente con otros seguidores e incluso el creador de contenido. De esta manera, hay una comunicación más directa entre espectadores y creadores. Esto opera de forma similar a los servidores de Discord donde los mensajes se muestran en orden cronológico y cualquiera puede participar. Por el momento, esta funcionalidad está disponible en todos los canales. Sin embargo, en un futuro se considera ofrecer este beneficio como premio al alcanzar un nivel alto. Esto permitiría incentivar el progreso del creador de contenido y la inversión de puntos de los seguidores optimizando, a su vez, la carga en los servidores y las bases de datos.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{portada/channel-chat.png}
+  \caption{Chat de comunidad de un canal}
+  \label{4.18}
+\end{figure}
+
+
+
 %Leaderboards globales y de comunidad, XP, Donar XP
 \subsection{Incorporación de gamificación}
 
+En \textit{Booster} los métodos de gamificación juegan un papel importante. Es una capa estructural del servicio pensada para incrementar la participación y la retención. Para esto, se implementar distintos mecanismos inspirados en lógicas de videojuegos combinando recompensas y reconocimiento público. 
+
+Uno de los componentes principales son las tablas de clasificación. \textit{Booster} presenta una sección de \textit{leaderboard global} en donde se compara el desempeño de los 100 mejores usuarios de la plataforma teniendo en cuenta la cantidad de seguidores, los puntos de Boost y el nivel del canal (\ref{4.19}). Esto genera un entorno de competición y visibilizando los perfiles más activos. 
+
+Además, se implementa un \textit{leaderboard de comunidad} el cual se encuentra dentro de todos los canales (\ref{4.15}). A diferencia de la clasificación anterior, en esta se reconocen a los seguidores más destacados de un usuario según la cantidad de puntos de experiencia invertidos. De esta manera, cada comunidad puede reconocer a sus miembros más fieles. 
+
+
+Otro mecanismo esencial es el sistema de puntos de experiencia o XP. Esta se obtiene principalmente por visualizaciones de anuncios dentro de la plataforma. En un futuro, se implementarán más métodos de obtención de puntos basadas en la interacción como comentar, participar, o consumir contenido. Esta moneda virtual, permite a los usuarios realizar compras de artículos de personalización e impulsar la visibilidad de los creadores de contenido en los algoritmos de recomendación. La opción de donar XP, posibilita a los seguidores, apoyar el contenido de otro usuario e invertir puntos para desbloquear nuevas funcionalidades y recompensas de la comunidad. A su vez, se posicionan en un ranking el cual destaca a los miembros más activos y fieles del canal.
+
+A todo esto, se suma la sección de \textit{marketplace}. Aquí, los usuarios pueden comprar mediante el uso de XP, artículos de personalización, temas de interfaz, insignias, entre otras recompensas. Esto, convierte a los puntos de experiencia en algo deseable, generando una motivación adicional para conseguirlos. El usuario decide en qué gastar sus puntos y como administrar sus recursos dentro de la plataforma, convirtiendo así los puntos, en una moneda.  
+
+Otro mecanismo empleados son los anuncios recompensados. Este es un sistema inspirado en los videojuegos, donde una visualización de anuncios te premia con una cantidad de moneda virtual, en este caso, con puntos de experiencia. Este enfoque convierte una práctica percibida como intrusiva en una transacción beneficiosa para ambas partes. La plataforma monetiza, mientras el usuario recibe una compensación, lo que mejora la aceptación del formato publicitario. 
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{portada/leaderboard.png}
+  \caption{Leaderboard de los 100 mejores canales en \textit{Booster}}
+  \label{4.19}
+\end{figure}
 
 
 

@@ -901,6 +901,86 @@
       \verb https://www.ramanmedianetwork.com/youtube-faces-user-backlash-over-ad-overload-threatening-platforms-future/
       \endverb
     \endentry
+    \entry{shrestha2024darkmode}{misc}{}{}
+      \name{author}{4}{}{%
+        {{hash=f0473debecb6f24ce230dc52eabd83c9}{%
+           family={Shrestha},
+           familyi={S\bibinitperiod},
+           given={Awan},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a397321e748ea7b4bbf07f3673e0ee08}{%
+           family={Shrestha},
+           familyi={S\bibinitperiod},
+           given={Sabil},
+           giveni={S\bibinitperiod}}}%
+        {{hash=50481b9865abd04584b871733841e194}{%
+           family={Paneru},
+           familyi={P\bibinitperiod},
+           given={Biplov},
+           giveni={B\bibinitperiod}}}%
+        {{hash=f8f33140d206dd50bef5d20e387f0deb}{%
+           family={Paneru},
+           familyi={P\bibinitperiod},
+           given={Bishwash},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{80bfcdb808ad84221331d8940c8e6cf1}
+      \strng{fullhash}{3806357fc51d0768fff9c6a5df9405a5}
+      \strng{fullhashraw}{3806357fc51d0768fff9c6a5df9405a5}
+      \strng{bibnamehash}{3806357fc51d0768fff9c6a5df9405a5}
+      \strng{authorbibnamehash}{3806357fc51d0768fff9c6a5df9405a5}
+      \strng{authornamehash}{80bfcdb808ad84221331d8940c8e6cf1}
+      \strng{authorfullhash}{3806357fc51d0768fff9c6a5df9405a5}
+      \strng{authorfullhashraw}{3806357fc51d0768fff9c6a5df9405a5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.HC}
+      \field{eprinttype}{arXiv}
+      \field{title}{An Exploration of Effects of Dark Mode on University Students: A Human Computer Interface Analysis}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2409.10895
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2409.10895
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2409.10895
+      \endverb
+    \endentry
+    \entry{android-darktheme}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=8b36e9207c24c76e6719268e49201d94}{%
+           family={{Google}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{fullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \strng{bibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorbibnamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
+      \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Implement Dark Theme}
+      \field{urlday}{18}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://developer.android.com/develop/ui/views/theming/darktheme
+      \endverb
+      \verb{url}
+      \verb https://developer.android.com/develop/ui/views/theming/darktheme
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
