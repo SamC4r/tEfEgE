@@ -1,12 +1,205 @@
 \chapter{Análisis}
 
+En esta sección se estudian las capacidades básicas que debe tener un producto mínimo viable de la aplicación, así como los actores que interactúan con el sistema y, los casos de uso y diagramas de secuencia más importantes. Finalmente, se describe el diagrama entidad relación de la base de datos.
+
 \section{Requisitos Funcionales}
+
+En esta sección se recopilan los requisitos funcionales más importantes que cumple el producto mínimo viable de la aplicación. Los requisitos funcionales son aquellos que definen los comportamientos, acciones y servicios que el sistema debe proporcionar al usuario. 
+
+En \textit{Booster} los requisitos funcionales se recopilan a continuación separados por distintos bloques. 
+
+\subsection{Gestión de usuario}
+
+\begin{enumerate}
+    \item El sistema debe permitir a los usuarios registrarse en la plataforma con un correo o nombre de usuario.
+    \item El sistema debe permitir a los usuarios iniciar sesión con un correo o nombre de usuario.
+    \item El sistema debe permitir a los usuarios cerrar sesión
+    \item El sistema debe permitir a los usuarios recuperar su contraseña.
+    \item El sistema debe permitir al usuario subir una foto de perfil. 
+    \item El sistema debe permitir a los usuarios editar foto de perfil, nombre, nombre de usuario y correo electrónico.
+    \item El sistema debe permitir al usuario registrarse e iniciar sesión con una cuenta de Google.
+
+\end{enumerate}
+
+\subsection{Carga, gestión y moderación de videos}
+
+
+
+\begin{enumerate}
+    \item El sistema debe permitir al usuario cargar un video a la plataforma.
+    \item El sistema debe permitir al usuario agregar título, descripción y categoría al video.
+    \item El sistema debe permitir al usuario seleccionar la visibilidad del video.
+    \item El sistema debe permitir al usuario asociar un video a una comunidad.
+    \item El sistema debe permitir al usuario eliminar un video propio.
+    \item El sistema debe almacenar la información del video y sus metadatos.
+    \item El sistema debe implementar un Adaptive Bitrate Streaming para la reproducción de video, lo que implica generar versiones de diferentes calidades.
+    \item El sistema debe permitir al usuario reportar un video.
+    \item El sistema debe permitir al usuario participar en votaciones para decidir si un video infringe las normas o no.
+\end{enumerate}
+
+\subsection{Reproducción y consumo de contenido}
+
+
+
+\begin{enumerate}
+    \item El sistema debe permitir al usuario visualizar un video.
+    \item El sistema debe permitir al usuario pausar, reanudar, adelantar y retroceder el video.
+    \item El sistema debe permitir al usuario cambiar la calidad de reproducción cuando existan varias resoluciones disponibles.
+    \item El sistema debe permitir al usuario reproducir videos en pantalla completa.
+    \item El sistema debe registrar visualizaciones del video.
+    \item El sistema debe permitir al usuario navegar al siguiente video desde la interfaz de visualización.
+    \item El sistema debe recomendar al usuario videos relacionados.
+    \item El sistema debe mostrar información del video, como título, descripción, número de visualizaciones, fecha de publicación, descripción y creador.
+\end{enumerate}
+
+\subsection{Exploración y búsqueda}
+
+\begin{enumerate}
+    \item El sistema debe permitir al usuario buscar videos por título, descripción o creador.
+    \item El sistema debe permitir al usuario filtrar videos por categorías.
+    \item El sistema debe recomendar al usuario videos en una cuadrícula principal.
+    \item El sistema debe permitir al usuario visualizar contenido reciente de comunidades y creadores.
+    \item El sistema debe permitir al usuario filtrar videos hechos por inteligencia artificial o con formato vertical. 
+\end{enumerate}
+
+\subsection{Interacción social}
+\begin{enumerate}
+    \item El sistema debe permitir al usuario calificar un video en una escala de 1 a 5 estrellas.
+    \item El sistema debe permitir al usuario comentar en un video.
+    \item El sistema debe permitir al usuario responder a un comentario existente.
+    \item El sistema debe permitir al usuario editar o eliminar sus propios comentarios.
+    \item El sistema debe mostrar los comentarios en estructura jerárquica o en árbol.
+    \item El sistema debe recomendar los comentarios más relevantes o populares primero.
+    \item El sistema debe permitir a un usuario donar puntos de experiencia a un canal. 
+\end{enumerate}
+
+\subsection{Comunidades}
+
+\begin{enumerate}
+    \item El sistema debe permitir al usuario crear una comunidad.
+    \item El sistema debe permitir al usuario unirse a comunidades.
+    \item El sistema debe permitir al usuario abandonar comunidades.
+    \item El sistema debe permitir al usuario consultar las comunidades a las que pertenece.
+    \item El sistema debe permitir al usuario consultar los videos más recientes asociados a una comunidad.
+    \item El sistema debe permitir al usuario buscar comunidades por nombre o descripción.
+    \item El sistema debe permitir al usuario filtrar comunidades por categorías.
+\end{enumerate}
+
+\subsection{Canales}
+
+\begin{enumerate}
+    \item El sistema debe permitir al usuario gestionar y personalizar su canal.
+    \item El sistema debe permitir al usuario visualizar la pestaña de videos de un canal.
+    \item El sistema debe permitir al usuario visualizar la pestaña ranking de canal con la clasificación de los usuario donantes.
+    \item El sistema debe permitir al usuario acceder a la pestaña de recompensas desbloqueadas de un canal.
+    \item El sistema debe permitir al usuario visualizar la pestaña de información o descripción del canal.
+    \item El sistema debe permitir al usuario acceder al chat comunitario de un canal o comunidad.
+    \item El sistema debe permitir al usuario consultar su propio canal.
+    \item El sistema debe permitir al usuario seguir a otros canales.
+    \item El sistema debe permitir al usuario dejar de seguir a otros canales.
+    \item El sistema debe permitir al usuario consultar los canales que sigue.
+\end{enumerate}
+
+
+\subsection{Gamficación}
+
+\begin{enumerate}
+    \item El sistema debe tener un recuento de los puntos de experienca (XP) de cada usuario.
+    \item El sistema debe permitir al usuario ganar puntos de experiencia al mirar anuncios.
+    \item El sistema debe permitir al usuario consultar sus puntos de boost y su nivel de canal.
+    \item El sistema debe mostrar tablas de clasificación por canal.
+    \item El sistema debe mostrar una clasificación de los canales más populares según el número de seguidores y el nivel de canal.
+    \item El sistema debe permitir al usuario visualizar artículos, recompensas o personalizaciones disponibles en la tienda.
+    \item El sistema debe permitir al usuario comprar artículos de personalización en la tienda con puntos de experiencia. 
+    \item El sistema debe permitir al usuario visualizar su inventario de artículos adquiridos.
+    \item El sistema debe mostrar badges o iconos especiales en el perfil del usuario.
+    \item El sistema debe reflejar visualmente los cambios de nivel recientes.
+\end{enumerate}
 
 \section{Requisitos No Funcionales}
 
+Los requisitos no funcionales son aquellos que definen cómo debe comportarse el sistema en términos de rendimientos, seguridad, usabilidad, escalabilidad, en lugar de qué acciones se deben realizar.
+
+\begin{enumerate}
+    \item \textbf{Rendimiento: } El sistema debe ser capaz de cargar las páginas en un tiempo aceptable (menos de 3 segundos) y reproducir videos sin interrupciones o buffering excesivo.
+    \item \textbf{Seguridad:} El sistema debe proteger la información de los usuarios. Se deben implementar medidas de seguridad frente a ataques comunes como inyección SQL y prevenir el uso abusivo de la plataforma mediante la implementación de \textit{rate limits}.
+    \item \textbf{Usabilidad:} El sistema debe tener una interfaz intuitiva y fácil de usar. 
+    \item \textbf{Disponibilidad:} El sistema debe estar activo la mayor cantidad de tiempo posible, minimizando el tiempo de inactividad.
+    \item \textbf{Escalabilidad: } El sistema debe ser capaz de manejar un aumento en el número de usuarios, interacciones y contenido sin degradar el rendimiento.
+    \item \textbf{Compatibilidad: } El sistema debe funcionar correctamente en diferentes navegadores web y dispositivos. Esto incluye, navegadores populares como Chrome, Firefox, Safari y Edge, así como dispositivos móviles y de escritorio.
+    \item \textbf{Mantenibilidad: } El sistema debe estar diseñado con patrones claros, utilizando buenas prácticas de desarrollo para facilitar su mantenimiento y evolución.
+    \item \textbf{Modularidad: } El sistema debe estar diseñado de tal forma que sus componentes sean independientes y puedan evolucionar o ser reemplazados sin afectar al resto del sistema. 
+\end{enumerate}
+
 \section{Actores}
 
+En un sistema software, los actores son entidades externas que interactuán con el sistema. Pueden ser usuarios humanos, otros sistemas o dispositivos. En el caso de \textit{Booster}, los actores principales son:
+
+\begin{itemize}
+    \item \textbf{Usuario visitante: } Un usuario que accede a la plataforma sin iniciar sesión. Este, puede explorar, buscar y consumir contenido, acceder a canales, acceder a los rankings, pero no puede interactuar con el sistema ni guardad sus preferencias.
+    \item \textbf{Usuario registrado: } Un usuario que ha creado una cuenta e iniciado sesión en la plataforma. Este, además de las capacidades de un usuario visitante, puede cargar videos, interactuar con el contenido, participar en comunidades, seguir canales, personalizar su experiencia y ganar puntos de experiencia.
+    \item \textbf{Creador de contenido: } Un usuario registrado que se dedica a crear videos en la plataforma. Además de consumir, puede gestionar su contenido y canal.   
+    \item \textbf{Sistema de backend: } Es el encargado de gestionar la lógica de negocio, el almacenamiento de datos, la autenticación, el recuento de puntos, el algoritmo de recomendación, entre otras funciones. Interactúa con los usuarios a través de la interfaz (\textit{frontend}).
+    \item \textbf{Sistema de procesamiento de videos: } Es el encargado de procesar los videos cargados por un usuario. Cuando un video es subido, este se encarga de la transcodificación, la implementación de Adaptive Bitrate Streaming, generación de miniaturas, para servir los videos.    
+\end{itemize}
+
 \section{Casos de uso}
+
+Un caso de uso es una descripción de cómo un actor interactúa con el sistema para alcanzar un objetivo. A continuación se muestran los diagramas de caso de uso más importantes detectados y, posteriormente, una descripción de cada uno de ellos.
+
+\subsection{Gestión de usuarios}
+
+\begin{enumerate}
+    \item Registro de usuario
+    \item Iniciar sesión
+    \item Recuperar contraseña
+    \item Cerrar sesión 
+    \item Gestionar perfil de usuario
+\end{enumerate}
+
+\subsection{Carga, gestión y moderación de videos}
+
+\begin{enumerate}
+    \item Subir video
+    \item Editar metadatos del video
+    \item Eliminar video
+    \item Procesar video
+    \item Reportar video
+    \item Votar en moderación de contenido
+\end{enumerate}
+
+
+
+\subsection{Diagramas de casos de uso}
+
+\subsubsection{Gestión de usuarios}
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/iniciar-sesion.png}
+  \caption{Carga de Videos a la plataforma}
+\end{figure}
+
+
+
+
+
+
+\subsubsection{Carga y gestión de videos}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/subir-video.png}
+  \caption{Carga de Videos a la plataforma}
+\end{figure}
+
+
+
+\subsection{Descripción de casos de uso}
+
+
+
+
 
 \section{Diagramas de secuencia}
 
