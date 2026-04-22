@@ -58,7 +58,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
     \item El sistema debe permitir al usuario buscar videos por título, descripción o creador.
     \item El sistema debe permitir al usuario filtrar videos por categorías.
     \item El sistema debe recomendar al usuario videos en una cuadrícula principal.
-    \item El sistema debe permitir al usuario visualizar contenido reciente de comunidades y creadores.
+    \item El sistema debe permitir al usuario visualizar contenido reciente de comunidades y creadores que sigue.
     \item El sistema debe permitir al usuario filtrar videos hechos por inteligencia artificial o con formato vertical. 
 \end{enumerate}
 
@@ -101,10 +101,10 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 \end{enumerate}
 
 
-\subsection{Gamficación}
+\subsection{Gamificación}
 
 \begin{enumerate}
-    \item El sistema debe tener un recuento de los puntos de experienca (XP) de cada usuario.
+    \item El sistema debe tener un recuento de los puntos de experiencia (XP) de cada usuario.
     \item El sistema debe permitir al usuario ganar puntos de experiencia al mirar anuncios.
     \item El sistema debe permitir al usuario consultar sus puntos de boost y su nivel de canal.
     \item El sistema debe mostrar tablas de clasificación por canal.
@@ -133,7 +133,7 @@ Los requisitos no funcionales son aquellos que definen cómo debe comportarse el
 
 \section{Actores}
 
-En un sistema software, los actores son entidades externas que interactuán con el sistema. Pueden ser usuarios humanos, otros sistemas o dispositivos. En el caso de \textit{Booster}, los actores principales son:
+En un sistema software, los actores son entidades externas que interactúan con el sistema. Pueden ser usuarios humanos, otros sistemas o dispositivos. En el caso de \textit{Booster}, los actores principales son:
 
 \begin{itemize}
     \item \textbf{Usuario visitante: } Un usuario que accede a la plataforma sin iniciar sesión. Este, puede explorar, buscar y consumir contenido, acceder a canales, acceder a los rankings, pero no puede interactuar con el sistema ni guardad sus preferencias.
@@ -149,6 +149,8 @@ Un caso de uso es una descripción de cómo un actor interactúa con el sistema 
 
 \subsection{Gestión de usuarios}
 
+Los casos de uso relacionados con la gestión de usuario son:
+
 \begin{enumerate}
     \item Registro de usuario
     \item Iniciar sesión
@@ -157,7 +159,22 @@ Un caso de uso es una descripción de cómo un actor interactúa con el sistema 
     \item Gestionar perfil de usuario
 \end{enumerate}
 
+\textbf{Diagrama}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.8\textwidth]{casos-uso/iniciar-sesion.png}
+  \caption{Gestión de usuarios en la plataforma}
+\end{figure}
+
+\textbf{Tablas}
+
+
+
+
 \subsection{Carga, gestión y moderación de videos}
+
+Los casos de uso identificados relacionados con la carga, gestión y moderación de videos son:
 
 \begin{enumerate}
     \item Subir video
@@ -168,6 +185,119 @@ Un caso de uso es una descripción de cómo un actor interactúa con el sistema 
     \item Votar en moderación de contenido
 \end{enumerate}
 
+\textbf{Diagrama}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/subir-video.png}
+  \caption{Carga de Videos a la plataforma}
+\end{figure}
+
+\textbf{Tablas}
+
+\subsection{Reproducción y consumo de contenido}
+
+Los casos de uso identificados relacionados con la reproducción y consumo de contenido son:
+
+\begin{enumerate}
+    \item Reproducir video
+    \item Controlar ajustes de reproducción
+    \item Información del video
+    \item Videos relacionados
+\end{enumerate}
+
+\textbf{Diagrama}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/reproduccion-consumo.png}
+  \caption{Reproducción y consumo de contenido}
+\end{figure}
+
+\textbf{Tablas}
+
+
+\subsection{Exploración y búsqueda}
+
+Los casos de uso identificados relacionados con la exploración y búsqueda de contenido son:
+
+\begin{enumerate}
+    \item Buscar videos
+    \item Explorar y filtrar videos
+    \item Explorar comunidades y canales 
+\end{enumerate}
+
+\clearpage
+
+\textbf{Diagrama}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{casos-uso/exploracion-busqueda.png}
+  \caption{Exploración y búsqueda de contenido}
+\end{figure}
+
+\textbf{Tablas}
+
+
+Buscar videos: Especifica solo la busqueda de video por titulo, descripcion, creador + la busqueda semántinca.
+
+explorar comunidades también incluye explorar los videos más recientes de las comunidades que un usuario sigue y para eso, se requiere estar logeado. Filtrar videos también lo requiere para el algoritmo de personalizacion y qutiar contenido hehco con IA, que es una preferencia de usuario
+
+
+\subsection{Interacción social}
+
+Los casos de uso identificados relacionados con la interacción social son:
+
+\begin{enumerate}
+    \item Calificar video
+    \item Gestión de comentarios
+    \item Donar puntos de experiencia
+\end{enumerate}
+
+\clearpage
+
+\textbf{Diagrama}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/exploracion-busqueda.png}
+  \caption{Interacciones en la plataforma}
+\end{figure}
+
+
+\textbf{Tablas}
+
+Gestión de comentarios incluye comentar, responder, editar, eliminar, mostrarlos y recomendar. 
+
+\subsection{Comunidades}
+
+\begin{enumerate}
+    \item Crear comunidad
+    \item Unirse a comunidad
+    \item Abandonar comunidad
+    \item Consultar comunidades
+    \item Buscar comunidades
+    \item Consultar videos en una comunidad 
+\end{enumerate}
+
+\subsection{Canales}
+
+\begin{enumerate}
+    \item Gestionar canal
+    \item Consultar canal
+    \item Seguir canales
+    \item Dejar de seguir canales
+\end{enumerate}
+
+\subsection{Gamificación}
+
+\begin{enumerate}
+    \item Ganar puntos de experiencia
+    \item Consultar puntos de experiencia y nivel de canal
+    \item Consultar tablas de clasificación
+    \item Consultar tienda de recompensas
+    \item Comprar artículos de personalización
+    \item Equipar artículos de personalización
+\end{enumerate}
 
 
 \subsection{Diagramas de casos de uso}
@@ -175,11 +305,6 @@ Un caso de uso es una descripción de cómo un actor interactúa con el sistema 
 \subsubsection{Gestión de usuarios}
 
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{casos-uso/iniciar-sesion.png}
-  \caption{Carga de Videos a la plataforma}
-\end{figure}
 
 
 
@@ -187,12 +312,9 @@ Un caso de uso es una descripción de cómo un actor interactúa con el sistema 
 
 
 \subsubsection{Carga y gestión de videos}
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=1\textwidth]{casos-uso/subir-video.png}
-  \caption{Carga de Videos a la plataforma}
-\end{figure}
 
+
+\subsection{Reproducción y consumo de contenido}
 
 
 \subsection{Descripción de casos de uso}
@@ -206,6 +328,4 @@ Un caso de uso es una descripción de cómo un actor interactúa con el sistema 
 En esta sección se recopilan algunos de los diagramas de secuencia más importantes en la aplicación final. 
 
 \section{Diagrama Entidad Relación}
-
-
 

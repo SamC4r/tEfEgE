@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  21 APR 2026 13:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  22 APR 2026 18:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -439,6 +439,13 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
+) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count431
+\float@exts=\toks30
+\float@box=\box56
+\@float@everytoks=\toks31
+\@floatcapt=\box57
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen169
@@ -451,32 +458,32 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen176
 \cmidrulekern=\dimen177
 \defaultaddspace=\dimen178
-\@cmidla=\count431
-\@cmidlb=\count432
+\@cmidla=\count432
+\@cmidlb=\count433
 \@aboverulesep=\dimen179
 \@belowrulesep=\dimen180
-\@thisruleclass=\count433
-\@lastruleclass=\count434
+\@thisruleclass=\count434
+\@lastruleclass=\count435
 \@thisrulewidth=\dimen181
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \col@sep=\dimen182
-\ar@mcellbox=\box56
+\ar@mcellbox=\box58
 \extrarowheight=\dimen183
-\NC@list=\toks30
+\NC@list=\toks32
 \extratabsurround=\skip76
 \backup@length=\skip77
-\ar@cellbox=\box57
+\ar@cellbox=\box59
 )
 \TX@col@width=\dimen184
 \TX@old@table=\dimen185
 \TX@old@col=\dimen186
 \TX@target=\dimen187
 \TX@delta=\dimen188
-\TX@cols=\count435
-\TX@ftn=\toks31
+\TX@cols=\count436
+\TX@ftn=\toks33
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \CenteringLeftskip=\skip78
@@ -511,7 +518,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip103
 \f@nch@widthC=\skip104
 \f@nch@widthR=\skip105
-\@temptokenb=\toks32
+\@temptokenb=\toks34
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
@@ -523,27 +530,27 @@ Package color Info: Driver file: pdftex.def on input line 149.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
-\everycr=\toks33
+\everycr=\toks35
 \minrowclearance=\skip106
-\rownum=\count436
+\rownum=\count437
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
 \LTleft=\skip107
 \LTright=\skip108
 \LTpre=\skip109
 \LTpost=\skip110
-\LTchunksize=\count437
+\LTchunksize=\count438
 \LTcapwidth=\dimen189
-\LT@head=\box58
-\LT@firsthead=\box59
-\LT@foot=\box60
-\LT@lastfoot=\box61
-\LT@gbox=\box62
-\LT@cols=\count438
-\LT@rows=\count439
-\c@LT@tables=\count440
-\c@LT@chunks=\count441
-\LT@p@ftn=\toks34
+\LT@head=\box60
+\LT@firsthead=\box61
+\LT@foot=\box62
+\LT@lastfoot=\box63
+\LT@gbox=\box64
+\LT@cols=\count439
+\LT@rows=\count440
+\c@LT@tables=\count441
+\c@LT@chunks=\count442
+\LT@p@ftn=\toks36
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinekeys.sty
@@ -559,13 +566,13 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count442
+\c@section@level=\count443
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
 \@linkdim=\dimen190
-\Hy@linkcounter=\count443
-\Hy@pagecounter=\count444
+\Hy@linkcounter=\count444
+\Hy@pagecounter=\count445
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -573,7 +580,7 @@ Now handling font encoding PD1 ...
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count445
+\Hy@SavedSpaceFactor=\count446
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -587,7 +594,7 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count446
+\c@Hy@tempcnt=\count447
 LaTeX Info: Redefining \url on input line 4801.
 \XeTeXLinkMargin=\dimen191
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -595,7 +602,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count447
+\Fld@menulength=\count448
 \Field@Width=\dimen192
 \Fld@charsize=\dimen193
 Package hyperref Info: Hyper figures OFF on input line 6078.
@@ -605,15 +612,15 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count448
-\c@Item=\count449
-\c@Hfootnote=\count450
+\Hy@abspage=\count449
+\c@Item=\count450
+\c@Hfootnote=\count451
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
 File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
-\Fld@listcount=\count451
-\c@bookmark@seq@number=\count452
+\Fld@listcount=\count452
+\c@bookmark@seq@number=\count453
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniquecounter.sty
@@ -626,13 +633,13 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count453
-\csq@gtype=\count454
-\csq@glevel=\count455
-\csq@qlevel=\count456
-\csq@maxlvl=\count457
-\csq@tshold=\count458
-\csq@ltx@everypar=\toks35
+\csq@reset=\count454
+\csq@gtype=\count455
+\csq@glevel=\count456
+\csq@qlevel=\count457
+\csq@maxlvl=\count458
+\csq@tshold=\count459
+\csq@ltx@everypar=\toks37
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
@@ -663,17 +670,17 @@ Package: todonotes 2024/01/05
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks36
-\XKV@tempa@toks=\toks37
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
 )
-\XKV@depth=\count459
+\XKV@depth=\count460
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks38
+\pgfutil@everybye=\toks40
 \pgfutil@tempdima=\dimen194
 \pgfutil@tempdimb=\dimen195
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box63
+\pgfutil@abb=\box65
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf\pgf.revision.tex)
 Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
 ))
@@ -694,10 +701,10 @@ Package graphics Info: Driver file: pdftex.def on input line 106.
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks39
-\pgfkeys@temptoks=\toks40
+\pgfkeys@pathtoks=\toks41
+\pgfkeys@temptoks=\toks42
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks41
+\pgfkeys@tmptoks=\toks43
 ))
 \pgf@x=\dimen198
 \pgf@y=\dimen199
@@ -711,14 +718,14 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@yd=\dimen263
 \w@pgf@writea=\write4
 \r@pgf@reada=\read5
-\c@pgf@counta=\count460
-\c@pgf@countb=\count461
-\c@pgf@countc=\count462
-\c@pgf@countd=\count463
-\t@pgf@toka=\toks42
-\t@pgf@tokb=\toks43
-\t@pgf@tokc=\toks44
-\pgf@sys@id@count=\count464
+\c@pgf@counta=\count461
+\c@pgf@countb=\count462
+\c@pgf@countc=\count463
+\c@pgf@countd=\count464
+\t@pgf@toka=\toks44
+\t@pgf@tokb=\toks45
+\t@pgf@tokc=\toks46
+\pgf@sys@id@count=\count465
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -729,21 +736,21 @@ File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count465
-\pgfsyssoftpath@bigbuffer@items=\count466
+\pgfsyssoftpath@smallbuffer@items=\count466
+\pgfsyssoftpath@bigbuffer@items=\count467
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
 \pgfmath@dimen=\dimen264
-\pgfmath@count=\count467
-\pgfmath@box=\box64
-\pgfmath@toks=\toks45
-\pgfmath@stack@operand=\toks46
-\pgfmath@stack@operation=\toks47
+\pgfmath@count=\count468
+\pgfmath@box=\box66
+\pgfmath@toks=\toks47
+\pgfmath@stack@operand=\toks48
+\pgfmath@stack@operation=\toks49
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count468
+\c@pgfmathroundto@lastzeros=\count469
 )) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@picminx=\dimen265
@@ -770,10 +777,10 @@ File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@shorten@start@additional=\dimen282
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box65
-\pgf@hbox=\box66
-\pgf@layerbox@main=\box67
-\pgf@picture@serial@count=\count469
+\pgfpic=\box67
+\pgf@hbox=\box68
+\pgf@layerbox@main=\box69
+\pgf@picture@serial@count=\count470
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgflinewidth=\dimen283
@@ -794,13 +801,13 @@ File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@max=\dimen288
-\pgf@sys@shading@range@num=\count470
-\pgf@shadingcount=\count471
+\pgf@sys@shading@range@num=\count471
+\pgf@shadingcount=\count472
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box68
+\pgfexternal@startupbox=\box70
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.tex
@@ -811,7 +818,7 @@ File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box69
+\pgfnodeparttextbox=\box71
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
@@ -824,13 +831,13 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
 \pgffor@iter=\dimen291
 \pgffor@skip=\dimen292
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@stack=\toks50
+\pgffor@toks=\toks51
 )) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count472
+\pgf@plot@mark@count=\count473
 \pgfplotmarksize=\dimen293
 )
 \tikz@lastx=\dimen294
@@ -841,69 +848,69 @@ File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \tikz@lastmovetoy=\dimen299
 \tikzleveldistance=\dimen300
 \tikzsiblingdistance=\dimen301
-\tikz@figbox=\box70
-\tikz@figbox@bg=\box71
-\tikz@tempbox=\box72
-\tikz@tempbox@bg=\box73
-\tikztreelevel=\count473
-\tikznumberofchildren=\count474
-\tikznumberofcurrentchild=\count475
-\tikz@fig@count=\count476
+\tikz@figbox=\box72
+\tikz@figbox@bg=\box73
+\tikz@tempbox=\box74
+\tikz@tempbox@bg=\box75
+\tikztreelevel=\count474
+\tikznumberofchildren=\count475
+\tikznumberofcurrentchild=\count476
+\tikz@fig@count=\count477
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count477
-\pgfmatrixcurrentcolumn=\count478
-\pgf@matrix@numberofcolumns=\count479
+\pgfmatrixcurrentrow=\count478
+\pgfmatrixcurrentcolumn=\count479
+\pgf@matrix@numberofcolumns=\count480
 )
-\tikz@expandcount=\count480
+\tikz@expandcount=\count481
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count481
-\calc@Bcount=\count482
+\calc@Acount=\count482
+\calc@Bcount=\count483
 \calc@Adimen=\dimen302
 \calc@Bdimen=\dimen303
 \calc@Askip=\skip112
 \calc@Bskip=\skip113
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count483
+\calc@Ccount=\count484
 \calc@Cskip=\skip114
 )
-\c@@todonotes@numberoftodonotes=\count484
-) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
+\c@@todonotes@numberoftodonotes=\count485
+) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.sty
+(C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count485
-\l__lipsum_a_int=\count486
-\l__lipsum_b_int=\count487
-
-(C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
+\g__lipsum_par_int=\count486
+\l__lipsum_a_int=\count487
+\l__lipsum_b_int=\count488
+ (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex)) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/relsize\relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count488
-\lst@gtempboxa=\box74
-\lst@token=\toks50
-\lst@length=\count489
+\lst@mode=\count489
+\lst@gtempboxa=\box76
+\lst@token=\toks52
+\lst@length=\count490
 \lst@currlwidth=\dimen304
-\lst@column=\count490
-\lst@pos=\count491
+\lst@column=\count491
+\lst@pos=\count492
 \lst@lostspace=\dimen305
 \lst@width=\dimen306
-\lst@newlines=\count492
-\lst@lineno=\count493
+\lst@newlines=\count493
+\lst@lineno=\count494
 \lst@maxwidth=\dimen307
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstpatch.sty
 File: lstpatch.sty 2025/11/14 1.11b (Carsten Heinz)
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
-\c@lstnumber=\count494
-\lst@skipnumbers=\count495
-\lst@framebox=\box75
+\c@lstnumber=\count495
+\lst@skipnumbers=\count496
+\lst@framebox=\box77
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2025/11/14 1.11b listings configuration
 ))
@@ -931,8 +938,9 @@ Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
 \caption@hangindent=\dimen315
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count496
-\c@continuedfloat=\count497
+\c@caption@flags=\count497
+\c@continuedfloat=\count498
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: longtable package is loaded.
@@ -942,9 +950,9 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 Package caption Info: wrapfig package is loaded.
 )
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count498
+\c@subfigure=\count499
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count499
+\c@subtable=\count500
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/placeins\placeins.sty
 Package: placeins 2005/04/18  v 2.2
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
@@ -1047,17 +1055,17 @@ Package biblatex Info: Reference section=0 on input line 133.
 Package biblatex Info: Reference segment=0 on input line 133.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count500
+\scratchcounter=\count501
 \scratchdimen=\dimen316
-\scratchbox=\box76
-\nofMPsegments=\count501
-\nofMParguments=\count502
-\everyMPshowfont=\toks51
-\MPscratchCnt=\count503
+\scratchbox=\box78
+\nofMPsegments=\count502
+\nofMParguments=\count503
+\everyMPshowfont=\toks53
+\MPscratchCnt=\count504
 \MPscratchDim=\dimen317
-\MPnumerator=\count504
-\makeMPintoPDFobject=\count505
-\everyMPtoPDFconversion=\toks52
+\MPnumerator=\count505
+\makeMPintoPDFobject=\count506
+\everyMPtoPDFconversion=\toks54
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1069,11 +1077,11 @@ Package hyperref Info: Link coloring OFF on input line 133.
 \@outlinefile=\write5
 \openout5 = `tfg_etsiinf_SamuelCaraballoChichiraldi.out'.
 
-\c@lstlisting=\count506
+\c@lstlisting=\count507
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (portada/portada.tex
-<portada/escudo_upm.png, id=386, 245.91875pt x 200.75pt>
+<portada/escudo_upm.png, id=414, 245.91875pt x 200.75pt>
 File: portada/escudo_upm.png Graphic file (type png)
 <use portada/escudo_upm.png>
 Package pdftex.def Info: portada/escudo_upm.png  used on input line 6.
@@ -1089,7 +1097,7 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 12.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <14.4> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 13.
-<portada/escudo_etsiinf.png, id=388, 160.6pt x 170.6375pt>
+<portada/escudo_etsiinf.png, id=416, 160.6pt x 170.6375pt>
 File: portada/escudo_etsiinf.png Graphic file (type png)
 <use portada/escudo_etsiinf.png>
 Package pdftex.def Info: portada/escudo_etsiinf.png  used on input line 17.
@@ -1140,18 +1148,27 @@ LaTeX Info: Redefining \% on input line 3.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <10.95> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 4.
  [5]
-LaTeX Info: Redefining \sptext on input line 87.
-LaTeX Info: Redefining \. on input line 87.
-LaTeX Info: Redefining \% on input line 87.
+Overfull \hbox (2.62762pt too wide) detected at line 74
+\T1/pbk/l/n/10.95 5.4.10. 
+ []
+
+
+Overfull \hbox (2.62762pt too wide) detected at line 75
+\T1/pbk/l/n/10.95 5.4.11. 
+ []
+
+LaTeX Info: Redefining \sptext on input line 88.
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 87.
- [6]
-Overfull \hbox (1.75185pt too wide) detected at line 99
+(babel)             Reported on input line 88.
+[6]
+Overfull \hbox (1.75185pt too wide) detected at line 106
 \T1/pbk/db/n/10.95 10. 
  []
 
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
-(Font)              Font shape `T1/pbk/db/n' tried instead on input line 101.
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 108.
 )
 \tf@toc=\write6
 \openout6 = `tfg_etsiinf_SamuelCaraballoChichiraldi.toc'.
@@ -1210,7 +1227,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 24.
  [7]
-<portada/FFmpeg_icon.svg.png, id=587, 3854.4pt x 3854.4pt>
+<portada/FFmpeg_icon.svg.png, id=622, 3854.4pt x 3854.4pt>
 File: portada/FFmpeg_icon.svg.png Graphic file (type png)
 <use portada/FFmpeg_icon.svg.png>
 Package pdftex.def Info: portada/FFmpeg_icon.svg.png  used on input line 34.
@@ -1231,7 +1248,7 @@ LaTeX Info: Redefining \sptext on input line 134.
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
  [11]
-<portada/cdn_image.png, id=620, 1405.25pt x 790.955pt>
+<portada/cdn_image.png, id=655, 1405.25pt x 790.955pt>
 File: portada/cdn_image.png Graphic file (type png)
 <use portada/cdn_image.png>
 Package pdftex.def Info: portada/cdn_image.png  used on input line 159.
@@ -1252,7 +1269,7 @@ LaTeX Info: Redefining \sptext on input line 213.
 LaTeX Info: Redefining \. on input line 213.
 LaTeX Info: Redefining \% on input line 213.
  [14]
-<portada/aws.png, id=636, 10673.72308pt x 6003.96924pt>
+<portada/aws.png, id=671, 10673.72308pt x 6003.96924pt>
 File: portada/aws.png Graphic file (type png)
 <use portada/aws.png>
 Package pdftex.def Info: portada/aws.png  used on input line 257.
@@ -1269,7 +1286,7 @@ LaTeX Info: Redefining \sptext on input line 291.
 LaTeX Info: Redefining \. on input line 291.
 LaTeX Info: Redefining \% on input line 291.
  [16 <./portada/aws.png>]
-<portada/mux-logo.png, id=649, 192.72pt x 61.21872pt>
+<portada/mux-logo.png, id=684, 192.72pt x 61.21872pt>
 File: portada/mux-logo.png Graphic file (type png)
 <use portada/mux-logo.png>
 Package pdftex.def Info: portada/mux-logo.png  used on input line 310.
@@ -1282,7 +1299,7 @@ LaTeX Info: Redefining \sptext on input line 359.
 LaTeX Info: Redefining \. on input line 359.
 LaTeX Info: Redefining \% on input line 359.
  [18]
-<portada/bunnynet-logo.png, id=664, 333.6465pt x 101.178pt>
+<portada/bunnynet-logo.png, id=699, 333.6465pt x 101.178pt>
 File: portada/bunnynet-logo.png Graphic file (type png)
 <use portada/bunnynet-logo.png>
 Package pdftex.def Info: portada/bunnynet-logo.png  used on input line 362.
@@ -1310,7 +1327,7 @@ LaTeX Info: Redefining \% on input line 467.
  [21]
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <9> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 470.
-<portada/centralizado.png, id=686, 465.99094pt x 427.5975pt>
+<portada/centralizado.png, id=721, 465.99094pt x 427.5975pt>
 File: portada/centralizado.png Graphic file (type png)
 <use portada/centralizado.png>
 Package pdftex.def Info: portada/centralizado.png  used on input line 477.
@@ -1325,7 +1342,7 @@ LaTeX Info: Redefining \sptext on input line 512.
 LaTeX Info: Redefining \. on input line 512.
 LaTeX Info: Redefining \% on input line 512.
  [23]
-<portada/fediverse.png, id=699, 1505.625pt x 1505.625pt>
+<portada/fediverse.png, id=734, 1505.625pt x 1505.625pt>
 File: portada/fediverse.png Graphic file (type png)
 <use portada/fediverse.png>
 Package pdftex.def Info: portada/fediverse.png  used on input line 525.
@@ -1334,7 +1351,7 @@ LaTeX Info: Redefining \sptext on input line 535.
 LaTeX Info: Redefining \. on input line 535.
 LaTeX Info: Redefining \% on input line 535.
  [24 <./portada/fediverse.png>]
-<portada/peertubelogo.png, id=707, 84.315pt x 20.075pt>
+<portada/peertubelogo.png, id=742, 84.315pt x 20.075pt>
 File: portada/peertubelogo.png Graphic file (type png)
 <use portada/peertubelogo.png>
 Package pdftex.def Info: portada/peertubelogo.png  used on input line 563.
@@ -1343,7 +1360,7 @@ LaTeX Info: Redefining \sptext on input line 571.
 LaTeX Info: Redefining \. on input line 571.
 LaTeX Info: Redefining \% on input line 571.
  [25 <./portada/peertubelogo.png>]
-<portada/p2p.png, id=714, 566.115pt x 475.7775pt>
+<portada/p2p.png, id=749, 566.115pt x 475.7775pt>
 File: portada/p2p.png Graphic file (type png)
 <use portada/p2p.png>
 Package pdftex.def Info: portada/p2p.png  used on input line 578.
@@ -1352,7 +1369,7 @@ LaTeX Info: Redefining \sptext on input line 588.
 LaTeX Info: Redefining \. on input line 588.
 LaTeX Info: Redefining \% on input line 588.
  [26 <./portada/p2p.png>]
-<portada/odysee.png, id=720, 401.5pt x 120.45pt>
+<portada/odysee.png, id=755, 401.5pt x 120.45pt>
 File: portada/odysee.png Graphic file (type png)
 <use portada/odysee.png>
 Package pdftex.def Info: portada/odysee.png  used on input line 611.
@@ -1379,7 +1396,7 @@ Overfull \hbox (26.54231pt too wide) in paragraph at lines 39--40
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-<portada/typescript.png, id=739, 1284.8pt x 1284.8pt>
+<portada/typescript.png, id=774, 1284.8pt x 1284.8pt>
 File: portada/typescript.png Graphic file (type png)
 <use portada/typescript.png>
 Package pdftex.def Info: portada/typescript.png  used on input line 49.
@@ -1391,7 +1408,7 @@ LaTeX Info: Redefining \sptext on input line 54.
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
  [30 <./portada/typescript.png>]
-<portada/PostgreSQL.png, id=765, 612.2875pt x 281.05pt>
+<portada/PostgreSQL.png, id=800, 612.2875pt x 281.05pt>
 File: portada/PostgreSQL.png Graphic file (type png)
 <use portada/PostgreSQL.png>
 Package pdftex.def Info: portada/PostgreSQL.png  used on input line 80.
@@ -1404,7 +1421,7 @@ LaTeX Info: Redefining \sptext on input line 86.
 LaTeX Info: Redefining \. on input line 86.
 LaTeX Info: Redefining \% on input line 86.
 [31]
-<portada/neondb.png, id=771, 451.6875pt x 149.8097pt>
+<portada/neondb.png, id=806, 451.6875pt x 149.8097pt>
 File: portada/neondb.png Graphic file (type png)
 <use portada/neondb.png>
 Package pdftex.def Info: portada/neondb.png  used on input line 93.
@@ -1416,7 +1433,7 @@ LaTeX Info: Redefining \sptext on input line 106.
 LaTeX Info: Redefining \. on input line 106.
 LaTeX Info: Redefining \% on input line 106.
  [32 <./portada/PostgreSQL.png> <./portada/neondb.png>]
-<portada/supabase.png, id=781, 200.75pt x 69.25874pt>
+<portada/supabase.png, id=816, 200.75pt x 69.25874pt>
 File: portada/supabase.png Graphic file (type png)
 <use portada/supabase.png>
 Package pdftex.def Info: portada/supabase.png  used on input line 113.
@@ -1428,7 +1445,7 @@ LaTeX Info: Redefining \sptext on input line 134.
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
  [33 <./portada/supabase.png>]
-<portada/drizzle-orm.png, id=792, 129.48375pt x 38.39343pt>
+<portada/drizzle-orm.png, id=827, 129.48375pt x 38.39343pt>
 File: portada/drizzle-orm.png Graphic file (type png)
 <use portada/drizzle-orm.png>
 Package pdftex.def Info: portada/drizzle-orm.png  used on input line 152.
@@ -1437,7 +1454,7 @@ LaTeX Info: Redefining \sptext on input line 169.
 LaTeX Info: Redefining \. on input line 169.
 LaTeX Info: Redefining \% on input line 169.
  [34 <./portada/drizzle-orm.png>]
-<portada/trpc-logo.png, id=801, 861.2175pt x 256.96pt>
+<portada/trpc-logo.png, id=836, 861.2175pt x 256.96pt>
 File: portada/trpc-logo.png Graphic file (type png)
 <use portada/trpc-logo.png>
 Package pdftex.def Info: portada/trpc-logo.png  used on input line 188.
@@ -1448,7 +1465,7 @@ LaTeX Info: Redefining \% on input line 194.
  [35 <./portada/trpc-logo.png>]
 LaTeX Font Info:    Font shape `T1/pbk/b/it' in size <10.95> not available
 (Font)              Font shape `T1/pbk/db/it' tried instead on input line 195.
-<portada/prefetch-diagram.png, id=809, 1806.75pt x 1606.0pt>
+<portada/prefetch-diagram.png, id=844, 1806.75pt x 1606.0pt>
 File: portada/prefetch-diagram.png Graphic file (type png)
 <use portada/prefetch-diagram.png>
 Package pdftex.def Info: portada/prefetch-diagram.png  used on input line 203.
@@ -1463,7 +1480,7 @@ LaTeX Info: Redefining \% on input line 232.
  [37]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 235.
-<portada/nextjs.png, id=826, 169.38281pt x 112.92188pt>
+<portada/nextjs.png, id=861, 169.38281pt x 112.92188pt>
 File: portada/nextjs.png Graphic file (type png)
 <use portada/nextjs.png>
 Package pdftex.def Info: portada/nextjs.png  used on input line 245.
@@ -1475,7 +1492,7 @@ LaTeX Info: Redefining \sptext on input line 250.
 LaTeX Info: Redefining \. on input line 250.
 LaTeX Info: Redefining \% on input line 250.
  [38 <./portada/nextjs.png>]
-<portada/clerk.png, id=836, 322.20375pt x 100.375pt>
+<portada/clerk.png, id=871, 322.20375pt x 100.375pt>
 File: portada/clerk.png Graphic file (type png)
 <use portada/clerk.png>
 Package pdftex.def Info: portada/clerk.png  used on input line 259.
@@ -1484,7 +1501,7 @@ LaTeX Info: Redefining \sptext on input line 278.
 LaTeX Info: Redefining \. on input line 278.
 LaTeX Info: Redefining \% on input line 278.
  [39 <./portada/clerk.png>]
-<portada/react.png, id=845, 1003.75pt x 709.65125pt>
+<portada/react.png, id=880, 1003.75pt x 709.65125pt>
 File: portada/react.png Graphic file (type png)
 <use portada/react.png>
 Package pdftex.def Info: portada/react.png  used on input line 293.
@@ -1505,12 +1522,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-<portada/tailwindcss-logo.png, id=862, 401.5pt x 46.1725pt>
+<portada/tailwindcss-logo.png, id=897, 401.5pt x 46.1725pt>
 File: portada/tailwindcss-logo.png Graphic file (type png)
 <use portada/tailwindcss-logo.png>
 Package pdftex.def Info: portada/tailwindcss-logo.png  used on input line 355.
 (pdftex.def)             Requested size: 153.64441pt x 17.66971pt.
-<portada/shadcn.png, id=863, 475.7775pt x 106.3975pt>
+<portada/shadcn.png, id=898, 475.7775pt x 106.3975pt>
 File: portada/shadcn.png Graphic file (type png)
 <use portada/shadcn.png>
 Package pdftex.def Info: portada/shadcn.png  used on input line 360.
@@ -1524,7 +1541,7 @@ Cap\'{\i }tulo 4.
 [43
 
 ]
-<portada/alg-rec.png, id=878, 483.0045pt x 191.5155pt>
+<portada/alg-rec.png, id=913, 483.0045pt x 191.5155pt>
 File: portada/alg-rec.png Graphic file (type png)
 <use portada/alg-rec.png>
 Package pdftex.def Info: portada/alg-rec.png  used on input line 31.
@@ -1537,7 +1554,7 @@ LaTeX Info: Redefining \sptext on input line 44.
 LaTeX Info: Redefining \. on input line 44.
 LaTeX Info: Redefining \% on input line 44.
 [44]
-<portada/comunidades.png, id=884, 634.16925pt x 419.76825pt>
+<portada/comunidades.png, id=919, 634.16925pt x 419.76825pt>
 File: portada/comunidades.png Graphic file (type png)
 <use portada/comunidades.png>
 Package pdftex.def Info: portada/comunidades.png  used on input line 52.
@@ -1557,7 +1574,7 @@ LaTeX Info: Redefining \sptext on input line 69.
 LaTeX Info: Redefining \. on input line 69.
 LaTeX Info: Redefining \% on input line 69.
  [46 <./portada/comunidades.png>]
-<portada/xp.png, id=900, 259.56975pt x 36.73724pt>
+<portada/xp.png, id=935, 259.56975pt x 36.73724pt>
 File: portada/xp.png Graphic file (type png)
 <use portada/xp.png>
 Package pdftex.def Info: portada/xp.png  used on input line 77.
@@ -1566,12 +1583,12 @@ LaTeX Info: Redefining \sptext on input line 99.
 LaTeX Info: Redefining \. on input line 99.
 LaTeX Info: Redefining \% on input line 99.
  [47 <./portada/xp.png>]
-<portada/explorer-1.png, id=907, 958.782pt x 485.4135pt>
+<portada/explorer-1.png, id=942, 958.782pt x 485.4135pt>
 File: portada/explorer-1.png Graphic file (type png)
 <use portada/explorer-1.png>
 Package pdftex.def Info: portada/explorer-1.png  used on input line 105.
 (pdftex.def)             Requested size: 426.79135pt x 216.07869pt.
-<portada/explorer-2.png, id=908, 975.645pt x 487.8225pt>
+<portada/explorer-2.png, id=943, 975.645pt x 487.8225pt>
 File: portada/explorer-2.png Graphic file (type png)
 <use portada/explorer-2.png>
 Package pdftex.def Info: portada/explorer-2.png  used on input line 110.
@@ -1580,12 +1597,12 @@ LaTeX Info: Redefining \sptext on input line 120.
 LaTeX Info: Redefining \. on input line 120.
 LaTeX Info: Redefining \% on input line 120.
  [48 <./portada/explorer-1.png> <./portada/explorer-2.png>]
-<portada/ia-video.png, id=918, 237.88875pt x 240.9pt>
+<portada/ia-video.png, id=953, 237.88875pt x 240.9pt>
 File: portada/ia-video.png Graphic file (type png)
 <use portada/ia-video.png>
 Package pdftex.def Info: portada/ia-video.png  used on input line 123.
 (pdftex.def)             Requested size: 213.39568pt x 216.1059pt.
-<portada/video-view-1.png, id=919, 1144.87724pt x 513.117pt>
+<portada/video-view-1.png, id=954, 1144.87724pt x 513.117pt>
 File: portada/video-view-1.png Graphic file (type png)
 <use portada/video-view-1.png>
 Package pdftex.def Info: portada/video-view-1.png  used on input line 135.
@@ -1602,7 +1619,7 @@ LaTeX Info: Redefining \sptext on input line 146.
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
  [50 <./portada/video-view-1.png>]
-<portada/sidebar.png, id=933, 115.02975pt x 545.6385pt>
+<portada/sidebar.png, id=968, 115.02975pt x 545.6385pt>
 File: portada/sidebar.png Graphic file (type png)
 <use portada/sidebar.png>
 Package pdftex.def Info: portada/sidebar.png  used on input line 171.
@@ -1622,24 +1639,24 @@ LaTeX Info: Redefining \sptext on input line 181.
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
 [51 <./portada/sidebar.png>]
-<portada/theme-selector.png, id=942, 778.70924pt x 410.7345pt>
+<portada/theme-selector.png, id=977, 778.70924pt x 410.7345pt>
 File: portada/theme-selector.png Graphic file (type png)
 <use portada/theme-selector.png>
 Package pdftex.def Info: portada/theme-selector.png  used on input line 192.
 (pdftex.def)             Requested size: 426.79135pt x 225.11499pt.
-<portada/dark.png, id=945, 1126.80975pt x 496.85625pt>
+<portada/dark.png, id=980, 1126.80975pt x 496.85625pt>
 File: portada/dark.png Graphic file (type png)
 <use portada/dark.png>
 Package pdftex.def Info: portada/dark.png  used on input line 203.
 (pdftex.def)             Requested size: 298.75264pt x 131.7345pt.
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <10> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 204.
-<portada/white.png, id=946, 1121.3895pt x 495.65175pt>
+<portada/white.png, id=981, 1121.3895pt x 495.65175pt>
 File: portada/white.png Graphic file (type png)
 <use portada/white.png>
 Package pdftex.def Info: portada/white.png  used on input line 209.
 (pdftex.def)             Requested size: 298.75264pt x 132.04288pt.
-<portada/retro.png, id=947, 1124.40076pt x 495.0495pt>
+<portada/retro.png, id=982, 1124.40076pt x 495.0495pt>
 File: portada/retro.png Graphic file (type png)
 <use portada/retro.png>
 Package pdftex.def Info: portada/retro.png  used on input line 217.
@@ -1652,7 +1669,7 @@ LaTeX Info: Redefining \sptext on input line 227.
 LaTeX Info: Redefining \. on input line 227.
 LaTeX Info: Redefining \% on input line 227.
  [53 <./portada/dark.png> <./portada/white.png> <./portada/retro.png>]
-<portada/report-modal.png, id=964, 252.34274pt x 330.63525pt>
+<portada/report-modal.png, id=999, 252.34274pt x 330.63525pt>
 File: portada/report-modal.png Graphic file (type png)
 <use portada/report-modal.png>
 Package pdftex.def Info: portada/report-modal.png  used on input line 237.
@@ -1661,7 +1678,7 @@ LaTeX Info: Redefining \sptext on input line 242.
 LaTeX Info: Redefining \. on input line 242.
 LaTeX Info: Redefining \% on input line 242.
  [54 <./portada/report-modal.png>]
-<portada/report-vote.png, id=971, 258.9675pt x 335.45325pt>
+<portada/report-vote.png, id=1006, 258.9675pt x 335.45325pt>
 File: portada/report-vote.png Graphic file (type png)
 <use portada/report-vote.png>
 Package pdftex.def Info: portada/report-vote.png  used on input line 249.
@@ -1670,7 +1687,7 @@ LaTeX Info: Redefining \sptext on input line 256.
 LaTeX Info: Redefining \. on input line 256.
 LaTeX Info: Redefining \% on input line 256.
  [55 <./portada/report-vote.png>]
-<portada/comentarios.png, id=978, 305.34074pt x 418.56375pt>
+<portada/comentarios.png, id=1013, 305.34074pt x 418.56375pt>
 File: portada/comentarios.png Graphic file (type png)
 <use portada/comentarios.png>
 Package pdftex.def Info: portada/comentarios.png  used on input line 262.
@@ -1679,7 +1696,7 @@ LaTeX Info: Redefining \sptext on input line 268.
 LaTeX Info: Redefining \. on input line 268.
 LaTeX Info: Redefining \% on input line 268.
  [56 <./portada/comentarios.png>]
-<portada/channel-videos.png, id=986, 596.82974pt x 503.481pt>
+<portada/channel-videos.png, id=1021, 596.82974pt x 503.481pt>
 File: portada/channel-videos.png Graphic file (type png)
 <use portada/channel-videos.png>
 Package pdftex.def Info: portada/channel-videos.png  used on input line 280.
@@ -1688,22 +1705,22 @@ LaTeX Info: Redefining \sptext on input line 288.
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
  [57 <./portada/channel-videos.png>]
-<portada/channel-viewer.png, id=997, 453.49425pt x 320.99925pt>
+<portada/channel-viewer.png, id=1032, 453.49425pt x 320.99925pt>
 File: portada/channel-viewer.png Graphic file (type png)
 <use portada/channel-viewer.png>
 Package pdftex.def Info: portada/channel-viewer.png  used on input line 293.
 (pdftex.def)             Requested size: 256.07741pt x 181.26694pt.
-<portada/channel-boost.png, id=1000, 516.12825pt x 377.61075pt>
+<portada/channel-boost.png, id=1035, 516.12825pt x 377.61075pt>
 File: portada/channel-boost.png Graphic file (type png)
 <use portada/channel-boost.png>
 Package pdftex.def Info: portada/channel-boost.png  used on input line 302.
 (pdftex.def)             Requested size: 341.43437pt x 249.80005pt.
-<portada/channel-level.png, id=1001, 873.2625pt x 277.035pt>
+<portada/channel-level.png, id=1036, 873.2625pt x 277.035pt>
 File: portada/channel-level.png Graphic file (type png)
 <use portada/channel-level.png>
 Package pdftex.def Info: portada/channel-level.png  used on input line 309.
 (pdftex.def)             Requested size: 426.79135pt x 135.39748pt.
-<portada/channel-leaderboard.png, id=1003, 581.7735pt x 364.9635pt>
+<portada/channel-leaderboard.png, id=1038, 581.7735pt x 364.9635pt>
 File: portada/channel-leaderboard.png Graphic file (type png)
 <use portada/channel-leaderboard.png>
 Package pdftex.def Info: portada/channel-leaderboard.png  used on input line 318.
@@ -1716,12 +1733,12 @@ LaTeX Info: Redefining \sptext on input line 324.
 LaTeX Info: Redefining \. on input line 324.
 LaTeX Info: Redefining \% on input line 324.
  [59 <./portada/channel-boost.png> <./portada/channel-level.png>]
-<portada/channel-rewards.png, id=1021, 572.1375pt x 201.75375pt>
+<portada/channel-rewards.png, id=1056, 572.1375pt x 201.75375pt>
 File: portada/channel-rewards.png Graphic file (type png)
 <use portada/channel-rewards.png>
 Package pdftex.def Info: portada/channel-rewards.png  used on input line 329.
 (pdftex.def)             Requested size: 341.43437pt x 120.40053pt.
-<portada/channel-about.png, id=1023, 573.342pt x 160.1985pt>
+<portada/channel-about.png, id=1058, 573.342pt x 160.1985pt>
 File: portada/channel-about.png Graphic file (type png)
 <use portada/channel-about.png>
 Package pdftex.def Info: portada/channel-about.png  used on input line 338.
@@ -1730,7 +1747,7 @@ LaTeX Info: Redefining \sptext on input line 345.
 LaTeX Info: Redefining \. on input line 345.
 LaTeX Info: Redefining \% on input line 345.
  [60 <./portada/channel-leaderboard.png> <./portada/channel-rewards.png>]
-<portada/channel-chat.png, id=1034, 572.1375pt x 264.99pt>
+<portada/channel-chat.png, id=1069, 572.1375pt x 264.99pt>
 File: portada/channel-chat.png Graphic file (type png)
 <use portada/channel-chat.png>
 Package pdftex.def Info: portada/channel-chat.png  used on input line 348.
@@ -1739,7 +1756,7 @@ LaTeX Info: Redefining \sptext on input line 363.
 LaTeX Info: Redefining \. on input line 363.
 LaTeX Info: Redefining \% on input line 363.
  [61 <./portada/channel-about.png> <./portada/channel-chat.png>]
-<portada/leaderboard.png, id=1044, 976.8495pt x 406.51875pt>
+<portada/leaderboard.png, id=1079, 976.8495pt x 406.51875pt>
 File: portada/leaderboard.png Graphic file (type png)
 <use portada/leaderboard.png>
 Package pdftex.def Info: portada/leaderboard.png  used on input line 373.
@@ -1769,49 +1786,78 @@ LaTeX Info: Redefining \sptext on input line 144.
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
  [67]
-<casos-uso/iniciar-sesion.png, id=1142, 1453.43pt x 1090.0725pt>
+<casos-uso/iniciar-sesion.png, id=1177, 1453.43pt x 1090.0725pt>
 File: casos-uso/iniciar-sesion.png Graphic file (type png)
 <use casos-uso/iniciar-sesion.png>
-Package pdftex.def Info: casos-uso/iniciar-sesion.png  used on input line 180.
-(pdftex.def)             Requested size: 426.79135pt x 320.08824pt.
-<casos-uso/subir-video.png, id=1143, 1453.43pt x 1090.0725pt>
+Package pdftex.def Info: casos-uso/iniciar-sesion.png  used on input line 166.
+(pdftex.def)             Requested size: 341.43437pt x 256.06728pt.
+LaTeX Info: Redefining \sptext on input line 180.
+LaTeX Info: Redefining \. on input line 180.
+LaTeX Info: Redefining \% on input line 180.
+ [68 <./casos-uso/iniciar-sesion.png (PNG copy)>]
+<casos-uso/subir-video.png, id=1188, 968.61874pt x 571.13374pt>
 File: casos-uso/subir-video.png Graphic file (type png)
 <use casos-uso/subir-video.png>
-Package pdftex.def Info: casos-uso/subir-video.png  used on input line 192.
-(pdftex.def)             Requested size: 426.79135pt x 320.08824pt.
-) (secciones/diseno-arquitectura.tex
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [68]
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [69 <./casos-uso/iniciar-sesion.png (PNG copy)>]
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [70 <./casos-uso/subir-video.png (PNG copy)>]
-Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [71
+Package pdftex.def Info: casos-uso/subir-video.png  used on input line 191.
+(pdftex.def)             Requested size: 426.79135pt x 251.65694pt.
+<casos-uso/reproduccion-consumo.png, id=1189, 670.505pt x 617.30624pt>
+File: casos-uso/reproduccion-consumo.png Graphic file (type png)
+<use casos-uso/reproduccion-consumo.png>
+Package pdftex.def Info: casos-uso/reproduccion-consumo.png  used on input line 212.
+(pdftex.def)             Requested size: 426.79135pt x 392.92703pt.
+LaTeX Info: Redefining \sptext on input line 214.
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+ [69 <./casos-uso/subir-video.png>]
+LaTeX Info: Redefining \sptext on input line 229.
+LaTeX Info: Redefining \. on input line 229.
+LaTeX Info: Redefining \% on input line 229.
+ [70 <./casos-uso/reproduccion-consumo.png>]
+<casos-uso/exploracion-busqueda.png, id=1216, 645.41125pt x 547.04375pt>
+File: casos-uso/exploracion-busqueda.png Graphic file (type png)
+<use casos-uso/exploracion-busqueda.png>
+Package pdftex.def Info: casos-uso/exploracion-busqueda.png  used on input line 234.
+(pdftex.def)             Requested size: 341.43437pt x 289.39758pt.
+LaTeX Info: Redefining \sptext on input line 256.
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+ [71
 
-] [72
+ <./casos-uso/exploracion-busqueda.png>]
+File: casos-uso/exploracion-busqueda.png Graphic file (type png)
+<use casos-uso/exploracion-busqueda.png>
+Package pdftex.def Info: casos-uso/exploracion-busqueda.png  used on input line 262.
+(pdftex.def)             Requested size: 426.79135pt x 361.7428pt.
+LaTeX Info: Redefining \sptext on input line 286.
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
+ [72
+
+]) (secciones/diseno-arquitectura.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [73] [74
+
+]
+Cap\'{\i }tulo 6.
+) (secciones/desarrollo.tex [75] [76
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [73] [74
+) (secciones/pruebas.tex [77] [78
 
 ]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [75] [76
+) (secciones/conclusiones.tex [79] [80
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [77] [78
+) (secciones/impacto.tex [81] [82
 
 ]
 Cap\'{\i }tulo 10.
-) [79] [80
+) [83] [84
 
 ]
 Overfull \hbox (1.31523pt too wide) in paragraph at lines 203--203
@@ -1843,7 +1889,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 203--203
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[81
+[85
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 203--203
@@ -1858,15 +1904,15 @@ Overfull \hbox (2.00604pt too wide) in paragraph at lines 203--203
 LaTeX Info: Redefining \sptext on input line 200.
 LaTeX Info: Redefining \. on input line 200.
 LaTeX Info: Redefining \% on input line 200.
-[82]
+[86]
 LaTeX Info: Redefining \sptext on input line 204.
 LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
- [83] [84
+ [87] [88
 
-] [85] [86] (secciones/anexo1.tex
+] [89] [90] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [87
+) [91
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -1881,23 +1927,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: FE9B3101AC8EE81B6F1DD56F97F58BBC;17554.
+(rerunfilecheck)             Checksum: A7311EC68E8D0548F041D60CC7D19456;18749.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36794 strings out of 467871
- 695768 string characters out of 5419344
- 1608951 words of memory out of 5000000
- 64660 multiletter control sequences out of 15000+600000
+ 36909 strings out of 467871
+ 697766 string characters out of 5419344
+ 1610275 words of memory out of 5000000
+ 64731 multiletter control sequences out of 15000+600000
  665475 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,131p,1296b,2660s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (97 pages, 12001413 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (101 pages, 11701707 bytes).
 PDF statistics:
- 1433 PDF objects out of 1440 (max. 8388607)
- 390 named destinations out of 1000 (max. 500000)
- 1023 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1526 PDF objects out of 1728 (max. 8388607)
+ 430 named destinations out of 1000 (max. 500000)
+ 1089 words of extra memory for PDF output out of 10000 (max. 10000000)
 
