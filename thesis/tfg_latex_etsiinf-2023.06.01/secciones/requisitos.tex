@@ -10,8 +10,9 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 \subsection{Gestión de usuario}
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-GU \arabic*.}, leftmargin=*]
     \item El sistema debe permitir a los usuarios registrarse en la plataforma con un correo o nombre de usuario.
+    \item El sistema debe enviar un código de verificación al correo proporcionado para completar el registro o, luego de un tiempo de inactividad de un usuario registrado. 
     \item El sistema debe permitir a los usuarios iniciar sesión con un correo o nombre de usuario.
     \item El sistema debe permitir a los usuarios cerrar sesión
     \item El sistema debe permitir a los usuarios recuperar su contraseña.
@@ -25,7 +26,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-CGMV \arabic*.}, leftmargin=*]
     \item El sistema debe permitir al usuario cargar un video a la plataforma.
     \item El sistema debe permitir al usuario agregar título, descripción y categoría al video.
     \item El sistema debe permitir al usuario seleccionar la visibilidad del video.
@@ -41,7 +42,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-RCC \arabic*.}, leftmargin=*]
     \item El sistema debe permitir al usuario visualizar un video.
     \item El sistema debe permitir al usuario pausar, reanudar, adelantar y retroceder el video.
     \item El sistema debe permitir al usuario cambiar la calidad de reproducción cuando existan varias resoluciones disponibles.
@@ -54,7 +55,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 \subsection{Exploración y búsqueda}
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-EB \arabic*.}, leftmargin=*]
     \item El sistema debe permitir al usuario buscar videos por título, descripción o creador.
     \item El sistema debe permitir al usuario filtrar videos por categorías.
     \item El sistema debe recomendar al usuario videos en una cuadrícula principal.
@@ -63,7 +64,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 \end{enumerate}
 
 \subsection{Interacción social}
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-IS \arabic*.}, leftmargin=*]
     \item El sistema debe permitir al usuario calificar un video en una escala de 1 a 5 estrellas.
     \item El sistema debe permitir al usuario comentar en un video.
     \item El sistema debe permitir al usuario responder a un comentario existente.
@@ -75,7 +76,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 \subsection{Comunidades}
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-COM \arabic*.}, leftmargin=*]
     \item El sistema debe permitir al usuario crear una comunidad.
     \item El sistema debe permitir al usuario unirse a comunidades.
     \item El sistema debe permitir al usuario abandonar comunidades.
@@ -87,7 +88,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 \subsection{Canales}
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-CAN \arabic*.}, leftmargin=*]
     \item El sistema debe permitir al usuario gestionar y personalizar su canal.
     \item El sistema debe permitir al usuario visualizar la pestaña de videos de un canal.
     \item El sistema debe permitir al usuario visualizar la pestaña ranking de canal con la clasificación de los usuario donantes.
@@ -103,11 +104,10 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 \subsection{Gamificación}
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RF-GAM \arabic*.}, leftmargin=*]
     \item El sistema debe tener un recuento de los puntos de experiencia (XP) de cada usuario.
     \item El sistema debe permitir al usuario ganar puntos de experiencia al mirar anuncios.
-    \item El sistema debe permitir al usuario consultar sus puntos de boost y su nivel de canal.
-    \item El sistema debe mostrar tablas de clasificación por canal.
+    \item El sistema debe permitir al usuario consultar los puntos de boost y el nivel de un canal.
     \item El sistema debe mostrar una clasificación de los canales más populares según el número de seguidores y el nivel de canal.
     \item El sistema debe permitir al usuario visualizar artículos, recompensas o personalizaciones disponibles en la tienda.
     \item El sistema debe permitir al usuario comprar artículos de personalización en la tienda con puntos de experiencia. 
@@ -120,7 +120,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 Los requisitos no funcionales son aquellos que definen cómo debe comportarse el sistema en términos de rendimientos, seguridad, usabilidad, escalabilidad, en lugar de qué acciones se deben realizar.
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{RNF \arabic*.}, leftmargin=*]
     \item \textbf{Rendimiento: } El sistema debe ser capaz de cargar las páginas en un tiempo aceptable (menos de 3 segundos) y reproducir videos sin interrupciones o buffering excesivo.
     \item \textbf{Seguridad:} El sistema debe proteger la información de los usuarios. Se deben implementar medidas de seguridad frente a ataques comunes como inyección SQL y prevenir el uso abusivo de la plataforma mediante la implementación de \textit{rate limits}.
     \item \textbf{Usabilidad:} El sistema debe tener una interfaz intuitiva y fácil de usar. 
@@ -158,17 +158,399 @@ Los casos de uso relacionados con la gestión de usuario son:
     \item Cerrar sesión 
     \item Gestionar perfil de usuario
 \end{enumerate}
+\clearpage
 
 \textbf{Diagrama}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{casos-uso/iniciar-sesion.png}
-  \caption{Gestión de usuarios en la plataforma}
+  \caption{Gestión de usuarios en la plataforma - Casos de uso}
 \end{figure}
 
-\textbf{Tablas}
 
+\textbf{Descripción}
+
+%TABLA REGISTRO
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Registro de usuario}} \\
+\hline
+\textbf{Actores} & Usuario visitante \\
+\hline
+\textbf{Descripción} & Permite a un usuario crear una cuenta nueva en la plataforma mediante correo electrónico, nombre de usuario y contraseña. También es posible utilizar una cuenta de Google. \\
+\hline
+\textbf{Precondiciones} & El usuario no ha iniciado sesión y accede a la pantalla de registro. \\
+\hline
+\textbf{Curso principal} &
+\begin{enumerate}
+    \item  El usuario accede al formulario de registro. 
+    \item  El sistema solicita los datos necesarios para crear la cuenta. 
+    \item  El usuario introduce un correo electrónico, nombre de usuario y contraseña. 
+    \item  El sistema valida la información introducida. 
+    \item  El sistema envía un código de verificación al correo proporcionado. 
+    \item  El usuario introduce el código de verificación recibido. 
+    \item  El sistema verifica el código introducido. 
+    \item  El sistema crea la cuenta de usuario. 
+    \item  El sistema confirma que el registro se ha realizado correctamente. 
+    \item  El sistema redirige al usuario a la pantalla de inicio de sesión. 
+\end{enumerate} \\ 
+\hline
+
+
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 3: registro con Google}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+
+\begin{enumerate}[label=3\alph*.]
+    \item El usuario selecciona la opción de registro con Google. 
+    \item El sistema redirige al proveedor de autenticación de Google (OAuth) para completar el proceso.
+    \item Si el proceso falla o es cancelado, el sistema muestra un mensaje de error y regresa a la pantalla de registro.
+    \item  Si la autenticación es correcta, el sistema crea la cuenta del usuario con los datos recibidos.
+    \item El sistema confirma el registro exitoso y redirige al usuario a la pantalla principal.
+\end{enumerate}
+} \\
+\hline
+
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: datos inválidos o inseguros}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+
+\begin{enumerate}[label=4\alph*.]
+    \item Si los datos introducidos no cumplen las reglas de validación, como contraseñas débiles, el sistema muestra los errores correspondientes en el formulario. 
+    \item El usuario corrige los errores señalados. 
+    \item El sistema vuelve a validar la información introducida.
+\end{enumerate} 
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: correo o nombre de usuario existente}} \\
+\hline
+
+\multicolumn{2}{|p{0.92\textwidth}|}{
+    \begin{enumerate}[label=4\alph*.]
+    \item Si el correo electrónico o el nombre de usuario ya existe, el sistema informa del conflicto y solicita datos diferentes. 
+    \item El usuario introduce un correo o nombre de usuario distinto. 
+    \item El sistema vuelve a validar la información introducida.
+\end{enumerate}
+
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 7: código incorrecto o expirado}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+
+\begin{enumerate}[label=7\alph*.]
+    \item Si el código introducido es incorrecto o ha expirado, el sistema muestra un mensaje de error y solicita un nuevo intento.
+    \item El usuario introduce nuevamente el código de verificación recibido. 
+    \item El sistema vuelve a verificar el código.
+\end{enumerate}
+
+} \\
+\hline
+
+
+\textbf{Postcondiciones} & La cuenta del usuario se crea y se almacena en la base de datos. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GU 1, RF-GU 2, RF-GU 8 \\
+\hline
+\end{longtable}
+
+
+
+
+
+
+
+
+
+%TABLA INICIAR SESION
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Iniciar sesión}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario autenticarse en la plataforma mediante correo electrónico o nombre de usuario y contraseña. También es posible iniciar sesión con una cuenta de Google. \\
+\hline
+\textbf{Precondiciones} & El usuario dispone de una cuenta y no ha iniciado sesión. \\
+\hline
+\textbf{Curso principal} &
+\begin{enumerate}
+    \item El usuario accede a la pantalla de inicio de sesión.
+    \item El sistema solicita las credenciales.
+    \item El usuario introduce su correo electrónico o nombre de usuario y contraseña.
+    \item El sistema valida las credenciales.
+    \item El sistema autentica al usuario.
+    \item El sistema inicia la sesión y redirige al usuario a la pantalla principal.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 3: inicio de sesión con Google}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item El usuario selecciona la opción de iniciar sesión con Google.
+    \item El sistema redirige al proveedor de autenticación de Google (OAuth) para completar el proceso.
+    \item Si el proceso falla o es cancelado, el sistema muestra un mensaje de error y regresa a la pantalla de inicio de sesión.
+    \item Si la autenticación es correcta, el sistema autentica al usuario.
+    \item El sistema inicia la sesión y redirige al usuario a la pantalla principal.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 3: recuperar contraseña}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item El usuario selecciona la opción de recuperar contraseña.
+    \item El sistema redirige al usuario al caso de uso \textit{Recuperar contraseña}.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: credenciales incorrectas}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si las credenciales introducidas no son correctas, el sistema muestra un mensaje de error.
+    \item El sistema regresa a la pantalla de inicio de sesión y solicita un nuevo intento.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: verificación adicional por inactividad}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si el sistema detecta un periodo prolongado de inactividad de la cuenta, envía un código de verificación al correo electrónico registrado.
+    \item El usuario introduce el código de verificación recibido.
+    \item El sistema valida el código introducido.
+    \item Si el código es correcto, el flujo continúa en el paso 5 del curso principal.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4a: código de verificación incorrecto o expirado}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4a\roman*.]
+    \item Si el código introducido es incorrecto o ha expirado, el sistema muestra un mensaje de error y solicita un nuevo intento.
+    \item Se regresa al paso 4b.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & El usuario accede a la plataforma con una sesión activa. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GU 2, RF-GU 3, RF-GU 8 \\
+\hline
+\end{longtable}
+
+
+
+
+
+
+
+%TABLA Recuperar Contraseña
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Recuperar contraseña}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario restablecer la contraseña de su cuenta. Para esto, el sistema envía un código o enlace de verificación al correo electrónico asociado. \\
+\hline
+\textbf{Precondiciones} & El usuario dispone de una cuenta previamente registrada y no ha iniciado sesión. \\
+\hline
+\textbf{Curso principal} &
+\begin{enumerate}
+    \item El usuario accede a la opción de recuperar contraseña desde la pantalla de inicio de sesión.
+    \item El sistema solicita el correo electrónico asociado a la cuenta.
+    \item El usuario introduce su correo electrónico.
+    \item El sistema valida que exista una cuenta asociada a ese correo.
+    \item El sistema envía un código al correo electrónico registrado.
+    \item El usuario introduce el código de verificación.
+    \item El sistema valida el código.
+    \item El sistema solicita al usuario una nueva contraseña y su confirmación.
+    \item El usuario introduce la nueva contraseña y su confirmación.
+    \item El sistema valida la nueva contraseña.
+    \item El sistema actualiza la contraseña de la cuenta.
+    \item El sistema confirma que el restablecimiento se ha realizado correctamente y redirige al usuario a la pantalla de inicio de sesión.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: correo no registrado}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si el correo electrónico introducido no está asociado a ninguna cuenta, el sistema muestra un mensaje de error solicitando al usuario que introduzca un correo válido y registrado.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 7: código inválido}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=7\alph*.]
+    \item Si el código introducido no es válido, el sistema muestra un mensaje de error.
+    \item El sistema solicita un nuevo intento de verificación.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 7: código expirado}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=7\alph*.]
+    \item Si el código introducido ha expirado, el sistema lo informa.
+    \item El sistema solicita al usuario que reinicie el proceso de recuperación de contraseña.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 10: contraseña inválida}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=10\alph*.]
+    \item Si la nueva contraseña no coincide con la confirmación o esta no cumple con las reglas de seguridad establecidas, el sistema muestra los errores correspondientes.
+    \item El usuario introduce una nueva contraseña válida y su confirmación.
+    \item El sistema vuelve a validar la contraseña introducida.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & La contraseña de la cuenta queda actualizada en la base de datos y el usuario puede volver a iniciar sesión con la nueva contraseña. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GU-5 \\
+\hline
+\end{longtable}
+
+
+%TABLA Cerrar Sesion
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Cerrar sesión}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario finalizar su sesión de forma segura. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma. \\
+\hline
+\textbf{Curso principal} &
+\begin{enumerate}
+    \item El usuario accede a la opción de cerrar sesión.
+    \item El sistema invalida la sesión activa del usuario.
+    \item El sistema redirige al usuario a la pantalla principal.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 2: sesión expirada}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=2\alph*.]
+    \item Si la sesión del usuario ya ha expirado, el sistema informa de que no existe una sesión activa válida.
+    \item El sistema redirige igualmente al usuario a la pantalla principal.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & La sesión del usuario queda finalizada y este deja de estar autenticado en la plataforma. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GU-4 \\
+\hline
+\end{longtable}
+
+
+%TABLA Gestion perfil de usuario
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Gestionar perfil de usuario}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario registrado consultar y modificar la información básica de su perfil. Esto incluye, cambiar la foto de perfil, su nombre, nombre de usuario y su correo electrónico. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma. \\
+\hline
+\textbf{Curso principal} &
+\begin{enumerate}
+    \item El usuario accede a su perfil en la barra de navegación.
+    \item El usuario selecciona la opción de editar perfil  (\textit{Manage account}).
+    \item El usuario modifica uno o varios de los siguientes datos: foto de perfil, nombre, nombre de usuario o correo electrónico.
+    \item El sistema valida la información introducida.
+    \item El sistema guarda los cambios realizados.
+    \item El sistema confirma que la actualización del perfil se ha realizado correctamente.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: datos inválidos}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si alguno de los datos introducidos no cumple las reglas de validación, el sistema muestra los errores correspondientes.
+    \item El usuario corrige los errores señalados.
+    \item El sistema vuelve a validar la información.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: correo o nombre de usuario ya existente}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si el nuevo correo electrónico o nombre de usuario ya está asociado a otra cuenta, el sistema informa del conflicto.
+    \item El usuario introduce un correo electrónico o nombre de usuario diferente.
+    \item El sistema vuelve a validar la información.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: error al subir la foto de perfil}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si la imagen seleccionada no cumple el formato o tamaño permitido, el sistema muestra un mensaje de error. (Tamaño recomendado 1:1; Límite de peso es $10$MB.) 
+    \item El usuario selecciona una imagen válida.
+    \item El sistema permite continuar con la edición del perfil.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & La información actualizada del perfil queda almacenada en la base de datos del sistema. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GU 6, RF-GU 7 \\
+\hline
+\end{longtable}
 
 
 
@@ -186,13 +568,13 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \end{enumerate}
 
 \textbf{Diagrama}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/subir-video.png}
-  \caption{Carga de Videos a la plataforma}
+  \caption{Carga de Videos a la plataforma - Casos de uso}
 \end{figure}
 
-\textbf{Tablas}
+\textbf{Descripción}
 
 \subsection{Reproducción y consumo de contenido}
 
@@ -207,13 +589,13 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 
 \textbf{Diagrama}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/reproduccion-consumo.png}
   \caption{Reproducción y consumo de contenido}
 \end{figure}
 
-\textbf{Tablas}
+\textbf{Descripción}
 
 
 \subsection{Exploración y búsqueda}
@@ -232,10 +614,10 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.8\textwidth]{casos-uso/exploracion-busqueda.png}
-  \caption{Exploración y búsqueda de contenido}
+  \caption{Exploración y búsqueda de contenido - Casos de uso}
 \end{figure}
 
-\textbf{Tablas}
+\textbf{Descripción}
 
 
 Buscar videos: Especifica solo la busqueda de video por titulo, descripcion, creador + la busqueda semántinca.
@@ -259,45 +641,76 @@ Los casos de uso identificados relacionados con la interacción social son:
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{casos-uso/exploracion-busqueda.png}
-  \caption{Interacciones en la plataforma}
+  \includegraphics[width=1\textwidth]{casos-uso/interaccion-social.png}
+  \caption{Interacciones en la plataforma  - Casos de uso}
 \end{figure}
 
 
-\textbf{Tablas}
+\textbf{Descripción}
 
 Gestión de comentarios incluye comentar, responder, editar, eliminar, mostrarlos y recomendar. 
 
 \subsection{Comunidades}
 
 \begin{enumerate}
-    \item Crear comunidad
-    \item Unirse a comunidad
-    \item Abandonar comunidad
+    \item Interactuar con comunidades
     \item Consultar comunidades
-    \item Buscar comunidades
-    \item Consultar videos en una comunidad 
+    \item Buscar y filtrar comunidades
 \end{enumerate}
+
+\textbf{Diagrama}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/comunidades.png}
+  \caption{Comunidades  - Casos de uso}
+\end{figure}
+
+
+\textbf{Descripción}
+
+ Interactuar con comunidades incluye crear, unirse, abandonar.
+ Consultar es: ver videos de las comnuidades, ver comunidades a las que pertenece
+ EXplorar comunidades tiene buscar por nombre,descripcion y filtrar.  
 
 \subsection{Canales}
 
 \begin{enumerate}
     \item Gestionar canal
-    \item Consultar canal
-    \item Seguir canales
-    \item Dejar de seguir canales
+    \item Consultar canal y canales seguidos
+    \item Interactuar con canales
 \end{enumerate}
 
+\textbf{Diagrama}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/canales.png}
+  \caption{Canales - Casos de uso}
+\end{figure}
+
+\textbf{Descripción}
+
+Consultar canal incluye consultar a los que sigue: extends de login
 \subsection{Gamificación}
 
 \begin{enumerate}
     \item Ganar puntos de experiencia
-    \item Consultar puntos de experiencia y nivel de canal
-    \item Consultar tablas de clasificación
+    \item Consultar puntos de boost y nivel de canal
+    \item Consultar rankings
     \item Consultar tienda de recompensas
     \item Comprar artículos de personalización
-    \item Equipar artículos de personalización
+    \item Equipar y consultar artículos de personalización
 \end{enumerate}
+
+\textbf{Diagrama}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{casos-uso/gamificacion.png}
+  \caption{Gamificación- Casos de uso}
+\end{figure}
+
+
+\textbf{Descripción}
 
 
 \subsection{Diagramas de casos de uso}
