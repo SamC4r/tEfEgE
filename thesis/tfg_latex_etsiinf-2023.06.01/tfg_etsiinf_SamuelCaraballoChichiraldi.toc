@@ -61,49 +61,49 @@
 \contentsline {section}{\numberline {5.3}Actores}{67}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Casos de uso}{68}{section.5.4}%
 \contentsline {subsection}{\numberline {5.4.1}Gestión de usuarios}{68}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Carga, gestión y moderación de videos}{75}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.2}Carga, gestión y moderación de videos}{74}{subsection.5.4.2}%
 \contentsline {subsection}{\numberline {5.4.3}Reproducción y consumo de contenido}{82}{subsection.5.4.3}%
 \contentsline {subsection}{\numberline {5.4.4}Exploración y búsqueda}{86}{subsection.5.4.4}%
-\contentsline {subsection}{\numberline {5.4.5}Interacción social}{89}{subsection.5.4.5}%
-\contentsline {subsection}{\numberline {5.4.6}Comunidades}{90}{subsection.5.4.6}%
-\contentsline {subsection}{\numberline {5.4.7}Canales}{91}{subsection.5.4.7}%
-\contentsline {subsection}{\numberline {5.4.8}Gamificación}{92}{subsection.5.4.8}%
-\contentsline {subsection}{\numberline {5.4.9}Diagramas de casos de uso}{93}{subsection.5.4.9}%
-\contentsline {subsubsection}{Gestión de usuarios}{93}{section*.61}%
-\contentsline {subsubsection}{Carga y gestión de videos}{93}{section*.62}%
-\contentsline {subsection}{\numberline {5.4.10}Reproducción y consumo de contenido}{93}{subsection.5.4.10}%
-\contentsline {subsection}{\numberline {5.4.11}Descripción de casos de uso}{93}{subsection.5.4.11}%
-\contentsline {section}{\numberline {5.5}Diagramas de secuencia}{93}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Diagrama Entidad Relación}{93}{section.5.6}%
-\contentsline {chapter}{\numberline {6}Diseño y Arquitectura}{95}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Patrones y mejores prácticas}{95}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Diseño de la Autenticación}{95}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{95}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Arquitectura de procesamiento propia}{95}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Arquitectura de procesamiento con un proveedor}{95}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Diseño de la interfaz de usuario}{95}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Comentarios}{95}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Interfaz de Video}{95}{subsection.6.6.2}%
-\contentsline {subsection}{\numberline {6.6.3}Secciones de Video}{95}{subsection.6.6.3}%
-\contentsline {section}{\numberline {6.7}Diseño del Algoritmo de Recomendación}{95}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Diseño de la búsqueda semántica de videos}{95}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Desarrollo}{97}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Implementación del procesamiento de videos propio}{97}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos con proveedor}{97}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Implementación de los comentarios}{97}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Patrones y mejores prácticas en código}{97}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{97}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{97}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Pruebas, Validación y Riesgos de Seguridad}{99}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{99}{section.8.1}%
-\contentsline {section}{\numberline {8.2}FeedBack de Usuarios}{99}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Vulnerabilidades detectadas y medidas tomadas}{99}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Medidas de seguridad}{99}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Protección acceso a rutas}{99}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Protección acceso y modificación de videos}{99}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Limitaciones de uso (Rate Limits)}{99}{subsection.8.4.3}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{101}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Análisis de Impacto}{103}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{105}{section*.63}%
-\contentsline {part}{Anexos}{111}{part*.65}%
-\contentsline {chapter}{\numberline {A}Primer anexo}{111}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {5.4.5}Interacción social}{90}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6}Comunidades}{94}{subsection.5.4.6}%
+\contentsline {subsection}{\numberline {5.4.7}Canales}{94}{subsection.5.4.7}%
+\contentsline {subsection}{\numberline {5.4.8}Gamificación}{94}{subsection.5.4.8}%
+\contentsline {subsection}{\numberline {5.4.9}Diagramas de casos de uso}{96}{subsection.5.4.9}%
+\contentsline {subsubsection}{Gestión de usuarios}{96}{section*.62}%
+\contentsline {subsubsection}{Carga y gestión de videos}{96}{section*.63}%
+\contentsline {subsection}{\numberline {5.4.10}Reproducción y consumo de contenido}{96}{subsection.5.4.10}%
+\contentsline {subsection}{\numberline {5.4.11}Descripción de casos de uso}{96}{subsection.5.4.11}%
+\contentsline {section}{\numberline {5.5}Diagramas de secuencia}{96}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Diagrama Entidad Relación}{96}{section.5.6}%
+\contentsline {chapter}{\numberline {6}Diseño y Arquitectura}{97}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Patrones y mejores prácticas}{97}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Diseño de la Autenticación}{97}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{97}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Arquitectura de procesamiento propia}{97}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Arquitectura de procesamiento con un proveedor}{97}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Diseño de la interfaz de usuario}{97}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Comentarios}{97}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Interfaz de Video}{97}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Secciones de Video}{97}{subsection.6.6.3}%
+\contentsline {section}{\numberline {6.7}Diseño del Algoritmo de Recomendación}{97}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Diseño de la búsqueda semántica de videos}{97}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Desarrollo}{99}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Implementación del procesamiento de videos propio}{99}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos con proveedor}{99}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Implementación de los comentarios}{99}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Patrones y mejores prácticas en código}{99}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{99}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{99}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Pruebas, Validación y Riesgos de Seguridad}{101}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{101}{section.8.1}%
+\contentsline {section}{\numberline {8.2}FeedBack de Usuarios}{101}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Vulnerabilidades detectadas y medidas tomadas}{101}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Medidas de seguridad}{101}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Protección acceso a rutas}{101}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Protección acceso y modificación de videos}{101}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.4.3}Limitaciones de uso (Rate Limits)}{101}{subsection.8.4.3}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{103}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Análisis de Impacto}{105}{chapter.10}%
+\contentsline {chapter}{Bibliografía}{107}{section*.64}%
+\contentsline {part}{Anexos}{113}{part*.66}%
+\contentsline {chapter}{\numberline {A}Primer anexo}{113}{appendix.Alph1}%

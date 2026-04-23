@@ -159,13 +159,12 @@ Los casos de uso relacionados con la gestión de usuario son:
     \item Cerrar sesión 
     \item Gestionar perfil de usuario
 \end{enumerate}
-\clearpage
 
 \textbf{Diagrama}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
-  \includegraphics[width=0.8\textwidth]{casos-uso/iniciar-sesion.png}
+  \includegraphics[width=0.8\linewidth]{casos-uso/iniciar-sesion.png}
   \caption{Gestión de usuarios en la plataforma - Casos de uso}
 \end{figure}
 
@@ -204,7 +203,7 @@ Los casos de uso relacionados con la gestión de usuario son:
 \rowcolor[gray]{0.75}
 \multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: registro con Google}} \\
 \hline
-\multicolumn{2}{|p{0.92\textwidth}|}{
+\multicolumn{2}{|p{0.88\textwidth}|}{
 
 \begin{enumerate}[label=3\alph*.]
     \item El usuario selecciona la opción de registro con Google. 
@@ -735,7 +734,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 \textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma y es el creador del video que desea eliminar. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a la sección de gestión de sus videos.
     \item El sistema muestra la lista de videos del usuario.
@@ -748,7 +747,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 3: video no eliminable}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: video no eliminable}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=3\alph*.]
@@ -759,7 +758,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: cancelación de la eliminación}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: cancelación de la eliminación}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=4\alph*.]
@@ -788,7 +787,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 \textbf{Precondiciones} & El usuario ha iniciado sesión y accede a un video. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a un video de la plataforma.
     \item El usuario selecciona la opción de reportar video.
@@ -802,7 +801,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: información incompleta}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: información incompleta}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=4\alph*.]
@@ -814,7 +813,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 5: reporte duplicado}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: reporte duplicado}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=5\alph*.]
@@ -825,7 +824,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 5: votación abierta}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: votación abierta}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=5\alph*.]
@@ -855,7 +854,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 \textbf{Precondiciones} & El usuario ha iniciado sesión y existe una votación abierta sobre un video. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a un video.
     \item El sistema indica que existe una votación de moderación abierta para el  video en la sección de detalles del video.
@@ -867,7 +866,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 2: no hay votaciones}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: no hay votaciones}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=2\alph*.]
@@ -877,7 +876,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: voto ya emitido}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: voto ya emitido}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=4\alph*.]
@@ -908,7 +907,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 \textbf{Precondiciones} & Existe un video cargado en la plataforma pendiente de procesamiento. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El sistema registra que un nuevo video ha sido cargado.
     \item El sistema de procesamiento recibe el archivo del video. 
@@ -921,7 +920,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 3: archivo corrupto o no procesable}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: archivo corrupto o no procesable}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=3\alph*.]
@@ -933,7 +932,7 @@ Los casos de uso identificados relacionados con la carga, gestión y moderación
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: fallo durante la transcodificación}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: fallo durante la transcodificación}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=4\alph*.]
@@ -985,7 +984,7 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 \textbf{Precondiciones} & El video existe y está disponible para su visualización en la plataforma. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a un video desde la plataforma.
     \item El sistema carga el reproductor de video.
@@ -997,7 +996,7 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 2: error de carga}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: error de carga}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=2\alph*.]
@@ -1023,15 +1022,16 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 \textbf{Actores} & Usuario visitante, Usuario registrado o Creador de Contenido y Sistema de procesamiento de videos \\
 \hline
-\textbf{Descripción} & Permite al usuario controlar la reproducción del video mediante acciones como pausar, reanudar, adelantar, retroceder o cambiar la calidad. \\
+\textbf{Descripción} & Permite al usuario controlar la reproducción del video mediante acciones como pausar, reanudar, adelantar, retroceder o cambiar la calidad y la velocidad de reproducción. \\
 \hline
 \textbf{Precondiciones} & El video se encuentra en reproducción. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a los controles del reproductor.
     \item El usuario pausa o reanuda el video.
     \item El usuario adelanta o retrocede el video.
+    \item El usuario cambia la velocidad de reproducción.
     \item El usuario cambia la calidad de reproducción si existen varias resoluciones disponibles y el sistema le pide al sistema de procesamiento de videos los recursos necesarios.
     \item El usuario activa o desactiva el modo de pantalla completa.
     \item El sistema aplica los cambios solicitados en tiempo real.
@@ -1039,10 +1039,10 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: calidad no disponible}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: calidad no disponible}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
-\begin{enumerate}[label=4\alph*.]
+\begin{enumerate}[label=5\alph*.]
     \item Si la calidad seleccionada no está disponible, el sistema mantiene la calidad actual.
 \end{enumerate}
 } \\
@@ -1067,7 +1067,7 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 \textbf{Precondiciones} & El usuario accede a la interfaz de visualización de un video. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a la página de visualización de un video.
     \item El sistema muestra el título del video.
@@ -1097,7 +1097,7 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 \textbf{Precondiciones} & El usuario se encuentra visualizando un video. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a la interfaz de visualización de un video.
     \item El sistema muestra una lista de videos relacionados según las preferencias, historial y gustos del usuario en la pestaña de \textit{Videos}.
@@ -1108,7 +1108,7 @@ Los casos de uso identificados relacionados con la reproducción y consumo de co
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 2: usuario no logueado}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: usuario no logueado}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=2\alph*.]
@@ -1159,7 +1159,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \hline
 \textbf{Precondiciones} & El usuario accede a la interfaz de búsqueda de la plataforma. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a la barra o sección de búsqueda.
     \item El sistema solicita el término de búsqueda.
@@ -1173,7 +1173,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 5: sin resultados}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: sin resultados}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=5\alph*.]
@@ -1191,7 +1191,6 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 
 %EXPLORAR Y FILTRAR
 
-
 \begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
 \hline
 \rowcolor[gray]{0.75}
@@ -1203,7 +1202,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \hline
 \textbf{Precondiciones} & El usuario accede a la pantalla principal o a la sección de exploración de videos. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a la sección principal de exploración de videos.
     \item El sistema muestra una cuadrícula de videos recomendados.
@@ -1221,7 +1220,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 2: error al cargar recomendaciones}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: error al cargar recomendaciones}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=2\alph*.]
@@ -1232,7 +1231,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \hline
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 4: filtros sin resultados}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: filtros sin resultados}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=4\alph*.]
@@ -1243,7 +1242,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo a los pasos 8 y 10: usuario sin sesión}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo a los pasos 8 y 10: usuario sin sesión}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=\roman*.]
@@ -1273,7 +1272,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \hline
 \textbf{Precondiciones} & El usuario accede a la sección de exploración de comunidades. \\
 \hline
-\textbf{Curso principal} &
+\textbf{Flujo principal} &
 \begin{enumerate}
     \item El usuario accede a la sección de exploración de comunidades.
     \item El sistema muestra comunidades destacados o recientes.
@@ -1285,7 +1284,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 
 
 \rowcolor[gray]{0.75}
-\multicolumn{2}{|c|}{\textbf{Curso alternativo al paso 2: sin contenido disponible}} \\
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: sin contenido disponible}} \\
 \hline
 \multicolumn{2}{|p{0.92\textwidth}|}{
 \begin{enumerate}[label=2\alph*.]
@@ -1326,7 +1325,173 @@ Los casos de uso identificados relacionados con la interacción social son:
 
 \textbf{Descripción}
 
-Gestión de comentarios incluye comentar, responder, editar, eliminar, mostrarlos y recomendar. 
+
+%CALIFICAR VIDEO
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Calificar video}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario registrado calificar un video mediante una puntuación de 1 a 5 estrellas. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma y accede a un video disponible. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la página de visualización de un video.
+    \item El sistema muestra la opción de calificación mediante estrellas.
+    \item El usuario selecciona una puntuación entre 1 y 5 estrellas. Si el usuario no tenía una sesión iniciada, el sistema le solicita que inicie sesión para calificar el video. 
+    \item El sistema registra la calificación emitida por el usuario.
+    \item El sistema actualiza la valoración promedio asociada al video.
+    \item El sistema confirma que la calificación se ha realizado correctamente.
+\end{enumerate} \\
+\hline
+
+
+\textbf{Postcondiciones} & La calificación del usuario queda almacenada y asociada al video correspondiente. \\
+\hline
+\textbf{Requisitos relacionados} & RF-IS 1 \\
+\hline
+\end{longtable}
+
+%GESTION DE COMENTARIOS
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Gestión de comentarios}} \\
+\hline
+\textbf{Actores} & Usuario registrado, Usuario visitante \\
+\hline
+\textbf{Descripción} & Permite a los usuarios visualizar comentarios de un video organizados en estructura de árbol de respuestas y, en el caso de usuarios registrados, crear comentarios, responder a comentarios existentes, así como editar o eliminar sus propios comentarios. \\
+\hline
+\textbf{Precondiciones} & El usuario accede a la página de visualización de un video. Para comentar, responder, editar o eliminar comentarios es necesario haber iniciado sesión. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la sección de comentarios de un video.
+    \item El sistema muestra los comentarios organizados en estructura de árbol de respuestas.
+    \item El sistema ordena los comentarios mostrando primero los más populares.
+    \item El usuario registrado escribe un nuevo comentario o responde a un comentario existente.
+    \item El sistema registra el comentario o la respuesta.
+    \item El sistema actualiza la estructura de comentarios del video.
+    \item El usuario puede editar o eliminar sus propios comentarios.
+    \item El sistema actualiza el comentario editado o elimina el comentario seleccionado.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: usuario no autenticado}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si el usuario no ha iniciado sesión, el sistema impide crear comentarios y respuestas.
+    \item El sistema abre una ventana flotante para iniciar sesión.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: comentario inválido}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si el comentario no cumple las reglas de validación, como una longitud por encima de 512 caracteres, el sistema no permite seguir escribiendo y muestra un mensaje de error.
+    \item El usuario corrige el contenido del comentario.
+    \item El sistema vuelve a validar la información introducida.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 7: comentario no editable o no eliminable}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=7\alph*.]
+    \item Si el comentario no pertenece al usuario, el sistema impide su edición o eliminación.
+    \item El sistema envía un mensaje de error y no hay cambios.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & Los comentarios del video muestran en orden descendente de popularidad y quedan organizados en estructura de árbol de respuestas. En su caso, se crean, actualizan o eliminan comentarios según las acciones del usuario. \\
+\hline
+\textbf{Requisitos relacionados} & RF-IS 2, RF-IS 3, RF-IS 4, RF-IS 5, RF-IS 6 \\
+\hline
+\end{longtable}
+
+\todo{Verificar que eran 48 horas la badge de cambio de nivel en flujo alternativo a 7}
+%DONAR XP
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Donar puntos de experiencia}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario registrado donar puntos de experiencia a un canal dentro de la plataforma. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión, accede a un canal y dispone de puntos de experiencia suficientes para realizar la donación. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la página de un canal.
+    \item El sistema muestra la opción de donar puntos (\textit{Boost Channel}).
+    \item El usuario selecciona la cantidad de puntos que desea donar.
+    \item El usuario confirma la donación.
+    \item El sistema valida que el usuario dispone de puntos suficientes.
+    \item El sistema descuenta los puntos del saldo del usuario.
+    \item El sistema suma los puntos donados al canal correspondiente.
+    \item El sistema actualiza la cantidad de puntos donados por parte del usuario hacia el canal y cambia su posición en el ranking si es necesario. 
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: cantidad inválida}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item Si la cantidad introducida no es válida, es decir, está fuera del rango permitido, el sistema muestra un mensaje de error.
+    \item El usuario introduce una cantidad de puntos válida.
+    \item Se vuelve a validar la cantidad introducida.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 4: puntos insuficientes}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=4\alph*.]
+    \item Si el usuario no dispone de puntos de experiencia suficientes, el sistema muestra un mensaje de error.
+    \item El sistema impide continuar con la operación.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 7: cambio de nivel del canal}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=7\alph*.]
+    \item El sistema detecta que el canal ha ascendido de nivel.
+    \item El sistema le muestra una alerta de cambio de nivel al usuario que donó.
+    \item El sistema incluye una insignia debajo de la barra del canal durante 48 horas  que indica el nuevo nivel alcanzado.
+\end{enumerate}
+} \\
+\hline
+
+
+
+\textbf{Postcondiciones} & La cantidad donada queda descontada del saldo del usuario y registrada a favor del canal correspondiente como puntos de Boost. \\
+\hline
+\textbf{Requisitos relacionados} & RF-IS 7 RF-GAM 9 \\
+\hline
+\end{longtable}
 
 \subsection{Comunidades}
 
@@ -1338,7 +1503,7 @@ Gestión de comentarios incluye comentar, responder, editar, eliminar, mostrarlo
 
 \textbf{Diagrama}
 
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/comunidades.png}
   \caption{Comunidades  - Casos de uso}
@@ -1360,7 +1525,7 @@ Gestión de comentarios incluye comentar, responder, editar, eliminar, mostrarlo
 \end{enumerate}
 
 \textbf{Diagrama}
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/canales.png}
   \caption{Canales - Casos de uso}
@@ -1381,7 +1546,7 @@ Consultar canal incluye consultar a los que sigue: extends de login
 \end{enumerate}
 
 \textbf{Diagrama}
-\begin{figure}[H]
+\begin{figure}[htbp]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/gamificacion.png}
   \caption{Gamificación- Casos de uso}
@@ -1420,3 +1585,5 @@ En esta sección se recopilan algunos de los diagramas de secuencia más importa
 
 \section{Diagrama Entidad Relación}
 
+\FloatBarrier
+\clearpage

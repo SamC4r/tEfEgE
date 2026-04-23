@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  23 APR 2026 18:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  23 APR 2026 20:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1171,6 +1171,41 @@ LaTeX Info: Redefining \% on input line 88.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 88.
 [6]
+Overfull \hbox (3.3943pt too wide) detected at line 98
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
+Overfull \hbox (3.3943pt too wide) detected at line 99
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
+Overfull \hbox (3.3943pt too wide) detected at line 100
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
+Overfull \hbox (3.3943pt too wide) detected at line 101
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
+Overfull \hbox (3.3943pt too wide) detected at line 102
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
+Overfull \hbox (3.3943pt too wide) detected at line 103
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
+Overfull \hbox (3.3943pt too wide) detected at line 104
+ []\T1/pbk/l/n/10.95 101
+ []
+
+
 Overfull \hbox (1.75185pt too wide) detected at line 106
 \T1/pbk/db/n/10.95 10. 
  []
@@ -1794,207 +1829,218 @@ LaTeX Info: Redefining \sptext on input line 141.
 LaTeX Info: Redefining \. on input line 141.
 LaTeX Info: Redefining \% on input line 141.
  [67]
-LaTeX Info: Redefining \sptext on input line 162.
-LaTeX Info: Redefining \. on input line 162.
-LaTeX Info: Redefining \% on input line 162.
- [68]
-<casos-uso/iniciar-sesion.png, id=1187, 1453.43pt x 1090.0725pt>
+<casos-uso/iniciar-sesion.png, id=1178, 1453.43pt x 1090.0725pt>
 File: casos-uso/iniciar-sesion.png Graphic file (type png)
 <use casos-uso/iniciar-sesion.png>
-Package pdftex.def Info: casos-uso/iniciar-sesion.png  used on input line 168.
+Package pdftex.def Info: casos-uso/iniciar-sesion.png  used on input line 167.
 (pdftex.def)             Requested size: 341.43437pt x 256.06728pt.
 
-secciones/requisitos.tex:266: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 266.
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
- [69
-
- <./casos-uso/iniciar-sesion.png (PNG copy)>]
-secciones/requisitos.tex:266: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 266.
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
- [70]
-Overfull \hbox (0.89871pt too wide) in alignment at lines 277--363
+secciones/requisitos.tex:265: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 265.
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
+ [68]
+secciones/requisitos.tex:265: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 265.
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
+ [69]
+Overfull \hbox (0.89871pt too wide) in alignment at lines 276--362
  [] [] 
  []
 
-secciones/requisitos.tex:363: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 363.
-LaTeX Info: Redefining \. on input line 363.
-LaTeX Info: Redefining \% on input line 363.
+secciones/requisitos.tex:362: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 362.
+LaTeX Info: Redefining \. on input line 362.
+LaTeX Info: Redefining \% on input line 362.
+ [70]
+secciones/requisitos.tex:448: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 448.
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
  [71]
-secciones/requisitos.tex:449: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 449.
-LaTeX Info: Redefining \. on input line 449.
-LaTeX Info: Redefining \% on input line 449.
+secciones/requisitos.tex:448: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 448.
+LaTeX Info: Redefining \. on input line 448.
+LaTeX Info: Redefining \% on input line 448.
  [72]
-secciones/requisitos.tex:449: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 449.
-LaTeX Info: Redefining \. on input line 449.
-LaTeX Info: Redefining \% on input line 449.
+secciones/requisitos.tex:553: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 553.
+LaTeX Info: Redefining \. on input line 553.
+LaTeX Info: Redefining \% on input line 553.
  [73]
-secciones/requisitos.tex:554: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 554.
-LaTeX Info: Redefining \. on input line 554.
-LaTeX Info: Redefining \% on input line 554.
+LaTeX Info: Redefining \sptext on input line 570.
+LaTeX Info: Redefining \. on input line 570.
+LaTeX Info: Redefining \% on input line 570.
  [74]
-LaTeX Info: Redefining \sptext on input line 571.
-LaTeX Info: Redefining \. on input line 571.
-LaTeX Info: Redefining \% on input line 571.
- [75]
+LaTeX Info: Redefining \sptext on input line 570.
+LaTeX Info: Redefining \. on input line 570.
+LaTeX Info: Redefining \% on input line 570.
+ [75 <./casos-uso/iniciar-sesion.png (PNG copy)>]
 <casos-uso/subir-video.png, id=1315, 954.56625pt x 498.86375pt>
 File: casos-uso/subir-video.png Graphic file (type png)
 <use casos-uso/subir-video.png>
-Package pdftex.def Info: casos-uso/subir-video.png  used on input line 577.
+Package pdftex.def Info: casos-uso/subir-video.png  used on input line 576.
 (pdftex.def)             Requested size: 426.79135pt x 223.04033pt.
 
-secciones/requisitos.tex:654: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 654.
-LaTeX Info: Redefining \. on input line 654.
-LaTeX Info: Redefining \% on input line 654.
+secciones/requisitos.tex:653: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 653.
+LaTeX Info: Redefining \. on input line 653.
+LaTeX Info: Redefining \% on input line 653.
  [76
 
  <./casos-uso/subir-video.png>]
-secciones/requisitos.tex:723: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 723.
-LaTeX Info: Redefining \. on input line 723.
-LaTeX Info: Redefining \% on input line 723.
+secciones/requisitos.tex:722: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 722.
+LaTeX Info: Redefining \. on input line 722.
+LaTeX Info: Redefining \% on input line 722.
  [77]
-secciones/requisitos.tex:776: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 776.
-LaTeX Info: Redefining \. on input line 776.
-LaTeX Info: Redefining \% on input line 776.
+secciones/requisitos.tex:775: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 775.
+LaTeX Info: Redefining \. on input line 775.
+LaTeX Info: Redefining \% on input line 775.
  [78]
-secciones/requisitos.tex:842: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 842.
-LaTeX Info: Redefining \. on input line 842.
-LaTeX Info: Redefining \% on input line 842.
+secciones/requisitos.tex:841: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 841.
+LaTeX Info: Redefining \. on input line 841.
+LaTeX Info: Redefining \% on input line 841.
  [79]
-secciones/requisitos.tex:894: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 894.
-LaTeX Info: Redefining \. on input line 894.
-LaTeX Info: Redefining \% on input line 894.
+secciones/requisitos.tex:893: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 893.
+LaTeX Info: Redefining \. on input line 893.
+LaTeX Info: Redefining \% on input line 893.
  [80]
-secciones/requisitos.tex:951: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 951.
-LaTeX Info: Redefining \. on input line 951.
-LaTeX Info: Redefining \% on input line 951.
+secciones/requisitos.tex:950: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 950.
+LaTeX Info: Redefining \. on input line 950.
+LaTeX Info: Redefining \% on input line 950.
  [81]
 <casos-uso/reproduccion-consumo.png, id=1419, 670.505pt x 617.30624pt>
 File: casos-uso/reproduccion-consumo.png Graphic file (type png)
 <use casos-uso/reproduccion-consumo.png>
-Package pdftex.def Info: casos-uso/reproduccion-consumo.png  used on input line 968.
+Package pdftex.def Info: casos-uso/reproduccion-consumo.png  used on input line 967.
 (pdftex.def)             Requested size: 426.79135pt x 392.92703pt.
-LaTeX Info: Redefining \sptext on input line 970.
-LaTeX Info: Redefining \. on input line 970.
-LaTeX Info: Redefining \% on input line 970.
+LaTeX Info: Redefining \sptext on input line 969.
+LaTeX Info: Redefining \. on input line 969.
+LaTeX Info: Redefining \% on input line 969.
  [82]
-secciones/requisitos.tex:1014: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 1014.
-LaTeX Info: Redefining \. on input line 1014.
-LaTeX Info: Redefining \% on input line 1014.
+secciones/requisitos.tex:1013: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1013.
+LaTeX Info: Redefining \. on input line 1013.
+LaTeX Info: Redefining \% on input line 1013.
  [83 <./casos-uso/reproduccion-consumo.png>]
-LaTeX Info: Redefining \sptext on input line 1085.
-LaTeX Info: Redefining \. on input line 1085.
-LaTeX Info: Redefining \% on input line 1085.
+secciones/requisitos.tex:1055: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1055.
+LaTeX Info: Redefining \. on input line 1055.
+LaTeX Info: Redefining \% on input line 1055.
  [84]
 secciones/requisitos.tex:1125: ignored error: Infinite glue shrinkage found in box being split
 LaTeX Info: Redefining \sptext on input line 1125.
 LaTeX Info: Redefining \. on input line 1125.
 LaTeX Info: Redefining \% on input line 1125.
  [85]
-<casos-uso/exploracion-busqueda.png, id=1487, 466.74374pt x 547.04375pt>
+<casos-uso/exploracion-busqueda.png, id=1486, 466.74374pt x 547.04375pt>
 File: casos-uso/exploracion-busqueda.png Graphic file (type png)
 <use casos-uso/exploracion-busqueda.png>
 Package pdftex.def Info: casos-uso/exploracion-busqueda.png  used on input line 1142.
 (pdftex.def)             Requested size: 341.43437pt x 400.19002pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 1145.
+LaTeX Info: Redefining \. on input line 1145.
+LaTeX Info: Redefining \% on input line 1145.
+ [86]
+secciones/requisitos.tex:1190: ignored error: Infinite glue shrinkage found in box being split
 LaTeX Info: Redefining \sptext on input line 1190.
 LaTeX Info: Redefining \. on input line 1190.
 LaTeX Info: Redefining \% on input line 1190.
- [86 <./casos-uso/exploracion-busqueda.png>]
-secciones/requisitos.tex:1261: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 1261.
-LaTeX Info: Redefining \. on input line 1261.
-LaTeX Info: Redefining \% on input line 1261.
- [87]
-secciones/requisitos.tex:1302: ignored error: Infinite glue shrinkage found in box being split
-LaTeX Info: Redefining \sptext on input line 1302.
-LaTeX Info: Redefining \. on input line 1302.
-LaTeX Info: Redefining \% on input line 1302.
+ [87 <./casos-uso/exploracion-busqueda.png>]
+secciones/requisitos.tex:1260: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1260.
+LaTeX Info: Redefining \. on input line 1260.
+LaTeX Info: Redefining \% on input line 1260.
  [88]
-LaTeX Info: Redefining \sptext on input line 1316.
-LaTeX Info: Redefining \. on input line 1316.
-LaTeX Info: Redefining \% on input line 1316.
+secciones/requisitos.tex:1301: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1301.
+LaTeX Info: Redefining \. on input line 1301.
+LaTeX Info: Redefining \% on input line 1301.
  [89]
-<casos-uso/interaccion-social.png, id=1548, 635.37375pt x 396.48125pt>
+LaTeX Info: Redefining \sptext on input line 1315.
+LaTeX Info: Redefining \. on input line 1315.
+LaTeX Info: Redefining \% on input line 1315.
+ [90]
+<casos-uso/interaccion-social.png, id=1553, 635.37375pt x 396.48125pt>
 File: casos-uso/interaccion-social.png Graphic file (type png)
 <use casos-uso/interaccion-social.png>
-Package pdftex.def Info: casos-uso/interaccion-social.png  used on input line 1322.
+Package pdftex.def Info: casos-uso/interaccion-social.png  used on input line 1321.
 (pdftex.def)             Requested size: 426.79135pt x 266.33072pt.
-<casos-uso/comunidades.png, id=1549, 645.41125pt x 526.96875pt>
-File: casos-uso/comunidades.png Graphic file (type png)
-<use casos-uso/comunidades.png>
-Package pdftex.def Info: casos-uso/comunidades.png  used on input line 1343.
-(pdftex.def)             Requested size: 426.79135pt x 348.46783pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 1346.
-LaTeX Info: Redefining \. on input line 1346.
-LaTeX Info: Redefining \% on input line 1346.
- [90
+secciones/requisitos.tex:1358: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1358.
+LaTeX Info: Redefining \. on input line 1358.
+LaTeX Info: Redefining \% on input line 1358.
+ [91
 
  <./casos-uso/interaccion-social.png>]
-<casos-uso/canales.png, id=1559, 846.16125pt x 495.8525pt>
+secciones/requisitos.tex:1424: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1424.
+LaTeX Info: Redefining \. on input line 1424.
+LaTeX Info: Redefining \% on input line 1424.
+ [92]
+secciones/requisitos.tex:1494: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1494.
+LaTeX Info: Redefining \. on input line 1494.
+LaTeX Info: Redefining \% on input line 1494.
+ [93]
+<casos-uso/comunidades.png, id=1607, 645.41125pt x 526.96875pt>
+File: casos-uso/comunidades.png Graphic file (type png)
+<use casos-uso/comunidades.png>
+Package pdftex.def Info: casos-uso/comunidades.png  used on input line 1508.
+(pdftex.def)             Requested size: 426.79135pt x 348.46783pt.
+<casos-uso/canales.png, id=1608, 846.16125pt x 495.8525pt>
 File: casos-uso/canales.png Graphic file (type png)
 <use casos-uso/canales.png>
-Package pdftex.def Info: casos-uso/canales.png  used on input line 1365.
+Package pdftex.def Info: casos-uso/canales.png  used on input line 1530.
 (pdftex.def)             Requested size: 426.79135pt x 250.0971pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 1368.
-LaTeX Info: Redefining \. on input line 1368.
-LaTeX Info: Redefining \% on input line 1368.
- [91 <./casos-uso/comunidades.png>]
-<casos-uso/gamificacion.png, id=1569, 938.50626pt x 536.0025pt>
+LaTeX Info: Redefining \sptext on input line 1546.
+LaTeX Info: Redefining \. on input line 1546.
+LaTeX Info: Redefining \% on input line 1546.
+ [94]
+LaTeX Info: Redefining \sptext on input line 1546.
+LaTeX Info: Redefining \. on input line 1546.
+LaTeX Info: Redefining \% on input line 1546.
+ [95 <./casos-uso/comunidades.png> <./casos-uso/canales.png>]
+<casos-uso/gamificacion.png, id=1635, 938.50626pt x 536.0025pt>
 File: casos-uso/gamificacion.png Graphic file (type png)
 <use casos-uso/gamificacion.png>
-Package pdftex.def Info: casos-uso/gamificacion.png  used on input line 1386.
+Package pdftex.def Info: casos-uso/gamificacion.png  used on input line 1551.
 (pdftex.def)             Requested size: 426.79135pt x 243.75066pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 1389.
-LaTeX Info: Redefining \. on input line 1389.
-LaTeX Info: Redefining \% on input line 1389.
- [92 <./casos-uso/canales.png>]) (secciones/diseno-arquitectura.tex
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
- [93 <./casos-uso/gamificacion.png>] [94
-
-]
+LaTeX Info: Redefining \sptext on input line 1589.
+LaTeX Info: Redefining \. on input line 1589.
+LaTeX Info: Redefining \% on input line 1589.
+ [96 <./casos-uso/gamificacion.png>]) (secciones/diseno-arquitectura.tex
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [95] [96
+) (secciones/desarrollo.tex [97
+
+
+] [98
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [97] [98
+) (secciones/pruebas.tex [99] [100
 
 ]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [99] [100
+) (secciones/conclusiones.tex [101] [102
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [101] [102
+) (secciones/impacto.tex [103] [104
 
 ]
 Cap\'{\i }tulo 10.
-) [103] [104
+) [105] [106
 
 ]
 Overfull \hbox (1.31523pt too wide) in paragraph at lines 204--204
@@ -2026,7 +2072,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 204--204
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[105
+[107
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 204--204
@@ -2041,15 +2087,15 @@ Overfull \hbox (2.00604pt too wide) in paragraph at lines 204--204
 LaTeX Info: Redefining \sptext on input line 201.
 LaTeX Info: Redefining \. on input line 201.
 LaTeX Info: Redefining \% on input line 201.
-[106]
+[108]
 LaTeX Info: Redefining \sptext on input line 205.
 LaTeX Info: Redefining \. on input line 205.
 LaTeX Info: Redefining \% on input line 205.
- [107] [108
+ [109] [110
 
-] [109] [110] (secciones/anexo1.tex
+] [111] [112] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [111
+) [113
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -2064,23 +2110,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: 66CA728151F38FC4A1452BE39DA6A3B7;18749.
+(rerunfilecheck)             Checksum: B9DAA73F6B31929C9A6D161348CD12BB;18749.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37556 strings out of 467871
- 706826 string characters out of 5419344
- 1618582 words of memory out of 5000000
- 65108 multiletter control sequences out of 15000+600000
+ 37613 strings out of 467871
+ 707441 string characters out of 5419344
+ 1618835 words of memory out of 5000000
+ 65121 multiletter control sequences out of 15000+600000
  665475 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,131p,1296b,2660s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (121 pages, 11849584 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (123 pages, 11862193 bytes).
 PDF statistics:
- 1919 PDF objects out of 2073 (max. 8388607)
- 696 named destinations out of 1000 (max. 500000)
+ 1978 PDF objects out of 2073 (max. 8388607)
+ 740 named destinations out of 1000 (max. 500000)
  1109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
