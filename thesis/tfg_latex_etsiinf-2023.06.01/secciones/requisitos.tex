@@ -114,7 +114,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
     \item El sistema debe permitir al usuario comprar artículos de personalización en la tienda con puntos de experiencia. 
     \item El sistema debe permitir al usuario visualizar su inventario de artículos adquiridos.
     \item El sistema debe mostrar badges o iconos especiales en el perfil del usuario.
-    \item El sistema debe reflejar visualmente los cambios de nivel recientes.
+    \item El sistema debe reflejar visualmente los cambios de nivel recientes en los canales.
 \end{enumerate}
 
 \section{Requisitos No Funcionales}
@@ -160,9 +160,10 @@ Los casos de uso relacionados con la gestión de usuario son:
     \item Gestionar perfil de usuario
 \end{enumerate}
 
+\clearpage
 \textbf{Diagrama}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.8\linewidth]{casos-uso/iniciar-sesion.png}
   \caption{Gestión de usuarios en la plataforma - Casos de uso}
@@ -1135,6 +1136,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
     \item Explorar comunidades 
 \end{enumerate}
 
+\clearpage
 
 \textbf{Diagrama}
 \begin{figure}[H]
@@ -1260,7 +1262,8 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \end{longtable}
 
 
-%EXPLORAR COMUNIDADES
+%EXPLORAR COMUNIDADES  -> Navegar sin rumbo   /  Busqueda: Aplicar filtros o buscar especificamente por nombres.
+
 \begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
 \hline
 \rowcolor[gray]{0.75}
@@ -1493,6 +1496,8 @@ Los casos de uso identificados relacionados con la interacción social son:
 \hline
 \end{longtable}
 
+\clearpage
+
 \subsection{Comunidades}
 
 \begin{enumerate}
@@ -1501,20 +1506,156 @@ Los casos de uso identificados relacionados con la interacción social son:
     \item Buscar y filtrar comunidades
 \end{enumerate}
 
+
+
 \textbf{Diagrama}
 
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=1\textwidth]{casos-uso/comunidades.png}
+  \includegraphics[width=0.6\textwidth]{casos-uso/comunidades.png}
   \caption{Comunidades  - Casos de uso}
 \end{figure}
 
 
 \textbf{Descripción}
 
- Interactuar con comunidades incluye crear, unirse, abandonar.
- Consultar es: ver videos de las comnuidades, ver comunidades a las que pertenece
- EXplorar comunidades tiene buscar por nombre,descripcion y filtrar.  
+
+%INTERACTUAR
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Interactuar con comunidades}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario registrado crear comunidades, unirse a comunidades existentes y abandonarlas. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la sección de comunidades.
+    \item El usuario selecciona una acción: crear, unirse o abandonar una comunidad.
+    \item En caso de creación, el usuario introduce los datos de la comunidad.
+    \item El sistema valida la información introducida.
+    \item El sistema crea la comunidad o actualiza la pertenencia del usuario.
+    \item El sistema confirma que la operación se ha realizado correctamente.
+    \item El usuario accede a una comunidad y decide si unirse o abandonarla si la está siguiendo.
+    \item El sistema actualiza la cantidad de miembros de la comunidad y la relación del usuario con ella. 
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: usuario sin sesión}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item El usuario no puede crear comunidades sin una sesión iniciada.
+    \item El sistema lo informa y solicita al usuario que introduzca sus credenciales para iniciar sesión. 
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: datos inválidos en creación}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item Si los datos introducidos para la comunidad no cumplen las reglas de validación, como nombres largos, el sistema muestra un mensaje de error.
+    \item El usuario corrige la información.
+    \item El sistema vuelve a validar los datos.
+\end{enumerate}
+} \\
+\hline
+
+
+
+\textbf{Postcondiciones} & La comunidad es creada o la relación del usuario con la comunidad queda actualizada. \\
+\hline
+\textbf{Requisitos relacionados} & RF-COM 1, RF-COM 2, RF-COM 3 \\
+\hline
+\end{longtable}
+
+%CONSULTAR COMUNIDADES
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Consultar comunidades}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario consultar las comunidades a las que pertenece y visualizar el contenido asociado a ellas. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la pestaña de comunidades.
+    \item El sistema muestra las comunidades a las que pertenece el usuario junto con sus videos más recientes.
+    \item El usuario selecciona una comunidad.
+    \item El sistema muestra todos los videos asociados a una comunidad.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 2: sin comunidades}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=2\alph*.]
+    \item Si el usuario no pertenece a ninguna comunidad, el sistema muestra las más populares.
+    \item El sistema invita al usuario a explorar o unirse a comunidades.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & El usuario visualiza las comunidades a las que pertenece y su contenido reciente. \\
+\hline
+\textbf{Requisitos relacionados} & RF-COM 4, RF-COM 5 \\
+\hline
+\end{longtable}
+
+%BUSCAR Y FILTRAR COMUNIDADES -> 
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Buscar y filtrar comunidades}} \\
+\hline
+\textbf{Actores} & Usuario visitante, Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario buscar comunidades por nombre, descripción y aplicar filtros según las categorías. \\
+\hline
+\textbf{Precondiciones} & El usuario accede a la sección de comunidades. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El sistema muestra las comunidades más destacadas y, en caso de que el usuario tenga una sesión activa, el sistema muestra comunidades relacionadas a sus intereses.
+    \item El usuario introduce un término de búsqueda o selecciona algunas categorías.
+    \item El sistema procesa la búsqueda o los filtros aplicados.
+    \item El sistema muestra las comunidades que coinciden con los criterios.
+    \item El usuario selecciona una comunidad para consultar su contenido.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: búsqueda sin resultados}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item Si no existen comunidades que coincidan con el criterio de búsqueda o filtros aplicados, el sistema lo informa.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & El usuario obtiene una lista de comunidades según los criterios de búsqueda o filtros. \\
+\hline
+\textbf{Requisitos relacionados} & RF-COM 6, RF-COM 7 \\
+\hline
+\end{longtable}
+
+
+
 
 \subsection{Canales}
 
@@ -1525,7 +1666,7 @@ Los casos de uso identificados relacionados con la interacción social son:
 \end{enumerate}
 
 \textbf{Diagrama}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/canales.png}
   \caption{Canales - Casos de uso}
@@ -1533,7 +1674,170 @@ Los casos de uso identificados relacionados con la interacción social son:
 
 \textbf{Descripción}
 
-Consultar canal incluye consultar a los que sigue: extends de login
+
+%GESTIONAR CANAL
+
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Gestionar canal}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario registrado gestionar y personalizar su propio canal dentro de la plataforma. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la sección de su canal (\textit{My Channel}).
+    \item El sistema muestra la información actual del canal.
+    \item El usuario selecciona la opción de personalizar canal.
+    \item El usuario modifica los elementos disponibles de personalización del canal.
+    \item El sistema valida los cambios introducidos.
+    \item El sistema guarda la nueva configuración del canal y confirma los cambios.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: datos inválidos}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=5\alph*.]
+    \item Si los datos introducidos no cumplen las reglas de validación, como un nombre superior a 50 caracteres, el sistema muestra un mensaje de error.
+    \item El usuario corrige la información señalada.
+    \item El sistema vuelve a validar los cambios introducidos.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & La configuración y personalización del canal quedan actualizadas en el sistema. \\
+\hline
+\textbf{Requisitos relacionados} & RF-CAN 1, RF-CAN 7 \\
+\hline
+\end{longtable}
+
+
+%CONSULTAR CANAL
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Consultar canal y canales seguidos}} \\
+\hline
+\textbf{Actores} & Usuario visitante, Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario consultar la información de un canal, sus videos, ranking, recompensas desbloqueadas, descripción y, en el caso de usuarios registrados, los canales que sigue. \\
+\hline
+\textbf{Precondiciones} & El usuario accede a la página de un canal disponible en la plataforma. Para consultar los canales seguidos, el usuario debe haber iniciado sesión. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la página de un canal.
+    \item El sistema muestra la página principal del canal.
+    \item El usuario selecciona la pestaña de videos.
+    \item El sistema muestra los videos asociados al canal.
+    \item El usuario selecciona la pestaña de ranking.
+    \item El sistema muestra la clasificación de usuarios donantes del canal.
+    \item El usuario selecciona la pestaña de recompensas desbloqueadas.
+    \item El sistema muestra las recompensas desbloqueadas del canal.
+    \item El usuario selecciona la pestaña de información.
+    \item El sistema muestra la descripción e información del canal.
+    \item Si el usuario ha iniciado sesión y es seguidor del canal, puede acceder a la pestaña de chat comunitario.
+    \item El sistema muestra el chat comunitario del canal.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 1: consultar canal propio}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=1\alph*.]
+    \item Si el usuario ha iniciado sesión, puede acceder a su propio canal desde su perfil.
+    \item El sistema muestra la página del canal propio del usuario.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 1: consultar canales seguidos}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=1\alph*.]
+    \item Si el usuario ha iniciado sesión, puede acceder a la sección de canales seguidos \textit{(Following)}.
+    \item El sistema muestra la lista de canales que sigue el usuario en sesión.
+    \item El usuario selecciona uno de los canales seguidos.
+    \item El sistema muestra la página del canal seleccionado.
+\end{enumerate}
+} \\
+\hline
+
+
+\textbf{Postcondiciones} & El usuario visualiza la información, contenido o canales seguidos solicitados. \\
+\hline
+\textbf{Requisitos relacionados} & RF-CAN 2, RF-CAN 3, RF-CAN 4, RF-CAN 5, RF-CAN 7, RF-CAN 10 \\
+\hline
+\end{longtable}
+
+
+
+%INTERACTUAR CON CANAL
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Interactuar con canales}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite a un usuario registrado seguir canales, dejar de seguirlos y acceder al chat comunitario asociado a un canal. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma y accede a un canal disponible. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la página de un canal.
+    \item El sistema muestra las opciones de interacción disponibles.
+    \item El usuario selecciona la opción de seguir canal \textit{(Follow)}.
+    \item El sistema registra la relación de seguimiento entre el usuario y el canal.
+    \item El usuario accede al chat comunitario del canal.
+    \item El sistema muestra el chat asociado.
+    \item El usuario puede dejar de seguir el canal.
+    \item El sistema elimina la relación de seguimiento entre el usuario y el canal.
+\end{enumerate} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: canal ya seguido}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item Si el usuario ya sigue el canal, el sistema informa de ello.
+    \item El sistema ofrece la opción de dejar de seguir el canal.
+\end{enumerate}
+} \\
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: acceso al chat no disponible}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=5\alph*.]
+    \item Si el chat comunitario no está disponible o el usuario no sigue al canal, el sistema muestra un mensaje informativo.
+    \item El sistema no permite el acceso al chat comunitario, impidiendo al usuario leer mensajes anteriores y enviar nuevos mensajes.
+\end{enumerate}
+} \\
+\hline
+
+
+\textbf{Postcondiciones} & La relación de seguimiento del usuario con el canal queda actualizada y el usuario puede acceder al chat comunitario si está disponible. \\
+\hline
+\textbf{Requisitos relacionados} & RF-CAN 6, RF-CAN 8, RF-CAN 9 \\
+\hline
+\end{longtable}
+
+
+
 \subsection{Gamificación}
 
 \begin{enumerate}
@@ -1546,7 +1850,7 @@ Consultar canal incluye consultar a los que sigue: extends de login
 \end{enumerate}
 
 \textbf{Diagrama}
-\begin{figure}[htbp]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{casos-uso/gamificacion.png}
   \caption{Gamificación- Casos de uso}
@@ -1555,29 +1859,218 @@ Consultar canal incluye consultar a los que sigue: extends de login
 
 \textbf{Descripción}
 
+%GANAR XP
 
-\subsection{Diagramas de casos de uso}
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Ganar puntos de experiencia}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario ganar puntos de experiencia (XP) al visualizar anuncios. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión en la plataforma. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a un anuncio con recompensas.
+    \item El usuario visualiza el anuncio.
+    \item El sistema reproduce el anuncio.
+    \item El sistema verifica que el anuncio ha sido visualizado correctamente.
+    \item El sistema asigna los puntos de experiencia correspondientes al usuario.
+    \item El sistema actualiza el recuento total de XP del usuario.
+    \item El sistema incrementa el contador de visitas del anuncio. 
+\end{enumerate} \\
+\hline
 
-\subsubsection{Gestión de usuarios}
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 3: anuncio no completado}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=3\alph*.]
+    \item Si el usuario abandona el anuncio antes de haber visto al menos 10 segundos o antes de la finalización del mismo, el sistema no otorga puntos de experiencia.
+    \item El sistema informa de que la recompensa no ha sido concedida.
+\end{enumerate}
+} \\
+\hline
+
+\textbf{Postcondiciones} & El recuento de XP del usuario se actualiza. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GAM 1, RF-GAM 2 \\
+\hline
+\end{longtable}
+
+
+%CONSUTLAR PUNTOS DE BOOST Y NIVEL DE CANAL
+
+\todo{verificar lo de las 48 horas aca tambien}
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Consultar puntos de boost y nivel de canal}} \\
+\hline
+\textbf{Actores} & Usuario visitante, Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario consultar los puntos de boost acumulados y el nivel asociado a un canal. \\
+\hline
+\textbf{Precondiciones} & El usuario accede a la página de un canal. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la página de un canal.
+    \item El sistema muestra los puntos de boost acumulados del canal junto con su barra de progreso.
+    \item El sistema muestra el nivel actual del canal y los puntos necesarios para alcanzar el siguiente nivel.
+    \item Si el canal ha ascendido de nivel recientemente, se incluye una insignia debajo de la barra del canal durante 48 horas que indica el nuevo nivel alcanzado.
+\end{enumerate} \\
+\hline
 
 
 
+\textbf{Postcondiciones} & El usuario visualiza el estado de progreso del canal. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GAM 3, RF-GAM 9 \\
+\hline
+\end{longtable}
+
+%CONSULTAR RANKINGS
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Consultar rankings}} \\
+\hline
+\textbf{Actores} & Usuario visitante, Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario visualizar la clasificación de los canales más populares según métricas como número de seguidores y nivel. \\
+\hline
+\textbf{Precondiciones} & El usuario accede a la sección de \textit{Top Channels}. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la sección de \textit{Top Channels} y decide si filtrar por seguidores o por nivel.
+    \item El sistema obtiene los datos de los 100 mejores canales en la plataforma.
+    \item El sistema ordena los canales según seguidores o nivel.
+    \item El sistema muestra la clasificación resultante.
+\end{enumerate} \\
+\hline
 
 
+\textbf{Postcondiciones} & El usuario visualiza la clasificación de canales disponible. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GAM 4 \\
+\hline
+\end{longtable}
+
+%CONSULTAR TIENDA DE RECOMPENSAS
+
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Consultar tienda de recompensas}} \\
+\hline
+\textbf{Actores} & Usuario visitante, Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario ver los artículos disponibles en la tienda como recompensas, ítems, insignias, títulos, iconos, entro otras personalizaciones y beneficios. \\
+\hline
+\textbf{Precondiciones} & El usuario accede a la tienda. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la tienda.
+    \item El sistema muestra los artículos disponibles.
+    \item El usuario navega entre las opciones disponibles.
+    \item El sistema muestra la información detallada de cada artículo y su precio.
+\end{enumerate} \\
+\hline
 
 
+\textbf{Postcondiciones} & El usuario visualiza los artículos disponibles en la tienda. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GAM 5 \\
+\hline
+\end{longtable}
 
-\subsubsection{Carga y gestión de videos}
+%COMPRAR ARTICULOS DE PERSONALIZACION
 
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Comprar artículos de personalización}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario adquirir artículos de personalización utilizando puntos de experiencia. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión y dispone de puntos de experiencia suficientes. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a la tienda.
+    \item El usuario selecciona un artículo.
+    \item El sistema muestra el coste del artículo.
+    \item El usuario confirma la compra.
+    \item El sistema valida que dispone de suficientes puntos.
+    \item El sistema descuenta los puntos correspondientes y guarda la transacción.
+    \item El sistema añade el artículo al inventario del usuario.
+\end{enumerate} \\
+\hline
 
-\subsection{Reproducción y consumo de contenido}
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 5: puntos insuficientes}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=5\alph*.]
+    \item Si el usuario no dispone de suficientes puntos, el sistema muestra un mensaje de error.
+    \item El sistema impide completar la compra y le ofrece alternativas para obtener más puntos como completar misiones, mirar anuncios voluntarios, comprarlos.
+\end{enumerate}
+} \\
+\hline
 
+\textbf{Postcondiciones} & El artículo queda registrado en el inventario del usuario. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GAM 6, RF-GAM 7 \\
+\hline
+\end{longtable}
 
-\subsection{Descripción de casos de uso}
+%EQUIPAR Y CONSULTAR ARTICULOS DE PERSONALIZACION
 
+\begin{longtable}{|p{0.28\textwidth}|p{0.64\textwidth}|}
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Caso de uso: Equipar y consultar artículos de personalización}} \\
+\hline
+\textbf{Actores} & Usuario registrado \\
+\hline
+\textbf{Descripción} & Permite al usuario consultar su inventario de artículos adquiridos y equiparlos en su perfil. \\
+\hline
+\textbf{Precondiciones} & El usuario ha iniciado sesión y dispone de artículos en su inventario. \\
+\hline
+\textbf{Flujo principal} &
+\begin{enumerate}
+    \item El usuario accede a su inventario.
+    \item El sistema muestra los artículos adquiridos.
+    \item El usuario selecciona un artículo.
+    \item El usuario decide equipar el artículo.
+    \item El sistema actualiza la apariencia del perfil del usuario.
+\end{enumerate} \\
+\hline
 
+\rowcolor[gray]{0.75}
+\multicolumn{2}{|c|}{\textbf{Flujo alternativo al paso 1: inventario vacío}} \\
+\hline
+\multicolumn{2}{|p{0.92\textwidth}|}{
+\begin{enumerate}[label=1\alph*.]
+    \item Si el usuario no dispone de artículos, el sistema informa de ello.
+\end{enumerate}
+} \\
+\hline
 
-
+\textbf{Postcondiciones} & El perfil del usuario refleja los artículos equipados y sus elementos visuales asociados. \\
+\hline
+\textbf{Requisitos relacionados} & RF-GAM 7, RF-GAM 8 \\
+\hline
+\end{longtable}
 
 \section{Diagramas de secuencia}
 
