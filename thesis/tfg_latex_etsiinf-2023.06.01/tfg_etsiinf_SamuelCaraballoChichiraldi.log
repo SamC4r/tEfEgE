@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  25 APR 2026 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  25 APR 2026 18:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1192,42 +1192,42 @@ Overfull \hbox (3.3943pt too wide) detected at line 76
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 78
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 79
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 80
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 81
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 82
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 83
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 84
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 85
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 LaTeX Info: Redefining \sptext on input line 86.
@@ -1237,82 +1237,82 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 86.
 [6]
 Overfull \hbox (3.3943pt too wide) detected at line 86
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 87
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 88
- []\T1/pbk/l/n/10.95 111
+ []\T1/pbk/l/n/10.95 113
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 90
- []\T1/pbk/l/n/10.95 113
+ []\T1/pbk/l/n/10.95 115
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 91
- []\T1/pbk/l/n/10.95 113
+ []\T1/pbk/l/n/10.95 115
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 92
- []\T1/pbk/l/n/10.95 113
+ []\T1/pbk/l/n/10.95 115
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 93
- []\T1/pbk/l/n/10.95 113
+ []\T1/pbk/l/n/10.95 115
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 94
- []\T1/pbk/l/n/10.95 113
+ []\T1/pbk/l/n/10.95 115
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 95
- []\T1/pbk/l/n/10.95 113
+ []\T1/pbk/l/n/10.95 115
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 97
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 98
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 99
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 100
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 101
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 102
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 103
- []\T1/pbk/l/n/10.95 115
+ []\T1/pbk/l/n/10.95 117
  []
 
 
@@ -2229,31 +2229,62 @@ LaTeX Info: Redefining \sptext on input line 2127.
 LaTeX Info: Redefining \. on input line 2127.
 LaTeX Info: Redefining \% on input line 2127.
  [109 <./diagramas-secuencia/video-view.png>]
-LaTeX Info: Redefining \sptext on input line 2133.
-LaTeX Info: Redefining \. on input line 2133.
-LaTeX Info: Redefining \% on input line 2133.
- [110]) (secciones/diseno-arquitectura.tex
+<diagrama-er/comunidades-usuarios-videos.png, id=1831, 1769.61125pt x 1301.86375pt>
+File: diagrama-er/comunidades-usuarios-videos.png Graphic file (type png)
+<use diagrama-er/comunidades-usuarios-videos.png>
+Package pdftex.def Info: diagrama-er/comunidades-usuarios-videos.png  used on input line 2136.
+(pdftex.def)             Requested size: 426.79135pt x 313.96341pt.
+<diagrama-er/interaccion-social.png, id=1832, 1801.73125pt x 1263.72125pt>
+File: diagrama-er/interaccion-social.png Graphic file (type png)
+<use diagrama-er/interaccion-social.png>
+Package pdftex.def Info: diagrama-er/interaccion-social.png  used on input line 2145.
+(pdftex.def)             Requested size: 426.79135pt x 299.34633pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2148.
+LaTeX Info: Redefining \. on input line 2148.
+LaTeX Info: Redefining \% on input line 2148.
+ [110 <./diagrama-er/comunidades-usuarios-videos.png>]
+<diagrama-er/gamificacion-reporte.png, id=1839, 1011.78pt x 1987.425pt>
+File: diagrama-er/gamificacion-reporte.png Graphic file (type png)
+<use diagrama-er/gamificacion-reporte.png>
+Package pdftex.def Info: diagrama-er/gamificacion-reporte.png  used on input line 2153.
+(pdftex.def)             Requested size: 320.0935pt x 628.7715pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2156.
+LaTeX Info: Redefining \. on input line 2156.
+LaTeX Info: Redefining \% on input line 2156.
+ [111 <./diagrama-er/interaccion-social.png>]
+Overfull \vbox (0.49393pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2156.
+LaTeX Info: Redefining \. on input line 2156.
+LaTeX Info: Redefining \% on input line 2156.
+ [112 <./diagrama-er/gamificacion-reporte.png>]) (secciones/diseno-arquitectura.tex
 Cap\'{\i }tulo 6.
-) (secciones/desarrollo.tex [111
+) (secciones/desarrollo.tex [113
 
 
-] [112
+] [114
 
 ]
 Cap\'{\i }tulo 7.
-) (secciones/pruebas.tex [113] [114
+) (secciones/pruebas.tex [115] [116
 
 ]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [115] [116
+) (secciones/conclusiones.tex [117] [118
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [117] [118
+) (secciones/impacto.tex [119] [120
 
 ]
 Cap\'{\i }tulo 10.
-) [119] [120
+) [121] [122
 
 ]
 Overfull \hbox (1.31523pt too wide) in paragraph at lines 204--204
@@ -2285,7 +2316,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 204--204
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[121
+[123
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 204--204
@@ -2300,15 +2331,15 @@ Overfull \hbox (2.00604pt too wide) in paragraph at lines 204--204
 LaTeX Info: Redefining \sptext on input line 201.
 LaTeX Info: Redefining \. on input line 201.
 LaTeX Info: Redefining \% on input line 201.
-[122]
+[124]
 LaTeX Info: Redefining \sptext on input line 205.
 LaTeX Info: Redefining \. on input line 205.
 LaTeX Info: Redefining \% on input line 205.
- [123] [124
+ [125] [126
 
-] [125] [126] (secciones/anexo1.tex
+] [127] [128] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [127
+) [129
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -2323,23 +2354,23 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: DEC59483D0431680B3E24E2B635442D5;18619.
+(rerunfilecheck)             Checksum: 5EE4AD78F34097C0D78AB06C5B212258;18619.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 37796 strings out of 467871
- 710015 string characters out of 5419344
+ 37822 strings out of 467871
+ 711017 string characters out of 5419344
  1620704 words of memory out of 5000000
- 65174 multiletter control sequences out of 15000+600000
+ 65195 multiletter control sequences out of 15000+600000
  665475 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,12n,131p,1296b,2660s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (137 pages, 12030743 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (139 pages, 12298316 bytes).
 PDF statistics:
- 2194 PDF objects out of 2487 (max. 8388607)
- 870 named destinations out of 1000 (max. 500000)
- 1137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2213 PDF objects out of 2487 (max. 8388607)
+ 875 named destinations out of 1000 (max. 500000)
+ 1152 words of extra memory for PDF output out of 10000 (max. 10000000)
 

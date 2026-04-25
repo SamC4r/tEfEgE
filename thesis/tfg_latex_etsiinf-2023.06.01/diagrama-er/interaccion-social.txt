@@ -1,0 +1,197 @@
+digraph ER_Interaccion_Social {
+  graph [
+    rankdir=LR
+    layout=dot
+    splines=ortho
+    overlap=false
+    bgcolor="white"
+    nodesep=0.8
+    ranksep=1.15
+    pad=0.4
+  ]
+
+  node [
+    fontname="Arial"
+    fontsize=12
+    margin=0.12
+  ]
+
+  edge [
+    fontname="Arial"
+    fontsize=10
+    color="#3f88b5"
+    dir=none
+  ]
+
+  Usuario [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Usuario"
+  ]
+
+  Video [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Video"
+  ]
+
+  Comentario [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Comentario"
+  ]
+
+  visualiza [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="visualiza"
+  ]
+
+  califica [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="califica"
+  ]
+
+  escribe [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="escribe"
+  ]
+
+  recibeComentario [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="recibe"
+  ]
+
+  responde [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="responde"
+  ]
+
+  reacciona [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="reacciona"
+  ]
+
+  sigue [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="sigue"
+  ]
+
+  idUsuario [
+    shape=ellipse
+    label=<<U>idUsuario</U>>
+  ]
+
+  nombreUsuario [
+    shape=ellipse
+    label="nombre"
+  ]
+
+  idVideo [
+    shape=ellipse
+    label=<<U>idVideo</U>>
+  ]
+
+  tituloVideo [
+    shape=ellipse
+    label="título"
+  ]
+
+  averageRating [
+    shape=ellipse
+    label="valoraciónMedia"
+  ]
+
+  commentCount [
+    shape=ellipse
+    label="cantidadComentarios"
+  ]
+
+  idComentario [
+    shape=ellipse
+    label=<<U>idComentario</U>>
+  ]
+
+  textoComentario [
+    shape=ellipse
+    label="comentario"
+  ]
+
+  replies [
+    shape=ellipse
+    label="respuestas"
+  ]
+
+  fechaComentario [
+    shape=ellipse
+    label="fechaCreación"
+  ]
+
+  seen [
+    shape=ellipse
+    label="seen"
+  ]
+
+  rating [
+    shape=ellipse
+    label="rating"
+  ]
+
+  Usuario -> idUsuario
+  Usuario -> nombreUsuario
+
+  Video -> idVideo
+  Video -> tituloVideo
+  Video -> averageRating
+  Video -> commentCount
+
+  Comentario -> idComentario
+  Comentario -> textoComentario
+  Comentario -> replies
+  Comentario -> fechaComentario
+
+
+  
+  seen -> visualiza
+  rating -> califica
+  
+  Usuario -> visualiza [label="(0,n)"]
+  visualiza -> Video [label="(0,n)"]
+
+  Usuario -> califica [label="(0,n)"]
+  califica -> Video [label="(0,n)"]
+
+  Usuario -> escribe [label="(1,1)"]
+  escribe -> Comentario [label="(0,n)"]
+
+  Video -> recibeComentario [label="(1,1)"]
+  recibeComentario -> Comentario [label="(0,n)"]
+
+  Comentario -> responde [label="(0,1)"]
+  responde -> Comentario [label="(0,n)"]
+
+  Usuario -> reacciona [label="(0,n)"]
+  reacciona -> Comentario [label="(0,n)"]
+
+  Usuario -> sigue [label="(0,n)"]
+  sigue -> Usuario [label="(0,n)"]
+}

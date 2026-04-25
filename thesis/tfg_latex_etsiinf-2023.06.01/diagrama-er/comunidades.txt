@@ -1,0 +1,206 @@
+digraph ER_Contenido_Comunidades {
+  graph [
+    rankdir=LR
+    layout=dot
+    splines=ortho
+    overlap=false
+    bgcolor="white"
+    nodesep=0.75
+    ranksep=1.1
+    pad=0.4
+  ]
+
+  node [
+    fontname="Arial"
+    fontsize=12
+    margin=0.12
+  ]
+
+  edge [
+    fontname="Arial"
+    fontsize=10
+    color="#3f88b5"
+    dir=none
+  ]
+
+  Usuario [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Usuario"
+  ]
+
+  Categoria [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Categoría"
+  ]
+
+  Comunidad [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Comunidad"
+  ]
+
+  Video [
+    shape=box
+    style="filled,rounded"
+    fillcolor="#FA2A55"
+    fontcolor="white"
+    label="Video"
+  ]
+
+  publica [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="publica"
+  ]
+
+  clasificaVideo [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="clasifica"
+  ]
+
+  clasificaComunidad [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="clasifica"
+  ]
+
+  contiene [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="contiene"
+  ]
+
+  pertenece [
+    shape=diamond
+    style=filled
+    fillcolor="#FCDDC2"
+    label="pertenece"
+  ]
+
+  joinedAt [
+    shape=ellipse
+    label="fechaIngreso"
+  ]
+  
+   rol [
+    shape=ellipse
+    label="rol"
+  ]
+
+  idUsuario [
+    shape=ellipse
+    label=<<U>idUsuario</U>>
+  ]
+
+  nombreUsuario [
+    shape=ellipse
+    label="nombre"
+  ]
+
+  username [
+    shape=ellipse
+    label="username"
+  ]
+
+  idCategoria [
+    shape=ellipse
+    label=<<U>idCategoría</U>>
+  ]
+
+  nombreCategoria [
+    shape=ellipse
+    label="nombre"
+  ]
+
+  idComunidad [
+    shape=ellipse
+    label=<<U>idComunidad</U>>
+  ]
+
+  nombreComunidad [
+    shape=ellipse
+    label="nombre"
+  ]
+
+
+
+  permitePublicaciones [
+    shape=ellipse
+    label="permitePublicaciones"
+  ]
+
+  idVideo [
+    shape=ellipse
+    label=<<U>idVideo</U>>
+  ]
+
+  tituloVideo [
+    shape=ellipse
+    label="título"
+  ]
+
+  visibilidad [
+    shape=ellipse
+    label="visibilidad"
+  ]
+
+  estado [
+    shape=ellipse
+    label="estado"
+  ]
+
+  duracion [
+    shape=ellipse
+    label="duración"
+  ]
+
+  Usuario -> idUsuario
+  Usuario -> nombreUsuario
+  Usuario -> username
+
+  Categoria -> idCategoria
+  Categoria -> nombreCategoria
+
+  Comunidad -> idComunidad
+  Comunidad -> nombreComunidad
+  Comunidad -> permitePublicaciones
+
+  Video -> idVideo
+  Video -> tituloVideo
+  Video -> visibilidad
+  Video -> estado
+  Video -> duracion
+
+  
+  rol -> pertenece
+  joinedAt -> pertenece
+  
+
+   Usuario -> publica [label="(1,1)"]
+  publica -> Video [label="(0,n)"]
+
+  Categoria -> clasificaVideo [label="(0,1)"]
+  clasificaVideo -> Video [label="(0,n)"]
+
+  Categoria -> clasificaComunidad [label="(0,1)"]
+  clasificaComunidad -> Comunidad [label="(0,n)"]
+
+  Comunidad -> contiene [label="(0,1)"]
+  contiene -> Video [label="(0,n)"]
+
+  Usuario -> pertenece [label="(0,n)"]
+  pertenece -> Comunidad [label="(0,n)"]
+}
