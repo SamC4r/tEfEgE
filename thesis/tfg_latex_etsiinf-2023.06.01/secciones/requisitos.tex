@@ -1141,7 +1141,7 @@ Los casos de uso identificados relacionados con la exploración y búsqueda de c
 \textbf{Diagrama}
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{casos-uso/exploracion-busqueda.png}
+  \includegraphics[width=0.7\textwidth]{casos-uso/exploracion-busqueda.png}
   \caption{Exploración y búsqueda de contenido - Casos de uso}
 \end{figure}
 
@@ -2072,9 +2072,60 @@ Los casos de uso identificados relacionados con la interacción social son:
 \hline
 \end{longtable}
 
+\clearpage
 \section{Diagramas de secuencia}
 
 En esta sección se recopilan algunos de los diagramas de secuencia más importantes en la aplicación final. 
+
+\subsection{Carga de videos}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{diagramas-secuencia/subir-video.png}
+  \caption{Carga de Video - Diagrama de Secuencia}
+  \label{5.9}
+\end{figure}
+
+La figura \ref{5.9} muestra el proceso de carga de un video a la plataforma. Este comienza cuando un usuario registrado accede a la sección de creadores \textit{(studio)} y selecciona la opción de subir un video. A continuación, el sistema le solicita al Sistema de Procesamiento de Videos un enlace temporal de carga para que el usuario suba el archivo directamente a este servicio sin pasar por el servidor de la plataforma. De esta forma, el archivo estaría solamente en el sistema de procesamiento y se evita sobrecargar el servidor de la plataforma con archivos pesados. Cuando se obtiene el enlace de carga, el sistema le indica al usuario que suba el archivo de video mediante un formulario. A su vez, mientras el sistema de procesamiento se encarga de recibir el archivo, procesarlo, almacenarlo y transcodificarlo, el usuario puede editar los metadatos del video, como título, descripción, visibilidad, entre otros. Una vez que el sistema de procesamiento finaliza con el procesamiento del video, se lo notifica al sistema de backend de la plataforma y el video pasa a estar disponible para su reproducción. 
+
+
+\subsection{Registro}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{diagramas-secuencia/registro.png}
+  \caption{Registro - Diagrama de Secuencia}
+  \label{5.10}
+\end{figure}
+
+La figura \ref{5.10} muestra el proceso de registro de un nuevo usuario en la plataforma. El proceso lo inicia un usuario visitante que accede al formulario de registro. Aquí, introduce sus datos personales requerido como nombre de usuario, correo electrónico y contraseña. Posteriormente, el sistema valida la información introducida, verificando que el nombre de usuario y correo no estén ya registrados y que la contraseña cumpla con las norma de seguridad. A continuación, el sistema envía un correo de verificación al correo y espera a que el usuario confirme su cuenta. Cuando se completan estos pasos, se crea un nuevo usuario en el sistema y se crea un nuevo canal.  
+
+\subsection{Inicio de sesión}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{diagramas-secuencia/inicio-sesion.png}
+  \caption{Inicio de sesión - Diagrama de Secuencia}
+  \label{5.11}
+\end{figure}
+
+El inicio de sesión, representado en la figura \ref{5.11} sigue un flujo similar al registro. En este caso, el que inicia la acción es un usuario con una cuenta previamente registrada en el sistema. El usuario accede al formulario de inicio de sesión e introduce sus credenciales, que pueden ser su nombre de usuario o correo electrónico junto con su contraseña. El sistema valida las credenciales introducidas, verificando que correspondan a una cuenta existente y que la contraseña sea correcta. En algunos casos, el sistema puede requerir una autenticación adicional, solicitando un código de verificación al correo registrado. Esto ocurre cuando se detecta un inicio de sesión desde un dispositivo o ubicación no habitual o, el usuario lleva un tiempo sin iniciar sesión. 
+
+Si la validación es exitosa, el sistema inicia una nueva sesión para el usuario y le permite acceder a las funcionalidades disponibles para usuarios registrados. En caso de que las credenciales sean incorrectas, el sistema muestra un mensaje de error e invita al usuario a intentarlo nuevamente o a recuperar su contraseña en caso de olvido.
+
+\subsection{Vista de Video}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{diagramas-secuencia/video-view.png}
+  \caption{Vista de Video - Diagrama de Secuencia}
+  \label{5.12}
+\end{figure}
+
+La figura \ref{5.12} detalla el proceso que se sigue cuando un usuario accede a un video para visualizarlo. Como se puede observar, el sistema de backend va solicitando fragmentos del video conforme avanza la reproducción. Además, el sistema de backend se encarga de actualizar la cantidad de visitas del video si el usuario ha iniciado sesión y notifica al sistema de frontend para que actualice la información en la página del video.
+
+
 
 \section{Diagrama Entidad Relación}
 

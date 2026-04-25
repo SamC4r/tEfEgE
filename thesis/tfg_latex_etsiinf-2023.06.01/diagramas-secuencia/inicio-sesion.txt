@@ -1,0 +1,96 @@
+@startuml
+!theme vibrant
+
+title Proceso de inicio de sesión
+
+autonumber
+
+skinparam BackgroundColor FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 7
+skinparam sequence {
+    ParticipantPadding 25
+    BoxPadding 10
+    ArrowThickness 1.2
+    LifeLineBorderColor #555555
+    LifeLineBackgroundColor #F7F7F7
+}
+
+actor "Usuario registrado" as Usuario
+participant "Booster Frontend" as Frontend
+participant "Booster Backend" as Backend
+participant "Servicio de autenticación\nClerk" as Clerk
+
+== Inicio del proceso ==
+
+Usuario -> Frontend: Accede a la pantalla de inicio de sesión
+activate Frontend
+
+Frontend --> Usuario: Muestra formulario de inicio de sesión
+
+Usuario -> Frontend: Introduce correo o usuario\ny contraseña o su cuenta de Google
+
+Frontend -> Clerk: Envía credenciales de autenticación
+activate Clerk
+
+alt Credenciales válidas
+    Clerk --> Frontend: Devuelve sesión autenticada
+    deactivate Clerk
+
+    Frontend -> Backend: Envía petición con token de sesión
+    activate Backend
+
+    Backend -> Clerk: Verifica token de sesión
+    activate Clerk
+    Clerk --> Backend: Token válido
+    deactivate Clerk
+
+    Backend --> Frontend: Autoriza acceso a recursos protegidos
+    deactivate Backend
+
+    Frontend --> Usuario: Redirige a la pantalla principal
+
+else Credenciales incorrectas
+    Clerk --> Frontend: Devuelve error de autenticación
+    deactivate Clerk
+
+    Frontend --> Usuario: Muestra mensaje de error
+
+else Verificación adicional requerida
+    Clerk --> Frontend: Solicita código de verificación
+    deactivate Clerk
+
+    Frontend --> Usuario: Solicita código enviado al correo
+
+    Usuario -> Frontend: Introduce código de verificación
+    Frontend -> Clerk: Envía código de verificación
+    activate Clerk
+
+    alt Código válido
+        Clerk --> Frontend: Devuelve sesión autenticada
+        deactivate Clerk
+
+        Frontend -> Backend: Envía petición con token de sesión
+        activate Backend
+
+        Backend -> Clerk: Verifica token de sesión
+        activate Clerk
+        Clerk --> Backend: Token válido
+        deactivate Clerk
+
+        Backend --> Frontend: Autoriza acceso a recursos protegidos
+        deactivate Backend
+
+        Frontend --> Usuario: Redirige a la pantalla principal
+
+    else Código inválido o expirado
+        Clerk --> Frontend: Devuelve error de verificación
+        deactivate Clerk
+
+        Frontend --> Usuario: Muestra mensaje de error
+    end
+end
+
+deactivate Frontend
+
+@enduml

@@ -1,0 +1,81 @@
+@startuml
+!theme vibrant
+
+title Proceso de registro de usuario
+
+autonumber
+
+skinparam BackgroundColor FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 7
+skinparam sequence {
+    ParticipantPadding 25
+    BoxPadding 10
+    ArrowThickness 1.2
+    LifeLineBorderColor #555555
+    LifeLineBackgroundColor #F7F7F7
+}
+
+actor "Usuario visitante" as Usuario
+participant "Booster Frontend" as Frontend
+participant "Booster Backend" as Backend
+participant "Servicio de autenticación\nClerk" as Clerk
+
+== Inicio del registro ==
+
+Usuario -> Frontend: Accede a la pantalla de registro
+activate Frontend
+
+Frontend --> Usuario: Muestra formulario de registro
+
+Usuario -> Frontend: Introduce correo electrónico,\nnombre de usuario y contraseña
+
+Frontend -> Clerk: Envía datos de registro
+activate Clerk
+
+alt Datos válidos
+    Clerk --> Frontend: Solicita verificación de correo
+    deactivate Clerk
+
+    Frontend --> Usuario: Solicita código de verificación
+
+    Usuario -> Frontend: Introduce código recibido
+
+    Frontend -> Clerk: Envía código de verificación
+    activate Clerk
+
+    alt Código válido
+        Clerk --> Frontend: Confirma cuenta creada\ny sesión autenticada
+        deactivate Clerk
+
+        Frontend -> Backend: Envía datos básicos del usuario\ncon token de sesión
+        activate Backend
+
+        Backend -> Clerk: Verifica token de sesión
+        activate Clerk
+        Clerk --> Backend: Token válido
+        deactivate Clerk
+
+        Backend -> Backend: Crea un nuevo usuario\nen la base de datos
+        Backend --> Frontend: Confirma registro en Booster
+        deactivate Backend
+
+        Frontend --> Usuario: Redirige a la pantalla principal
+
+    else Código inválido o expirado
+        Clerk --> Frontend: Devuelve error de verificación
+        deactivate Clerk
+
+        Frontend --> Usuario: Muestra mensaje de error
+    end
+
+else Datos inválidos o cuenta existente
+    Clerk --> Frontend: Devuelve error de registro
+    deactivate Clerk
+
+    Frontend --> Usuario: Muestra errores en el formulario
+end
+
+deactivate Frontend
+
+@enduml

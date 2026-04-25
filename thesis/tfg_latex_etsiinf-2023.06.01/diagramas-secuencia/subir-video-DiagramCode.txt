@@ -1,0 +1,69 @@
+@startuml
+!theme mars
+
+title Proceso de carga de video a la plataforma
+
+autonumber
+
+skinparam BackgroundColor FFFFFF
+skinparam shadowing false
+skinparam RoundCorner 7
+skinparam sequence {
+    ParticipantPadding 25
+    BoxPadding 10
+    ArrowThickness 1.2
+    LifeLineBorderColor #555555
+    LifeLineBackgroundColor #F7F7F7
+}
+
+actor "Usuario registrado" as Usuario
+participant "Booster Frontend/Backend" as Backend
+participant "Sistema de procesamiento\nde videos" as Procesamiento
+
+== Solicitud de enlace de carga ==
+
+Usuario -> Backend: Accede a la opción de subir video
+activate Backend
+
+Backend -> Procesamiento: Solicita enlace temporal de carga
+activate Procesamiento
+Procesamiento --> Backend: Devuelve enlace de carga
+deactivate Procesamiento
+
+Backend --> Usuario: Envía enlace temporal de carga
+
+== Carga del archivo y edición de metadatos en paralelo ==
+
+par Carga directa del archivo
+    Usuario -> Procesamiento: Sube archivo de video usando el enlace
+    activate Procesamiento
+    Backend -> Backend: Actualiza estado del video a uploading
+    Procesamiento --> Backend: Notifica carga completada
+    deactivate Procesamiento
+    Backend -> Backend: Actualiza estado del video a procesando
+
+else Edición de metadatos
+    Backend --> Usuario: Muestra formulario de metadatos
+    Usuario -> Backend: Introduce título, descripción,\ncategoría, visibilidad y comunidad
+    Backend -> Backend: Valida metadatos
+    Backend -> Backend: Almacena metadatos del video
+end
+
+
+== Procesamiento del video ==
+
+Backend -> Procesamiento: Solicita procesamiento del video
+activate Procesamiento
+
+Procesamiento -> Procesamiento: Transcodifica video
+Procesamiento -> Procesamiento: Genera calidades para\nAdaptive Bitrate Streaming
+Procesamiento -> Procesamiento: Genera miniatura y recursos\nde reproducción
+
+Procesamiento --> Backend: Notifica procesamiento completado
+deactivate Procesamiento
+
+Backend -> Backend: Actualiza estado del video a procesado
+Backend --> Usuario: Confirma que el video fue procesado correctamente
+
+deactivate Backend
+@enduml
