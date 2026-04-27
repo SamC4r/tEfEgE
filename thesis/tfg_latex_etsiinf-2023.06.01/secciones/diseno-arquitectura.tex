@@ -4,6 +4,177 @@
 % Explicar mono-repo de NextJS, /components poniendo archivos servidor fuera
 \section{Patrones y mejores prácticas}
 
+En esta sección se describen los patrones de diseño y las mejores prácticas empleadas en el desarrollo de \textit{Booster}.
+
+\subsection{Mono-Repositorio con NextJS}
+Se ha optado por utilizar un mono-repositorio \footnote{Se entiende por mono-repositorio a aquel proyecto software donde se utiliza un único repositorio para almacenar el código. Es decir, es un repositorio que contiene el código de todos los módulos de la aplicación que, aunque están relacionados, podrían funcionar de forma independiente.} utilizando el framework NextJS, lo que permite una gestión centralizada del código. Además, la integración del \textit{Frontend} con el \textit{Backend} se realiza de forma más fluida gracias a la habilidad de NextJS para controlar ambos. Es decir, ambos componentes están en el mismo repositorio mejorando así la experiencia de desarrollo y despliegue. 
+A continuación, se detalla la estructura de archivos del proyecto. 
+
+\subsection{Estructura general de archivos}
+%FILES FROM BOOSTER
+\begin{figure}[H]
+\centering
+
+\begin{tcolorbox}[
+    colback=white,
+    fontupper=\large,
+    boxrule=0.0pt,
+    width=0.8\textwidth,
+]
+
+\scriptsize
+\dirtree{%
+.1 \folder{\textbf{Booster}}.
+.2 \folder{src}.
+.3 \folder{app}.
+.3 \folder{components}.
+.3 \folder{db}.
+.3 \folder{lib}.
+.3 \folder{modules}.
+.3 \folder{trpc}.
+.3 \codefile{middleware.ts}.
+.3 \codefile{constants.ts}.
+.2 \folder{public}.
+.2 \configfile{.env.local}.
+.2 \configfile{drizzle.conf.ts}.
+.2 \configfile{next.config.ts}.
+.2 \configfile{tailwind.config.ts}.
+.2 \configfile{tsconfig.json}.
+}
+
+\end{tcolorbox}
+
+\caption{Estructura general del proyecto Booster}
+\label{fig:estructura-general-booster}
+\end{figure}
+%src/app
+\begin{figure}[H]
+\centering
+
+\begin{tcolorbox}[
+    colback=white,
+    fontupper=\large,
+    boxrule=0.0pt,
+    width=1\textwidth,
+]
+
+\scriptsize
+\dirtree{%
+.1 \folder{\textbf{src/app}}.
+.2 \folder{(auth)}.
+.2 \folder{(communities)}.
+.2 \folder{(home)}.
+.3 \folder{(explorer)}.
+.4 \folder{videos}.
+.2 \folder{(market)}.
+.2 \folder{(next-up)}.
+.2 \folder{(search)}.
+.2 \folder{(studio)}.
+.2 \folder{(users)}.
+.2 \folder{api}.
+}
+\end{tcolorbox}
+\caption{Estructura de rutas de la aplicación - Directorio /src/app}
+\label{fig:estructura-rutas-booster}
+\end{figure}
+\clearpage
+% Backend   
+\begin{figure}[H]
+
+
+
+\begin{tcolorbox}[
+    colback=white,
+    fontupper=\large,
+    boxrule=0.0pt,
+    width=1\textwidth,
+]
+
+\scriptsize
+\dirtree{%
+.1 \folder{\textbf{src}}.
+.2 \folder{app}.
+.2 \folder{components}.
+.2 \folder{db}.
+.3 \codefile{index.ts}.
+.3 \codefile{schema.ts}.
+.2 \folder{lib}.
+.3 \codefile{bunny.ts}.
+.3 \codefile{redis.ts}.
+.3 \codefile{uploadthing.ts}.
+.3 \codefile{utils.ts}.
+.3 \codefile{ratelimits.ts}.
+.2 \folder{modules}.
+.3 \folder{home}.
+.4 \folder{server}.
+.4 \folder{ui}.
+.3 \folder{studio}.
+.3 \folder{users}.
+.3 \folder{video-views}.
+.3 \folder{videos}.
+.2 \folder{trpc}.
+.3 \folder{routers}.
+.4 \codefile{\_app.ts}.
+.3 \codefile{client.tsx}.
+.3 \codefile{init.ts}.
+.3 \codefile{query-client.ts}.
+.3 \codefile{server.tsx}.
+}
+\end{tcolorbox}
+
+\caption{Estructura del backend}
+\label{fig:estructura-tecnica-booster}
+\end{figure}
+
+En la figura \ref{fig:estructura-general-booster} se observa la estructura de la aplicación. El directorio \texttt{/src} contiene el código fuente de la aplicación y se divide en varias subcarpetas. Por otra parte, el directorio \texttt{/public} contiene los archivos estáticos que se sirven directamente al cliente. En \textit{Booster} se ha utilizado exclusivamente para almacenar imágenes como logos de la aplicación. 
+
+En la raíz del proyecto se encuentran además archivos de configuración. El archivo \texttt{.env.local} se utiliza para almacenar variables de entorno y api-keys fundamentales para el correcto funcionamiento de los proveedores y para mejorar la seguridad. Otros archivos como \texttt{drizzle.conf.ts}, \texttt{next.config.ts}, \texttt{tailwind.config.ts} y \texttt{tsconfig.json} contienen configuraciones específicas para Drizzle, NextJS, TailwindCSS CSS y TypeScript respectivamente. 
+
+Las figuras \ref{fig:estructura-rutas-booster} y \ref{fig:estructura-tecnica-booster} detallan el contenido de la organización de rutas de la aplicación y de los componentes del \textit{backend} respectivamente. 
+
+\subsection{Separación de funcionalidades y Arquitectura modular}
+
+El proyecto emplea el principio de separación de funcionalidades dividiendo en capas los módulos con distintos funcionamiento. En la figura \ref{fig:estructura-tecnica-booster} se observan distintos directorios donde cada uno cumple un objetivo distinto:
+
+\begin{itemize}
+    \item \textbf{/db:} Se encarga de la gestión de la base de datos \textit{NeonDB} y su ORM \textit{Drizzle-ORM}.
+    \item \textbf{/components}: Recopila componentes de la interfaz de usuario que se reutilizan a lo largo de toda la aplicación.
+    \item \textbf{/lib:} Contiene archivos de configuración de servicios externos. Además, incorpora funciones de utilidades (\texttt{utils.ts}) que implementa funciones específicas empleadas en distintas partes del proyecto. Por otro lado, se incluye un archivo \texttt{ratelimits.ts} que especifica los límites de uso de la aplicación para aliviar la carga en el servidor y proteger a la aplicación.
+    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación organizadas en subdirectorios agrupados por funcionalidad. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte específica de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos subdirectorios nos encontramos un directorio \texttt{/ui} que implementa la interfaz de usuario de este componente junto con su interacción con el \textit{backend}. El directorio \texttt{/server} se encarga de gestionar la lógica de negocio relativa a ese componente. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar de la base de datos la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
+    \item \textbf{/trpc:} Contiene los archivos de configuración de tRPC para establecer una comunicación entre el cliente y el servidor. 
+\end{itemize}
+
+\subsection{Rutas agrupadas en NextJS}
+
+En el directorio \texttt{/src/app}, como se observa en la figura \ref{fig:estructura-rutas-booster} se utilizan grupos de rutas mediante paréntesis, como  \texttt{(auth)}, \texttt{(home)}. Este método, permite organizar la lógica de las rutas de sin afectar directamente la URL final. De esta forma, distintos componentes que pertenezcan a una misma sección, se pueden organizar según su propósito funcional sin alterar el comportamiento de la aplicación. Esta es una buena práctica recomendada en la documentación de NextJS \cite{nextjs-parenthesis}. 
+
+
+\subsection{Acceso a datos mediante ORM}
+
+La interacción con la base de datos se realiza mediante una ORM, más concretamente, con \textit{Drizzle-ORM} como se analizó en \ref{drizzle}. Dentro de \texttt{/src/app/db} se encuentra un archivo \texttt{schema.ts} que permite definir el esquema de datos, tablas y relaciones de forma tipada con TypeScript, facilitando así la integración de los tipos de datos de las tablas, con lo utilizado en la aplicación. 
+
+\subsection{Centralización de integraciones externas}
+
+Los archivos de configuración de servicios externos se encuentran todos en \texttt{/src/lib} para mejorar la organización del código y facilitar su mantenibilidad. Estos archivos tienen información de conexión con los servicios de terceros y utilizan claves de api alojadas en el archivo \texttt{.env.local} 
+
+\subsection{Seguridad mediante variables de entorno}
+
+El proyecto utiliza variables de entorno para almacenar información sensible. Se almacena en el archivo \texttt{.env.local} el cual contiene, claves de API, secretos de webhooks, claves públicas y privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público de código abierto y solo es conocido por el servicio de \textit{hosting}. 
+
+\subsection{Middleware para control de accesos}
+
+Cada solicitud a ruta específicas del \textit{backend} pasan primero por un middleware implementado en el archivo \texttt{middleware.ts}. En \textit{Booster} esto permite proteger ciertas rutas y comprobar la sesión del usuario antes de ejecutar determinadas acciones. Gracias a esto, se evita reutilizar la misma lógica de validación en varias partes.
+
+\subsection{Reutilización de componentes visuales}
+
+Al emplear React.Js para la interfaz de usuario se pueden crear componentes reutilizables. Estos se almacenan en la carpeta \texttt{/componenets} permitiendo así, manejar una apariencia visual coherente en toda la aplicación y evitar reutilizar el mismo código en múltiples partes. Además, esta decisión facilita la evolución del diseño de la aplicación. Cuando se desea actualizar un elemento visual, se modifica el componente y los cambios quedan reflejados en todas las parte donde se utilice.
+
+\subsection{prefetch de tRPC}
+
+En \textit{Booster}, se aprovechan las capacidades de velocidad de obtención de datos que ofrece tRPC como son el \textit{prefetch} de datos. A lo largo de toda la aplicación, los componentes servidores se incluyen en los directorios de \texttt{/src/app} y son los encargados de hacer la precarga de datos almacenándolos en caché. Posteriormente, el componente cliente, que se ejecuta del lado del cliente y encontrado en \text{/src/modules} intenta leer los datos en la caché almacenados por el servidor. De esta forma, se consigue un acceso a los datos más eficiente. Además, mientras se realiza este proceso, se emplean elementos visuales de carga como \textit{Skeletons} y en caso de error, se indica. 
+
+
+%SRC Folder
 \section{Diseño de la Autenticación}
 
 \section{Diseño de la Base de Datos}
@@ -11,15 +182,6 @@
 \section{Arquitectura de procesamiento propia}
 
 \section{Arquitectura de procesamiento con un proveedor}
-
-\section{Diseño de la interfaz de usuario}
-
-    \subsection{Comentarios}
-
-    \subsection{Interfaz de Video}
-
-    \subsection{Secciones de Video}
-
 
 \section{Diseño del Algoritmo de Recomendación}
 

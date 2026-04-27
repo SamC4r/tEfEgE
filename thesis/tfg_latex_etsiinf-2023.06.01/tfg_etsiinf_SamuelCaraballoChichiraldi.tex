@@ -23,6 +23,12 @@
 \usepackage{array}
 \usepackage{ragged2e}
 
+\usepackage{dirtree}
+\usepackage{xcolor}
+\usepackage{fontawesome5}
+\usepackage{tcolorbox}
+\usepackage{float}
+
 \addbibresource{secciones/biblio.bib} % fichero/s donde estará la bibliografía
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -44,6 +50,17 @@
 
 \renewcommand{\chaptermark}[1]{\markboth{\textbf{Capítulo \thechapter. #1}}{}}
 \renewcommand{\sectionmark}[1]{\markright{\textbf{\thesection. #1}}}
+
+
+\newcommand{\foldericon}{\textcolor{orange!85!black}{\faIcon{folder}}}
+\newcommand{\fileicon}{\textcolor{gray!75!black}{\faIcon{file-alt}}}
+\newcommand{\codefileicon}{\textcolor{blue!65!black}{\faIcon{file-code}}}
+\newcommand{\configfileicon}{\textcolor{gray!80!black}{\faIcon{cog}}}
+
+\newcommand{\folder}[1]{\foldericon\hspace{0.45em}\texttt{#1}}
+\newcommand{\file}[1]{\fileicon\hspace{0.45em}\texttt{#1}}
+\newcommand{\codefile}[1]{\codefileicon\hspace{0.45em}\texttt{#1}}
+\newcommand{\configfile}[1]{\configfileicon\hspace{0.45em}\texttt{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Configuración para profundidad de la numeración e índice
