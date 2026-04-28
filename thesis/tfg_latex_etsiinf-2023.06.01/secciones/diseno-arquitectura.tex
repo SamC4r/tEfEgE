@@ -10,6 +10,8 @@ En esta sección se describen los patrones de diseño y las mejores prácticas e
 Se ha optado por utilizar un mono-repositorio \footnote{Se entiende por mono-repositorio a aquel proyecto software donde se utiliza un único repositorio para almacenar el código. Es decir, es un repositorio que contiene el código de todos los módulos de la aplicación que, aunque están relacionados, podrían funcionar de forma independiente.} utilizando el framework NextJS, lo que permite una gestión centralizada del código. Además, la integración del \textit{Frontend} con el \textit{Backend} se realiza de forma más fluida gracias a la habilidad de NextJS para controlar ambos. Es decir, ambos componentes están en el mismo repositorio mejorando así la experiencia de desarrollo y despliegue. 
 A continuación, se detalla la estructura de archivos del proyecto. 
 
+\clearpage
+
 \subsection{Estructura general de archivos}
 %FILES FROM BOOSTER
 \begin{figure}[H]
@@ -19,7 +21,7 @@ A continuación, se detalla la estructura de archivos del proyecto.
     colback=white,
     fontupper=\large,
     boxrule=0.0pt,
-    width=0.8\textwidth,
+    width=1\textwidth,
 ]
 
 \scriptsize
@@ -122,7 +124,7 @@ A continuación, se detalla la estructura de archivos del proyecto.
 }
 \end{tcolorbox}
 
-\caption{Estructura del backend}
+\caption{Estructura del backend y frontend}
 \label{fig:estructura-tecnica-booster}
 \end{figure}
 
@@ -140,7 +142,7 @@ El proyecto emplea el principio de separación de funcionalidades dividiendo en 
     \item \textbf{/db:} Se encarga de la gestión de la base de datos \textit{NeonDB} y su ORM \textit{Drizzle-ORM}.
     \item \textbf{/components}: Recopila componentes de la interfaz de usuario que se reutilizan a lo largo de toda la aplicación.
     \item \textbf{/lib:} Contiene archivos de configuración de servicios externos. Además, incorpora funciones de utilidades (\texttt{utils.ts}) que implementa funciones específicas empleadas en distintas partes del proyecto. Por otro lado, se incluye un archivo \texttt{ratelimits.ts} que especifica los límites de uso de la aplicación para aliviar la carga en el servidor y proteger a la aplicación.
-    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación organizadas en subdirectorios agrupados por funcionalidad. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte específica de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos subdirectorios nos encontramos un directorio \texttt{/ui} que implementa la interfaz de usuario de este componente junto con su interacción con el \textit{backend}. El directorio \texttt{/server} se encarga de gestionar la lógica de negocio relativa a ese componente. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar de la base de datos la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
+    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación organizadas en subdirectorios agrupados por funcionalidad. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte específica de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos subdirectorios nos encontramos un directorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. El directorio \texttt{/server} se encarga de gestionar la lógica de negocio relativa a ese componente. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar de la base de datos la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
     \item \textbf{/trpc:} Contiene los archivos de configuración de tRPC para establecer una comunicación entre el cliente y el servidor. 
 \end{itemize}
 
@@ -171,13 +173,86 @@ Al emplear React.Js para la interfaz de usuario se pueden crear componentes reut
 
 \subsection{prefetch de tRPC}
 
-En \textit{Booster}, se aprovechan las capacidades de velocidad de obtención de datos que ofrece tRPC como son el \textit{prefetch} de datos. A lo largo de toda la aplicación, los componentes servidores se incluyen en los directorios de \texttt{/src/app} y son los encargados de hacer la precarga de datos almacenándolos en caché. Posteriormente, el componente cliente, que se ejecuta del lado del cliente y encontrado en \text{/src/modules} intenta leer los datos en la caché almacenados por el servidor. De esta forma, se consigue un acceso a los datos más eficiente. Además, mientras se realiza este proceso, se emplean elementos visuales de carga como \textit{Skeletons} y en caso de error, se indica. 
+
+En \textit{Booster}, se utiliza tRPC para optimizar la obtención de datos mediante técnicas de precarga. Esto permite recuperar la información desde el lado del servidor antes de que los componentes del cliente la necesiten, como se analizó en \ref{trpc}.  
+
+En esta implementación, los componentes del servidor encargados de la precarga (\textit{prefetch}) se encuentran dentro del directorio \texttt{/src/app}. Aquí, se ejecutan procedimientos tRPC y se preparan los datos correspondientes que posteriormente serán utilizados por el cliente. A continuación, los componentes cliente, organizados en \texttt{/src/modules} acceden a esos datos disponibles en la caché y por tanto, se reducen las solicitudes al servidor. Esto mejora la experiencia de usuario y disminuye los tiempos de carga, generando así, una navegación más fluida. 
+
+Además, mientras se realiza este proceso, se emplean elementos visuales de carga como \textit{Skeletons}. En caso de error, se muestra una indicación visual adecuada. 
+
+\subsection{Convención de nombres y estructura}
+
+El proyecto utiliza una estructura de carpetas clara y con nombres descriptivos para los módulos y las secciones. Esto facilita la navegación dentro del código y la mantenibilidad del mismo. 
+
+Asimismo, las variables dentro del proyecto siguen la convención \textit{camelCase} y empleando nombres descriptivos.  
+
+\subsection{procedimientos públicos y protegidos}
+
+En \textit{Booster} se implementan 2 tipos de procedimientos para interactuar con el servidor: público y privado. Un procedimiento público denotado como \textit{baseProcedure} pueden ser consumidos sin requerir una sesión autenticada. Por otro lado, un procedimiento privado (\textit{protectedProcedure}) requiere verificar la identidad del usuario antes de permitir la ejecución de una acción. 
+
+Esto es útil para implementar mecanismos que requieran identificar previamente al usuario primero y además, evitar reutilizar el mismo código en distintos lugares. Basta con definir una vez las comprobaciones de sesión dentro de \textit{protectedProcedure} y tRPC se encarga de ejecutarlas en cada procedimiento protegido.
 
 
-%SRC Folder
+
 \section{Diseño de la Autenticación}
 
+Como se analizó en \ref{clerk}, \textit{Booster} utiliza \textit{Clerk}, un proveedor externo para la gestión de usuarios dentro de la aplicación. Además, se siguieron las recomendaciones y los pasos de integración descritos por la documentación oficial de \textit{Clerk} para NextJS \cite{clerk-nextjs-docs}. 
+A continuación, se detallan los elementos más relevantes a tener en cuenta para la integración de este servicio de autenticación. 
+
+\subsection{Middleware}
+
+La protección de rutas se implementa mediante el uso de un middleware identificado por \textit{Clerk} como \texttt{clerkMiddleware()} y encontrado en el archivo \texttt{middleware.ts}. Esto permite interceptar solicitudes y comprobar si el usuario tiene un sesión válida antes de acceder a distintas partes de la aplicación. 
+
+Esto se emplea para proteger rutas que requieren un inicio de sesión previo del usuario como es el \textit{/studio}. El \textit{/studio}, es la sección donde un creador de contenido puede gestionar sus videos, por tanto, solo tiene sentido con una sesión activa del usuario.
+
+A continuación, se muestran fragmentos del archivo \texttt{middleware.ts}.
+
+\begin{lstlisting}[language=TypeScript]
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
+
+const isProtectedRoute = createRouteMatcher([
+    "/studio(.*)",
+])
+
+export default clerkMiddleware(async (auth, req) => {
+    if(isProtectedRoute(req)) await auth.protect();
+});
+
+export const config = {
+    matcher: [
+        // Skip Next.js internals and all 
+        // static files, unless found in search params
+        '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png
+        |gif|svg|ttf|woff2?|csv|docx?|xlsx?|zip|webmanifest|xml)).*)',
+
+        // Always run for API routes
+        '/(api|trpc)(.*)',
+    ],
+};
+
+\end{lstlisting}
+
+Aquí se observa como se implementa \textit{Clerk} para aplicar reglas de autenticación antes de permitir el acceso a ciertas rutas. Se importa \texttt{clerkMiddleware}, que integra el sistema de autenticación de Clerk en el NextJS, y \texttt{createRouteMatcher} para definir patrones de rutas a las cuales aplicar reglas.
+
+La constante \texttt{isProtectedRoute} define como ruta protegida solo a \texttt{/studio(.*)}. Esto significa que cualquier acceso a una ruta que comience por \texttt{/studio} activará la lógica de protección de rutas, que en este caso, requiere una sesión activa del usuario.
+
+Dentro de \texttt{clerkMiddleware()}, se comprueba si la solicitud entrante coincide con una ruta protegida mediante \texttt{if(isProtectedRoute(req))}. Si la condición se cumple, se ejecuta \texttt{auth.protect()}, que impide el acceso a usuarios no autenticados. De esta forma, la lógica de protección no tiene que repetirse dentro de cada página.
+
+Finalmente, la propiedad \texttt{matcher} indica sobre qué solicitudes debe ejecutarse el middleware. La primera regla evita aplicar el middleware sobre archivos internos de NextJS y archivos estáticos, como imágenes, hojas de estilo, fuentes o documentos. La segunda regla hace que el middleware también se ejecute sobre rutas \texttt{/api} y \texttt{/trpc}. Es importante notar que esto no hace que todas estas rutas queden automáticamente protegidas. En cambio, esto solo indica que un acceso a ellas invoca una llamada al middleware. La protección se aplica cuando la ruta coincide con lo definido en \texttt{isProtectedRoute}, porque es el único caso donde se ejecuta \texttt{auth.protect()}.
+
+\subsection{Usuario Clerk vs Usuario Interno}
+
+En la aplicación se debe coordinar la identificación de un usuario gestionado por \textit{Clerk} con su correspondiente usuario almacenado en la base de datos interna. Por esa razón, cada usuario de la tabla \texttt{users} contiene un identificador interno (\textit{id}) y, un atributo \textit{clerkId}. El \textit{id} se usa en la aplicación para identificar al usuario y realizar consultas con la base de datos, funcionando como clave primaria de la entidad usuario, mientras que \textit{clerkId}, funciona para asociar el usuario identificado por \textit{Clerk} al usuario interno. 
+
+Esto permite que la aplicación tenga su propio modelo de datos sin depender del proveedor externo. 
+
+\subsection{Creación y Sincronización de Usuarios}
+
+Cuando se crea un nuevo usuario en la aplicación mediante un registro, se modifican sus datos o se eliminan, se hace mediante los servicios de \textit{Clerk}. Sin embargo, como también se deben reflejar los cambios en la base de datos interna, se utiliza un \textit{webhook} para sincronizar los datos. Este webhook se encuentra definido en la ruta \texttt{/src/app/api/users/webhook/route.ts} y recibe eventos enviados por \textit{Clerk} cuando se crea, actualiza o elimina un usuario. El campo \textit{clerkId} es enviado por \textit{Clerk} en estas peticiones para identificar al usuario modificado y actúa como vínculo entre ambos sistemas. 
+
 \section{Diseño de la Base de Datos}
+
+
 
 \section{Arquitectura de procesamiento propia}
 

@@ -791,6 +791,7 @@
       \strng{authornamehash}{715102f7c5e27c5e4a213cc505bd2161}
       \strng{authorfullhash}{715102f7c5e27c5e4a213cc505bd2161}
       \strng{authorfullhashraw}{715102f7c5e27c5e4a213cc505bd2161}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -1010,6 +1011,38 @@
       \endverb
       \verb{url}
       \verb https://nextjs.org/docs/app/api-reference/file-conventions/route-groups
+      \endverb
+    \endentry
+    \entry{clerk-nextjs-docs}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=715102f7c5e27c5e4a213cc505bd2161}{%
+           family={{Clerk}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{fullhash}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{fullhashraw}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{bibnamehash}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{authorbibnamehash}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{authornamehash}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{authorfullhash}{715102f7c5e27c5e4a213cc505bd2161}
+      \strng{authorfullhashraw}{715102f7c5e27c5e4a213cc505bd2161}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Next.js Quickstart (App Router) - Getting started}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://clerk.com/docs/nextjs/getting-started/quickstart
+      \endverb
+      \verb{url}
+      \verb https://clerk.com/docs/nextjs/getting-started/quickstart
       \endverb
     \endentry
   \enddatalist

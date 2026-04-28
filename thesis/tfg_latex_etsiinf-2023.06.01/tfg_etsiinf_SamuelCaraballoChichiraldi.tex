@@ -62,6 +62,8 @@
 \newcommand{\codefile}[1]{\codefileicon\hspace{0.45em}\texttt{#1}}
 \newcommand{\configfile}[1]{\configfileicon\hspace{0.45em}\texttt{#1}}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Configuración para profundidad de la numeración e índice
 \addto\captionsspanish{\renewcommand{\contentsname}{Tabla de contenidos}}
@@ -116,6 +118,20 @@
   keywordstyle=\bfseries,
   stringstyle=,
   emphstyle=\itshape
+}
+
+\lstdefinelanguage{TypeScript}{
+  morekeywords={
+    import, from, export, default, const, let, var,
+    async, await, if, else, return, true, false,
+    null, undefined, type, interface, enum, class,
+    extends, implements, public, private, protected,
+    readonly, function, new
+  },
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]',
+  morestring=[b]",
 }
 
 \lstset{

@@ -20,7 +20,7 @@ En el caso del proyecto Booster, TypeScript resulta una herramienta útil debido
 Más técnicamente, a diferencia de JavaScript, en TypeScript se pueden definir estructuras complejas y detectar errores de forma más clara. A modo de ejemplo, se pueden declarar variables de la siguiente forma:
 
 
-\begin{lstlisting}[language=c]
+\begin{lstlisting}[language=TypeScript]
     // con ':' se indica el tipo de la variable 
     //a diferencia de JavaScript donde solo se incluye un let. 
     saludos: string = "Hola"; 
@@ -167,6 +167,8 @@ Esta alternativa se menciona como una herramienta importante que se podría habe
 
 \subsection{Comunicación Cliente Servidor - tRPC}
 
+\label{trpc}
+
 La comunicación cliente-servidor es esencial dentro de cualquier aplicación web moderna. En la plataforma Booster, esto permite que el \textit{frontend} se comunique con el \textit{backend} para recuperar datos, actualizarlos y ejecutar funciones como registro de usuario e inicio de sesión. Existen diversos enfoques, siendo APIs Rest o GraphQL las más conocidas. Sin embargo, para los efectos del proyecto se ha optado por una tecnología llamada \textbf{tRPC}. Esta, está orientada al desarrollo de RPCs (Remote Procedure Calls) con TypeScript que permite construir procedimientos de comunicación entre cliente y servidor respetando los tipos y garantizando coherencia y consistencia.
 
 \textbf{tRPC} es una de las tecnologías fundamentales en este proyecto facilitando el intercambio de datos entre cliente y servidor. A diferencia de un enfoque REST, con tRPC se definen procedimientos en el servidor y el cliente se encarga de consumirlos sin necesidad de especificar un esquema de endpoints o capas adicionales de generación de tipos. Además, la utilización de esta biblioteca mejora la seguridad y la coherencia de tipos de extremo a extremo. Es decir, un tipo definido en el \textit{backend} se pueden compartir fácilmente hacia el \textit{frontend}, convirtiéndola en una herramienta ideal para el desarrollo \textit{full-stack}.
@@ -251,6 +253,8 @@ Otro aspecto importante a mencionar es su elevada curva de aprendizaje. Con los 
 \pagebreak
 
 \subsection{Autenticación - ClerkAuth}
+
+\label{clerk}
 
 La autenticación de usuarios es también un proceso fundamental en cualquier aplicación software. Para este proyecto se han evaluado distintas formas de gestionarlo. Entre ellas destacan la utilización de librerías como \textbf{BetterAuth} y \textbf{NextAuth}. Sin embargo, para facilitar el desarrollo, se ha optado por incluir un proveedor de autenticación y gestión de usuario llamado \textbf{Clerk} \cite{clerk}. 
 

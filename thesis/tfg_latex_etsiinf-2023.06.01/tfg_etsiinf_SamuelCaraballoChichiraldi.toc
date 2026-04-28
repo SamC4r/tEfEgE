@@ -86,29 +86,32 @@
 \contentsline {subsection}{\numberline {6.1.8}Middleware para control de accesos}{117}{subsection.6.1.8}%
 \contentsline {subsection}{\numberline {6.1.9}Reutilización de componentes visuales}{117}{subsection.6.1.9}%
 \contentsline {subsection}{\numberline {6.1.10}prefetch de tRPC}{117}{subsection.6.1.10}%
+\contentsline {subsection}{\numberline {6.1.11}Convención de nombres y estructura}{118}{subsection.6.1.11}%
+\contentsline {subsection}{\numberline {6.1.12}procedimientos públicos y protegidos}{118}{subsection.6.1.12}%
 \contentsline {section}{\numberline {6.2}Diseño de la Autenticación}{118}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{118}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Arquitectura de procesamiento propia}{118}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Arquitectura de procesamiento con un proveedor}{118}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Diseño del Algoritmo de Recomendación}{118}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Diseño de la búsqueda semántica de videos}{118}{section.6.7}%
-\contentsline {chapter}{\numberline {7}Desarrollo}{119}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Implementación del procesamiento de videos propio}{119}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos con proveedor}{119}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Implementación de los comentarios}{119}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Patrones y mejores prácticas en código}{119}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{119}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{119}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Pruebas, Validación y Riesgos de Seguridad}{121}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{121}{section.8.1}%
-\contentsline {section}{\numberline {8.2}FeedBack de Usuarios}{121}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Vulnerabilidades detectadas y medidas tomadas}{121}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Medidas de seguridad}{121}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Protección acceso a rutas}{121}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Protección acceso y modificación de videos}{121}{subsection.8.4.2}%
-\contentsline {subsection}{\numberline {8.4.3}Limitaciones de uso (Rate Limits)}{121}{subsection.8.4.3}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{123}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Análisis de Impacto}{125}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{127}{section*.73}%
-\contentsline {part}{Anexos}{133}{part*.75}%
-\contentsline {chapter}{\numberline {A}Primer anexo}{133}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {6.2.1}Middleware}{118}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Usuario Clerk vs Usuario Interno}{120}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Creación y Sincronización de Usuarios}{120}{subsection.6.2.3}%
+\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{120}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Arquitectura de procesamiento propia}{120}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Arquitectura de procesamiento con un proveedor}{120}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Diseño del Algoritmo de Recomendación}{120}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Diseño de la búsqueda semántica de videos}{120}{section.6.7}%
+\contentsline {chapter}{\numberline {7}Desarrollo}{121}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Implementación del procesamiento de videos propio}{121}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos con proveedor}{121}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Implementación de los comentarios}{121}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Acceder y modificar datos de usuario}{121}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Acceder y modificar datos de video}{121}{section.7.5}%
+\contentsline {chapter}{\numberline {8}Pruebas, Despliegue y Riesgos de Seguridad}{123}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{123}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Despliegue}{123}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Feedback de Usuarios}{123}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Vulnerabilidades detectadas y acciones tomadas}{123}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Protección acceso y modificación de videos}{123}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Limitaciones de uso (Rate Limits)}{123}{subsection.8.4.2}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{125}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Análisis de Impacto}{127}{chapter.10}%
+\contentsline {chapter}{Bibliografía}{129}{section*.73}%
+\contentsline {part}{Anexos}{135}{part*.75}%
+\contentsline {chapter}{\numberline {A}Primer anexo}{135}{appendix.Alph1}%
