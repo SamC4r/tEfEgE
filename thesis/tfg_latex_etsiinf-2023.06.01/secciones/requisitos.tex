@@ -2157,18 +2157,30 @@ Por otro lado, con respecto a las interacciones sociales se tiene el siguiente d
   \label{interaccion}
 \end{figure}
 
-En \ref{interaccion}, se describen las relaciones entre las entidades usuario, video y comentarios que corresponden a interacciones sociales dentro de la plataforma. Como se puede observar, un usuario es capaz de visualizar un número arbitrario de videos a lo largo del tiempo en la plataforma. Además, un video, puede ser visto por muchos usuarios. Para dibujar gráficas de estadísticas de visualizaciones, se debe conocer cuándo se ha visto un video. Además, un usuario puede calificar cada video en una escala del 1 al 5 y estos, pueden tener un gran número de calificaciones las cuales determinan la valoración media del contenido. Cabe destacar que un usuario solo puede dejar a lo sumo una calificación en un video. Es decir, no se puede calificar el mismo video 2 veces seguidas, pero sí se puede modificar o eliminar la valoración.  
+En \ref{interaccion}, se describen las relaciones entre las entidades usuario, video y comentarios que corresponden a interacciones sociales dentro de la plataforma. Como se puede observar, un usuario es capaz de visualizar un número arbitrario de videos a lo largo del tiempo en la plataforma. Además, un video, puede ser visto por muchos usuarios. Para dibujar gráficas con estadísticas de visitas, se debe conocer cuándo se ha visto un video. Además, un usuario puede calificar cada video en una escala del 1 al 5 y estos, pueden tener un gran número de calificaciones que determinan la valoración media del contenido. Cabe destacar que un usuario solo puede dejar a lo sumo una calificación en un video. Es decir, no se puede calificar el mismo video 2 veces seguidas, pero es posible modificar o eliminar la valoración.  
 
 
+Asimismo, un usuario puede crear un comentario en un video. Cada usuario puede escribir un número indefinido de comentarios pero estos solo pueden tener un único autor. No existen comentarios anónimos, siempre se debe conocer el usuario que lo creó. Además, cada uno de estos debe estar asociado a exactamente un video. Es decir, no existen comentarios que no tengan un video o que estén repetidos en varios. Sin embargo, un video no tiene límite superior de comentarios ni otras restricciones adicionales.
 
+Otro aspecto importante a destacar es que, un comentario puede tener muchas respuestas modelado mediante un atributo respuestas que mantiene la cuenta de estas. Sin embargo, un comentario solo puede responder como máximo a un único mensaje padre. 
 
+\clearpage
 Por último, en cuanto a la gamificación y la moderación del contenido se obtiene el siguiente diagrama: 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.7\textwidth]{diagrama-er/gamificacion-reporte.png}
   \caption{Diagrama Entidad Relación - Gamificación y Moderación}
+  \label{gami}
 \end{figure}
+
+En \ref{gami}, se describen las relaciones entre las entidades video, reporte, usuario, donación XP y asset. Estas detallan el vínculo que tienen las acciones relativas a la moderación de contenido y otros aspectos de gamificación como la donación de puntos de experiencia o la compra de artículos. 
+
+Como se puede observar en la parte superior del gráfico, un video puede tener un número indefinido de reportes pero un reporte, siempre estará asociado a un único video. Además, este reporte siempre será creado por un usuario quien puede crear un varios reportes. Además, los usuarios son capaces de votar en una denuncia indicando su tipo de voto: en contra o a favor. 
+
+Más abajo, se ve que un usuario puede realizar 0 donaciones o las que quiera hacia otro canal. Para esto, se necesita saber el identificador del canal que recibe la donación de puntos. Además, un usuario puede recibir un número indefinido de donaciones. 
+
+Por otro lado, un usuario puede equiparse un número arbitrario de assets o títulos y cada título puede pertenecer a muchos usuarios. Además, cada uno de estos tiene un precio y en algunos casos, un nivel requerido para desbloquearlo.   
 
 
 \FloatBarrier

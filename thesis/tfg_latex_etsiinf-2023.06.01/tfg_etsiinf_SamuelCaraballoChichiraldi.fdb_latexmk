@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tfg_etsiinf_SamuelCaraballoChichiraldi"] 1777461960.30128 "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777462460.50513 0
+["biber tfg_etsiinf_SamuelCaraballoChichiraldi"] 0 "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777467915.08848 -1
   "secciones/biblio.bib" 1777374972 7918 ed6d47fa3288f32366505826292665c8 ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" 1777462460 109947 6203913af132d21411bf550c29b9f23f "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" 1777467914 109947 6203913af132d21411bf550c29b9f23f "pdflatex"
   (generated)
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.blg"
   (rewritten before read)
-["pdflatex"] 1777462450.24757 "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" "tfg_etsiinf_SamuelCaraballoChichiraldi.pdf" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777462460.50587 0
+["pdflatex"] 1777467903.68023 "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" "tfg_etsiinf_SamuelCaraballoChichiraldi.pdf" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777467915.0892 0
   "C:/Users/max/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777461000 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/max/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1774524133 13332519 f75fea545f5fea1171d2d0d0409a830b ""
   "C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -267,7 +267,7 @@
   "casos-uso/subir-video.png" 1776955091 63571 01e414a8cd11c8174c6ef0320adaf314 ""
   "datos_tfg.tex" 1774716570 979 5acc582971bc64fcb37db8a0773fa8a0 ""
   "diagrama-er/comunidades-usuarios-videos.png" 1777130010 161450 e47e77d01ea743065361bb74859e8946 ""
-  "diagrama-er/gamificacion-reporte.png" 1777132818 182561 c108d7f44f59ea40a638cf75f8fabca8 ""
+  "diagrama-er/gamificacion-reporte.png" 1777467558 421881 0341291380e4e6309b43fa8bcd27f5c9 ""
   "diagrama-er/interaccion-social.png" 1777132356 158968 a38f3e4b4c0967f82875db16e247575b ""
   "diagrama-er/liamerd.png" 1777460615 407856 426b28d739bddf02d4768e46b9281b5d ""
   "diagramas-secuencia/inicio-sesion.png" 1777113591 42408 cadc754a17e4ba33f3e96bdcbde3d93d ""
@@ -332,15 +332,15 @@
   "secciones/innovaciones.tex" 1777289193 35511 f30f93ea50240898bf909877374a0398 ""
   "secciones/intro.tex" 1776008517 25410 fc25f5daefc1a7eacb76aac0eb3e00e7 ""
   "secciones/pruebas.tex" 1777375796 395 e7294a72062f5921d2db8326cf357c06 ""
-  "secciones/requisitos.tex" 1777462451 92275 aa890036a4c7d4f6e5499b91d47e1000 ""
+  "secciones/requisitos.tex" 1777467911 94302 00177f5253aafa6390ef559e129cd49c ""
   "secciones/resumen.tex" 1776080997 1945 0558af780997f7617ab496af9ef4db84 ""
   "secciones/tecnologias.tex" 1777371252 32882 c53d9a0add63d95aa804a26f75f8c07a ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.aux" 1777462459 38268 cbd8b6627ac4d2832dc38c5b70fd3884 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.aux" 1777467914 38376 ab2bd299492babc47e7480f4211723f4 "pdflatex"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" 1777461968 44175 bafa0508894e88b4453f84acfb6d7ea4 "biber tfg_etsiinf_SamuelCaraballoChichiraldi"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.out" 1777462460 21005 4cd39cb5831029efbcb6dffca57543da "pdflatex"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml" 1777462460 2677 6aaf639f93ea75d84fe3f5187ae959a2 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.out" 1777467914 21005 4cd39cb5831029efbcb6dffca57543da "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml" 1777467914 2677 6aaf639f93ea75d84fe3f5187ae959a2 "pdflatex"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.tex" 1777461070 7636 8268e093d48288c0803ea0093955b7b3 ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.toc" 1777462460 10433 2e556828eaa209b172ce9954b67b9a27 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.toc" 1777467914 10433 2e556828eaa209b172ce9954b67b9a27 "pdflatex"
   (generated)
   "tfg_etsiinf_SamuelCaraballoChichiraldi.aux"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf"

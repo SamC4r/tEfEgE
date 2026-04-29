@@ -233,7 +233,7 @@ digraph ER_Moderacion_Gamificacion {
   Activo -> categoriaActivo
   Activo -> nivelRequerido
 
-  Usuario -> reporta [label="(0,1)"]
+  Usuario -> reporta [label="(1,1)"]
   reporta -> Reporte [label="(0,n)"]
 
   Video -> esReportado [label="(1,1)"]
