@@ -2127,27 +2127,40 @@ La figura \ref{5.12} detalla el proceso que se sigue cuando un usuario accede a 
 
 
 
-\section{Diagrama Entidad Relación}
+\section{Diagrama Conceptual de la Base de Datos}
+
+\label{diagrama-er}
 
 En esta sección se presenta un diagrama conceptual de la base de datos, siguiendo el modelo entidad relación de Chen. Como el diagrama completo es muy extenso, se ha dividido en varias partes y se han omitido algunos atributos para facilitar su lectura. Más adelante en la sección de diseño de la base de datos se presenta la información completa de las tablas y sus relaciones. 
 
+En primer lugar, con respecto a la publicación de contenido se tiene lo siguiente:
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{diagrama-er/comunidades-usuarios-videos.png}
   \caption{Diagrama Entidad Relación - Comunidades, Usuarios y Videos}
+  \label{carga-videos}
 \end{figure}
 
-\clearpage
-Por otro lado, respecto a las interacciones sociales se tiene lo siguiente:
+En \ref{carga-videos} se observa el diagrama conceptual de datos que relaciona a las entidades usuario, comunidad, videos y categoría. Estas relaciones permiten cargar un video a la plataforma y relacionan el contenido. Como se puede ver, cualquier usuario puede publicar una cantidad arbitraria de videos y estos, solo pueden pertenecer a un único usuario. Es decir, no existen videos que no tengan un propietario o autor. Por otro lado, al publicar un video se puede seleccionar opcionalmente una categoría disponible en el sistema. De la misma forma, un video se puede asociar a como mucho una sola comunidad, pero una comunidad, puede tener un gran número de videos asociados. 
+
+Una comunidad es creada por un usuario pero puede pertenecer a varios usuarios denominados "moderadores ", los cuales se pueden ir añadiendo. Por lo tanto, si una comunidad no permite publicar contenido, rechazará todos los videos que no hayan sido creador por alguno de los moderadores de la comunidad. 
+
+El atributo de \textit{visibildad} de un video, determina si este es público o no en la plataforma. Esto quiere decir que, en caso de que la visibilidad sea privada, el algoritmo de recomendación no tendrá en cuenta este video para mostrarlo a los usuarios. Además, mientras el estado no llegue a \textit{procesado}, se seguirá ignorando por los algoritmos que sugieren contenido.  
+
+Por otro lado, con respecto a las interacciones sociales se tiene el siguiente diagrama:
 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{diagrama-er/interaccion-social.png}
   \caption{Diagrama Entidad Relación - Interacción Social}
+  \label{interaccion}
 \end{figure}
 
-\clearpage
+En \ref{interaccion}, se describen las relaciones entre las entidades usuario, video y comentarios que corresponden a interacciones sociales dentro de la plataforma. Como se puede observar, un usuario es capaz de visualizar un número arbitrario de videos a lo largo del tiempo en la plataforma. Además, un video, puede ser visto por muchos usuarios. Para dibujar gráficas de estadísticas de visualizaciones, se debe conocer cuándo se ha visto un video. Además, un usuario puede calificar cada video en una escala del 1 al 5 y estos, pueden tener un gran número de calificaciones las cuales determinan la valoración media del contenido. Cabe destacar que un usuario solo puede dejar a lo sumo una calificación en un video. Es decir, no se puede calificar el mismo video 2 veces seguidas, pero sí se puede modificar o eliminar la valoración.  
+
+
+
 
 Por último, en cuanto a la gamificación y la moderación del contenido se obtiene el siguiente diagrama: 
 
