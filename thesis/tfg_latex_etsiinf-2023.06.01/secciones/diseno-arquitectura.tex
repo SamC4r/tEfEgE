@@ -4,10 +4,10 @@
 % Explicar mono-repo de NextJS, /components poniendo archivos servidor fuera
 \section{Patrones y mejores prácticas}
 
-En esta sección se describen los patrones de diseño y las mejores prácticas empleadas en el desarrollo de \textit{Booster}.
+En esta sección se describen los patrones de diseño y las mejores prácticas empleadas en el desarrollo de \textit{Booster}. El objetivo es analizar las decisiones de diseño adoptadas que permitieron crear una aplicación modular, mantenible, segura y escalable. 
 
 \subsection{Mono-Repositorio con NextJS}
-Se ha optado por utilizar un mono-repositorio \footnote{Se entiende por mono-repositorio a aquel proyecto software donde se utiliza un único repositorio para almacenar el código. Es decir, es un repositorio que contiene el código de todos los módulos de la aplicación que, aunque están relacionados, podrían funcionar de forma independiente.} utilizando el framework NextJS, lo que permite una gestión centralizada del código. Además, la integración del \textit{Frontend} con el \textit{Backend} se realiza de forma más fluida gracias a la habilidad de NextJS para controlar ambos. Es decir, ambos componentes están en el mismo repositorio mejorando así la experiencia de desarrollo y despliegue. 
+Se ha optado por utilizar un mono-repositorio \footnote{Se entiende por mono-repositorio a aquel proyecto software donde se utiliza un único repositorio para almacenar el código. Es decir, es un repositorio que contiene el código de todos los módulos de la aplicación que, aunque están relacionados, podrían funcionar de forma independiente.} mediante el framework NextJS, que permite una gestión centralizada del código. Además, la integración del \textit{Frontend} con el \textit{Backend} se realiza de forma más fluida gracias a las capacidades que ofrece NextJS. Ambos componentes están en el mismo repositorio mejorando así la experiencia de desarrollo y despliegue. 
 A continuación, se detalla la estructura de archivos del proyecto. 
 
 \clearpage
@@ -136,13 +136,13 @@ Las figuras \ref{fig:estructura-rutas-booster} y \ref{fig:estructura-tecnica-boo
 
 \subsection{Separación de funcionalidades y Arquitectura modular}
 
-El proyecto emplea el principio de separación de funcionalidades dividiendo en capas los módulos con distintos funcionamiento. En la figura \ref{fig:estructura-tecnica-booster} se observan distintos directorios donde cada uno cumple un objetivo distinto:
+El proyecto emplea el principio de separación de funcionalidades dividiendo en capas los módulos con distinto propósito. En la figura \ref{fig:estructura-tecnica-booster} se observan diferentes directorios donde cada uno cumple un objetivo específico:
 
 \begin{itemize}
     \item \textbf{/db:} Se encarga de la gestión de la base de datos \textit{NeonDB} y su ORM \textit{Drizzle-ORM}.
     \item \textbf{/components}: Recopila componentes de la interfaz de usuario que se reutilizan a lo largo de toda la aplicación.
     \item \textbf{/lib:} Contiene archivos de configuración de servicios externos. Además, incorpora funciones de utilidades (\texttt{utils.ts}) que implementa funciones específicas empleadas en distintas partes del proyecto. Por otro lado, se incluye un archivo \texttt{ratelimits.ts} que especifica los límites de uso de la aplicación para aliviar la carga en el servidor y proteger a la aplicación.
-    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación organizadas en subdirectorios agrupados por funcionalidad. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte específica de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos subdirectorios nos encontramos un directorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. El directorio \texttt{/server} se encarga de gestionar la lógica de negocio relativa a ese componente. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar de la base de datos la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
+    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento, como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte concreta de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos directorios se encuentra un subdirectorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. Además, existe otro subdirectorio \texttt{/server}, que se encarga de gestionar la lógica de negocio relativa a ese componente. Normalmente en esta sección es donde se, crean, recuperan, actualizan y eliminan registros en la based de datos. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
     \item \textbf{/trpc:} Contiene los archivos de configuración de tRPC para establecer una comunicación entre el cliente y el servidor. 
 \end{itemize}
 
@@ -155,9 +155,25 @@ En el directorio \texttt{/src/app}, como se observa en la figura \ref{fig:estruc
 
 La interacción con la base de datos se realiza mediante una ORM, más concretamente, con \textit{Drizzle-ORM} como se analizó en \ref{drizzle}. Dentro de \texttt{/src/app/db} se encuentra un archivo \texttt{schema.ts} que permite definir el esquema de datos, tablas y relaciones de forma tipada con TypeScript, facilitando así la integración de los tipos de datos de las tablas, con lo utilizado en la aplicación. 
 
+\subsection{Esquemas de validación}
+
+Una buena práctica empleada en el desarrollo de \textit{Booster} consiste en la utilización de esquemas de validación para controlar los datos que se manejan en la aplicación. Antes de que se ejecuta la lógica del sistema, se comprueba que los datos cumplen con ciertas restricciones. Mediante la utilización de una herramienta conocida como \textbf{Zod}, se realiza esta validación, lo que permite reducir errores y entradas inválidas. 
+
+\begin{lstlisting}[language=TypeScript]
+ getFollowersByUserId: baseProcedure
+    .input(z.object({ userId: z.string().uuid() }))
+    .query(async ({ ctx, input }) => {
+        const { userId: creatorId } = input;
+        const { clerkUserId } = ctx;
+
+
+\end{lstlisting}
+
+Este es el código del procedimiento \texttt{getFollowersByUserId} dentro del archivo \texttt{/src/modules/follows/server/procedure.ts} que comprueba que el identificador recibido por el procedimiento sea de tipo \texttt{uuid} y \texttt{string} antes de realizar la operación. 
+
 \subsection{Centralización de integraciones externas}
 
-Los archivos de configuración de servicios externos se encuentran todos en \texttt{/src/lib} para mejorar la organización del código y facilitar su mantenibilidad. Estos archivos tienen información de conexión con los servicios de terceros y utilizan claves de api alojadas en el archivo \texttt{.env.local} 
+Los archivos de configuración de servicios externos se encuentran todos en \texttt{/src/lib} para mejorar la organización del código y facilitar su mantenibilidad. Estos archivos tienen información de conexión con los servicios de terceros y utilizan claves de API alojadas en el archivo \texttt{.env.local} 
 
 \subsection{Seguridad mediante variables de entorno}
 
@@ -254,7 +270,7 @@ Cuando se crea un nuevo usuario en la aplicación mediante un registro, se modif
 
 En la sección \ref{diagrama-er}, se presentaron los diagramas conceptuales de la base de datos. Aquí, se detallan las decisiones de diseño de la misma junto con las características de las tablas teniendo en consideración sus atributos y las restricciones.
 
-El diagrama entidad relación con todos los atributos, relaciones, claves primarias y foráneas se encuentra accesible en este \hyperlink{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy1sOAkEIBdEN9Z4IMqgk8giXnuju7d_KqdbKHrpzFCty7GnCYxlYrgC_TpZ032HzI89LmycbC9NWStUpx-lFemsM1reodsubcc5HxgbJh83xBxJcK1E&active=videos}{enlace} \footnote{\url{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy1sOAkEIBdEN9Z4IMqgk8giXnuju7d_KqdbKHrpzFCty7GnCYxlYrgC_TpZ032HzI89LmycbC9NWStUpx-lFemsM1reodsubcc5HxgbJh83xBxJcK1E&active=videos}}.  En la siguiente figura se observa una captura de pantalla del sitio web que genera el diagrama a partir del esquema definido en \texttt{/src/db/schema.ts}
+El diagrama entidad relación con todos los atributos, relaciones, claves primarias y foráneas se encuentra accesible en este \hyperlink{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm_-7yLbThNsyMFwBvhRD0n2H9Y88pxZ3Fga6bCmtSnmdTtJHozG-i9YuuRnvPDI2SD5sjj_6QyX5}{enlace} \footnote{\url{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm_-7yLbThNsyMFwBvhRD0n2H9Y88pxZ3Fga6bCmtSnmdTtJHozG-i9YuuRnvPDI2SD5sjj_6QyX5}}.  En la siguiente figura se observa una captura de pantalla del sitio web que genera el diagrama a partir del esquema definido en \texttt{/src/db/schema.ts}
 
 \begin{figure}[H]
   \centering
@@ -1506,7 +1522,247 @@ Un usuario, puede reaccionar a un comentario dándole un \textit{me gusta} y por
 \caption{Descripción de la tabla comment\_reactions}
 \end{longtable}
 
+
+%REWARDED VIEWS
+
+Un usuario puede recibir puntos de experiencia por visualizar videos marcados como destacados (featured), que normalmente son anuncios. Por esa razón, surge la tabla \textit{rewarded\_view} que mantiene un registro de las visitas que fueron recompensadas junto con la cantida de puntos de experiencia ganados por el usuario. 
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Visualizaciones recompensadas}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Visualizaciones recompensadas}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& user\_\allowbreak id, video\_\allowbreak id
+& Identificador compuesto que relaciona un usuario con un video recompensado visualizado. En este caso se permite que un usuario pueda conseguir recompensa varias veces sobre un mismo video. Sin embargo, esto solo es posible si se cumplen 24 horas desde la última visita recompensada sobre ese video. 
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& user\_\allowbreak id
+& Identificador del usuario que visualizó el video recompensado.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& video\_\allowbreak id
+& Identificador del video recompensado visualizado por el usuario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& created\_\allowbreak at
+& Momento de creación de la visita recompensada.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización de la visita recompensada.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& xp\_\allowbreak earned
+& Cantidad de puntos de experiencia obtenidos por la visualización recompensada.
+& nullable
+& integer \\
+\hline
+
+\caption{Descripción de la tabla rewarded\_view}
+\end{longtable}
+
+
+%REPORTS
+
+Finalmente, un usuario puede crear una votación de moderación mediante un reporte o, votar sobre una denuncia activa. Esto se modela con las tablas \textit{reports} y \textit{report\_votes}
+
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Reportes}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Reportes}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& id
+& Identificador del reporte o denuncia.
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& video\_\allowbreak id
+& Identificador del video reportado.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& reporter\_\allowbreak id
+& Identificador del usuario que crea el reporte.
+& foreign key, nullable, on delete set null
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& reason
+& Motivo por el cual se reporta el video. Estas razones vienen predefinidas en un \textit{enum} llamado \textit{report\_reasons} que incluye: ai, clickbait, spam,entre otros.
+& not null
+& enum report\_\allowbreak reason \\
+\cline{2-5}
+
+& details
+& Información adicional asociada al reporte proporcionada por el usuario que lo crea.
+& nullable
+& text \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento de creación del reporte.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& expires\_\allowbreak at
+& Fecha y hora de expiración del reporte. 
+& not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla reports}
+\end{longtable}
+
+
+% REPORT VOTES
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Votos de reportes}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Votos de reportes}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& report\_\allowbreak id, user\_\allowbreak id
+& Identificador compuesto que relaciona un reporte con el usuario que vota. No se puede votar 2 veces para el mismo reporte pero sí se puede modificar o eliminar el voto. 
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& report\_\allowbreak id
+& Identificador del reporte votado por el usuario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& user\_\allowbreak id
+& Identificador del usuario que emite
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& vote\_\allowbreak type
+& Tipo del voto emitido por el usuario. Puede ser \textit{agree} o \textit{disagree}
+& not null
+& text \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento en el que el usuario votó.
+& default now, not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla report\_votes}
+\end{longtable}
+
+Toda la información de las tablas se encuentra en el archivo \texttt{/src/db/schema.ts} donde se especifican estas relaciones y los \textit{enums} empleados. 
+
+
+\clearpage
+
+
+
+
 \section{Arquitectura de procesamiento propia}
+
+
 
 \section{Arquitectura de procesamiento con un proveedor}
 
