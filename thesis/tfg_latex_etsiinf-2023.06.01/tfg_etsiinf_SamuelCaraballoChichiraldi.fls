@@ -270,6 +270,8 @@ INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\environ\environ.sty
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\environ\environ.sty
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\trimspaces\trimspaces.sty
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\emptypage\emptypage.sty
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\emptypage\emptypage.sty
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
@@ -1008,6 +1010,12 @@ INPUT .\diagrama-er\liamerd.png
 INPUT .\diagrama-er\liamerd.png
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\courier\pcrr8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\courier\pcrr8r.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkd8t.vf
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8r.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8t.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkli8t.vf
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8r.tfm
 INPUT .\secciones\desarrollo.tex
 INPUT .\secciones\desarrollo.tex
 INPUT .\secciones\desarrollo.tex
@@ -1028,6 +1036,10 @@ INPUT .\secciones\impacto.tex
 INPUT .\secciones\impacto.tex
 INPUT .\secciones\impacto.tex
 INPUT secciones\impacto.tex
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8t.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkl8t.vf
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8r.tfm
 INPUT .\secciones\anexo1.tex
 INPUT .\secciones\anexo1.tex
 INPUT .\secciones\anexo1.tex

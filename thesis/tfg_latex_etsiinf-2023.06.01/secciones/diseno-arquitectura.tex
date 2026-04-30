@@ -262,7 +262,1249 @@ El diagrama entidad relación con todos los atributos, relaciones, claves primar
   \caption{Diagrama Entidad Relación - LiamERD}
 \end{figure}
 
+Los datos, siempre están almacenados en tablas y está adaptado a un sistema \textit{PostgreSQL}. Además, para identificar una entidad, se emplean claves primarias y para establecer relaciones se utilizan claves foráneas.
 
+
+
+\subsection{Tablas}
+
+En esta sección se describen los tipos de datos que almacenan cada una de las tablas junto con su descripción y las restricciones consideradas.
+
+
+%Usuario 
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Usuarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Usuarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria} 
+& id 
+& Identificador del usuario.
+& primary key, default random 
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& equipped\_\allowbreak asset\_\allowbreak id 
+& Identificador del asset equipado por el usuario. 
+& foreign key, nullable 
+& uuid \\
+\cline{2-5}
+
+& equipped\_\allowbreak title\_\allowbreak id 
+& Identificador del título equipado por el usuario. 
+& foreign key, nullable 
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& clerk\_\allowbreak id 
+& Identificador del usuario en Clerk. 
+& unique, not null 
+& text \\
+\cline{2-5}
+
+& name 
+& Nombre del usuario. 
+& not null 
+& text \\
+\cline{2-5}
+
+& username 
+& Nombre de usuario utilizado dentro de la plataforma. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& image\_\allowbreak url 
+& URL de la imagen de perfil del usuario. 
+& not null 
+& text \\
+\cline{2-5}
+
+& created\_\allowbreak at 
+& Momento de creación del usuario. 
+& default now, not null 
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at 
+& Fecha y hora de última actualización de los datos del usuario. 
+& default now, not null 
+& timestamp \\
+\cline{2-5}
+
+& about 
+& Descripción personal o biografía breve del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& instagram 
+& Enlace al de Instagram del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& twitter 
+& Enlace al perfil de Twitter del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& youtube 
+& Enlace al canal de YouTube del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& tiktok 
+& Enlace al perfil de TikTok del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& discord 
+& Enlace al perfil de Discord del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& website 
+& Enlace al sitio web del usuario. 
+& nullable 
+& text \\
+\cline{2-5}
+
+& xp 
+& Cantidad de puntos de experiencia acumulados por el usuario. 
+& default 0 
+& integer \\
+\cline{2-5}
+
+& boost\_\allowbreak points 
+& Cantidad de puntos donados hacia el usuario. 
+& default 0 
+& bigint \\
+\cline{2-5}
+
+& new\_\allowbreak level\_\allowbreak at 
+& Momento en el que el usuario alcanzó un nuevo nivel. 
+& nullable 
+& timestamp \\
+\cline{2-5}
+
+& rewarded\_\allowbreak ads\_\allowbreak enabled 
+& Indica si el usuario habilita los anuncios voluntarios recompensados. 
+& default false 
+& boolean \\
+\cline{2-5}
+
+& vertical\_\allowbreak videos\_\allowbreak enabled 
+& Indica si el usuario habilita los videos en formato vertical. 
+& default true 
+& boolean \\
+\cline{2-5}
+
+& ai\_\allowbreak content\_\allowbreak enabled 
+& Indica si el usuario habilita el contenido hecho por IA en la plataforma. 
+& default true 
+& boolean \\
+\hline
+
+\caption{Descripción de la tabla users}
+\end{longtable}
+
+%Videos
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Videos}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Videos}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& id
+& Identificador único del video dentro del sistema.
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& user\_\allowbreak id
+& Identificador del usuario creador del video.
+& foreign key, not null, on delete cascade, on update cascade
+& uuid \\
+\cline{2-5}
+
+& category\_\allowbreak id
+& Identificador de la categoría asociada al video.
+& foreign key, nullable, on delete set null
+& uuid \\
+\cline{2-5}
+
+& community\_\allowbreak id
+& Identificador de la comunidad asociada al video.
+& foreign key, nullable, on delete set null
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& title
+& Título del video.
+& not null
+& text \\
+\cline{2-5}
+
+& description
+& Descripción del video.
+& nullable
+& text \\
+\cline{2-5}
+
+& playback\_\allowbreak url
+& URL utilizada para reproducir el video.
+& nullable
+& text \\
+\cline{2-5}
+
+& thumbnail\_\allowbreak url
+& URL de la imagen miniatura del video.
+& nullable
+& text \\
+\cline{2-5}
+
+& thumbnail\_\allowbreak key
+& Clave interna asociada a la miniatura del video.
+& nullable
+& text \\
+\cline{2-5}
+
+& preview\_\allowbreak url
+& URL de la vista previa del video.
+& nullable
+& text \\
+\cline{2-5}
+
+& preview\_\allowbreak key
+& Clave interna asociada a la vista previa del video.
+& nullable
+& text \\
+\cline{2-5}
+
+& bunny\_\allowbreak video\_\allowbreak id
+& Identificador del video dentro del servicio externo de procesamiento y almacenamiento de video bunny.net.
+& unique, nullable
+& text \\
+\cline{2-5}
+
+& bunny\_\allowbreak status
+& Estado del video dentro del servicio de bunny.net.
+& nullable
+& text \\
+\cline{2-5}
+
+& bunny\_\allowbreak duration
+& Duración registrada por el servicio externo de video bunny.net.
+& nullable
+& integer \\
+\cline{2-5}
+
+& width
+& Anchura del video en píxeles.
+& nullable
+& integer \\
+\cline{2-5}
+
+& height
+& Altura del video en píxeles.
+& nullable
+& integer \\
+\cline{2-5}
+
+& duration
+& Duración total del video en segundos.
+& default 0, not null
+& integer \\
+\cline{2-5}
+
+& visibility
+& Visibilidad del video dentro de la plataforma (público o privado).
+& default private, not null
+& enum video\_\allowbreak visibility \\
+\cline{2-5}
+
+& status
+& Estado interno del procesamiento del video (processing, uploading, processed, completed, error, finished).
+& default processing, not null
+& enum video\_\allowbreak status \\
+\cline{2-5}
+
+& is\_\allowbreak featured
+& Indica si el video es destacado.
+& default false, nullable
+& boolean \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento de creación del video.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización del video.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& is\_\allowbreak ai
+& Indica si el video contiene o ha sido generado con contenido de inteligencia artificial.
+& default false, not null
+& boolean \\
+\cline{2-5}
+
+& tags
+& Etiquetas asociadas al video.
+& nullable
+& text[] \\
+\cline{2-5}
+
+& comment\_\allowbreak count
+& Cantidad total de comentarios asociados al video.
+& default 0, not null
+& integer \\
+\cline{2-5}
+
+& rating\_\allowbreak count
+& Cantidad total de calificaciones recibidas por el video.
+& default 0, not null
+& integer \\
+\cline{2-5}
+
+& average\_\allowbreak rating
+& Promedio de todas las calificaciones recibidas por el video.
+& default 0, not null
+& real \\
+\hline
+
+\caption{Descripción de la tabla videos}
+\end{longtable}
+
+
+%Comunidades
+
+Las comunidades puede ser creadas por cualquier usuario. Además, un usuario puede pertenecer a varias y esto se modela mediante una tabla \textit{Miembros de Comunidad} llamada \textit{community\_members} que relaciona a un usuario con una comunidad y su rol en ella (miembro, moderador, administrador).
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Comunidades}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Comunidades}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& id
+& Identificador de la comunidad.
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& category\_\allowbreak id
+& Identificador de la categoría asociada a la comunidad.
+& foreign key, nullable
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& name
+& Nombre de la comunidad.
+& unique, not null
+& text \\
+\cline{2-5}
+
+& description\_\allowbreak short
+& Descripción breve de la comunidad.
+& nullable
+& text \\
+\cline{2-5}
+
+& description\_\allowbreak long
+& Descripción larga de la comunidad.
+& nullable
+& text \\
+\cline{2-5}
+
+& banner\_\allowbreak url
+& URL de la imagen del banner de la comunidad.
+& nullable
+& text \\
+\cline{2-5}
+
+& icon\_\allowbreak url
+& URL del icono de la comunidad.
+& nullable
+& text \\
+\cline{2-5}
+
+& rules
+& Reglas de la comunidad.
+& nullable
+& text \\
+\cline{2-5}
+
+& is\_\allowbreak private
+& Indica si la comunidad es privada. Solo los moderadores pueden ver y crear contenido en caso afirmativo. Por defecto el único moderador es el creador. 
+& default false, not null
+& boolean \\
+\cline{2-5}
+
+& allow\_\allowbreak user\_\allowbreak posts
+& Indica si los usuarios pueden publicar contenido en la comunidad. En caso negativo, solo los moderadores pueden asociar contenido a ella. Por defecto el único moderador es el creador.
+& default true, not null
+& boolean \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento de creación de la comunidad.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización de la comunidad.
+& default now, not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla communities}
+\end{longtable}
+
+
+%Community members
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Miembros de comunidades}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Miembros de comunidades}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& community\_\allowbreak id, user\_\allowbreak id
+& Identificador compuesto que relaciona a un usuario con una comunidad. De esta forma, no hay 2 registros con el mismo id de comunidad y de usuario. Es decir, un usuario no puede pertenecer dos veces a la misma comunidad. 
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& community\_\allowbreak id
+& Identificador de la comunidad a la que pertenece el usuario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& user\_\allowbreak id
+& Identificador del usuario miembro de la comunidad.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& role
+& Rol del usuario dentro de la comunidad (miembro, moderador, administrador).
+& default member, not null
+& text \\
+\cline{2-5}
+
+& joined\_\allowbreak at
+& Momento en el que el usuario se unió a la comunidad.
+& default now, not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla community\_members}
+\end{longtable}
+
+
+%Categorias 
+
+Actualmente, en \textit{Booster} existe un número de fijo de categorías que fueron añadidas manualmente por los administradores del sistema. Sin embargo, se considera como posible ampliación, permitir a los usuarios crear sus propias categorías. 
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Categorías}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Categorías}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& id
+& Identificador de la categoría.
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& Ninguna
+& 
+& 
+&  \\
+\hline
+
+\textbf{Atributos}
+& name
+& Nombre de la categoría.
+& unique, not null
+& text \\
+\cline{2-5}
+
+& description
+& Descripción de la categoría.
+& nullable
+& text \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento de creación de la categoría.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización de la categoría.
+& default now, not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla categories}
+\end{longtable}
+
+
+
+%ASSETS
+
+De la misma forma que con el caso de las categorías, los \textit{assets} en la plataforma solo son añadidos por administradores del sistema de forma manual. 
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Assets}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Assets}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& asset\_\allowbreak id
+& Identificador único del asset.
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& Ninguna
+& 
+& 
+&  \\
+\hline
+
+\textbf{Atributos}
+& price
+& Precio del asset dentro de la plataforma.
+& default 0, not null
+& integer \\
+\cline{2-5}
+
+& asset\_\allowbreak name
+& Nombre del asset.
+& not null
+& text \\
+\cline{2-5}
+
+& category
+& Categoría a la que pertenece el asset (icono, insignia, perk).
+& nullable
+& text \\
+\cline{2-5}
+
+& asset\_\allowbreak description
+& Descripción del asset.
+& not null
+& text \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento de creación del asset.
+& default now
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización del asset.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& icon\_\allowbreak number
+& Número del icono asociado al asset. En el \textit{frontend} se definen íconos como componentes React para algunos assets y por tanto se necesita saber cuál aplicar en cada caso. 
+& default 0, not null
+& integer \\
+\cline{2-5}
+
+& required\_\allowbreak level
+& Nivel requerido para desbloquear el asset.
+& default 0
+& integer \\
+\hline
+
+\caption{Descripción de la tabla assets}
+\end{longtable}
+
+
+Como un usuario puede comprar un número indenifinido de assets, se genera la siguiente tabla que modela la relaación entre asset y usuario.
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+% USER_ASSETS
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Assets de usuarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Assets de usuarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& asset\_\allowbreak id, user\_\allowbreak id
+& Identificador compuesto que relaciona un asset con un usuario. Un usuario no puede comprar el mismo asset 2 veces. 
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& asset\_\allowbreak id
+& Identificador del asset adquirido por el usuario.
+& foreign key, not null, on delete cascade, on update cascade
+& uuid \\
+\cline{2-5}
+
+& user\_\allowbreak id
+& Identificador del usuario dueño del asset.
+& foreign key, not null, on delete cascade, on update cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& No hay más atributos.
+& 
+& 
+& \\
+\hline
+
+\caption{Descripción de la tabla user\_assets}
+
+\end{longtable}
+
+
+% USER_FOLLOWS
+
+Un usuario también podía seguir a otro usuario y por tanto, se genera esta tabla llamada \textit{user\_follows} que registra los seguimientos de un usuario a otro.
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Follows de usuarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Follows de usuarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& user\_\allowbreak id, creator\_\allowbreak id
+& Identificador compuesto que representa la relación de seguimiento entre un usuario y un creador. Un usuario no puede seguir 2 veces al mismo creador.
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& user\_\allowbreak id
+& Identificador del usuario seguidor.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& creator\_\allowbreak id
+& Identificador del usuario creador que es seguido.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& created\_\allowbreak at
+& Momento de creación de la relación de seguimiento (follow).
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización de la relación de seguimiento.
+& default now, not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla user\_follows}
+\end{longtable}
+
+Además, otra interacción que puede realizar un usuario sobre otro usuario creador de contenido es donar puntos de experiencia. Esto genera la tabla \textit{boost\_transactions} que mantiene un registro de esta acción. Aquí, cabe destacar que se permite a un usuario hacer varias donaciones sobre un mismo creador.
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Transacciones de boost}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Transacciones de boost}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& boost\_\allowbreak id
+& Identificador de la transacción de boost (donación de puntos de experiencia). En este caso no se utiliza un identificador compuesto para permitir varias donaciones de un mismo usuario sobre un canal.  
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& creator\_\allowbreak id
+& Identificador del usuario creador que recibe los puntos de experiencia.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& booster\_\allowbreak id
+& Identificador del usuario que dona los puntos de experiencia.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& xp
+& Cantidad de puntos de experiencia donados.
+& not null
+& integer \\
+\hline
+
+\caption{Descripción de la tabla boost\_transactions}
+\end{longtable}
+
+Al visualizar un video se debe mantener un registro del usuario que lo vio para tener un contador de visitas. Además, este puede incluir una calificación al video y enviar comentarios, por tanto es necesario modelar estas relaciones y guardar estas acciones. Por estas razones surgen las siguientes tablas que modelan las visitas de los videos, las calificaciones dadas y los comentarios recibidos por un video.
+
+%VIDEO VIEWS
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Visualizaciones de videos}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Visualizaciones de videos}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& user\_\allowbreak id, video\_\allowbreak id
+& Identificador compuesto que relaciona un usuario con un video visualizado. Un usuario puede ver varias veces el video pero en la implementación elegida, se utiliza un identificador compuesto y si el mismo usuario intenta visualizar el contenido otra vez, se incrementa un contador. Otra opción sería utilizar un identificador de la visualización de video. 
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& user\_\allowbreak id
+& Identificador del usuario que visualizó el video.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& video\_\allowbreak id
+& Identificador del video visualizado por el usuario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& created\_\allowbreak at
+& Momento de creación del registro de visualización.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización del registro de visualización.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& seen
+& Cantidad de veces que el usuario ha visualizado el video. Se incrementa si la última visualización del usuario almacenada en updated\_at es superior a 12.
+& default 1
+& integer \\
+\hline
+
+\caption{Descripción de la tabla video\_views}
+\end{longtable}
+
+
+%CALIFICACIONES
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Calificaciones de videos}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Calificaciones de videos}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& user\_\allowbreak id, video\_\allowbreak id
+& Identificador compuesto que relaciona un usuario con un video calificado. Un usuario no puede calificar dos veces el mismo video. 
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& user\_\allowbreak id
+& Identificador del usuario que calificó el video.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& video\_\allowbreak id
+& Identificador del video calificado por el usuario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& created\_\allowbreak at
+& Momento de creación de la calificación.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización del registro de calificación.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& rating
+& Calificación asignada por el usuario al video en una escala del 1 al 5.
+& nullable
+& integer \\
+\hline
+
+\caption{Descripción de la tabla video\_ratings}
+\end{longtable}
+
+%COMENTARIOS
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Comentarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Comentarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& comment\_\allowbreak id
+& Identificador único del comentario.
+& primary key, default random
+& uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& user\_\allowbreak id
+& Identificador del usuario que realiza el comentario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& video\_\allowbreak id
+& Identificador del video al que pertenece el comentario.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& parent\_\allowbreak id
+& Identificador del comentario padre. Cuando el comentario no tiene respuesta, parent\_id es igual a comment\_id.
+& foreign key, nullable, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& comment
+& Contenido textual del comentario.
+& not null
+& text \\
+\cline{2-5}
+
+& created\_\allowbreak at
+& Momento de creación del comentario.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización del comentario.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& replies
+& Cantidad de respuestas asociadas al comentario.
+& default 0, not null
+& integer \\
+\hline
+
+\caption{Descripción de la tabla comments}
+\end{longtable}
+
+
+Un usuario, puede reaccionar a un comentario dándole un \textit{me gusta} y por tanto, se genera la siguiente tabla
+
+%COMMENT REACTIONS
+
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\small
+
+\begin{longtable}{|
+>{\raggedright\arraybackslash}p{1.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{4.9cm}|
+>{\raggedright\arraybackslash}p{2.7cm}|
+>{\raggedright\arraybackslash}p{2.1cm}|
+}
+\hline
+
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Reacciones a comentarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endfirsthead
+
+\hline
+\rowcolor[gray]{0.75}
+\multicolumn{5}{|c|}{\textbf{Reacciones a comentarios}} \\
+\hline
+
+ & \textbf{Nombre en BD} & \textbf{Descripción} & \textbf{Restricciones} & \textbf{Dominio} \\
+\hline
+\endhead
+
+\textbf{Clave primaria}
+& user\_\allowbreak id, comment\_\allowbreak id
+& Identificador compuesto que relaciona a un usuario con un comentario reaccionado.
+& primary key
+& uuid, uuid \\
+\hline
+
+\textbf{Claves foráneas}
+& comment\_\allowbreak id
+& Identificador del comentario al que pertenece la reacción.
+& foreign key, not null, on delete cascade
+& uuid \\
+\cline{2-5}
+
+& user\_\allowbreak id
+& Identificador del usuario que realiza la reacción.
+& foreign key, not null, on delete cascade
+& uuid \\
+\hline
+
+\textbf{Atributos}
+& created\_\allowbreak at
+& Momento de creación de la reacción.
+& default now, not null
+& timestamp \\
+\cline{2-5}
+
+& updated\_\allowbreak at
+& Fecha y hora de última actualización de la reacción.
+& default now, not null
+& timestamp \\
+\hline
+
+\caption{Descripción de la tabla comment\_reactions}
+\end{longtable}
 
 \section{Arquitectura de procesamiento propia}
 
