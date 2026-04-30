@@ -3,7 +3,7 @@
 Este capítulo constituye un estudio técnico exhaustivo para identificar fortalezas y oportunidades de mejora en las tecnologías más conocidas para implementar la infraestructura de procesamiento de audiovisuales. Asimismo, integra un análisis de los principales proveedores disponibles en el mercado teniendo en cuenta aspectos técnicos y financieros. Finalmente, se exploran distintos modelos de arquitectura empleados por las aplicaciones que brindan este servicio. 
 
 
-\section{Procesamiento, Transcodificación y Entrega de Video}
+\section{Procesamiento, Transcodificación, Segmentación y Entrega de Video}
 
 \label{2.1}
 
@@ -13,7 +13,7 @@ En esta sección se hace un análisis de las herramientas más utilizadas para p
 
 
 \subsection{FFmpeg}
-
+\label{ffmpeg}
 
 
 FFmpeg es una herramienta de código abierto utilizada para el procesamiento de contenido multimedia, en particular audio y video. Es empleada en una amplia variedad de tareas y aplicaciones como:
@@ -21,10 +21,11 @@ FFmpeg es una herramienta de código abierto utilizada para el procesamiento de 
 
 
 \begin{itemize}
-    \item   \textbf{Transcodificación}: FFmpeg puede convertir videos entre distintos formatos, códecs \footnote{Se entiende por códec a aquella tecnología software o hardware que permite comprimir o descomprimir archivos multimedia. } y resoluciones, lo que es esencial para garantizar la compatibilidad con diferentes dispositivos y plataformas. Por ejemplo, se puede convertir un video en formato \lstinline|.mov| a \lstinline|.mp4|, o extraer el audio de un archivo \lstinline|.mp4| a \lstinline|.mp3|.
+    \item   \textbf{Transcodificación}: FFmpeg puede convertir videos entre distintos formatos, códecs \footnote{Se entiende por códec a aquella tecnología software o hardware que permite comprimir o descomprimir archivos multimedia. } y resoluciones, lo que es esencial para garantizar la compatibilidad con diferentes dispositivos y plataformas. Por ejemplo, se puede convertir un video en formato \lstinline|.mov| a \lstinline|.mp4|, o extraer el audio de un archivo \lstinline|.mp4| a \lstinline|.mp3|. También se emplea para generar distintas calidades de reproducción de un video, 360p, 720p, 1080p, entre otros.
     \item \textbf{Compresión y Optimización}: Permite reducir el tamaño de archivos sin perder calidad significativa ajustando la resolución, códec  y el \textit{bitrate} \footnote{Se entiende por bitrate (tasa de bits) como la cantidad de información que se transmite por unidad de tiempo.}. Esto es esencial para mejorar la experiencia de usuario. Por ejemplo, en este tipo de servicios se suele utilizar \textbf{Adaptive Bitrate}. Esto consiste en guardar varias copias del mismo contenido con diferentes calidades y tamaños y, de esta forma, el reproductor puede seleccionar la versión más adecuada según la velocidad de conexión del usuario. 
     \item \textbf{Edición de video}: Permite realizar tareas básicas de edición como recortar la duración, unir varios videos, rotar, etc.
     \item \textbf{Streaming}: FFmpeg puede ser utilizado para transmitir video en tiempo real a través de protocolos como RTP o UDP.
+    \item \textbf{Segmentación}: FFmpeg permite segmentar un video para dividirlo en trozo más pequeños. Esto resulta útil para implementar protocolos de streaming de videos.
     
 
 \end{itemize}
@@ -125,6 +126,7 @@ La gran mayoría de actores principales en el mercado de streaming implementan e
 Cabe destacar que, en ambos protocolos HLS y MPEG-DASH, el video no se descarga por completo en una única acción, sino que el reproductor va solicitando pequeños segmentos o fragmentos al servidor conforme avanza la reproducción. En otras palabras, el video está almacenado en partes pequeñas en el servidor, cada una con diferentes calidades, y el reproductor le solicita la parte que mejor se adapte a las condiciones de red del usuario en cada momento. Así, se evitan transmitir grandes cantidades de datos innecesarios por la red y se puede implementar un Adaptive Bitrate eficiente.
 
 \subsection{Object Storage}
+\label{bucket}
 
 El contenido multimedia, en particular los videos, suelen ocupar un gran espacio de almacenamiento. Además, con las técnicas de \textbf{Adaptive Bitrate} es necesario almacenar varias copias del mismo video con diferentes calidades y tamaños, lo cual incrementa el uso de espacio de forma considerable. Por ello, es fundamental contar con un sistema de almacenamiento eficiente y escalable. Por esa razón, se suelen emplear sistemas de almacenamiento de objetos \textbf{Object Storage} \cite{object_storage} como Google Cloud Storage, Amazon S3 Buckets o Azure Blob Storage que permiten almacenar grandes cantidades de datos de forma escalable y con alta disponibilidad. Esto es esencial para garantizar un acceso rápido y confiable a los videos por parte de los usuarios.
 
@@ -190,7 +192,9 @@ A pesar de sus desventajas, el uso de CDNs es muy común en la industria, especi
 
 \subsection{Colas de Procesamiento}
 
-El procesamiento y la transcodificación de video son tareas que suelen tomar un largo tiempo en completarse. Por esa razón, cuando un usuario sube un video, en lugar de forzarlo a esperar, se utilizan colas de procesamiento. En vez de hacer las operaciones lentas en la misma petición HTTP, el sistema registra un trabajo pendiente en una cola y este espera a ser atendido por un worker. A continuación, se realiza este trabajo y se reportan los resultados al finalizar. Así, se consigue desacoplar procesos lentos de otros más rápidos que de lo contrario causarían una mala experiencia de usuario. 
+\label{cola}
+
+El procesamiento y la transcodificación de video son tareas que suelen tomar un largo tiempo en completarse. Por esa razón, cuando un usuario sube un video, en lugar de forzarlo a esperar, se utilizan colas de procesamiento. En vez de hacer las operaciones lentas en la misma petición HTTP, el sistema registra un trabajo pendiente en una cola y este espera a ser atendido por un consumer. A continuación, se realiza este trabajo y se reportan los resultados al finalizar. Así, se consigue desacoplar procesos lentos de otros más rápidos que de lo contrario causarían una mala experiencia de usuario. 
 
 En el contexto de procesamientos de videos el esquema es el siguiente:
 
@@ -198,7 +202,7 @@ En el contexto de procesamientos de videos el esquema es el siguiente:
     \item 1. El usuario sube el video
     \item 2. El sistema guarda el archivo en un Object Store
     \item 3. Se crea un job en la cola de procesamiento
-    \item 4. Un worker toma el trabajo pendiente 
+    \item 4. Un consumer toma el trabajo pendiente 
     \item 5. Se ejecuta la transcodificación de video, se generan copias del video, se comprime, etc.
     \item 6. Al terminar se notifica al sistema
 \end{itemize}
@@ -209,13 +213,13 @@ Existen diversas formas de implementar una cola de procesamiento. Por ejemplo, R
 
 La ventaja principal es que mejoran la experiencia de usuario. La subida de video suele ser un proceso rápido mientras que la transcodificación puede tardar minutos e incluso horas en finalizar. 
 
-Además, las colas de procesamiento facilitan la escalabilidad. Este modelo permite responder de forma efectiva ante picos de alta demanda sin colapsar el \textit{backend} porque los trabajos permanecen en un estado de espera en la cola. Para evitar que haya saturaciones o una gran cantidad de trabajos pendientes en ser atendidos, una solución común es añadir más workers según sea necesario. 
+Además, las colas de procesamiento facilitan la escalabilidad. Este modelo permite responder de forma efectiva ante picos de alta demanda sin colapsar el \textit{backend} porque los trabajos permanecen en un estado de espera en la cola. Para evitar que haya saturaciones o una gran cantidad de trabajos pendientes en ser atendidos, una solución común es añadir más consumers según sea necesario. 
 
 Por otra parte, también favorecen la priorización de trabajos. Por ejemplo, dando paso a videos Premium o urgentes antes que al resto.
 
 \textbf{Desventajas}
 
-La desventaja más clara es que las colas de prioridad añaden complejidad a la arquitectura. Esto quiere decir que además de operar con las APIs y las bases de datos, ahora es necesario gestionar workers, reintentos, resolver duplicados, timeouts, entre otros. 
+La desventaja más clara es que las colas de prioridad añaden complejidad a la arquitectura. Esto quiere decir que además de operar con las APIs y las bases de datos, ahora es necesario gestionar consumers, reintentos, resolver duplicados, timeouts, entre otros. 
 
 \textbf{Servicios de Colas de Procesamiento}
 
@@ -244,9 +248,9 @@ En esta sección se hace un estudio de los principales proveedores de infraestru
 %ROWS: Proveedor, Facilidad implementacion o Integracion, Flexibilidad, Escalabilidad, Costos, Soporte, Personalizacion, Popularidad, Caracteristicas adicionales, Problemas / Inconvenientes, Otros.
 
 \subsection{Amazon Web Services}
+\label{aws}
 
-
-Amazon Web Services es una proveedor de infraestructura en la nube que permite al cliente implementar soluciones propias utilizando servicios modulares según la necesidad. Esto le aporta al cliente la posibilidad de crear desde cero la lógica para el almacenamiento, entrega de video, transcodificación y procesamiento, generación de miniaturas y carga de videos al servidor. Esta solución, aunque es más compleja, permite un control total sobre el funcionamiento del servicio. 
+Amazon Web Services es una proveedor de infraestructura en la nube que permite al cliente implementar soluciones propias utilizando servicios modulares según la necesidad. Esto le aporta al cliente la posibilidad de crear desde cero la lógica para el almacenamiento, entrega de video, transcodificación y segmentación, generación de miniaturas y carga de videos al servidor. Esta solución, aunque es más compleja, permite un control total sobre el funcionamiento del servicio. 
 
 Las funcionalidades de este proveedor serán desarrolladas en detalle en el capítulo de arquitectura donde se describe el diseño de una pipeline propio mediante los servicios de AWS y con las tecnologías expuestas en el capítulo anterior.
  \todo{poner capitulo arquitectura y donde Explico Docker?}.
@@ -294,7 +298,7 @@ Para calcular el costo aproximado de esta solución, se deben considerar cada un
     \item Amazon S3 Buckets: Suponiendo $500$ GB de datos almacenados cada mes y tomando el precio para la región de España de un S3 Bucket Standard (\$ $0.023$ por GB) el costo total es: $500 \text{ GB } \cdot 0.023 \$ \text{ por GB} = \$11.5 $ al mes.
     \item Amazon EC2: Suponiendo un \lstinline|t3.medium| que trabaja 24 horas por día, y tomando el precio por hora de \$ $0.0416$ el costo total es: $0.0416 \$ \text{ por hora} \cdot 24 \text{ horas por día} \cdot 30 \text{ días por mes} = \$29.95$ al mes.
     \item Amazon SQS: Suponiendo 2 millones de solicitudes al mes, y tomando  \$ $0.40$ como el precio estándar por cada millón de solicitudes, el costo total es: $2 \text{ millones de solicitudes} \cdot 0.40 \$ \text{ por millón de solicitudes} = \$0.80$ al mes.
-    \item Amazon CloudFront: Si se entregan 2TB de datos al mes y tomando el precio para la región de Europa de \$ $0.09$ por GB, el costo total es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.09 \$ \text{ por GB} = \$184.32$ al mes.
+    \item Amazon CloudFront: Si se entregan 2TB de datos al mes y tomando el precio para la región de Europa de $\$ 0.09$ por GB, el costo total es: $2 \text{ TB} \cdot 1024 \text{ GB por TB} \cdot 0.09 \$ \text{ por GB} = \$184.32$ al mes.
 \end{itemize}
 
 Sumando cada uno de estos costos, el costo total aproximado con este proveedor es: $\$11.5 + \$29.95 + \$0.80 + \$184.32 = \$226.57$ al mes.
@@ -354,6 +358,7 @@ Con estas estimaciones, el costo aproximado por mes es $\$ 20.00$. Sin embargo, 
 
 
 \subsection{Bunny.net}
+\label{bunny}
 
 Bunny.net es una plataforma que ofrece varios servicios. Entre estos, se encuentra la entrega de contenido mediante CDNs, almacenamiento de objetos, streaming de videos, optimización de imágenes y seguridad contra ataques DDoS. El principal punto fuerte de Bunny.net es su precio competitivo en comparación con otros proveedores de infraestructura de streaming. Sin embargo, su integración requiere un mayor esfuerzo de desarrollo.  
 
@@ -482,7 +487,7 @@ Normalmente, este tipo de plataformas se compone de una cadena de servicios que 
 
 El flujo comienza cuando un usuario sube un video a la plataforma. Se carga un archivo desde el \textit{frontend} de la aplicación web o móvil hacia un servidor \textit{backend}. A continuación, el servidor registra los metadatos del video (identificador, titulo, descripción, tags, visibilidad, duración, etc.) en una base de datos e intenta almacenar el video en un sistema de Object Storage. 
 
-Posteriormente, el archivo subido pasa a una cola de procesamiento, donde espera a ser atendido por un worker para ejecutar tareas de transcodificación. Herramientas como FFmpeg juegan un papel fundamental en esta etapa permitiendo convertir el video a diferentes formatos, resoluciones y bitrates, y segmentarlo para adaptarlo a HLS o MPEG-DASH. En paralelo, se suelen generar miniaturas, extraer metadatos adicionales, crear subtítulos, entre otras tareas.
+Posteriormente, el archivo subido pasa a una cola de procesamiento, donde espera a ser atendido por un consumer para ejecutar tareas de transcodificación. Herramientas como FFmpeg juegan un papel fundamental en esta etapa permitiendo convertir el video a diferentes formatos, resoluciones y bitrates, y segmentarlo para adaptarlo a HLS o MPEG-DASH. En paralelo, se suelen generar miniaturas, extraer metadatos adicionales, crear subtítulos, entre otras tareas.
 
 Una vez, el video fue procesado, se distribuyen los segmentos a través de un CDN. De este modo, el video se entrega de forma eficiente a los usuarios finales. 
 

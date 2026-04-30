@@ -1759,12 +1759,37 @@ Toda la información de las tablas se encuentra en el archivo \texttt{/src/db/sc
 
 
 
+\section{Arquitecturas de procesamiento de videos}
 
-\section{Arquitectura de procesamiento propia}
+En esta sección se presentan las alternativas posibles para desarrollar un servicio de procesamiento de videos. En primer lugar, se analiza una solución básica implementando una arquitectura de procesamiento propia y desde cero. Posteriormente, se estudia la solución empleada en la aplicación final mediante el uso de un proveedor externo como \textit{Bunny.net} analizado en \ref{bunny}.
+\subsection{Arquitectura de procesamiento propia}
+
+Esta primera solución se basa en implementar un flujo de procesamiento de videos asíncrono mediante el uso de servicios de Amazon Web Services \ref{aws}. Con esto, se consigue tener un registro del archivo de video y distribuirlo de forma eficiente, evitando que el \textit{backend} realice estas tareas. El proceso se ilustra en la figura \ref{amazon-arch}
+
+El flujo comienza  cuando el usuario solicita al \textit{backend} un enlace para cargar un video. En lugar de enviar el video directamente al \textit{backend} y luego al servicio de procesamiento de videos, se envia un enlace de carga al usuario para que suba el video directamente al servicio de procesamiento. Por motivos de seguridad, este enlace de carga se pide a través del \textit{backend}. Además, esta técnica reduce la carga sobre el \textit{backend} y evita que tenga que manejar archivos de tamaño elevado. 
+
+Posteriormente, el archivo original cargado por el usuario se almacena en un \textit{bucket} de Amazon S3 denominado \textit{S3 Raw Bucket} que funciona como un \textit{Object Storage} explicado en \ref{bucket}. Este \textit{bucket} almacena el contenido en su estado original antes de procesarlo. Una vez que el archivo se ha sido subido correctamente, S3 genera un evento indicando que se ha creado un nuevo objeto.
+
+Ese evento se envía a una cola de Amazon SQS. Amazon SQS actúa como una cola de procesamiento analizada en \ref{cola}. En vez de procesar el video de forma inmediata, el sistema registra un trabajo en la cola para que sea procesado y de esta forma, en momentos de alta demanda el sistema reaccionará mejor. 
+
+Los consumers son procesos que están continuamente consultando la cola SQS. Cuando detectan un nuevo mensaje, leen el evento generado por S3 y extraen la información necesaria para procesar el video, principalmente el nombre del bucket y la clave del archivo. Es importante destacar que estos consumers no transcodifican el video. En cambio, se encargan de identificar qué archivo debe procesarse y lanzan una tarea de procesamiento para realizar ese trabajo.
+
+Para ejecutar el procesamiento, el consumer invoca Amazon ECS, el servicio de Amazon encargado de administrar la ejecución de contenedores. En este caso, el consumer lanza una tarea ECS y le pasa al contenedor las variables de entorno necesarias, como el identificador del video y el nombre del \textit{bucket}. Con esa información, el contenedor encargado de procesar el video sabe exactamente qué archivo debe descargar y transformar y desde qué contenedor debe hacerlo.
+
+Una vez que la tarea se inicia, el contenedor de procesamiento descarga el video original desde el S3 Raw Bucket. A continuación utiliza herramientas como ffmpeg (\ref{ffmpeg}) para transcodificar y procesar el video.
+
+La segmentación convierte el video original en fragmentos para la reproducción en streaming. En la solución empleada, se generan segmentos del video en formato MPEG-DASH junto con un \texttt{manifest.mpd}. Además, la transcodificación produce diferentes calidades de reproducción como 360p, 720p y 1080p.  También se generan miniaturas del video extrayendo un fotograma representativo mediante ffmpeg. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{arquitectura/amazon-arch.png}
+  \caption{Arquitectura de Procesamiento empleando servicios de Amazon Web Services}
+  \label{amazon-arch}
+\end{figure}
 
 
 
-\section{Arquitectura de procesamiento con un proveedor}
+\subsection{Arquitectura de procesamiento con un proveedor}
 
 \section{Diseño del Algoritmo de Recomendación}
 
