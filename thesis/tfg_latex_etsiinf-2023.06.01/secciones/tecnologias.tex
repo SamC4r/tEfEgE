@@ -83,6 +83,8 @@ Por estas razones, Booster integra una base de datos \textbf{PostgreSQL} como si
 
 \textbf{Uso de PostgreSQL - NeonDB}
 
+\label{neon}
+
 En Booster, PostgreSQL se integra a través de una plataforma de base de datos moderna y serverless diseñada para la nube conocida como \textbf{NeonDB}.
 
 NeonDB presenta una arquitectura que separa almacenamiento y cómputo para ofrecer un escalado más flexible y administrar mejor la base de datos. Además, está especialmente diseñada para soportar funcionalidades de \textbf{Inteligencia Artificial}. En el caso de Booster, se han empleado extensiones como \lstinline|pgvector| para almacenar embeddings y realizar búsquedas semánticas de los títulos y descripciones de los videos. \cite{pgvector} Esta capacidad, permite realizar búsquedas más inteligentes en comparación a las búsquedas literales. Con esto, se puede encontrar contenido relacionado por significado y mejorar el sistema de recomendación ante una búsqueda en lenguaje natural. 
@@ -352,7 +354,7 @@ TailwindCSS suele ser una gran opción para el desarrollo moderno de interfaces.
 
 Booster hace uso de las capacidades de TailwindCSS para el diseño de la plataforma. Se utiliza principalmente para mejorar y modernizar la apariencia visual de los elementos en pantalla. Asimismo, se definen colores, tamaños, tipografías y comportamientos responsivos. 
 
-Complementariamente a Tailwind, Booster incorpora \textbf{shadcn/ui} \cite{shadcn}, un sistema de componentes R reutilizables y personalizables como botones, barras laterales, avatares, menús, diálogos, toasts, formularios, tablas, entre otros. Gracias a esto, se utilizan elementos de interfaz ya elaborados y con una apariencia muy moderna y atractiva. Esto permite, ofrecer una experiencia de usuario más profesional y mejora la \textbf{usabilidad} de la aplicación. El uso de esta librería es importante en Booster ya que se consigue una interfaz limpia, moderna y funcional sin dedicar demasiado tiempo al desarrollo de cada componente desde cero. \\
+Complementariamente a Tailwind, Booster incorpora \textbf{shadcn/ui} \cite{shadcn}, un sistema de componentes reutilizables y personalizables como botones, barras laterales, avatares, menús, diálogos, toasts, formularios, tablas, entre otros. Gracias a esto, se utilizan elementos de interfaz ya elaborados y con una apariencia muy moderna y atractiva. Esto permite, ofrecer una experiencia de usuario más profesional y mejora la \textbf{usabilidad} de la aplicación. El uso de esta librería es importante en Booster ya que se consigue una interfaz limpia, moderna y funcional sin dedicar demasiado tiempo al desarrollo de cada componente desde cero. \\
 
 \begin{figure}[h]
     \centering

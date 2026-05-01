@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  30 APR 2026 19:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  1 MAY 2026 21:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -767,6 +767,22 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@cntb=\count467
 \multirow@dima=\skip94
 \bigstrutjot=\dimen309
+) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2025/10/21 v1.2g Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/emptypage\emptypage.sty
 Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
@@ -889,7 +905,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip114
 ) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/parskip\parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
+)
+(C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
 \csq@reset=\count485
 \csq@gtype=\count486
@@ -903,8 +920,7 @@ File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
-
-(C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
+ (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.cfg
 File: csquotes.cfg 
 )) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.sty
 Package: todonotes 2024/01/05 v1.1.7 Todonotes source and documentation.
@@ -1011,12 +1027,12 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
-LaTeX Font Info:    Trying to load font information for T1+pbk on input line 170.
+LaTeX Font Info:    Trying to load font information for T1+pbk on input line 172.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pbk.fd
 File: t1pbk.fd 2001/06/04 font definitions for T1/pbk.
 )
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <10.95> not available
-(Font)              Font shape `T1/pbk/l/n' tried instead on input line 170.
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 172.
  (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1027,26 +1043,26 @@ LaTeX Info: Redefining \% on input line 16.
 )
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 170.
-LaTeX Font Info:    ... okay on input line 170.
-LaTeX Info: Redefining \. on input line 170.
-LaTeX Info: Redefining \% on input line 170.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 172.
+LaTeX Font Info:    ... okay on input line 172.
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1100,8 +1116,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'tfg_etsiinf_SamuelCaraballoChichiraldi.bbl' found.
  (tfg_etsiinf_SamuelCaraballoChichiraldi.bbl)
-Package biblatex Info: Reference section=0 on input line 170.
-Package biblatex Info: Reference segment=0 on input line 170.
+Package biblatex Info: Reference section=0 on input line 172.
+Package biblatex Info: Reference segment=0 on input line 172.
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count511
@@ -1121,7 +1137,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 170.
+Package hyperref Info: Link coloring OFF on input line 172.
  (tfg_etsiinf_SamuelCaraballoChichiraldi.out) (tfg_etsiinf_SamuelCaraballoChichiraldi.out)
 \@outlinefile=\write5
 \openout5 = `tfg_etsiinf_SamuelCaraballoChichiraldi.out'.
@@ -1140,6 +1156,14 @@ Overfull \hbox (18.93573pt too wide) in paragraph at lines 4--7
 []|  [] 
  []
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
+(C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 7.
+ (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <20.74> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 10.
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <14.4> not available
@@ -1258,7 +1282,7 @@ Overfull \hbox (3.3943pt too wide) detected at line 82
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 83
- []\T1/pbk/l/n/10.95 119
+ []\T1/pbk/l/n/10.95 118
  []
 
 
@@ -1373,67 +1397,67 @@ Overfull \hbox (3.3943pt too wide) detected at line 100
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 101
- []\T1/pbk/l/n/10.95 137
+ []\T1/pbk/l/n/10.95 140
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 102
- []\T1/pbk/l/n/10.95 137
+ []\T1/pbk/l/n/10.95 141
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 104
- []\T1/pbk/l/n/10.95 139
+ []\T1/pbk/l/n/10.95 143
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 105
- []\T1/pbk/l/n/10.95 139
+ []\T1/pbk/l/n/10.95 143
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 106
- []\T1/pbk/l/n/10.95 139
+ []\T1/pbk/l/n/10.95 143
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 107
- []\T1/pbk/l/n/10.95 139
+ []\T1/pbk/l/n/10.95 143
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 108
- []\T1/pbk/l/n/10.95 139
+ []\T1/pbk/l/n/10.95 143
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 110
- []\T1/pbk/l/n/10.95 141
+ []\T1/pbk/l/n/10.95 145
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 111
- []\T1/pbk/l/n/10.95 141
+ []\T1/pbk/l/n/10.95 145
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 112
- []\T1/pbk/l/n/10.95 141
+ []\T1/pbk/l/n/10.95 145
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 113
- []\T1/pbk/l/n/10.95 141
+ []\T1/pbk/l/n/10.95 145
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 114
- []\T1/pbk/l/n/10.95 141
+ []\T1/pbk/l/n/10.95 145
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 115
- []\T1/pbk/l/n/10.95 141
+ []\T1/pbk/l/n/10.95 145
  []
 
 
@@ -1447,33 +1471,15 @@ LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <12> not available
 \tf@toc=\write6
 \openout6 = `tfg_etsiinf_SamuelCaraballoChichiraldi.toc'.
 
-LaTeX Info: Redefining \sptext on input line 182.
-LaTeX Info: Redefining \. on input line 182.
-LaTeX Info: Redefining \% on input line 182.
+LaTeX Info: Redefining \sptext on input line 184.
+LaTeX Info: Redefining \. on input line 184.
+LaTeX Info: Redefining \% on input line 184.
  [7] [8
 
 ] (secciones/intro.tex
 Cap\'{\i }tulo 1.
-
-LaTeX Warning: Citation 'alphabet2025results' on page 1 undefined on input line 8.
-
-
-LaTeX Warning: Citation 'data-reportal' on page 1 undefined on input line 8.
-
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 10.
-
-LaTeX Warning: Citation 'tiktok_europe_200m' on page 1 undefined on input line 12.
-
-
-LaTeX Warning: Citation 'netflix_q42025_shareholder' on page 1 undefined on input line 14.
-
-
-LaTeX Warning: Citation 'meta_q42025_results' on page 1 undefined on input line 16.
-
-
-LaTeX Warning: Citation 'iea_energy_ai_2025' on page 1 undefined on input line 18.
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1482,20 +1488,6 @@ l.19
       [1
 
 ]
-
-LaTeX Warning: Citation 'ofcom_media_use_attitudes_2025' on page 2 undefined on input line 24.
-
-
-LaTeX Warning: Citation 'ofcom_online_nations_2025' on page 2 undefined on input line 26.
-
-
-Overfull \hbox (60.92389pt too wide) in paragraph at lines 26--27
-\T1/pbk/l/n/10.95 ma-ción, la es-ca-la del ma-les-tar es in-clu-so más evi-den-te. Of-com []
- []
-
-
-LaTeX Warning: Citation 'lu2025adblockers' on page 2 undefined on input line 28.
-
 LaTeX Info: Redefining \sptext on input line 31.
 LaTeX Info: Redefining \. on input line 31.
 LaTeX Info: Redefining \% on input line 31.
@@ -1530,4 +1522,1422 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 24.
 (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
-LaTeX Font Info:    Font shape `T1/pc
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 24.
+ [7]
+<portada/FFmpeg_icon.svg.png, id=687, 3854.4pt x 3854.4pt>
+File: portada/FFmpeg_icon.svg.png Graphic file (type png)
+<use portada/FFmpeg_icon.svg.png>
+Package pdftex.def Info: portada/FFmpeg_icon.svg.png  used on input line 35.
+(pdftex.def)             Requested size: 85.35696pt x 85.33813pt.
+LaTeX Info: Redefining \sptext on input line 52.
+LaTeX Info: Redefining \. on input line 52.
+LaTeX Info: Redefining \% on input line 52.
+ [8 <./portada/FFmpeg_icon.svg.png>]
+LaTeX Info: Redefining \sptext on input line 80.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+ [9]
+LaTeX Info: Redefining \sptext on input line 107.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
+ [10]
+LaTeX Info: Redefining \sptext on input line 132.
+LaTeX Info: Redefining \. on input line 132.
+LaTeX Info: Redefining \% on input line 132.
+ [11]
+LaTeX Info: Redefining \sptext on input line 159.
+LaTeX Info: Redefining \. on input line 159.
+LaTeX Info: Redefining \% on input line 159.
+ [12]
+<portada/cdn_image.png, id=725, 1405.25pt x 790.955pt>
+File: portada/cdn_image.png Graphic file (type png)
+<use portada/cdn_image.png>
+Package pdftex.def Info: portada/cdn_image.png  used on input line 162.
+(pdftex.def)             Requested size: 341.43437pt x 192.17445pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 167.
+LaTeX Info: Redefining \. on input line 167.
+LaTeX Info: Redefining \% on input line 167.
+ [13 <./portada/cdn_image.png>]
+LaTeX Info: Redefining \sptext on input line 199.
+LaTeX Info: Redefining \. on input line 199.
+LaTeX Info: Redefining \% on input line 199.
+ [14]
+LaTeX Info: Redefining \sptext on input line 230.
+LaTeX Info: Redefining \. on input line 230.
+LaTeX Info: Redefining \% on input line 230.
+ [15]
+<portada/aws.png, id=741, 10673.72308pt x 6003.96924pt>
+File: portada/aws.png Graphic file (type png)
+<use portada/aws.png>
+Package pdftex.def Info: portada/aws.png  used on input line 262.
+(pdftex.def)             Requested size: 170.71393pt x 96.0105pt.
+LaTeX Info: Redefining \sptext on input line 271.
+LaTeX Info: Redefining \. on input line 271.
+LaTeX Info: Redefining \% on input line 271.
+ [16 <./portada/aws.png>]
+LaTeX Info: Redefining \sptext on input line 302.
+LaTeX Info: Redefining \. on input line 302.
+LaTeX Info: Redefining \% on input line 302.
+ [17]
+<portada/mux-logo.png, id=755, 192.72pt x 61.21872pt>
+File: portada/mux-logo.png Graphic file (type png)
+<use portada/mux-logo.png>
+Package pdftex.def Info: portada/mux-logo.png  used on input line 315.
+(pdftex.def)             Requested size: 170.71393pt x 54.22852pt.
+LaTeX Info: Redefining \sptext on input line 332.
+LaTeX Info: Redefining \. on input line 332.
+LaTeX Info: Redefining \% on input line 332.
+ [18 <./portada/mux-logo.png>]
+<portada/bunnynet-logo.png, id=763, 333.6465pt x 101.178pt>
+File: portada/bunnynet-logo.png Graphic file (type png)
+<use portada/bunnynet-logo.png>
+Package pdftex.def Info: portada/bunnynet-logo.png  used on input line 368.
+(pdftex.def)             Requested size: 170.71393pt x 51.76836pt.
+LaTeX Info: Redefining \sptext on input line 374.
+LaTeX Info: Redefining \. on input line 374.
+LaTeX Info: Redefining \% on input line 374.
+ [19 <./portada/bunnynet-logo.png>]
+Overfull \hbox (22.27586pt too wide) in paragraph at lines 395--396
+[]\T1/pbk/l/n/10.95 STIRR, un ser-vi-cio ame-ri-cano de strea-ming de TV y pe-lí-cu-las, em-plea Bunny.net
+ []
+
+LaTeX Info: Redefining \sptext on input line 405.
+LaTeX Info: Redefining \. on input line 405.
+LaTeX Info: Redefining \% on input line 405.
+[20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 412.
+LaTeX Info: Redefining \. on input line 412.
+LaTeX Info: Redefining \% on input line 412.
+ [21]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 473.
+LaTeX Info: Redefining \. on input line 473.
+LaTeX Info: Redefining \% on input line 473.
+ [22]
+LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <9> not available
+(Font)              Font shape `T1/pbk/l/it' tried instead on input line 476.
+<portada/centralizado.png, id=790, 465.99094pt x 427.5975pt>
+File: portada/centralizado.png Graphic file (type png)
+<use portada/centralizado.png>
+Package pdftex.def Info: portada/centralizado.png  used on input line 483.
+(pdftex.def)             Requested size: 213.39568pt x 195.80989pt.
+LaTeX Info: Redefining \sptext on input line 492.
+LaTeX Info: Redefining \. on input line 492.
+LaTeX Info: Redefining \% on input line 492.
+ [23 <./portada/centralizado.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 518.
+LaTeX Info: Redefining \. on input line 518.
+LaTeX Info: Redefining \% on input line 518.
+ [24]
+<portada/fediverse.png, id=803, 1505.625pt x 1505.625pt>
+File: portada/fediverse.png Graphic file (type png)
+<use portada/fediverse.png>
+Package pdftex.def Info: portada/fediverse.png  used on input line 531.
+(pdftex.def)             Requested size: 213.39568pt x 213.38211pt.
+LaTeX Info: Redefining \sptext on input line 541.
+LaTeX Info: Redefining \. on input line 541.
+LaTeX Info: Redefining \% on input line 541.
+ [25 <./portada/fediverse.png>]
+<portada/peertubelogo.png, id=811, 84.315pt x 20.075pt>
+File: portada/peertubelogo.png Graphic file (type png)
+<use portada/peertubelogo.png>
+Package pdftex.def Info: portada/peertubelogo.png  used on input line 569.
+(pdftex.def)             Requested size: 213.39568pt x 50.80977pt.
+LaTeX Info: Redefining \sptext on input line 577.
+LaTeX Info: Redefining \. on input line 577.
+LaTeX Info: Redefining \% on input line 577.
+ [26 <./portada/peertubelogo.png>]
+<portada/p2p.png, id=818, 566.115pt x 475.7775pt>
+File: portada/p2p.png Graphic file (type png)
+<use portada/p2p.png>
+Package pdftex.def Info: portada/p2p.png  used on input line 584.
+(pdftex.def)             Requested size: 213.39568pt x 179.3381pt.
+LaTeX Info: Redefining \sptext on input line 594.
+LaTeX Info: Redefining \. on input line 594.
+LaTeX Info: Redefining \% on input line 594.
+ [27 <./portada/p2p.png>]
+<portada/odysee.png, id=825, 401.5pt x 120.45pt>
+File: portada/odysee.png Graphic file (type png)
+<use portada/odysee.png>
+Package pdftex.def Info: portada/odysee.png  used on input line 617.
+(pdftex.def)             Requested size: 213.39568pt x 64.02014pt.
+) (secciones/tecnologias.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [28 <./portada/odysee.png>]
+Cap\'{\i }tulo 3.
+[29
+
+]
+Overfull \hbox (19.97226pt too wide) in paragraph at lines 38--39
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (26.54231pt too wide) in paragraph at lines 39--40
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+<portada/typescript.png, id=839, 1284.8pt x 1284.8pt>
+File: portada/typescript.png Graphic file (type png)
+<use portada/typescript.png>
+Package pdftex.def Info: portada/typescript.png  used on input line 49.
+(pdftex.def)             Requested size: 85.35696pt x 85.33813pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 54.
+LaTeX Info: Redefining \. on input line 54.
+LaTeX Info: Redefining \% on input line 54.
+ [30 <./portada/typescript.png>]
+<portada/PostgreSQL.png, id=865, 612.2875pt x 281.05pt>
+File: portada/PostgreSQL.png Graphic file (type png)
+<use portada/PostgreSQL.png>
+Package pdftex.def Info: portada/PostgreSQL.png  used on input line 80.
+(pdftex.def)             Requested size: 170.71393pt x 78.35895pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 88.
+LaTeX Info: Redefining \. on input line 88.
+LaTeX Info: Redefining \% on input line 88.
+[31]
+<portada/neondb.png, id=871, 451.6875pt x 149.8097pt>
+File: portada/neondb.png Graphic file (type png)
+<use portada/neondb.png>
+Package pdftex.def Info: portada/neondb.png  used on input line 95.
+(pdftex.def)             Requested size: 170.71393pt x 56.61966pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 108.
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
+ [32 <./portada/PostgreSQL.png> <./portada/neondb.png>]
+<portada/supabase.png, id=881, 200.75pt x 69.25874pt>
+File: portada/supabase.png Graphic file (type png)
+<use portada/supabase.png>
+Package pdftex.def Info: portada/supabase.png  used on input line 115.
+(pdftex.def)             Requested size: 170.71393pt x 58.89978pt.
+
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 138.
+LaTeX Info: Redefining \. on input line 138.
+LaTeX Info: Redefining \% on input line 138.
+ [33 <./portada/supabase.png>]
+<portada/drizzle-orm.png, id=892, 129.48375pt x 38.39343pt>
+File: portada/drizzle-orm.png Graphic file (type png)
+<use portada/drizzle-orm.png>
+Package pdftex.def Info: portada/drizzle-orm.png  used on input line 156.
+(pdftex.def)             Requested size: 170.71393pt x 50.62381pt.
+LaTeX Info: Redefining \sptext on input line 175.
+LaTeX Info: Redefining \. on input line 175.
+LaTeX Info: Redefining \% on input line 175.
+ [34 <./portada/drizzle-orm.png>]
+<portada/trpc-logo.png, id=901, 861.2175pt x 256.96pt>
+File: portada/trpc-logo.png Graphic file (type png)
+<use portada/trpc-logo.png>
+Package pdftex.def Info: portada/trpc-logo.png  used on input line 194.
+(pdftex.def)             Requested size: 170.71393pt x 50.93626pt.
+LaTeX Info: Redefining \sptext on input line 200.
+LaTeX Info: Redefining \. on input line 200.
+LaTeX Info: Redefining \% on input line 200.
+ [35 <./portada/trpc-logo.png>]
+LaTeX Font Info:    Font shape `T1/pbk/b/it' in size <10.95> not available
+(Font)              Font shape `T1/pbk/db/it' tried instead on input line 201.
+<portada/prefetch-diagram.png, id=909, 1806.75pt x 1606.0pt>
+File: portada/prefetch-diagram.png Graphic file (type png)
+<use portada/prefetch-diagram.png>
+Package pdftex.def Info: portada/prefetch-diagram.png  used on input line 209.
+(pdftex.def)             Requested size: 426.79135pt x 379.3705pt.
+LaTeX Info: Redefining \sptext on input line 214.
+LaTeX Info: Redefining \. on input line 214.
+LaTeX Info: Redefining \% on input line 214.
+ [36 <./portada/prefetch-diagram.png (PNG copy)>]
+LaTeX Info: Redefining \sptext on input line 238.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
+ [37]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 241.
+<portada/nextjs.png, id=926, 169.38281pt x 112.92188pt>
+File: portada/nextjs.png Graphic file (type png)
+<use portada/nextjs.png>
+Package pdftex.def Info: portada/nextjs.png  used on input line 251.
+(pdftex.def)             Requested size: 128.0387pt x 85.36145pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 256.
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+ [38 <./portada/nextjs.png>]
+<portada/clerk.png, id=936, 322.20375pt x 100.375pt>
+File: portada/clerk.png Graphic file (type png)
+<use portada/clerk.png>
+Package pdftex.def Info: portada/clerk.png  used on input line 267.
+(pdftex.def)             Requested size: 128.0387pt x 39.8889pt.
+LaTeX Info: Redefining \sptext on input line 286.
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
+ [39 <./portada/clerk.png>]
+<portada/react.png, id=945, 1003.75pt x 709.65125pt>
+File: portada/react.png Graphic file (type png)
+<use portada/react.png>
+Package pdftex.def Info: portada/react.png  used on input line 301.
+(pdftex.def)             Requested size: 85.35696pt x 60.34662pt.
+LaTeX Info: Redefining \sptext on input line 315.
+LaTeX Info: Redefining \. on input line 315.
+LaTeX Info: Redefining \% on input line 315.
+ [40 <./portada/react.png>] (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+) (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2025/11/14 1.11b (Carsten Heinz)
+)
+LaTeX Info: Redefining \sptext on input line 345.
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+ [41]
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
+
+ []
+
+<portada/tailwindcss-logo.png, id=962, 401.5pt x 46.1725pt>
+File: portada/tailwindcss-logo.png Graphic file (type png)
+<use portada/tailwindcss-logo.png>
+Package pdftex.def Info: portada/tailwindcss-logo.png  used on input line 363.
+(pdftex.def)             Requested size: 153.64441pt x 17.66971pt.
+<portada/shadcn.png, id=963, 475.7775pt x 106.3975pt>
+File: portada/shadcn.png Graphic file (type png)
+<use portada/shadcn.png>
+Package pdftex.def Info: portada/shadcn.png  used on input line 368.
+(pdftex.def)             Requested size: 153.64441pt x 34.3596pt.
+) (secciones/innovaciones.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [42 <./portada/tailwindcss-logo.png> <./portada/shadcn.png>]
+Cap\'{\i }tulo 4.
+[43
+
+]
+<portada/alg-rec.png, id=978, 483.0045pt x 191.5155pt>
+File: portada/alg-rec.png Graphic file (type png)
+<use portada/alg-rec.png>
+Package pdftex.def Info: portada/alg-rec.png  used on input line 31.
+(pdftex.def)             Requested size: 426.79135pt x 169.22672pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 44.
+LaTeX Info: Redefining \. on input line 44.
+LaTeX Info: Redefining \% on input line 44.
+[44]
+LaTeX Info: Redefining \sptext on input line 48.
+LaTeX Info: Redefining \. on input line 48.
+LaTeX Info: Redefining \% on input line 48.
+ [45 <./portada/alg-rec.png>]
+<portada/comunidades.png, id=991, 634.16925pt x 419.76825pt>
+File: portada/comunidades.png Graphic file (type png)
+<use portada/comunidades.png>
+Package pdftex.def Info: portada/comunidades.png  used on input line 52.
+(pdftex.def)             Requested size: 384.1096pt x 254.252pt.
+LaTeX Info: Redefining \sptext on input line 68.
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
+ [46
+
+ <./portada/comunidades.png>]
+<portada/xp.png, id=1000, 259.56975pt x 36.73724pt>
+File: portada/xp.png Graphic file (type png)
+<use portada/xp.png>
+Package pdftex.def Info: portada/xp.png  used on input line 77.
+(pdftex.def)             Requested size: 384.1096pt x 54.36464pt.
+LaTeX Info: Redefining \sptext on input line 96.
+LaTeX Info: Redefining \. on input line 96.
+LaTeX Info: Redefining \% on input line 96.
+ [47 <./portada/xp.png>]
+<portada/explorer-1.png, id=1007, 958.782pt x 485.4135pt>
+File: portada/explorer-1.png Graphic file (type png)
+<use portada/explorer-1.png>
+Package pdftex.def Info: portada/explorer-1.png  used on input line 105.
+(pdftex.def)             Requested size: 426.79135pt x 216.07869pt.
+<portada/explorer-2.png, id=1008, 975.645pt x 487.8225pt>
+File: portada/explorer-2.png Graphic file (type png)
+<use portada/explorer-2.png>
+Package pdftex.def Info: portada/explorer-2.png  used on input line 110.
+(pdftex.def)             Requested size: 426.79135pt x 213.39948pt.
+LaTeX Info: Redefining \sptext on input line 118.
+LaTeX Info: Redefining \. on input line 118.
+LaTeX Info: Redefining \% on input line 118.
+ [48 <./portada/explorer-1.png> <./portada/explorer-2.png>]
+<portada/ia-video.png, id=1017, 237.88875pt x 240.9pt>
+File: portada/ia-video.png Graphic file (type png)
+<use portada/ia-video.png>
+Package pdftex.def Info: portada/ia-video.png  used on input line 123.
+(pdftex.def)             Requested size: 213.39568pt x 216.1059pt.
+<portada/video-view-1.png, id=1018, 1144.87724pt x 513.117pt>
+File: portada/video-view-1.png Graphic file (type png)
+<use portada/video-view-1.png>
+Package pdftex.def Info: portada/video-view-1.png  used on input line 135.
+(pdftex.def)             Requested size: 426.79135pt x 191.28311pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Info: Redefining \sptext on input line 142.
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+[49 <./portada/ia-video.png>]
+LaTeX Info: Redefining \sptext on input line 146.
+LaTeX Info: Redefining \. on input line 146.
+LaTeX Info: Redefining \% on input line 146.
+ [50 <./portada/video-view-1.png>]
+<portada/sidebar.png, id=1033, 115.02975pt x 545.6385pt>
+File: portada/sidebar.png Graphic file (type png)
+<use portada/sidebar.png>
+Package pdftex.def Info: portada/sidebar.png  used on input line 171.
+(pdftex.def)             Requested size: 102.43758pt x 485.90814pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 172.
+See the caption package documentation for explanation.
+
+
+Underfull \hbox (badness 1173) in paragraph at lines 172--172
+[]\T1/pbk/l/n/10.95 Figura 4.7: |[]Barra
+ []
+
+LaTeX Info: Redefining \sptext on input line 181.
+LaTeX Info: Redefining \. on input line 181.
+LaTeX Info: Redefining \% on input line 181.
+[51 <./portada/sidebar.png>]
+<portada/theme-selector.png, id=1042, 778.70924pt x 410.7345pt>
+File: portada/theme-selector.png Graphic file (type png)
+<use portada/theme-selector.png>
+Package pdftex.def Info: portada/theme-selector.png  used on input line 192.
+(pdftex.def)             Requested size: 426.79135pt x 225.11499pt.
+<portada/dark.png, id=1045, 1126.80975pt x 496.85625pt>
+File: portada/dark.png Graphic file (type png)
+<use portada/dark.png>
+Package pdftex.def Info: portada/dark.png  used on input line 203.
+(pdftex.def)             Requested size: 298.75264pt x 131.7345pt.
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <10> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 204.
+<portada/white.png, id=1046, 1121.3895pt x 495.65175pt>
+File: portada/white.png Graphic file (type png)
+<use portada/white.png>
+Package pdftex.def Info: portada/white.png  used on input line 209.
+(pdftex.def)             Requested size: 298.75264pt x 132.04288pt.
+<portada/retro.png, id=1047, 1124.40076pt x 495.0495pt>
+File: portada/retro.png Graphic file (type png)
+<use portada/retro.png>
+Package pdftex.def Info: portada/retro.png  used on input line 217.
+(pdftex.def)             Requested size: 298.75264pt x 131.53496pt.
+LaTeX Info: Redefining \sptext on input line 227.
+LaTeX Info: Redefining \. on input line 227.
+LaTeX Info: Redefining \% on input line 227.
+ [52 <./portada/theme-selector.png>]
+LaTeX Info: Redefining \sptext on input line 227.
+LaTeX Info: Redefining \. on input line 227.
+LaTeX Info: Redefining \% on input line 227.
+ [53 <./portada/dark.png> <./portada/white.png> <./portada/retro.png>]
+<portada/report-modal.png, id=1064, 252.34274pt x 330.63525pt>
+File: portada/report-modal.png Graphic file (type png)
+<use portada/report-modal.png>
+Package pdftex.def Info: portada/report-modal.png  used on input line 237.
+(pdftex.def)             Requested size: 256.07741pt x 335.56348pt.
+LaTeX Info: Redefining \sptext on input line 242.
+LaTeX Info: Redefining \. on input line 242.
+LaTeX Info: Redefining \% on input line 242.
+ [54 <./portada/report-modal.png>]
+<portada/report-vote.png, id=1071, 258.9675pt x 335.45325pt>
+File: portada/report-vote.png Graphic file (type png)
+<use portada/report-vote.png>
+Package pdftex.def Info: portada/report-vote.png  used on input line 249.
+(pdftex.def)             Requested size: 256.07741pt x 331.74654pt.
+LaTeX Info: Redefining \sptext on input line 256.
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+ [55 <./portada/report-vote.png>]
+<portada/comentarios.png, id=1078, 305.34074pt x 418.56375pt>
+File: portada/comentarios.png Graphic file (type png)
+<use portada/comentarios.png>
+Package pdftex.def Info: portada/comentarios.png  used on input line 262.
+(pdftex.def)             Requested size: 256.07741pt x 351.06104pt.
+LaTeX Info: Redefining \sptext on input line 268.
+LaTeX Info: Redefining \. on input line 268.
+LaTeX Info: Redefining \% on input line 268.
+ [56 <./portada/comentarios.png>]
+<portada/channel-videos.png, id=1086, 596.82974pt x 503.481pt>
+File: portada/channel-videos.png Graphic file (type png)
+<use portada/channel-videos.png>
+Package pdftex.def Info: portada/channel-videos.png  used on input line 280.
+(pdftex.def)             Requested size: 277.41176pt x 234.02405pt.
+LaTeX Info: Redefining \sptext on input line 288.
+LaTeX Info: Redefining \. on input line 288.
+LaTeX Info: Redefining \% on input line 288.
+ [57 <./portada/channel-videos.png>]
+<portada/channel-viewer.png, id=1097, 453.49425pt x 320.99925pt>
+File: portada/channel-viewer.png Graphic file (type png)
+<use portada/channel-viewer.png>
+Package pdftex.def Info: portada/channel-viewer.png  used on input line 293.
+(pdftex.def)             Requested size: 256.07741pt x 181.26694pt.
+<portada/channel-boost.png, id=1100, 516.12825pt x 377.61075pt>
+File: portada/channel-boost.png Graphic file (type png)
+<use portada/channel-boost.png>
+Package pdftex.def Info: portada/channel-boost.png  used on input line 302.
+(pdftex.def)             Requested size: 341.43437pt x 249.80005pt.
+<portada/channel-level.png, id=1101, 873.2625pt x 277.035pt>
+File: portada/channel-level.png Graphic file (type png)
+<use portada/channel-level.png>
+Package pdftex.def Info: portada/channel-level.png  used on input line 309.
+(pdftex.def)             Requested size: 426.79135pt x 135.39748pt.
+<portada/channel-leaderboard.png, id=1103, 581.7735pt x 364.9635pt>
+File: portada/channel-leaderboard.png Graphic file (type png)
+<use portada/channel-leaderboard.png>
+Package pdftex.def Info: portada/channel-leaderboard.png  used on input line 318.
+(pdftex.def)             Requested size: 341.43437pt x 214.1961pt.
+LaTeX Info: Redefining \sptext on input line 324.
+LaTeX Info: Redefining \. on input line 324.
+LaTeX Info: Redefining \% on input line 324.
+ [58 <./portada/channel-viewer.png>]
+LaTeX Info: Redefining \sptext on input line 324.
+LaTeX Info: Redefining \. on input line 324.
+LaTeX Info: Redefining \% on input line 324.
+ [59 <./portada/channel-boost.png> <./portada/channel-level.png>]
+<portada/channel-rewards.png, id=1121, 572.1375pt x 201.75375pt>
+File: portada/channel-rewards.png Graphic file (type png)
+<use portada/channel-rewards.png>
+Package pdftex.def Info: portada/channel-rewards.png  used on input line 329.
+(pdftex.def)             Requested size: 341.43437pt x 120.40053pt.
+<portada/channel-about.png, id=1123, 573.342pt x 160.1985pt>
+File: portada/channel-about.png Graphic file (type png)
+<use portada/channel-about.png>
+Package pdftex.def Info: portada/channel-about.png  used on input line 338.
+(pdftex.def)             Requested size: 426.79135pt x 119.25635pt.
+LaTeX Info: Redefining \sptext on input line 345.
+LaTeX Info: Redefining \. on input line 345.
+LaTeX Info: Redefining \% on input line 345.
+ [60 <./portada/channel-leaderboard.png> <./portada/channel-rewards.png>]
+<portada/channel-chat.png, id=1134, 572.1375pt x 264.99pt>
+File: portada/channel-chat.png Graphic file (type png)
+<use portada/channel-chat.png>
+Package pdftex.def Info: portada/channel-chat.png  used on input line 348.
+(pdftex.def)             Requested size: 426.79135pt x 197.67455pt.
+LaTeX Info: Redefining \sptext on input line 363.
+LaTeX Info: Redefining \. on input line 363.
+LaTeX Info: Redefining \% on input line 363.
+ [61 <./portada/channel-about.png> <./portada/channel-chat.png>]
+<portada/leaderboard.png, id=1144, 976.8495pt x 406.51875pt>
+File: portada/leaderboard.png Graphic file (type png)
+<use portada/leaderboard.png>
+Package pdftex.def Info: portada/leaderboard.png  used on input line 373.
+(pdftex.def)             Requested size: 426.79135pt x 177.60959pt.
+) (secciones/requisitos.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [62 <./portada/leaderboard.png>]
+Cap\'{\i }tulo 5.
+[63
+
+]
+LaTeX Info: Redefining \sptext on input line 60.
+LaTeX Info: Redefining \. on input line 60.
+LaTeX Info: Redefining \% on input line 60.
+ [64]
+LaTeX Info: Redefining \sptext on input line 87.
+LaTeX Info: Redefining \. on input line 87.
+LaTeX Info: Redefining \% on input line 87.
+ [65]
+LaTeX Info: Redefining \sptext on input line 117.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [66]
+LaTeX Info: Redefining \sptext on input line 141.
+LaTeX Info: Redefining \. on input line 141.
+LaTeX Info: Redefining \% on input line 141.
+ [67]
+LaTeX Info: Redefining \sptext on input line 163.
+LaTeX Info: Redefining \. on input line 163.
+LaTeX Info: Redefining \% on input line 163.
+ [68]
+<casos-uso/iniciar-sesion.png, id=1252, 1453.43pt x 1090.0725pt>
+File: casos-uso/iniciar-sesion.png Graphic file (type png)
+<use casos-uso/iniciar-sesion.png>
+Package pdftex.def Info: casos-uso/iniciar-sesion.png  used on input line 168.
+(pdftex.def)             Requested size: 341.43437pt x 256.06728pt.
+
+secciones/requisitos.tex:266: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 266.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [69
+
+ <./casos-uso/iniciar-sesion.png (PNG copy)>]
+secciones/requisitos.tex:266: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 266.
+LaTeX Info: Redefining \. on input line 266.
+LaTeX Info: Redefining \% on input line 266.
+ [70]
+Overfull \hbox (0.89871pt too wide) in alignment at lines 277--363
+ [] [] 
+ []
+
+secciones/requisitos.tex:363: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 363.
+LaTeX Info: Redefining \. on input line 363.
+LaTeX Info: Redefining \% on input line 363.
+ [71]
+secciones/requisitos.tex:449: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 449.
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+ [72]
+secciones/requisitos.tex:449: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 449.
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+ [73]
+secciones/requisitos.tex:554: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 554.
+LaTeX Info: Redefining \. on input line 554.
+LaTeX Info: Redefining \% on input line 554.
+ [74]
+LaTeX Info: Redefining \sptext on input line 571.
+LaTeX Info: Redefining \. on input line 571.
+LaTeX Info: Redefining \% on input line 571.
+ [75]
+<casos-uso/subir-video.png, id=1380, 954.56625pt x 498.86375pt>
+File: casos-uso/subir-video.png Graphic file (type png)
+<use casos-uso/subir-video.png>
+Package pdftex.def Info: casos-uso/subir-video.png  used on input line 577.
+(pdftex.def)             Requested size: 426.79135pt x 223.04033pt.
+
+secciones/requisitos.tex:654: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 654.
+LaTeX Info: Redefining \. on input line 654.
+LaTeX Info: Redefining \% on input line 654.
+ [76
+
+ <./casos-uso/subir-video.png>]
+secciones/requisitos.tex:723: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 723.
+LaTeX Info: Redefining \. on input line 723.
+LaTeX Info: Redefining \% on input line 723.
+ [77]
+secciones/requisitos.tex:776: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 776.
+LaTeX Info: Redefining \. on input line 776.
+LaTeX Info: Redefining \% on input line 776.
+ [78]
+secciones/requisitos.tex:842: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 842.
+LaTeX Info: Redefining \. on input line 842.
+LaTeX Info: Redefining \% on input line 842.
+ [79]
+secciones/requisitos.tex:894: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 894.
+LaTeX Info: Redefining \. on input line 894.
+LaTeX Info: Redefining \% on input line 894.
+ [80]
+secciones/requisitos.tex:951: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 951.
+LaTeX Info: Redefining \. on input line 951.
+LaTeX Info: Redefining \% on input line 951.
+ [81]
+<casos-uso/reproduccion-consumo.png, id=1484, 670.505pt x 617.30624pt>
+File: casos-uso/reproduccion-consumo.png Graphic file (type png)
+<use casos-uso/reproduccion-consumo.png>
+Package pdftex.def Info: casos-uso/reproduccion-consumo.png  used on input line 968.
+(pdftex.def)             Requested size: 426.79135pt x 392.92703pt.
+LaTeX Info: Redefining \sptext on input line 970.
+LaTeX Info: Redefining \. on input line 970.
+LaTeX Info: Redefining \% on input line 970.
+ [82]
+secciones/requisitos.tex:1014: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1014.
+LaTeX Info: Redefining \. on input line 1014.
+LaTeX Info: Redefining \% on input line 1014.
+ [83 <./casos-uso/reproduccion-consumo.png>]
+secciones/requisitos.tex:1056: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1056.
+LaTeX Info: Redefining \. on input line 1056.
+LaTeX Info: Redefining \% on input line 1056.
+ [84]
+secciones/requisitos.tex:1126: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1126.
+LaTeX Info: Redefining \. on input line 1126.
+LaTeX Info: Redefining \% on input line 1126.
+ [85]
+LaTeX Info: Redefining \sptext on input line 1139.
+LaTeX Info: Redefining \. on input line 1139.
+LaTeX Info: Redefining \% on input line 1139.
+ [86]
+<casos-uso/exploracion-busqueda.png, id=1560, 466.74374pt x 547.04375pt>
+File: casos-uso/exploracion-busqueda.png Graphic file (type png)
+<use casos-uso/exploracion-busqueda.png>
+Package pdftex.def Info: casos-uso/exploracion-busqueda.png  used on input line 1144.
+(pdftex.def)             Requested size: 298.75264pt x 350.16522pt.
+
+secciones/requisitos.tex:1192: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1192.
+LaTeX Info: Redefining \. on input line 1192.
+LaTeX Info: Redefining \% on input line 1192.
+ [87
+
+ <./casos-uso/exploracion-busqueda.png>]
+secciones/requisitos.tex:1262: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1262.
+LaTeX Info: Redefining \. on input line 1262.
+LaTeX Info: Redefining \% on input line 1262.
+ [88]
+secciones/requisitos.tex:1304: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1304.
+LaTeX Info: Redefining \. on input line 1304.
+LaTeX Info: Redefining \% on input line 1304.
+ [89]
+LaTeX Info: Redefining \sptext on input line 1318.
+LaTeX Info: Redefining \. on input line 1318.
+LaTeX Info: Redefining \% on input line 1318.
+ [90]
+<casos-uso/interaccion-social.png, id=1618, 635.37375pt x 396.48125pt>
+File: casos-uso/interaccion-social.png Graphic file (type png)
+<use casos-uso/interaccion-social.png>
+Package pdftex.def Info: casos-uso/interaccion-social.png  used on input line 1324.
+(pdftex.def)             Requested size: 426.79135pt x 266.33072pt.
+
+secciones/requisitos.tex:1361: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1361.
+LaTeX Info: Redefining \. on input line 1361.
+LaTeX Info: Redefining \% on input line 1361.
+ [91
+
+ <./casos-uso/interaccion-social.png>]
+secciones/requisitos.tex:1427: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1427.
+LaTeX Info: Redefining \. on input line 1427.
+LaTeX Info: Redefining \% on input line 1427.
+ [92]
+secciones/requisitos.tex:1497: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1497.
+LaTeX Info: Redefining \. on input line 1497.
+LaTeX Info: Redefining \% on input line 1497.
+ [93]
+LaTeX Info: Redefining \sptext on input line 1499.
+LaTeX Info: Redefining \. on input line 1499.
+LaTeX Info: Redefining \% on input line 1499.
+ [94]
+<casos-uso/comunidades.png, id=1679, 486.81876pt x 526.96875pt>
+File: casos-uso/comunidades.png Graphic file (type png)
+<use casos-uso/comunidades.png>
+Package pdftex.def Info: casos-uso/comunidades.png  used on input line 1515.
+(pdftex.def)             Requested size: 256.07741pt x 277.19344pt.
+
+secciones/requisitos.tex:1578: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1578.
+LaTeX Info: Redefining \. on input line 1578.
+LaTeX Info: Redefining \% on input line 1578.
+ [95
+
+ <./casos-uso/comunidades.png>]
+secciones/requisitos.tex:1617: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1617.
+LaTeX Info: Redefining \. on input line 1617.
+LaTeX Info: Redefining \% on input line 1617.
+ [96]
+LaTeX Info: Redefining \sptext on input line 1664.
+LaTeX Info: Redefining \. on input line 1664.
+LaTeX Info: Redefining \% on input line 1664.
+ [97]
+<casos-uso/canales.png, id=1725, 657.45625pt x 495.8525pt>
+File: casos-uso/canales.png Graphic file (type png)
+<use casos-uso/canales.png>
+Package pdftex.def Info: casos-uso/canales.png  used on input line 1671.
+(pdftex.def)             Requested size: 426.79135pt x 321.89174pt.
+
+secciones/requisitos.tex:1719: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1719.
+LaTeX Info: Redefining \. on input line 1719.
+LaTeX Info: Redefining \% on input line 1719.
+ [98 <./casos-uso/canales.png>]
+secciones/requisitos.tex:1780: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1780.
+LaTeX Info: Redefining \. on input line 1780.
+LaTeX Info: Redefining \% on input line 1780.
+ [99]
+secciones/requisitos.tex:1837: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1837.
+LaTeX Info: Redefining \. on input line 1837.
+LaTeX Info: Redefining \% on input line 1837.
+ [100]
+<casos-uso/gamificacion.png, id=1774, 938.50626pt x 536.0025pt>
+File: casos-uso/gamificacion.png Graphic file (type png)
+<use casos-uso/gamificacion.png>
+Package pdftex.def Info: casos-uso/gamificacion.png  used on input line 1855.
+(pdftex.def)             Requested size: 426.79135pt x 243.75066pt.
+
+Underfull \vbox (badness 2142) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 1858.
+LaTeX Info: Redefining \. on input line 1858.
+LaTeX Info: Redefining \% on input line 1858.
+ [101]
+secciones/requisitos.tex:1902: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1902.
+LaTeX Info: Redefining \. on input line 1902.
+LaTeX Info: Redefining \% on input line 1902.
+ [102 <./casos-uso/gamificacion.png>]
+LaTeX Info: Redefining \sptext on input line 1992.
+LaTeX Info: Redefining \. on input line 1992.
+LaTeX Info: Redefining \% on input line 1992.
+ [103]
+secciones/requisitos.tex:2034: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 2034.
+LaTeX Info: Redefining \. on input line 2034.
+LaTeX Info: Redefining \% on input line 2034.
+ [104]
+LaTeX Info: Redefining \sptext on input line 2075.
+LaTeX Info: Redefining \. on input line 2075.
+LaTeX Info: Redefining \% on input line 2075.
+ [105]
+<diagramas-secuencia/subir-video.png, id=1859, 1040.88875pt x 1102.1175pt>
+File: diagramas-secuencia/subir-video.png Graphic file (type png)
+<use diagramas-secuencia/subir-video.png>
+Package pdftex.def Info: diagramas-secuencia/subir-video.png  used on input line 2085.
+(pdftex.def)             Requested size: 426.79135pt x 451.88791pt.
+LaTeX Info: Redefining \sptext on input line 2091.
+LaTeX Info: Redefining \. on input line 2091.
+LaTeX Info: Redefining \% on input line 2091.
+ [106
+
+ <./diagramas-secuencia/subir-video.png>]
+<diagramas-secuencia/registro.png, id=1867, 990.70125pt x 984.67876pt>
+File: diagramas-secuencia/registro.png Graphic file (type png)
+<use diagramas-secuencia/registro.png>
+Package pdftex.def Info: diagramas-secuencia/registro.png  used on input line 2097.
+(pdftex.def)             Requested size: 426.79135pt x 424.19994pt.
+
+Underfull \vbox (badness 5726) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2103.
+LaTeX Info: Redefining \. on input line 2103.
+LaTeX Info: Redefining \% on input line 2103.
+ [107 <./diagramas-secuencia/registro.png>]
+<diagramas-secuencia/inicio-sesion.png, id=1875, 1077.02374pt x 1088.065pt>
+File: diagramas-secuencia/inicio-sesion.png Graphic file (type png)
+<use diagramas-secuencia/inicio-sesion.png>
+Package pdftex.def Info: diagramas-secuencia/inicio-sesion.png  used on input line 2108.
+(pdftex.def)             Requested size: 426.79135pt x 431.16728pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2114.
+LaTeX Info: Redefining \. on input line 2114.
+LaTeX Info: Redefining \% on input line 2114.
+ [108 <./diagramas-secuencia/inicio-sesion.png>]
+<diagramas-secuencia/video-view.png, id=1883, 1147.28625pt x 914.41624pt>
+File: diagramas-secuencia/video-view.png Graphic file (type png)
+<use diagramas-secuencia/video-view.png>
+Package pdftex.def Info: diagramas-secuencia/video-view.png  used on input line 2121.
+(pdftex.def)             Requested size: 426.79135pt x 340.15654pt.
+
+Underfull \vbox (badness 8113) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2127.
+LaTeX Info: Redefining \. on input line 2127.
+LaTeX Info: Redefining \% on input line 2127.
+ [109 <./diagramas-secuencia/video-view.png>]
+<diagrama-er/comunidades-usuarios-videos.png, id=1891, 1769.61125pt x 1301.86375pt>
+File: diagrama-er/comunidades-usuarios-videos.png Graphic file (type png)
+<use diagrama-er/comunidades-usuarios-videos.png>
+Package pdftex.def Info: diagrama-er/comunidades-usuarios-videos.png  used on input line 2139.
+(pdftex.def)             Requested size: 426.79135pt x 313.96341pt.
+LaTeX Info: Redefining \sptext on input line 2145.
+LaTeX Info: Redefining \. on input line 2145.
+LaTeX Info: Redefining \% on input line 2145.
+ [110 <./diagrama-er/comunidades-usuarios-videos.png>]
+<diagrama-er/interaccion-social.png, id=1899, 1801.73125pt x 1263.72125pt>
+File: diagrama-er/interaccion-social.png Graphic file (type png)
+<use diagrama-er/interaccion-social.png>
+Package pdftex.def Info: diagrama-er/interaccion-social.png  used on input line 2155.
+(pdftex.def)             Requested size: 426.79135pt x 299.34633pt.
+LaTeX Info: Redefining \sptext on input line 2161.
+LaTeX Info: Redefining \. on input line 2161.
+LaTeX Info: Redefining \% on input line 2161.
+ [111 <./diagrama-er/interaccion-social.png>]
+LaTeX Info: Redefining \sptext on input line 2167.
+LaTeX Info: Redefining \. on input line 2167.
+LaTeX Info: Redefining \% on input line 2167.
+ [112]
+<diagrama-er/gamificacion-reporte.png, id=1912, 1695.33376pt x 3313.37875pt>
+File: diagrama-er/gamificacion-reporte.png Graphic file (type png)
+<use diagrama-er/gamificacion-reporte.png>
+Package pdftex.def Info: diagrama-er/gamificacion-reporte.png  used on input line 2172.
+(pdftex.def)             Requested size: 298.75264pt x 583.84406pt.
+
+Underfull \vbox (badness 2875) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 2178.
+LaTeX Info: Redefining \. on input line 2178.
+LaTeX Info: Redefining \% on input line 2178.
+ [113
+
+ <./diagrama-er/gamificacion-reporte.png>]
+LaTeX Info: Redefining \sptext on input line 2187.
+LaTeX Info: Redefining \. on input line 2187.
+LaTeX Info: Redefining \% on input line 2187.
+ [114]) (secciones/diseno-arquitectura.tex
+Cap\'{\i }tulo 6.
+[115
+
+
+]
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 45.
+ (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesomefree1.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree0 on input line 45.
+ (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/fontawesome5\ufontawesomefree0.fd)
+LaTeX Info: Redefining \sptext on input line 82.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
+ [116
+
+{C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free1.enc}{C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/fontawesome5/fa5free0.enc}]
+Underfull \vbox (badness 5260) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 140.
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+ [117
+
+]
+LaTeX Info: Redefining \sptext on input line 157.
+LaTeX Info: Redefining \. on input line 157.
+LaTeX Info: Redefining \% on input line 157.
+ [118]
+LaTeX Info: Redefining \sptext on input line 189.
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+ [119]
+LaTeX Info: Redefining \sptext on input line 213.
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
+ [120]
+Overfull \hbox (27.23763pt too wide) in paragraph at lines 220--221
+\T1/pbk/l/n/10.95 ca-do por \T1/pbk/l/it/10.95 Clerk \T1/pbk/l/n/10.95 co-mo \T1/pcr/m/n/10.95 clerkMiddleware() \T1/pbk/l/n/10.95 y en-con-tra-do en el ar-chi-vo \T1/pcr/m/n/10.95 middleware.ts\T1/pbk/l/n/10.95 .
+ []
+
+
+Overfull \hbox (65.96263pt too wide) in paragraph at lines 227--229
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (33.11237pt too wide) in paragraph at lines 242--244
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 252.
+LaTeX Info: Redefining \. on input line 252.
+LaTeX Info: Redefining \% on input line 252.
+[121]
+Overfull \hbox (4.24252pt too wide) in paragraph at lines 253--254
+[]\T1/pbk/l/n/10.95 La cons-tan-te \T1/pcr/m/n/10.95 isProtectedRoute \T1/pbk/l/n/10.95 de-fi-ne co-mo ru-ta pro-te-gi-da so-lo a \T1/pcr/m/n/10.95 /studio(.*)\T1/pbk/l/n/10.95 .
+ []
+
+LaTeX Info: Redefining \sptext on input line 272.
+LaTeX Info: Redefining \. on input line 272.
+LaTeX Info: Redefining \% on input line 272.
+[122]
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
+[][][][]$\T1/pcr/m/n/9 https : / / liambx . com / erd / p / github . com / SamC4r / Booster / blob / main / src / db /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--273
+\T1/pcr/m/n/9 schema . ts ? showMode = ALL _ FIELDS & hidden = eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm _
+ []
+
+<diagrama-er/liamerd.png, id=2008, 982.26974pt x 504.08325pt>
+File: diagrama-er/liamerd.png Graphic file (type png)
+<use diagrama-er/liamerd.png>
+Package pdftex.def Info: diagrama-er/liamerd.png  used on input line 277.
+(pdftex.def)             Requested size: 426.79135pt x 219.02061pt.
+LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <10> not available
+(Font)              Font shape `T1/pbk/db/n' tried instead on input line 305.
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 301--310
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 310--319
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 319--457
+ [] [] [] [] [] 
+ []
+
+secciones/diseno-arquitectura.tex:457: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 457.
+LaTeX Info: Redefining \. on input line 457.
+LaTeX Info: Redefining \% on input line 457.
+ [123 <./diagrama-er/liamerd.png>]
+secciones/diseno-arquitectura.tex:457: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 457.
+LaTeX Info: Redefining \. on input line 457.
+LaTeX Info: Redefining \% on input line 457.
+ [124]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 471--480
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 480--489
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 489--657
+ [] [] [] [] [] 
+ []
+
+secciones/diseno-arquitectura.tex:657: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 657.
+LaTeX Info: Redefining \. on input line 657.
+LaTeX Info: Redefining \% on input line 657.
+ [125]
+LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <10> not available
+(Font)              Font shape `T1/pbk/l/it' tried instead on input line 662.
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 674--683
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 683--692
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 692--770
+ [] [] [] [] [] 
+ []
+
+secciones/diseno-arquitectura.tex:770: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 770.
+LaTeX Info: Redefining \. on input line 770.
+LaTeX Info: Redefining \% on input line 770.
+ [126]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 784--793
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 793--802
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 802--838
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 838.
+LaTeX Info: Redefining \. on input line 838.
+LaTeX Info: Redefining \% on input line 838.
+[127]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 855--864
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 864--873
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 873--915
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 933--942
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 942--951
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 951--1017
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 1017.
+LaTeX Info: Redefining \. on input line 1017.
+LaTeX Info: Redefining \% on input line 1017.
+[128]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1033--1042
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1042--1051
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1051--1082
+ [] [] [] [] [] 
+ []
+
+secciones/diseno-arquitectura.tex:1082: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1082.
+LaTeX Info: Redefining \. on input line 1082.
+LaTeX Info: Redefining \% on input line 1082.
+ [129]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1099--1108
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1108--1117
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1117--1153
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1167--1176
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1176--1185
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1185--1215
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 1215.
+LaTeX Info: Redefining \. on input line 1215.
+LaTeX Info: Redefining \% on input line 1215.
+[130]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1231--1240
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1240--1249
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1249--1291
+ [] [] [] [] [] 
+ []
+
+secciones/diseno-arquitectura.tex:1291: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1291.
+LaTeX Info: Redefining \. on input line 1291.
+LaTeX Info: Redefining \% on input line 1291.
+ [131]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1306--1315
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1315--1324
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1324--1366
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1380--1389
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1389--1398
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1398--1452
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 1452.
+LaTeX Info: Redefining \. on input line 1452.
+LaTeX Info: Redefining \% on input line 1452.
+[132]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1469--1478
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1478--1487
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1487--1523
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 1529.
+LaTeX Info: Redefining \. on input line 1529.
+LaTeX Info: Redefining \% on input line 1529.
+[133]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1540--1549
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1549--1558
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1558--1600
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1618--1627
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1627--1636
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1636--1684
+ [] [] [] [] [] 
+ []
+
+secciones/diseno-arquitectura.tex:1684: ignored error: Infinite glue shrinkage found in box being split
+LaTeX Info: Redefining \sptext on input line 1684.
+LaTeX Info: Redefining \. on input line 1684.
+LaTeX Info: Redefining \% on input line 1684.
+ [134]
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1699--1708
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1708--1717
+ [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.48262pt too wide) in alignment at lines 1717--1753
+ [] [] [] [] [] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 1758.
+LaTeX Info: Redefining \. on input line 1758.
+LaTeX Info: Redefining \% on input line 1758.
+[135]
+<arquitectura/amazon-arch.png, id=2089, 1145.27875pt x 522.95375pt>
+File: arquitectura/amazon-arch.png Graphic file (type png)
+<use arquitectura/amazon-arch.png>
+Package pdftex.def Info: arquitectura/amazon-arch.png  used on input line 1771.
+(pdftex.def)             Requested size: 426.79135pt x 194.87831pt.
+LaTeX Info: Redefining \sptext on input line 1783.
+LaTeX Info: Redefining \. on input line 1783.
+LaTeX Info: Redefining \% on input line 1783.
+ [136
+
+ <./arquitectura/amazon-arch.png>]
+<arquitectura/bunny-arch.png, id=2102, 1617.04124pt x 1767.60374pt>
+File: arquitectura/bunny-arch.png Graphic file (type png)
+<use arquitectura/bunny-arch.png>
+Package pdftex.def Info: arquitectura/bunny-arch.png  used on input line 1804.
+(pdftex.def)             Requested size: 426.79135pt x 466.52477pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 1808.
+LaTeX Info: Redefining \. on input line 1808.
+LaTeX Info: Redefining \% on input line 1808.
+ [137]
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 1813.
+LaTeX Info: Redefining \sptext on input line 1818.
+LaTeX Info: Redefining \. on input line 1818.
+LaTeX Info: Redefining \% on input line 1818.
+ [138 <./arquitectura/bunny-arch.png>]
+Overfull \hbox (29.21329pt too wide) in paragraph at lines 1829--1830
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (17.40617pt too wide) in paragraph at lines 1837--1838
+[]\T1/pbk/l/n/10 Esto se ha-ce me-dian-te el pro-to-co-lo TUS con-tra \T1/pcr/m/n/10 https://video.bunnycdn.com/tusupload\T1/pbk/l/n/10 .
+ []
+
+LaTeX Info: Redefining \sptext on input line 1850.
+LaTeX Info: Redefining \. on input line 1850.
+LaTeX Info: Redefining \% on input line 1850.
+[139]
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <7> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 1881.
+LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <5> not available
+(Font)              Font shape `T1/pbk/l/n' tried instead on input line 1881.
+LaTeX Info: Redefining \sptext on input line 1913.
+LaTeX Info: Redefining \. on input line 1913.
+LaTeX Info: Redefining \% on input line 1913.
+ [140]
+LaTeX Info: Redefining \sptext on input line 1941.
+LaTeX Info: Redefining \. on input line 1941.
+LaTeX Info: Redefining \% on input line 1941.
+ [141]) (secciones/desarrollo.tex
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+ [142]
+Cap\'{\i }tulo 7.
+) (secciones/pruebas.tex [143
+
+] [144
+
+]
+Cap\'{\i }tulo 8.
+) (secciones/conclusiones.tex [145] [146
+
+]
+Cap\'{\i }tulo 9.
+) (secciones/impacto.tex [147] [148
+
+]
+Cap\'{\i }tulo 10.
+) [149] [150
+
+]
+Overfull \hbox (1.31523pt too wide) in paragraph at lines 242--242
+[]\T1/pbk/l/n/10.95 DataReportal. ^^S  Di-gi-tal 2025: Glo-bal Over-view Re-port^^T, vi-si-ta-do 12 de abr. de
+ []
+
+
+Overfull \hbox (7.39021pt too wide) in paragraph at lines 242--242
+\T1/pbk/l/n/10.95 di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / s22 . q4cdn . com / 959853165 / files / doc _ financials /
+ []
+
+
+Overfull \hbox (4.1522pt too wide) in paragraph at lines 242--242
+\T1/pbk/l/n/10.95 sults^^T, vi-si-ta-do 26 de mar. de 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / investor . atmeta .
+ []
+
+
+Overfull \hbox (0.74391pt too wide) in paragraph at lines 242--242
+\T1/pbk/l/n/10.95 ción: []$\T1/pcr/m/n/10.95 https : / / www . ofcom . org . uk / siteassets / resources / documents /
+ []
+
+
+Overfull \hbox (1.00604pt too wide) in paragraph at lines 242--242
+\T1/pcr/m/n/10.95 research -[] and -[] data / online -[] research / online -[] nation / 2025 / online -[]
+ []
+
+
+Overfull \hbox (28.08347pt too wide) in paragraph at lines 242--242
+\T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
+ []
+
+[151
+
+]
+Overfull \hbox (10.61328pt too wide) in paragraph at lines 242--242
+[]\T1/pbk/l/n/10.95 H. P. G. T. F. Cas-per Haems Je-roen van der Hooft. ^^S  Hy-brid Uni-cast^^UBroadcast
+ []
+
+
+Overfull \hbox (2.00604pt too wide) in paragraph at lines 242--242
+\T1/pcr/m/n/10.95 information -[] youtube -[] snapchat -[] and -[] tiktok -[] recommender -[] systems -[]
+ []
+
+LaTeX Info: Redefining \sptext on input line 239.
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
+[152]
+Overfull \hbox (7.54115pt too wide) in paragraph at lines 242--242
+\T1/pbk/l/n/10.95 abr. de 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / nextjs . org / docs / app / api -[] reference /
+ []
+
+LaTeX Info: Redefining \sptext on input line 243.
+LaTeX Info: Redefining \. on input line 243.
+LaTeX Info: Redefining \% on input line 243.
+[153] [154
+
+] [155] [156] (secciones/anexo1.tex
+Ap\'{e}ndice A.
+) [157
+
+] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
+LaTeX Info: Redefining \sptext on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \sptext on input line 16.
+LaTeX Info: Redefining \. on input line 16.
+LaTeX Info: Redefining \% on input line 16.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+ ***********
+Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
+(rerunfilecheck)             Checksum: F98A01C30A21DE8E991833E8291D80DD;21644.
+Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
+\openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 43549 strings out of 467871
+ 843112 string characters out of 5419344
+ 1743623 words of memory out of 5000000
+ 70722 multiletter control sequences out of 15000+600000
+ 685272 words of font info for 167 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 116i,12n,131p,1412b,2656s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm_-7yLbThNsyMFwBvhRD0n2H9Y88pxZ3Fga6bCmtSnmdTtJHozG-i9YuuRnvPDI2SD5sjj_6QyX5} has been referenced but does not exist, replaced by a fixed one
+
+<C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (167 pages, 13051287 bytes).
+PDF statistics:
+ 2594 PDF objects out of 2984 (max. 8388607)
+ 996 named destinations out of 1000 (max. 500000)
+ 1263 words of extra memory for PDF output out of 10000 (max. 10000000)
+

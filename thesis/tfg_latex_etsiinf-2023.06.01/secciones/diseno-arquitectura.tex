@@ -187,7 +187,7 @@ Cada solicitud a ruta específicas del \textit{backend} pasan primero por un mid
 
 Al emplear React.Js para la interfaz de usuario se pueden crear componentes reutilizables. Estos se almacenan en la carpeta \texttt{/componenets} permitiendo así, manejar una apariencia visual coherente en toda la aplicación y evitar reutilizar el mismo código en múltiples partes. Además, esta decisión facilita la evolución del diseño de la aplicación. Cuando se desea actualizar un elemento visual, se modifica el componente y los cambios quedan reflejados en todas las parte donde se utilice.
 
-\subsection{prefetch de tRPC}
+\subsection{Prefetch de datos}
 
 
 En \textit{Booster}, se utiliza tRPC para optimizar la obtención de datos mediante técnicas de precarga. Esto permite recuperar la información desde el lado del servidor antes de que los componentes del cliente la necesiten, como se analizó en \ref{trpc}.  
@@ -202,7 +202,7 @@ El proyecto utiliza una estructura de carpetas clara y con nombres descriptivos 
 
 Asimismo, las variables dentro del proyecto siguen la convención \textit{camelCase} y empleando nombres descriptivos.  
 
-\subsection{procedimientos públicos y protegidos}
+\subsection{Procedimientos públicos y protegidos}
 
 En \textit{Booster} se implementan 2 tipos de procedimientos para interactuar con el servidor: público y privado. Un procedimiento público denotado como \textit{baseProcedure} pueden ser consumidos sin requerir una sesión autenticada. Por otro lado, un procedimiento privado (\textit{protectedProcedure}) requiere verificar la identidad del usuario antes de permitir la ejecución de una acción. 
 
@@ -1766,6 +1766,13 @@ En esta sección se presentan las alternativas posibles para desarrollar un serv
 
 Esta primera solución se basa en implementar un flujo de procesamiento de videos asíncrono mediante el uso de servicios de Amazon Web Services \ref{aws}. Con esto, se consigue tener un registro del archivo de video y distribuirlo de forma eficiente, evitando que el \textit{backend} realice estas tareas. El proceso se ilustra en la figura \ref{amazon-arch}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{arquitectura/amazon-arch.png}
+  \caption{Arquitectura de Procesamiento con servicios de Amazon Web Services}
+  \label{amazon-arch}
+\end{figure}
+
 El flujo comienza  cuando el usuario solicita al \textit{backend} un enlace para cargar un video. En lugar de enviar el video directamente al \textit{backend} y luego al servicio de procesamiento de videos, se envia un enlace de carga al usuario para que suba el video directamente al servicio de procesamiento. Por motivos de seguridad, este enlace de carga se pide a través del \textit{backend}. Además, esta técnica reduce la carga sobre el \textit{backend} y evita que tenga que manejar archivos de tamaño elevado. 
 
 Posteriormente, el archivo original cargado por el usuario se almacena en un \textit{bucket} de Amazon S3 denominado \textit{S3 Raw Bucket} que funciona como un \textit{Object Storage} explicado en \ref{bucket}. Este \textit{bucket} almacena el contenido en su estado original antes de procesarlo. Una vez que el archivo se ha sido subido correctamente, S3 genera un evento indicando que se ha creado un nuevo objeto.
@@ -1778,22 +1785,200 @@ Para ejecutar el procesamiento, el consumer invoca Amazon ECS, el servicio de Am
 
 Una vez que la tarea se inicia, el contenedor de procesamiento descarga el video original desde el S3 Raw Bucket. A continuación utiliza herramientas como ffmpeg (\ref{ffmpeg}) para transcodificar y procesar el video.
 
-La segmentación convierte el video original en fragmentos para la reproducción en streaming. En la solución empleada, se generan segmentos del video en formato MPEG-DASH junto con un \texttt{manifest.mpd}. Además, la transcodificación produce diferentes calidades de reproducción como 360p, 720p y 1080p.  También se generan miniaturas del video extrayendo un fotograma representativo mediante ffmpeg. 
+La segmentación convierte el video original en fragmentos para la reproducción en streaming. En la solución empleada, se generan segmentos del video en formato MPEG-DASH junto con un \texttt{manifest.mpd}. Además, la transcodificación produce diferentes calidades de reproducción como 360p, 720p y 1080p.  También se generan miniaturas del video extrayendo un fotograma representativo mediante ffmpeg.   
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=1\textwidth]{arquitectura/amazon-arch.png}
-  \caption{Arquitectura de Procesamiento empleando servicios de Amazon Web Services}
-  \label{amazon-arch}
-\end{figure}
+Cuando el proceso finaliza, los archivos generados se almacenan en un segundo \textit{bucket} de S3, denominado \textit{Processed Videos Bucket}. Aquí se guardan los recursos preparados para ser entregados a los clientes finales, como los manifiestos, miniaturas, segmentos y las distintas calidades de video generadas. Sobre este \textit{bucket}, se utiliza Amazon CloudFront, la capa de distribución de contenido de Amazon, y se consiguen los beneficios analizados en \ref{cdn}. Asimismo, cuando el procesamiento de videos termina, se debe avisar al \textit{backend} sobre esto, actualizar el estado del video, añadir la duración e incorporar la URL final del archivo procesado. 
+
+
 
 
 
 \subsection{Arquitectura de procesamiento con un proveedor}
 
+Otra alternativa para implementar el procesamiento de videos es delegar estas tareas a un proveedor externo especializado. En lugar de que \textit{Booster} tenga que descargar los archivos de videos, procesarlos, transcodificarlos, segmentarlos y almacenarlos en \textit{buckets} propios, se ha decidido utilizar \textit{Bunny.net}, más concretamente, el servicio de \textit{Bunny Stream} \ref{bunny}. Este se encarga de realizar todas las tareas de procesamiento de video, cuenta con una CDN que facilita su distribución y además, dispone de un gran número de opciones de personalización que se adaptan bien con los objetivos de la plataforma. 
+
+En la figura \ref{bunny-arch}, se observa un diagrama de secuencias que ilustra el proceso de carga de videos a la plataforma integrando \textit{Bunny.net}. El flujo comienza cuando un usuario selecciona la opción de subir video dentro del \texttt{/studio} y arrastra o selecciona un archivo de video. Antes de iniciar la carga, el cliente obtiene algunos metadatos del archivo como la duración y sus dimensiones. Esto se hace para evitar que se suban videos por encima de 10 minutos y así, reducir los costos de infraestructura y además, se detectan el ancho y alto para determinar si es un video vertical. Esto se debe a que los usuarios tienen la opción de filtrar los videos verticales en su perfil de recomendaciones. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{arquitectura/bunny-arch.png}
+  \caption{Arquitectura de Procesamiento con Bunny.net}
+  \label{bunny-arch}
+\end{figure}
+
+
+Luego, el cliente llama al endpoint \texttt{/api/bunny/create} dentro del backend the \textit{Booster} enviándole el título del video. Aquí, se verifica en primer lugar que el usuario tenga una sesión válida para cargar un archivo de video. Si no lo está, se rechaza la operación. Si todo es correcto, el backend realiza una petición a \textit{Bunny Stream} para craer un nuevo objeto de video, según se especifica en su documentación \cite{bunny-upload-docs}. Para esto, se debe realizar una petición \textit{POST} autenticada de la siguiente forma, pasándole \textit{Headers} como \textit{Acces-Key} y \textit{content-type}: 
+
+\begin{lstlisting}[language=TypeScript]
+curl --request POST
+  --url https://video.bunnycdn.com/library/:libraryId/videos
+  --header 'AccessKey: <Your Stream Library API key>'
+  --header 'accept: application/json'
+  --header 'content-type: application/json'
+  --data '{"title":"test"}'
+\end{lstlisting}
+
+Como se puede observar, esto requiere conocer el identificador de la librería de \textit{Bunny} y además, la clave de API del mismo. Esta es información delicada que se debe recuperar del archivo \texttt{.env.local} destinado a almacenar este tipo de datos. 
+
+Este paso es importante porque \textit{Bunny} necesita crear primero una entidad de video antes de recibir el archivo. Al crearlo, \textit{Bunny} devuelve un identificador de video, denominado \texttt{guid}, que es una referencia al video dentro del proveedor del servicio. En \textit{Booster}, ese valor se almacena en la base de datos para asociar el video gestionado por \textit{Bunny} con su correspondiente en la plataforma. 
+
+Posteriormente, según la documentación, se podría enviar una petición \textit{PUT} a la referencia externa del video recién creado con su \textit{guid} de la siguiente forma:
+
+\begin{lstlisting}[language=TypeScript]
+curl --request PUT
+  --url <https://video.bunnycdn.com/library/><Your Library ID>/videos/<GUID>
+  --header 'AccessKey: <Your Stream Library API key>'
+  --header 'accept: application/json'
+  --data-binary '@path/to/your/video.mp4'
+\end{lstlisting}
+
+Con esto, el servidor devolvería el estado de la operación al finalizar y el archivo quedaría cargado y disponible en el servicio externo. Sin embargo, en \textit{Booster} se utiliza el \textit{TUS Resumable Uploads} de \textit{Bunny Stream} \cite{bunny-tus}. La ventaja principal de \textit{TUS} es que la subida puede reanudarse si se interrumpe. El cliente puede consultar subidas previas y continuar desde donde se quedó. Esto lo convierte en una solución más robusta en comparación con una subida HTTP normal, donde una interrupción obliga a reiniciar la carga. Esto lo hace ideal para evitar errores y malas experiencias de usuario con archivos pesados. 
+
+Esto se hace mediante el protocolo TUS contra \texttt{https://video.bunnycdn.com/tusupload}. No obstante, este proceso requiere introducir una capa de seguridad adicional, enviando una solicitud de firma temporal al endpoint \texttt{/api/bunny/sign}, para que \textit{Bunny} acepte la solicitud de carga de video mediante TUS. 
+
+Mientras se realiza la carga del video a los servidores de \textit{Bunny}, se registra en la base de datos de la plataforma el nuevo video junto con información como duración, dimensiones, identificador de Bunny, título. Esto es importante porque \textit{Bunny} gestiona el archivo multimedia, pero \textit{Booster} sigue siendo dueño de los datos funcionales de la plataforma como su visibilidad, sus comentarios, su calificación promedio, entre otros. 
+
+Una vez completada la subida, \textit{Bunny} realiza su propio procesamiento de video y \textit{Booster}, espera a que se complete esta operación. Para eso, se utiliza un endpoint dentro del backend \texttt{/api/bunny/webhooks/[token]}, el cual recibe notificaciones de \textit{Bunny} cuando cambia el estado de un video. En la ruta, se incluye un token conocido solo por el backend de la plataforma y \textit{Bunny}, para evitar peticiones maliciosas y ejecuciones no deseadas de código. 
+
+Cuando llega un \textit{webhook} válido a la ruta anterior, el backend extrae el identificador del video enviado por \textit{Bunny} y obtiene su referencia en la base de datos. Con esta información, \textit{Booster} consigue actualizar datos del video como su estado, duración y miniaturas. Cabe destacar, que para reproducir el contenido una vez procesado, se utiliza el identificador de librería y el identificador de video de \textit{Bunny} el cual utiliza una CDN para distribuir los recursos.  
+ 
+
+
 \section{Diseño del Algoritmo de Recomendación}
+
+En \textit{Booster} se implementa un algoritmo de recomendación propio que decide qué videos enseñar según su popularidad dentro de la página, la calidad, la relación del usuario y el creador, el historial de visualización del usuario y su contexto de navegación. Las recomendaciones dentro de la sección de vista de videos aplican más filtros para sugerir contenido similar al que se está reproduciendo. 
+
+\textit{Booster} implementa un algoritmo que evalúa matemáticamente múltiples factores para mostrar el mejor contenido. Estos factores incluyen el canal de boost, la cantidad de seguidores del canal, la cantidad de visualizaciones, la calificación promedio, el número de comentarios entre otros. Estas métricas, se introducen en una fórmula que determina una puntuacion a cada video, denominado $score(x)$, siendo $x$ un video cualquiera en la plataforma. De esta forma, los videos se enseñan en orden descendente de \textit{score}. La fórmula empleada es la siguiente:
+
+\begin{equation}
+\label{eq:recommendation-score}
+\begin{aligned}
+\operatorname{score}(x)
+&=
+\ln\Bigg(
+\left(
+\frac{\sqrt{1000 \cdot B_x}}{1000} + 1
+\right)^2
++ V_x \\[2mm]
+&\quad
++ \tanh(\overline{R}_x - 3.5)
+\cdot \ln\left(\max(R_x,1)\right)\\[2mm]
+&\quad
++ \ln\left(\max(R_x,1)\right) \\[2mm]
+&\quad
++ \ln\left(\max(C_x,1)\right)
++ \frac{\sqrt{1000 \cdot B_x}}{1000}
+\Bigg) \\[2mm]
+&\quad
++ \frac{100}{\ln\left(H_x + 2\right)} \\[2mm]
+&\quad
+- 100 \cdot \mathbb{I}_{\mathrm{watched}}(x) \\[2mm]
+&\quad
++ 50 \cdot \mathbb{I}_{\mathrm{following}}(x) \\[2mm]
+&\quad
++ 20 \cdot \ln\left(U_{\operatorname{cat}}(x)+ 1\right) \\[2mm]
+&\quad
++ 50 \cdot \mathbb{I}_{\mathrm{sameCategoryAs\_y}}(x)
+\cdot \mathbb{I}_{\mathrm{videosPage}}(x)
+\end{aligned}
+\end{equation}
+
+\noindent
+Donde $B_x$ representa los puntos de boost del creador del video,
+$V_x$ el número de visualizaciones,
+$\overline{R}_x \in [1,5]$ la calificación promedio,
+$R_x$ el número de calificaciones,
+$C_x$ el número de comentarios,
+$H_x$ las horas transcurridas desde la publicación,
+$U_{\operatorname{cat}}(x)$ el número de visualizaciones previas del usuario en la categoría del video,
+y $\mathbb{I}$ representa una función indicadora que toma valor $1$ si la condición se cumple y $0$ en caso contrario. Es decir,
+ 
+\begin{equation}
+    \mathbb{I}_{condicion}(x) = 
+\begin{cases} 
+1 & \text{si condicion se cumple en x} \\ 
+0 & \text{en caso contrario} 
+\end{cases}
+\end{equation}
+
+Como se puede observar, el nivel del canal determinado por esta fórmula 
+
+\begin{equation}
+    \frac{\sqrt{1000 \cdot B_x}}{1000}
+\end{equation}
+
+es el factor que más influencia el valor de $score(x)$. Un espectador puede cambiar la puntuación de un video donando puntos de experiencia al canal.
+
+Además, se observa que se consideran otras métricas de popularidad como la cantidad de visitas, comentarios y calificaciones. Para evitar que los videos muy populares dominen la recomendación, se aplica logaritmos a varias variables, suavizando el efecto de los valores grandes. La diferencia entre un video con 100.000 y 110.000 visualizaciones no debería alterar de forma desproporcionada el orden de recomendación. El logaritmo permite controlar ese crecimiento.
+
+El algoritmo también toma en cuenta la calidad del video mediante la calificación promedio $R_x$. Se compara la valoración promedio con un umbral de 3.5 estrellas mediante la función $\tanh(x - 3.5)$. Si el video está por encima de este valor, obtiene un efecto positivo y aumenta el nivel del \textit{score}. Por otro lado, si está por debajo, se obtiene un valor negativo y se penaliza. Este efecto se multiplica por la cantidad de calificaciones recbidias suavizadas con $ln(x)$. 
+
+Además, el algoritmo incluye un factor de actualidad. Los videos más recientes reciben una bonificación adicional la cual va disminuyendo con el tiempo. De esta forma, el contenido nuevo es mejor valorado por el algoritmo de recomendación. 
+
+Asimismo, se incluye una penalización fuerte para los videos que han sido vistos recientemente por el usuario. Con esta estrategia, se evita recomendar repetidamente el mismo contenido y permite a los usuarios descubrir nuevos videos. 
+
+El algoritmo también se adapta al usuario en sesión. Como se puede observar en la fórmula, los videos pertenecientes a un creador que el usuario esté siguiendo reciben una bonificación mayor. Además, el algoritmo mantiene una cuenta de las veces que un usuario ha visto una misma categoría, y determina qué tan importante es para el usuario esa temática de videos. Es decir, si un usuario ha visualizado varios videos de gaming, el algoritmo le asignará más valor a videos con esa misma categoría. 
+
+Finalmente, el útlimo factor solo se aplican cuando el usuario está visualizando un video. Aquí, para recomendar contenido similar, cuando el usuario está reproduciendo un video $y$, el algoritmo da prioridad a otros videos de la misma categoría que $y$. Esto solo aplica dentro de la página de videos y su propósito es dar continuidad temática. 
+
+Esta información se encuentra explicada en la página web en la sección de \href{https://www.boostervideos.net/about}{/about}. \footnote{\url{https://www.boostervideos.net/about}}
 
 
 \section{Diseño de la búsqueda semántica de videos}
+
+En \textit{Booster}, además de implementar una búsqueda de videos según las coincidencias de términos, se ha explorado una alternativa mediante \textit{embeddings}. Esta búsqueda semántica de videos permite encontrar contenido por cercanía conceptual de las palabras que el usuario escribe. A diferencia de la búsqueda tradicional donde se filtran los resultados que tengan literalmente algunas de las palabras introducidas, este nueva búsqueda permite capturar el significado de la consulta. 
+
+En \textit{Booster}, esto se ha implementado teniendo en cuenta el título y la descripción para crear \textit{embeddings}. Estos son representaciones vectoriales de texto diseñados para capturar el significado semántico de las palabras.  
+
+Más concretamente, si un video tiene un título $t_i$ y una descripción $d_i$, se combinan para aplicar una función de \textit{embeddings} que transforma esa palabra en un vector que intenta representar su significado. Particularmente, se hace 
+
+\begin{equation}
+    S_i = t_i + d_i  
+\end{equation}
+
+y luego, se aplica la función obteniendo
+
+\begin{equation}
+    \vec{\mathbf{e}}_i = f(S_i)
+\end{equation}
+
+$ \vec{\mathbf{e}}_i$, es un vector de muchas dimensiones $d$ donde cada una representa un significado semántico diferente. Por lo tanto, 
+
+\begin{equation}
+     \vec{\mathbf{e}}_i \in \mathbb{R}^d 
+\end{equation}
+
+De esta forma, videos con títulos y descripciones similares quedan posicionados cerca. Por ejemplo, un video titulado ''Cómo crear una página web'' puede estar cercano a otro con un título como ''Fundamentos de Javascript'', aunque no tengan palabras en común. 
+
+Cuando un usuario introduce una consulta para buscar, se le aplica la función y luego se deben encontrar los videos cuyos embeddings estén más cercanos al embedding de la consulta. Una forma de medir esto es mediante el producto escalar de vectores, en este caso
+\begin{equation}
+    \Vert \vec{\mathbf{e}}_i \Vert \cdot \Vert \vec{\mathbf{q}} \Vert \cdot \cos(\theta)  = \vec{\mathbf{e}}_i \cdot \vec{\mathbf{q}} 
+\end{equation}
+
+Con esto, pose obtiene el índice de similitud como
+
+\begin{equation}
+    s( \vec{\mathbf{q}} ,\vec{\mathbf{e}}_i) = \cos (\theta ) = \frac{\vec{\mathbf{e}}_i \cdot \vec{\mathbf{q}} }{\Vert \vec{\mathbf{e}}_i \Vert \cdot \Vert \vec{\mathbf{q}} \Vert}  \quad  \in  [-1,1]
+\end{equation}
+
+Si ambos vectores apuntan en una dirección parecida, el valor del producto esscalar tenderá a $1$ y por tanto se dice que tienen significados similares. Por otro lado, si el valor se aproxima a $-1$ aquellos vectores no están relacionados. 
+
+La búsqueda semántica calcula el índice de similitud de la consulta con cada uno de los vectores almacenados en la base de datos y se queda con los mejores. 
+
+\begin{equation}
+    \text{top}(x,\vec{\mathbf{q}}) = \max _{\vec{\mathbf{x}}_i \in V } s(\vec{\mathbf{q}},\vec{\mathbf{x}}_i)
+\end{equation}
+
+Donde $V$ es el espacio vectorial generado por los \textit{embeddings} de los videos $V \subseteq \mathbb{R} ^ d $
+
+En \textit{Booster}, esto se almacena como un atributo adicional de cada video en la base de datos de tipo vector y con una dimensión de 1536, debido al modelo de \textit{embeddings} utilizado \footnote{OpenAI text-embedding-ada-002}. Esto implica que cada vez que se actualiza el título o la descripción, se debe reconstruir el vector representado por este video. 
+
+Asimismo, la base de datos NeonDB (\ref{neon}), permite realizar operaciones de similitud vectorial direcamente sobre estos \textit{embeddings}. Con esto, la consulta se envía a la base de datos que calcula los índices de similitud y devuelve los más cercanos. 
+
+
+
+
+
+
 
 

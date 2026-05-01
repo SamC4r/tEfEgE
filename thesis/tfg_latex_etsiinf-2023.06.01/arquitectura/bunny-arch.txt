@@ -1,0 +1,75 @@
+@startuml
+!theme mars
+title Arquitectura de subida, procesamiento y webhook con Bunny.net
+
+actor Usuario
+participant "Cliente React\nStudioBunnyUploader" as Client
+participant "Booster Backend" as Backend
+database "Base de datos\nPostgreSQL" as DB
+participant "Webhook Booster\n/api/bunny/webhooks/{token}" as Webhook
+participant "Bunny Stream" as BunnyAPI
+
+
+Usuario -> Client: Carga un video
+Client -> Client: Lee duración, ancho y alto
+Client -> Client: Valida duración máxima
+
+Client -> Backend: POST /api/bunny/create\n{ title }
+Backend -> Backend: Verificar sesión
+
+Backend -> DB: Buscar usuario
+DB -> Backend: Usuario encontrado
+
+Backend -> BunnyAPI: Crear video en Bunny Stream\nPOST /library/{libraryId}/videos
+BunnyAPI -> Backend: Devuelve guid
+Backend -> Client: Devuelve guid del video
+
+Client -> Backend: POST /api/bunny/sign\n{ videoId: guid }
+Backend -> Backend: Verificar sesión
+
+Backend -> DB: Buscar usuario interno
+DB -> Backend: Usuario encontrado
+
+Backend -> Backend: Generar firma SHA256\nlibraryId + apiKey + expires + videoId
+Backend -> Client: libraryId, videoId, expires, signature
+
+Client -> BunnyAPI: Subir video con TUS\nAuthorizationSignature\nAuthorizationExpire\nVideoId\nLibraryId
+BunnyAPI-> Client: Progreso de carga
+Client -> Usuario: Muestra porcentaje de subida
+
+Client -> Backend: createAfterUpload\nbunnyVideoId, title, width, height
+Backend -> DB: Crear registro del video
+DB -> Backend: Registro creado
+Backend -> Client: Devuelve id de BD
+
+BunnyAPI-> BunnyAPI: Archivo recibido
+BunnyAPI-> BunnyAPI: Procesar video
+BunnyAPI-> BunnyAPI: Codificar resoluciones
+BunnyAPI-> BunnyAPI: Generar preview y thumbnail
+
+BunnyAPI-> Webhook: POST /api/bunny/webhooks/{token}\nEstado del video
+Webhook -> Webhook: Validar token secreto
+
+Webhook -> DB: Buscar video por bunnyVideoId
+DB -> Webhook: Video encontrado
+
+Webhook -> BunnyAPI: Consultar metadatos del video
+BunnyAPI -> Webhook: duration, status, thumbnailFileName,\nwidth, height
+
+Webhook -> BunnyAPI: Construir URLs de preview y thumbnail
+BunnyAPI-> Webhook: URLs públicas del contenido
+
+Webhook -> DB: Actualizar estado, duración,\nthumbnail, preview, ancho y alto
+DB -> Webhook: Video actualizado
+
+
+
+Webhook -> BunnyAPI: Responder ok
+
+Client -> Backend: Consultar estado del video
+Backend -> DB: Leer bunnyStatus y status
+DB -> Backend: Estado actualizado
+Backend -> Client: Video completado o procesando
+Client -> Usuario: Muestra estado final o permite previsualizar
+
+@enduml
