@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tfg_etsiinf_SamuelCaraballoChichiraldi"] 1777662554.68855 "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777663042.81563 0
+["biber tfg_etsiinf_SamuelCaraballoChichiraldi"] 1777663992.40096 "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777664138.81819 0
   "secciones/biblio.bib" 1777650842 8367 eaf9a0dd40e113addc85004ec98bb45d ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" 1777663042 110085 bf5e96a495a29ecbc85dd2766c21d45c "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" 1777664138 110085 bf5e96a495a29ecbc85dd2766c21d45c "pdflatex"
   (generated)
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.blg"
   (rewritten before read)
-["pdflatex"] 1777663031.43918 "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" "tfg_etsiinf_SamuelCaraballoChichiraldi.pdf" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777663042.81656 0
+["pdflatex"] 1777664128.24122 "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" "tfg_etsiinf_SamuelCaraballoChichiraldi.pdf" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777664138.81909 0
   "C:/Users/max/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777541919 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/max/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1774524133 13332519 f75fea545f5fea1171d2d0d0409a830b ""
   "C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -366,7 +366,7 @@
   "secciones/anexo1.tex" 1774523325 118 1f01156af7891e36022d847df1dc888f ""
   "secciones/conclusiones.tex" 1774549818 142 e50f799c6af09ef242b3006edc79d159 ""
   "secciones/desarrollo.tex" 1777374457 908 aaaf9e097533ae052bce6bdb6d7dffa1 ""
-  "secciones/diseno-arquitectura.tex" 1777663030 76127 93525e8855ddfdac8d4694a2ae3ebace ""
+  "secciones/diseno-arquitectura.tex" 1777664124 76379 7a7f8139d225a4a150b6c96db71175f4 ""
   "secciones/estado-arte.tex" 1777631670 51107 548e9012be85069e2b343efadfb3152a ""
   "secciones/impacto.tex" 1774549949 970 5c65342cbcfc06439689a8c7df6e8a3e ""
   "secciones/innovaciones.tex" 1777289193 35511 f30f93ea50240898bf909877374a0398 ""
@@ -375,12 +375,12 @@
   "secciones/requisitos.tex" 1777476365 94302 00177f5253aafa6390ef559e129cd49c ""
   "secciones/resumen.tex" 1776080997 1945 0558af780997f7617ab496af9ef4db84 ""
   "secciones/tecnologias.tex" 1777662889 32896 c02cbf4c45ea1c67ec2ebc78e72678db ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.aux" 1777663042 45432 7092e7ed3a63bfc8f0ee3e2c9adcc4c0 "pdflatex"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" 1777662557 46848 2c578056967a7cc60c1e8e6e88a273b4 "biber tfg_etsiinf_SamuelCaraballoChichiraldi"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.out" 1777663042 21644 f98a01c30a21de8e991833e8291d80dd "pdflatex"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml" 1777663042 2677 6aaf639f93ea75d84fe3f5187ae959a2 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.aux" 1777664138 45432 7092e7ed3a63bfc8f0ee3e2c9adcc4c0 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" 1777663994 46848 2c578056967a7cc60c1e8e6e88a273b4 "biber tfg_etsiinf_SamuelCaraballoChichiraldi"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.out" 1777664138 21644 f98a01c30a21de8e991833e8291d80dd "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml" 1777664138 2677 6aaf639f93ea75d84fe3f5187ae959a2 "pdflatex"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.tex" 1777661740 7715 ecf3b8c106a7b4abf710c6a2902b4621 ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.toc" 1777663042 10746 cb1991e99a74a12e9b919b55d9f48070 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.toc" 1777664138 10746 cb1991e99a74a12e9b919b55d9f48070 "pdflatex"
   (generated)
   "tfg_etsiinf_SamuelCaraballoChichiraldi.aux"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf"

@@ -1950,18 +1950,19 @@ $ \vec{\mathbf{e}}_i$, es un vector de muchas dimensiones $d$ donde cada una rep
 
 De esta forma, videos con títulos y descripciones similares quedan posicionados cerca. Por ejemplo, un video titulado ''Cómo crear una página web'' puede estar cercano a otro con un título como ''Fundamentos de Javascript'', aunque no tengan palabras en común. 
 
-Cuando un usuario introduce una consulta para buscar, se le aplica la función y luego se deben encontrar los videos cuyos embeddings estén más cercanos al embedding de la consulta. Una forma de medir esto es mediante el producto escalar de vectores, en este caso
+Cuando un usuario introduce una consulta $q$ se le aplica la función $\vec{\mathbf{q}} = f(q)$, obteniendo un nuevo vector dentro del mismo espacio vectorial que los \textit{embeddings} almacenados en la base de datos. A continuación, se calcula la similitud entre $\vec{\mathbf{q}}$ y cada \textit{embedding} de video, seleccionando aquellos con mayor parecido y por tanto, con  mayor relación semántica. Una forma de medir el parecido es mediante el producto escalar de vectores, en este caso
+
 \begin{equation}
     \Vert \vec{\mathbf{e}}_i \Vert \cdot \Vert \vec{\mathbf{q}} \Vert \cdot \cos(\theta)  = \vec{\mathbf{e}}_i \cdot \vec{\mathbf{q}} 
 \end{equation}
 
-Con esto, pose obtiene el índice de similitud como
+A partir de esta fórmula, se obtiene el índice de similitud como
 
 \begin{equation}
     s( \vec{\mathbf{q}} ,\vec{\mathbf{e}}_i) = \cos (\theta ) = \frac{\vec{\mathbf{e}}_i \cdot \vec{\mathbf{q}} }{\Vert \vec{\mathbf{e}}_i \Vert \cdot \Vert \vec{\mathbf{q}} \Vert}  \quad  \in  [-1,1]
 \end{equation}
 
-Si ambos vectores apuntan en una dirección parecida, el valor del producto esscalar tenderá a $1$ y por tanto se dice que tienen significados similares. Por otro lado, si el valor se aproxima a $-1$ aquellos vectores no están relacionados. 
+Si ambos vectores apuntan en una dirección parecida, el valor del producto esscalar tenderá a $1$ y por tanto se dice que tienen significados similares. Por otro lado, si el valor se aproxima a $-1$ los vectores no están relacionados. 
 
 La búsqueda semántica calcula el índice de similitud de la consulta con cada uno de los vectores almacenados en la base de datos y se queda con los mejores. 
 
@@ -1969,7 +1970,7 @@ La búsqueda semántica calcula el índice de similitud de la consulta con cada 
     \text{top}(x,\vec{\mathbf{q}}) = \max _{\vec{\mathbf{x}}_i \in V } s(\vec{\mathbf{q}},\vec{\mathbf{x}}_i)
 \end{equation}
 
-Donde $V$ es el espacio vectorial generado por los \textit{embeddings} de los videos $V \subseteq \mathbb{R} ^ d $
+Donde $V$ es el conjunto de \textit{embeddings} de los videos almacenados en la base de datos $V \subset \mathbb{R} ^ d $
 
 En \textit{Booster}, esto se almacena como un atributo adicional de cada video en la base de datos de tipo vector y con una dimensión de 1536, debido al modelo de \textit{embeddings} utilizado \footnote{OpenAI text-embedding-ada-002}. Esto implica que cada vez que se actualiza el título o la descripción, se debe reconstruir el vector representado por este video. 
 
