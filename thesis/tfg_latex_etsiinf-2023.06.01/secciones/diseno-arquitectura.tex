@@ -1763,6 +1763,7 @@ Toda la información de las tablas se encuentra en el archivo \texttt{/src/db/sc
 
 En esta sección se presentan las alternativas posibles para desarrollar un servicio de procesamiento de videos. En primer lugar, se analiza una solución básica implementando una arquitectura de procesamiento propia y desde cero. Posteriormente, se estudia la solución empleada en la aplicación final mediante el uso de un proveedor externo como \textit{Bunny.net} analizado en \ref{bunny}.
 \subsection{Arquitectura de procesamiento propia}
+\label{propio-aws}
 
 Esta primera solución se basa en implementar un flujo de procesamiento de videos asíncrono mediante el uso de servicios de Amazon Web Services \ref{aws}. Con esto, se consigue tener un registro del archivo de video y distribuirlo de forma eficiente, evitando que el \textit{backend} realice estas tareas. El proceso se ilustra en la figura \ref{amazon-arch}
 
@@ -1794,6 +1795,7 @@ Cuando el proceso finaliza, los archivos generados se almacenan en un segundo \t
 
 
 \subsection{Arquitectura de procesamiento con un proveedor}
+\label{bunny-arch-design}
 
 Otra alternativa para implementar el procesamiento de videos es delegar estas tareas a un proveedor externo especializado. En lugar de que \textit{Booster} tenga que descargar los archivos de videos, procesarlos, transcodificarlos, segmentarlos y almacenarlos en \textit{buckets} propios, se ha decidido utilizar \textit{Bunny.net}, más concretamente, el servicio de \textit{Bunny Stream} \ref{bunny}. Este se encarga de realizar todas las tareas de procesamiento de video, cuenta con una CDN que facilita su distribución y además, dispone de un gran número de opciones de personalización que se adaptan bien con los objetivos de la plataforma. 
 

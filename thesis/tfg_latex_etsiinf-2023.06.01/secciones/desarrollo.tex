@@ -101,8 +101,692 @@ Aquí, mientras la información correspondiente a un video no está disponible, 
 
 \section{Implementación del procesamiento de videos propio}
 
+En \ref{propio-aws} se analizó el funcionamiento de la arquitectura del procesamiento de videos con una solución personalizada utilizando los servicios de AWS. Aquí, se muestra el código en python y Dockerfile de los contenedores que ejecutan las tareas de consumidores de la cola de procesamiento y el procesamiento de videos.
 
-\section{Implementación del procesamiento de videos con proveedor}
+\subsection{Consumidor}
+
+El consumidor, es el componente encargado de leer trabajos pendientes en la cola de procesamiento de Amazon SQS y generar trabajos de procesamiento de videos. Este, está constantemente observando la cola y esperando nuevas peticiones para crear procesos de transcodificación y segmentación de videos utilizando ECS, ECR y \textit{Fargate} de Amazon. Se implementa mediante un microservicio con Docker el cual también se despliega en los servicios de Amazon. 
+
+El siguiente código, es el \textit{Dockerfile} correspondiente al consumidor y que se ejecuta en Amazon. Este prepara el contenedor para ejecutar la tarea instalando los paquetes python almacenados en \texttt{requirements.txt} que son: \textit{boto3}, \textit{pydantic\_settings}, \textit{python-dotenv}
+
+\begin{lstlisting}[language=docker]
+FROM python:3.11-slim
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+CMD ["python", "main.py"]
+
+\end{lstlisting}
+
+El siguiente código, es el programa en Python que ejecuta el consumidor. 
+
+\begin{lstlisting}[language=Python]
+# main.py
+import urllib
+import boto3 
+from secret_keys import SecretKeys
+import json
+
+secret_keys = SecretKeys()
+sqs_client = boto3.client("sqs",region_name=secret_keys.REGION_NAME)
+ecs_client = boto3.client("ecs",region_name=secret_keys.REGION_NAME)
+
+
+def poll_sqs():
+    while True:
+        response = sqs_client.receive_message(   # Determinar mensajes en la cola
+            QueueUrl=secret_keys.AWS_SQS_VIDEO_PROCESSING,
+            MaxNumberOfMessages=10,
+            WaitTimeSeconds=10,
+        )
+
+        for message in response.get("Messages", []):
+            message_body = json.loads(message.get("Body"))
+
+            if (
+                "Service" in message_body 
+                and "Event" in message_body
+                and message_body.get("Event") == "s3:TestEvent"
+            ):
+                sqs_client.delete_message(
+                    QueueUrl=secret_keys.AWS_SQS_VIDEO_PROCESSING, 
+                    ReceiptHandle=message["ReceiptHandle"]
+                )
+
+                
+                continue
+            
+            if "Records" in message_body:
+                s3_record = message_body['Records'][0]['s3']
+                bucket_name=s3_record['bucket']['name']
+                s3_key = urllib.parse.unquote_plus(s3_record['object']['key'])
+
+                # spin up docker container -- we need ecs (ecs: like kubernetes)
+                # ECR To upload docker containers
+                # ECS uses ECR to spin up the docker container
+                # ECR + ECS run on fargate
+
+                response = ecs_client.run_task(
+                    cluster="arn:aws:ecs:eu-west-3:744389573944:cluster/
+                                        boostervideos-transcoder-cluster",
+                    launchType="FARGATE",
+                    taskDefinition="arn:aws:ecs:eu-west-3:744389573944:
+                                task-definition/boostervideo-transcoder:3",
+                    overrides={
+                        "containerOverrides": [
+                            {
+                            "name":"boostervideo-transcoder",
+                            "environment": [
+                                {"name":"S3_BUCKET", "value": bucket_name},
+                                {"name":"S3_KEY", "value": s3_key},
+                            ]
+                            }
+                        ]
+                    },
+                    networkConfiguration={
+                        "awsvpcConfiguration":{
+                            "subnets": [
+                                "subnet-027c641f401bf92a9",
+                                "subnet-04f29995b26c5b201",
+                                "subnet-097ecb0316d1b4dd6"
+                            ],
+                            "assignPublicIp":"ENABLED",
+                            "securityGroups":[
+                                "sg-082b2f92620250501"
+                            ]
+                        }
+                    }
+                )
+                
+                print(response)
+                if(response.get('tasks')) continue
+                sqs_client.delete_message(
+                    QueueUrl=secret_keys.AWS_SQS_VIDEO_PROCESSING, 
+                    ReceiptHandle=message['ReceiptHandle']
+                )
+        print(response)
+
+if __name__ == "__main__":
+    poll_sqs()
+
+\end{lstlisting}
+
+Como se puede observar, el consumidor está dentro de un bucle infinito y espera a recibir mensajes en la cola. Se descartan los mensajes de Test y cuando llega una trabajo a la cola producido después de que un video se cargue al \textit{Raw Videos Bucket} S3 de Amazon, se lanza un contenedor docker para procesar el video. Esto se realiza mediante un cliente ECS (Elastic Container Service), un orquestador de contenedores que permite ejecutar tareas en AWS Fargate. Estas herramientas permiten enfocarse únicamente en diseñar y ejecutar las los programas de los contenedores, eliminando la necesidad de gestionar o escalar estos servicios. 
+
+El código anterior, se apoya de un archivo \texttt{.env} y un \texttt{secret\_keys.py} para gestionar las claves de API y otra información sensible. 
+
+\begin{lstlisting}[language=Python]
+# secret_keys.py
+
+from pydantic_settings import BaseSettings
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class SecretKeys(BaseSettings):
+    REGION_NAME: str = ""
+    AWS_SQS_VIDEO_PROCESSING: str = ""
+\end{lstlisting}
+
+
+
+
+\subsection{Procesador de video}
+
+Cuando se despliega una tarea de procesamiento, con Amazon Fargate se crea una instancia de un contenedor que se encarga de transcodificar y segmentar el contenido mediante el uso de la herramienta FFmpeg. Este, también presenta un \textit{Dockerfile}:
+
+\begin{lstlisting}[language=docker]
+FROM python:3.11-slim
+RUN apt-get update && apt-get install -y ffmpeg && apt-get clean && rm -rf var/lib/apt/lists/*
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY . .
+
+CMD ["python","main.py"]
+
+\end{lstlisting}
+
+Como se puede observar, cuando se crea este contenedor, se instala en primer lugar FFmpeg, la herramienta que se utiliza para transcodificar y segmentar el video \ref{ffmpeg}.
+A continuación, de la misma forma que con el consumidor, se instalan los paquetes de python necesarios. Estos son los mismos que en el caso anterior pero sumando la libreria \textit{requests}. 
+
+El procesamiento de videos ejecuta el siguiente código Python
+
+\begin{lstlisting}[language=Python]
+# main.py
+
+from pathlib import Path
+from secret_keys import SecretKeys
+import boto3
+import subprocess
+import os
+import requests
+from boto3.s3.transfer import TransferConfig
+
+
+
+secret_keys = SecretKeys()
+class VideoTranscoder: 
+    '''
+    Inicializa conexión con mi servicio AWS
+    '''
+    def __init__(self):
+        self.s3_client = boto3.client(
+            "s3", 
+            region_name=secret_keys.REGION_NAME,
+            aws_access_key_id=secret_keys.AWS_ACCES_KEY_ID,
+            aws_secret_access_key=secret_keys.AWS_SECRET_ACCESS_KEY,
+        )
+
+
+    '''
+    Determina la duración de un video
+    '''
+    def ffprobe_duration(self, input_path: str) -> float:
+        """Return duration in seconds using ffprobe (float)."""
+        cmd = [
+            "ffprobe",
+            "-v", "error",
+            "-select_streams", "v:0",
+            "-show_entries", "format=duration",
+            "-of", "default=noprint_wrappers=1:nokey=1",
+            input_path,
+        ]
+        out = subprocess.check_output(cmd, text=True).strip()
+        return float(out) if out else 0.0
+
+
+    '''
+    Extrae un fotograma representativo para 
+    generar una miniatura del video
+    '''
+
+    def extract_thumbnail(self, input_path: str, output_path: str, ts_seconds: float):
+        """
+        Save a single JPEG frame at timestamp ts_seconds.
+        """
+        # ensure non-negative, round to 3 decimals
+        ts = max(0.0, ts_seconds)
+        cmd = [
+            "ffmpeg",
+            "-hide_banner", "-loglevel", "error",
+            "-i", input_path,
+            "-ss", f"{ts:.3f}",
+            "-frames:v", "1",
+            "-q:v", "2",            # quality (2 is high)
+            "-y",                   # overwrite
+            output_path,
+        ]
+        process = subprocess.run(cmd, check=True)
+        if process.returncode != 0:
+            print(process.stderr)
+            raise Exception("Error in generating thumbnail")
+
+    def download_video(self, local_path: str):
+        self.s3_client.download_file(
+            secret_keys.S3_BUCKET,
+            secret_keys.S3_KEY,
+            local_path
+        )
+
+    # ...
+
+    '''
+    Transcodificación y Segmentación de video
+    utilizando el protocolo MPEG-DASH
+    '''
+
+    def transcode_video(self,input_path: str, output_dir: str):
+         # DASH
+        cmd = [
+            "ffmpeg",
+            "-i", input_path,
+
+            # create 3 video ladders
+            "-filter_complex",
+            "[0:v]split=3[v1][v2][v3];"
+            "[v1]scale=640:360:flags=fast_bilinear[360p];"
+            "[v2]scale=1280:720:flags=fast_bilinear[720p];"
+            "[v3]scale=1920:1080:flags=fast_bilinear[1080p]",
+
+            # 360p
+            "-map","[360p]","-c:v:0","libx264","-b:v:0","1000k",
+            "-preset","veryfast","-profile:v","high","-level:v","4.1",
+
+            # 720p
+            "-map","[720p]","-c:v:1","libx264","-b:v:1","4000k",
+            "-preset","veryfast","-profile:v","high","-level:v","4.1",
+
+            # 1080p
+            "-map","[1080p]","-c:v:2","libx264","-b:v:2","8000k",
+            "-preset","veryfast","-profile:v","high","-level:v","4.1",
+
+            # audio (optional)
+            "-map","0:a?","-c:a","aac","-b:a","128k",
+
+            # keyframe/segment alignment (choose seg = 6s; align GOP to it)
+            # If source fps=30, g=180; if 24fps, g=144.  We'll force keyframes every 6s regardless:
+            "-g","180",                # Assuming video is 30FPS. If 60 FPS use 360. 
+            "-keyint_min","180",
+            "-sc_threshold","0",
+            "-force_key_frames","expr:gte(t,n_forced*6)",
+
+            # DASH muxer (static VOD)
+            "-f","dash",
+            "-use_timeline","1",
+            "-use_template","1",
+            "-seg_duration","6",  # 6 seconds for segment duration
+
+            # DO NOT set window_size for VOD; removing it avoids sliding window
+            # "-window_size","0",      # (optional) explicitly zero
+            "-adaptation_sets","id=0,streams=v id=1,streams=a",
+            "-init_seg_name","init-$RepresentationID$.m4s",
+            "-media_seg_name","chunk-$RepresentationID$-$Number%05d$.m4s",
+
+            f"{output_dir}/manifest.mpd",
+        ]
+
+        process = subprocess.run(cmd)
+
+        if process.returncode != 0:
+            print(process.stderr)
+            raise Exception("Error in transcoding process")
+
+
+    '''
+    Cargar al bucket de Videos Procesados los
+    archivos y fragmentos recientemente generados
+    '''
+
+    def upload_files(self,prefix:str, local_dir:str):
+
+        cfg = TransferConfig(
+            multipart_threshold=5*1024*1024,   
+            multipart_chunksize=5*1024*1024,   
+            max_concurrency=16,                
+            use_threads=True,
+        )
+
+        for root, _, files in os.walk(local_dir):
+            for file in files:
+                local_path = os.path.join(root, file)
+                s3_key = f"{prefix}/{os.path.relpath(local_path,local_dir)}"
+                self.s3_client.upload_file(
+                        local_path, 
+                    secret_keys.S3_PROCESSED_VIDEOS_BUCKET, 
+                    s3_key, 
+                    ExtraArgs={
+                        "ACL":"public-read",
+                        'ContentType':self._get_content_type(local_path),
+                    },
+                    Config=cfg
+                )
+
+    '''
+    Método principal
+    '''
+    def process_video(self):
+        work_dir = Path("/tmp/workspace")
+        work_dir.mkdir(exist_ok=True)
+
+        input_path = work_dir / "input.mp4"
+        output_path = work_dir / "output"
+        output_path.mkdir(exist_ok=True) # if the folder already exists, 
+                                         # do nothing, otw create it
+
+        try:
+            self.download_video(input_path)
+            dur = self.ffprobe_duration(input_path)
+
+
+
+            if(dur > 600):   # 10 minute limit
+                print("Video too long") 
+                exit(1)
+
+
+            print("DURACION:",dur)
+
+            try:
+                # Enviar solicitud a Booster para que actualice la duracion del video en la BD.
+                res  = requests.put(f"{secret_keys.BACKEND_URL}?
+                            id={secret_keys.S3_KEY}&duration={dur}")
+            except Exception as e:
+                print(e)
+
+            self.transcode_video(str(input_path), str(output_path))
+
+            try:
+                ts = dur * 0.10 if dur > 0 else 0.0
+                poster_path = output_path / "poster.jpg"
+                self.extract_thumbnail(input_path,poster_path,ts)
+            except Exception as e:
+                print("Thumbnail generation failed:",e)
+
+            
+            # Cargar todos los archivos generados en output_path
+            # al bucket de videos procesado
+            self.upload_files(secret_keys.S3_KEY,str(output_path))
+            self.update_video()
+        finally:
+            if input_path.exists():
+                input_path.unlink() #delete the file
+            if output_path.exists():
+                import shutil
+                shutil.rmtree(str(output_path))
+
+    
+    def update_video(self):
+        print("ENVIANDO A ", secret_keys.BACKEND_URL)
+        try:
+            print("envia")
+            response = requests.put(f"{secret_keys.BACKEND_URL}?id={secret_keys.S3_KEY}")
+            print(response.json)
+            return response.json()
+        except Exception as e:
+            print("errored")
+            print(e)
+
+VideoTranscoder().process_video()
+
+\end{lstlisting}
+
+Este programa se compone de varios métodos con finalidades distintas. La primera función ejecutada es \texttt{process\_video()}, la cual descarga el contenido desde el \textit{Raw Videos Bucket} de AWS. Luego, se analiza la duración y si es inferior a 10 minutos, comienza el procesamiento del video. 
+
+El método  \texttt{transcode\_video()} es el encargado de segmentar y transcodificar el video. Se utiliza la herramienta FFmpeg para generar distintas calidades de video con tasas de bits diferentes. Además, se incluye el audio en el resultado final y se segmenta el video en fragmentos de 6 segundos. En la implementación elegida, se emplea MPEG-DASH (\ref{dash}) como protocolo de streaming de video y por consiguiente, se debe particionar el video en partes con la extensión \texttt{.m4s} y, se debe generar un archivo \texttt{manifest.mpd} llamado MPD. Este, se encarga de informar al reproductor de videos en el cliente, información sobre el contenido como las calidades disponibles, las localizaciones de los segmentos \texttt{.m4s} en el servidor, cuándo se debe reproducir cada segmento y qué codec utilizar. Además, se genera un archivo de inicialización (\texttt{init- ... .m4s}) para reproducir los fragmentos del video \texttt{.m4s}. 
+
+Finalmente, los archivos de inicilizacion, los fragmentos y el manifesto (MPD), se cargan al \textit{bucket} que almacena los videos procesados para ser entregados al cliente.  
+
+\clearpage
+
+\section{Implementación del procesamiento de videos con Bunny}
+
+En \ref{bunny-arch-design}, se analizó cómo integrar el proveedor que se encarga de la gestión y procesamiento de videos, \textit{Bunny.net}, más concretamente, su servicio \textit{BunnyStream}. 
+
+En esa sección, se describieron los pasos para cargar un archivo de video a un proveedor externo. Esto comienza enviando una solicitud POST a un endpoint de bunny, pero en la implementación elegida, el cliente llama a una ruta dentro del backend de \textit{Booster} que se encarga de verificar la sesión del usuario y comunicarse directamente con \textit{Bunny}. Este endpoint está en \texttt{/api/bunny/create} y realiza lo siguiente: 
+
+
+\begin{lstlisting}[language=TypeScript]
+// app/api/bunny/create/route.ts
+import { NextResponse } from "next/server";
+import { auth } from "@clerk/nextjs/server";
+import { uploadRateLimit } from "@/lib/ratelimit";
+import { db } from "@/db";
+import { users, videos } from "@/db/schema";
+import { inArray } from "drizzle-orm";
+
+export async function POST(req: Request) {
+  '''
+  La petición que llega tiene información de 
+  sesión de Clerk.
+  Clerk indica que las peticiones desde un 
+  Client Component hacia un Route Handler leen 
+  la sesión desde cookies y no necesitan enviar 
+  un Bearer token manualmente.
+
+  auth(), lee la información de sesión de 
+  la petición (request).
+  '''
+
+  const { userId: clerkUserId } = await auth();
+  if (!clerkUserId) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+ 
+
+  let userId;
+
+  const [user] = await db
+    .select()
+    .from(users)
+    .where(inArray(users.clerkId, clerkUserId ? [clerkUserId] : [])); //trick
+
+  if (user) {
+    userId = user.id;
+  }
+
+  if(!userId) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+  const { success } = await uploadRateLimit.limit(userId);
+  if (!success) {
+    return NextResponse.json(
+      { error: "Daily upload limit reached (5 uploads per day)" },
+      { status: 429 }
+    );
+  }
+
+  const { title } = await req.json();
+  const lib = process.env.NEXT_PUBLIC_BUNNY_STREAM_LIBRARY_ID!;
+  const r = await fetch(`https://video.bunnycdn.com/library/${lib}/videos`, {
+    method: "POST",
+    headers: {
+      AccessKey: process.env.BUNNY_STREAM_API_KEY!,
+      accept: "application/json",
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({ title }),
+  });
+  if (!r.ok)
+    return NextResponse.json({ error: await r.text() }, { status: r.status });
+  const json = await r.json(); //video id is on guid
+
+
+
+  return NextResponse.json(json);
+}
+\end{lstlisting}
+
+Este fragmento de código corresponde a la lógica ejecutada una vez llega la petición por parte del cliente al endpoint \texttt{/create}. En primer lugar, se verifica que la petición corresponda a un usuario con una sesión válida. Gracias a Clerk y Next.Js, esta información está disponible en las \textit{cookies} y el método \texttt{auth()}, lo puede determinar directamente. Si no hay una sesión de usuario activa, se descarta la petición y la operación. En caso contrario, a partir del \texttt{clerkId} identificado de la sesión se obtiene una referencia en la base de datos al usuario correspondiente. Posteriormente, se aplican límites de uso y si todo funciona correctamente, se envía una petición POST al endpoint de Bunny para crear un objeto de video. Es importante destacar que en este caso, se utilizan las claves de API de \textit{Bunny} y además los identificadores de librería para enviar la solicitud. Por motivos de seguridad esto se almacena en \texttt{.env.local} y se hace a través del servidor. Cuando el video es creado, se obtiene en la respuesta el identificador del objeto de video en el servicio externo. 
+
+Como se analizó anteriormente en \ref{bunny-arch-design}, el siguiente paso para cargar un archivo a \textit{Bunny} a través del protocolo TUS, es crear una firma digital. Esto se hace mediante el endpoint \texttt{/api/bunny/sign} que realiza los pasos recomendados por la documentación del servicio de procesamiento de videos:
+
+\begin{lstlisting}[language=TypeScript]
+// /app/api/bunny/sign/route.ts
+import { db } from "@/db";
+import { users, videos } from "@/db/schema";
+import { auth } from "@clerk/nextjs/server";
+import crypto from "crypto";
+import { and, eq, inArray } from "drizzle-orm";
+import { NextResponse } from "next/server";
+
+export async function POST(req: Request) {
+  const { videoId } = (await req.json()) as { videoId: string };
+  if (!videoId) return new Response("Missing videoId", { status: 400 });
+
+  const { userId: clerkUserId } = await auth();
+  if (!clerkUserId) return new Response("Unauthorized", { status: 401 });
+
+  let userId;
+
+  const [user] = await db
+    .select()
+    .from(users)
+    .where(inArray(users.clerkId, clerkUserId ? [clerkUserId] : [])); //trick
+
+  if (user) {
+    userId = user.id;
+  }
+
+  if (!userId) {
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
+
+
+  const libraryId = process.env.NEXT_PUBLIC_BUNNY_STREAM_LIBRARY_ID!;
+  const apiKey = process.env.BUNNY_STREAM_API_KEY!;
+
+  const expires = Math.floor(Date.now() / 1000) + 10 * 60; // 10 minutos (arbitrario)
+  const payload = `${libraryId}${apiKey}${expires}${videoId}`;
+  const signature = crypto.createHash("sha256").update(payload).digest("hex");
+
+  return Response.json({
+    libraryId,
+    videoId,
+    expires,
+    signature,
+  });
+}
+\end{lstlisting}
+
+Aquí, se realizan las mismas comprobaciones de sesión anteriores y a continuación se crea una firma tomando el identificador de librería de \textit{Bunny}, la clave de API, entre otros. Finalmente, si todo se realiza correctamente, se devuelve la firma al cliente quien continúa con el proceso del \textit{TUS Upload} y comienza a cargar el archivo de video.
+
+En particular, el cliente ejecuta el siguiente código después de seleccionar un archivo para cargar al servidor mediante TUS. Se omiten partes relativas a la interfaz de usuario, sólo se analiza la implementación del \textit{TUS Upload}
+
+\begin{lstlisting}[language=TypeScript]
+
+  const utils = trpc.useUtils();
+  const router = useRouter();
+  const videoIdRef = useRef<string | null>(null);
+
+  const createAfterUpload = trpc.videos.createAfterUpload.useMutation({
+    onSuccess: (data) => {
+      utils.studio.getMany.invalidate({ limit: DEFAULT_LIMIT })
+      videoIdRef.current = data.id;
+      onUploadStarted?.(data.id);
+    }
+  });
+
+  const tusUploader = async (file: File) => {
+    try {
+      const { duration, width, height } = await getVideoMetadata(file);
+      if (duration > 600) {
+        toast.error("Video is longer than 10 minutes");
+        return;
+      }
+
+      setState({ file, progress: 0, uploading: true });
+      onProgressChange?.(true);
+      const createRes = await fetch("/api/bunny/create", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ title: file.name }),
+      });
+
+      if (!createRes.ok) {
+        const errorData = await createRes.json();
+        throw new Error(errorData.error || "Failed to create video");
+      }
+      const { guid } = await createRes.json() as { guid: string };
+
+      const signRes = await fetch("/api/bunny/sign", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ videoId: guid }),
+      });
+
+      if (!signRes.ok) throw new Error(await signRes.text());
+      const { libraryId, videoId, expires, signature } = await signRes.json();
+
+
+      const upload = new tus.Upload(file, {
+        // Endpoint is the upload creation URL from your tus server
+        endpoint: 'https://video.bunnycdn.com/tusupload',
+        headers: {
+          AuthorizationSignature: signature,
+          AuthorizationExpire: expires,
+          VideoId: videoId,
+          LibraryId: libraryId,
+        },
+
+        // Retry delays will enable tus-js-client to automatically retry on errors
+        retryDelays: [0, 3000, 5000, 10000, 20000],
+        // Attach additional meta data about the file for the server
+        metadata: {
+          filename: file.name,
+          filetype: file.type,
+        },
+        // Callback for errors which cannot be fixed using retries
+        onError: (err) => {
+          setState((s) => ({ ...s, uploading: false }));
+          onProgressChange?.(false);
+          toast.error(`Upload failed: ${err.message}`);
+        },
+        onProgress: (bytesUploaded, bytesTotal) => {
+          const pct = Math.min(99, Math.round((bytesUploaded / bytesTotal) * 100));
+          setState((s) => ({ ...s, progress: pct,}));
+        },
+        onSuccess: async () => {
+          setState((s) => ({ ...s, progress: 100, uploading: false }));
+          onProgressChange?.(false);
+          toast.success("Uploaded the video! Processing started.");
+          if (onSuccess && videoIdRef.current) {
+            onSuccess(videoIdRef.current);
+          } else if (!onSuccess && videoIdRef.current) {
+            router.push(`/studio/videos/${videoIdRef.current}`)
+          }
+        },
+      })
+      upload.findPreviousUploads().then(async function (previousUploads) {
+    
+
+        // Start the upload
+        upload.start()
+
+        await createAfterUpload.mutateAsync({
+          bunnyVideoId: videoId,
+          title: file.name,
+          width,
+          height,
+        });
+      })
+    } catch(error:any) {
+      setState((s) => ({ ...s, uploading: false }));
+      onProgressChange?.(false);
+      toast.error("Upload failed" + error.message)
+    }
+  }
+
+  const onPick = (e: ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0]; if (f) void tusUploader(f);
+  };
+  const onDrop = (e: DragEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    const f = e.dataTransfer.files?.[0]; if (f) void tusUploader(f);
+  };
+\end{lstlisting}
+
+
+Como se puede observar, se invoca a los endpoints \texttt{/create} y \texttt{/sign} para finalmente, comenzar la carga de contenido hacia el servidor de \textit{Bunny.net}. Mientras se sube el video a los servidores externos, se ejecuta el procedimiento \texttt{createAfterUpload} el cual crea un nuevo registro de video en la base de datos. 
+
+\begin{lstlisting}[language=TypeScript]
+
+  createAfterUpload: protectedProcedure
+
+    //  primero se comprueba que los datos de entrada
+    // cumplan con las restricciones y sean válidos. 
+    .input(
+      z.object({
+        bunnyVideoId: z.string().uuid(), // Bunny GUID just uploaded to
+        title: z.string().min(1).max(200),
+        description: z.string().max(5000).optional(),
+        categoryId: z.string().uuid().optional(),
+        width: z.number().optional(),
+        height: z.number().optional(),
+      })
+    )
+    .mutation(async ({ ctx, input }) => {
+      const { id: userId, accountType } = ctx.user;
+      const [row] = await db
+        .insert(videos)
+        .values({
+          userId,
+          title: input.title,
+          description: input.description,
+          categoryId: input.categoryId,
+          bunnyVideoId: input.bunnyVideoId,
+          bunnyStatus: "uploaded", // webhook will flip to "processed"
+          isAi: false,
+          width: input.width,
+          height: input.height,
+        })
+        .returning();
+      return row;
+    }),
+\end{lstlisting}
 
 \section{Implementación de los comentarios}
 

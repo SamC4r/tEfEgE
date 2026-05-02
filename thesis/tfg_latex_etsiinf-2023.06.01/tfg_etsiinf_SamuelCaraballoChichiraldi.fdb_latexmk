@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber tfg_etsiinf_SamuelCaraballoChichiraldi"] 1777725201.53991 "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777725682.6053 0
+["biber tfg_etsiinf_SamuelCaraballoChichiraldi"] 1777740070.23731 "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777740466.46511 0
   "secciones/biblio.bib" 1777650842 8367 eaf9a0dd40e113addc85004ec98bb45d ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" 1777725682 110085 bf5e96a495a29ecbc85dd2766c21d45c "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf" 1777740465 110085 bf5e96a495a29ecbc85dd2766c21d45c "pdflatex"
   (generated)
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.blg"
   (rewritten before read)
-["pdflatex"] 1777725670.83979 "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" "tfg_etsiinf_SamuelCaraballoChichiraldi.pdf" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777725682.60607 0
+["pdflatex"] 1777740455.46028 "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" "tfg_etsiinf_SamuelCaraballoChichiraldi.pdf" "tfg_etsiinf_SamuelCaraballoChichiraldi" 1777740466.46603 0
   "C:/Users/max/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1777541919 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/max/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1774524133 13332519 f75fea545f5fea1171d2d0d0409a830b ""
   "C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -294,9 +294,9 @@
   "C:/Users/max/AppData/Local/Programs/MiKTeX/tex/latex/wrapfig/wrapfig.sty" 1044403200 26220 3701aebf80ccdef248c0c20dd062fea9 ""
   "C:/Users/max/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/max/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "arquitectura/amazon-arch.png" 1777631473 89150 0a05476c38f2d76cef0b2b098e151730 ""
+  "arquitectura/amazon-arch.png" 1777732871 90420 ccc4fdf61b370a6dfbf0680281527bc1 ""
   "arquitectura/bunny-arch.png" 1777652737 79435 5f0f1808faa4a6986608db08ea530f6e ""
-  "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" 1777661740 7715 ecf3b8c106a7b4abf710c6a2902b4621 ""
+  "c:/Users/max/Desktop/sam/tfg/thesis/tfg_latex_etsiinf-2023.06.01/tfg_etsiinf_SamuelCaraballoChichiraldi.tex" 1777727512 8377 d6e020a17f0f9c6fd6dbbc3d17b2094e ""
   "casos-uso/canales.png" 1777047368 50750 49c39564143e56714fabbee9841ecada ""
   "casos-uso/comunidades.png" 1777044996 47332 1ea7aa9b533046514fecc52558ffd0f4 ""
   "casos-uso/exploracion-busqueda.png" 1776959687 45024 c993773ddb175f68762335b896cc42a6 ""
@@ -366,9 +366,9 @@
   "portada/xp.png" 1775230448 7604 2ba8045c7b9bbbee5175f22090352e2d ""
   "secciones/anexo1.tex" 1774523325 118 1f01156af7891e36022d847df1dc888f ""
   "secciones/conclusiones.tex" 1774549818 142 e50f799c6af09ef242b3006edc79d159 ""
-  "secciones/desarrollo.tex" 1777725636 5149 158eb7a71630204149f6677018624a10 ""
-  "secciones/diseno-arquitectura.tex" 1777718778 76543 29bbe08cb0cbb3e3aa467c09ea8bedcb ""
-  "secciones/estado-arte.tex" 1777631670 51107 548e9012be85069e2b343efadfb3152a ""
+  "secciones/desarrollo.tex" 1777740453 32343 d1820b7d775879ae4ce0d8112d7e5606 ""
+  "secciones/diseno-arquitectura.tex" 1777737794 76590 9760fae71a69e59647281619abdc030f ""
+  "secciones/estado-arte.tex" 1777735044 51121 90c8146c8f2a717637a6f4fbb2319c94 ""
   "secciones/impacto.tex" 1774549949 970 5c65342cbcfc06439689a8c7df6e8a3e ""
   "secciones/innovaciones.tex" 1777289193 35511 f30f93ea50240898bf909877374a0398 ""
   "secciones/intro.tex" 1776008517 25410 fc25f5daefc1a7eacb76aac0eb3e00e7 ""
@@ -376,12 +376,12 @@
   "secciones/requisitos.tex" 1777476365 94302 00177f5253aafa6390ef559e129cd49c ""
   "secciones/resumen.tex" 1776080997 1945 0558af780997f7617ab496af9ef4db84 ""
   "secciones/tecnologias.tex" 1777662889 32896 c02cbf4c45ea1c67ec2ebc78e72678db ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.aux" 1777725682 45793 053589602b6c52f0355778a564ee8db4 "pdflatex"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" 1777725203 46848 2c578056967a7cc60c1e8e6e88a273b4 "biber tfg_etsiinf_SamuelCaraballoChichiraldi"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.out" 1777725682 21842 a7c403b96a3376db1c972507c5fec924 "pdflatex"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml" 1777725682 2677 6aaf639f93ea75d84fe3f5187ae959a2 "pdflatex"
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.tex" 1777661740 7715 ecf3b8c106a7b4abf710c6a2902b4621 ""
-  "tfg_etsiinf_SamuelCaraballoChichiraldi.toc" 1777725682 10834 04f54b10139d3abb15c0982b2f795d24 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.aux" 1777740465 46308 9651399c7e5a3a7e946d222e0ef9d0aa "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.bbl" 1777740072 46848 2c578056967a7cc60c1e8e6e88a273b4 "biber tfg_etsiinf_SamuelCaraballoChichiraldi"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.out" 1777740465 22099 71b6714c3a28e44957fd9b76dc383d23 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml" 1777740465 2677 6aaf639f93ea75d84fe3f5187ae959a2 "pdflatex"
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.tex" 1777727512 8377 d6e020a17f0f9c6fd6dbbc3d17b2094e ""
+  "tfg_etsiinf_SamuelCaraballoChichiraldi.toc" 1777740465 11003 6beed96811a4d39ee8dee980df2bc153 "pdflatex"
   (generated)
   "tfg_etsiinf_SamuelCaraballoChichiraldi.aux"
   "tfg_etsiinf_SamuelCaraballoChichiraldi.bcf"

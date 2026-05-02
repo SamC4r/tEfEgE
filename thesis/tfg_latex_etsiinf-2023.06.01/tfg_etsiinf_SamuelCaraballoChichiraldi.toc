@@ -93,7 +93,7 @@
 \contentsline {subsection}{\numberline {6.2.1}Middleware}{121}{subsection.6.2.1}%
 \contentsline {subsection}{\numberline {6.2.2}Usuario Clerk vs Usuario Interno}{122}{subsection.6.2.2}%
 \contentsline {subsection}{\numberline {6.2.3}Creación y Sincronización de Usuarios}{122}{subsection.6.2.3}%
-\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{123}{section.6.3}%
+\contentsline {section}{\numberline {6.3}Diseño de la Base de Datos}{122}{section.6.3}%
 \contentsline {subsection}{\numberline {6.3.1}Tablas}{123}{subsection.6.3.1}%
 \contentsline {section}{\numberline {6.4}Arquitecturas de procesamiento de videos}{136}{section.6.4}%
 \contentsline {subsection}{\numberline {6.4.1}Arquitectura de procesamiento propia}{136}{subsection.6.4.1}%
@@ -103,19 +103,21 @@
 \contentsline {chapter}{\numberline {7}Desarrollo}{143}{chapter.7}%
 \contentsline {section}{\numberline {7.1}Precarga de Datos con tRPC}{143}{section.7.1}%
 \contentsline {section}{\numberline {7.2}Implementación del procesamiento de videos propio}{145}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Implementación del procesamiento de videos con proveedor}{145}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Implementación de los comentarios}{145}{section.7.4}%
-\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{145}{section.7.5}%
-\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{145}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Pruebas, Despliegue y Riesgos de Seguridad}{147}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{147}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Despliegue}{147}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Feedback de Usuarios}{147}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Vulnerabilidades detectadas y acciones tomadas}{147}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Protección acceso y modificación de videos}{147}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Limitaciones de uso (Rate Limits)}{147}{subsection.8.4.2}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{149}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Análisis de Impacto}{151}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{153}{section*.77}%
-\contentsline {part}{Anexos}{159}{part*.79}%
-\contentsline {chapter}{\numberline {A}Primer anexo}{159}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {7.2.1}Consumidor}{145}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Procesador de video}{148}{subsection.7.2.2}%
+\contentsline {section}{\numberline {7.3}Implementación del procesamiento de videos con Bunny}{154}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Implementación de los comentarios}{159}{section.7.4}%
+\contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{159}{section.7.5}%
+\contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{159}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Pruebas, Despliegue y Riesgos de Seguridad}{161}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{161}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Despliegue}{161}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Feedback de Usuarios}{161}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Vulnerabilidades detectadas y acciones tomadas}{161}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Protección acceso y modificación de videos}{161}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Limitaciones de uso (Rate Limits)}{161}{subsection.8.4.2}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{163}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Análisis de Impacto}{165}{chapter.10}%
+\contentsline {chapter}{Bibliografía}{167}{section*.77}%
+\contentsline {part}{Anexos}{173}{part*.79}%
+\contentsline {chapter}{\numberline {A}Primer anexo}{173}{appendix.Alph1}%
