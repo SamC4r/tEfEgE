@@ -1,8 +1,106 @@
 \chapter{Desarrollo}
 
-Capítulo destinado a la explicación de algunos de los aspectos más importantes de la aplicación como: Implementación del procesamiento de videos propio (incluyendo código python y docker) y con proveedor (incluyendo implementación de las rutas más importantes y el TUS upload). cómo se implementan los comentarios, patrones y mejores prácticas (explicar implementación de prefetch), fetch de usuarios, fetch de videos y donación de XP, cómo se protegen rutas, cómo se protege acceso a videos, /studio.
+Este capítulo está destinado a la explicación de la implementación de algunos de los componentes más importantes de la aplicación. En concreto se analizará el código utilizado para la precarga de datos con tRPC, la implementación del procesamiento de videos propio incluyendo código python y docker y la implementación de la integración con el proveedor de servicio de procesamiento de videos detallando el código de los endpoints y el TUS upload. Además se analizará la lógica detrás de los comentarios, y cómo se recuperan datos de los usuarios y videos desde el cliente.
+
+
+\section{Precarga de Datos con tRPC}
+
+En \ref{prefetch} y \ref{trpc}, se analizó cómo funciona el sistema de precarga de datos mediante tRPC. Más específicamente, se mencionó que en  \texttt{/src/app} se encuentran los componentes servidores. Por ejemplo, el siguiente código es un fragmento del componente servidor de un canal de usuario:
+
+\begin{lstlisting}[language=TypeScript]
+//Booster/src/app/(users)/users/[userId]/page.tsx
+
+import { UsersView } from "@/modules/users/views/users-view";
+import { HydrateClient, trpc } from "@/trpc/server";
+
+export const dynamic = 'force-dynamic'; // IMPORTANTE: ESTO FUERZA LA 
+                                        // PRECARGA DE DATOS
+
+interface PageProps {
+    params: Promise<{ userId: string }>;
+}
+
+
+const Page = async ({ params }: PageProps) => { // ser recibe el parámetro
+                                                // variable userId que se
+                                                // introduce en la ruta
+    '''
+    Para obtener el id del usuario según NextJS,
+    en la ruta, el directorio se debe llamar [userId],
+    igual que la variable. 
+    '''
+
+    const { userId } = await params; 
+
+
+
+    '''
+    Precarga de datos devueltos por este procedimiento.
+    se ejecuta el procedimiento y los datos se guardan
+    en cache
+    '''
+
+    void trpc.users.getByUserId.prefetch({ userId});
+    void trpc.users.getVideosByUserId.prefetch({ userId});
+    
+    //...
+
+    '''
+    <HydrateClient> Pasa los datos precargados por el servidor
+    hacia la cache del cliente.
+    '''
+    
+
+    return (
+        {/* Se carga el componente UsersView (frontend)
+             y se le pasa el id del usuario  */}
+        <HydrateClient>
+            <UsersView userId={userId} />   
+        </HydrateClient>
+    );
+}
+
+export default Page;
+\end{lstlisting}
+
+En este código, se observa cómo se realiza una precarga de datos mediante 
+
+\begin{lstlisting}[language=TypeScript]
+void trpc.users.getByUserId.prefetch({ userId});
+\end{lstlisting}
+
+Esto invoca al procedimiento para realizar una precarga de datos y posteriormente con \texttt{<HydrateClient>}, se carga la información en la caché del cliente. Por tanto, cuando el componente cliente \texttt{UsersView} necesite recuperar los datos, consultará directamente a la caché. Dentro del código del cliente se realiza la siguiente acción:
+
+\begin{lstlisting}[language=TypeScript]
+const [user] = trpc.users.getByUserId.useSuspenseQuery({ userId });
+const [userVideos] = trpc.users.getVideosByUserId.useSuspenseQuery({ userId, });
+\end{lstlisting}
+
+Estos métodos recuperan la información depositada por el servidor en la caché. Como se puede observar, el servidor realiza una precarga de datos de los procedimientos de tRPC \texttt{getByUserId} y \texttt{getVideosByUserId}, por tanto, el cliente recupera la información mediante \texttt{useSuspenseQuery()} y los datos se almacenan como un objeto javascript dentro de la variable \texttt{user} y \texttt{userVideos}. 
+
+Como las operaciones de recuperación de datos desde un servidor pueden tardar un tiempo en procesarse, los componentes de la página web se pueden cargar antes de disponer de la información. Por lo tanto, es común emplear métodos visuales que indican estados de carga. Por ejemplo, en la sección de videos se realiza lo siguiente. 
+
+\begin{lstlisting}[language=TypeScript]
+export const VideoSection = ({ videoId }: VideoSectionProps) => {
+    return (
+        <Suspense fallback={<VideoSectionSkeleton />}>
+            <ErrorBoundary fallback={<VideoErrorFallback />}>
+                <VideoSectionSuspense videoId={videoId} />
+            </ErrorBoundary>
+        </Suspense>
+    )
+}
+\end{lstlisting}
+
+Aquí, mientras la información correspondiente a un video no está disponible, se muestra un \texttt{<Skeleton>}. Cuando se esté esperando a los datos, se enseña al usuario una página web esqueleto que indica visualmente los componentes que se rellenarán y además, indica claramente el estado de carga.  
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\textwidth]{portada/skeleton-videos.png}
+  \caption{Esqueleto en la página principal}
+\end{figure}
 
 \section{Implementación del procesamiento de videos propio}
+
 
 \section{Implementación del procesamiento de videos con proveedor}
 
