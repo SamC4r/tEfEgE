@@ -6,7 +6,7 @@ actor Usuario
 participant "Cliente React\nStudioBunnyUploader" as Client
 participant "Booster Backend" as Backend
 database "Base de datos\nPostgreSQL" as DB
-participant "Webhook Booster\n/api/bunny/webhooks/{token}" as Webhook
+participant "Webhook Booster\n/api/bunny/webhooks/[token]" as Webhook
 participant "Bunny Stream" as BunnyAPI
 
 
@@ -64,12 +64,10 @@ DB -> Webhook: Video actualizado
 
 
 
-Webhook -> BunnyAPI: Responder ok
-
-Client -> Backend: Consultar estado del video
-Backend -> DB: Leer bunnyStatus y status
-DB -> Backend: Estado actualizado
+loop Consultar estado del video
+Backend -> DB: ¿Está el video procesado?
+DB -> Backend: Estado procesado
 Backend -> Client: Video completado o procesando
 Client -> Usuario: Muestra estado final o permite previsualizar
-
+end
 @enduml

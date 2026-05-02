@@ -788,13 +788,188 @@ Como se puede observar, se invoca a los endpoints \texttt{/create} y \texttt{/si
     }),
 \end{lstlisting}
 
+
 \section{Implementación de los comentarios}
+
+En \ref{comentarios}, se explicaron las mejoras presentes en los comentarios de un video. Allí, se describió que los comentarios están estructurados en formato de árbol de respuestas. Dado este requerimiento, eso exigió modelar a los comentarios como nodos dentro de un árbol. Además, esto supuso añadir un atributo en formato de cláve foránea en la tabla de comentarios que indicara el padre de un nodo. Más específicamente, se creó del lado del cliente un componente \texttt{<Comment>} que recibe como propiedades el identificador del comentario a renderizar.
+
+\begin{lstlisting}[language=Typescript]
+  export const Comment = ({ comment, videoId, viewer, depth, maxDepth }: CommentProps) => {
+    .....
+  }
+\end{lstlisting}
+
+Con este diseño, para obtener las respuestas de un comentario, se busca en la base de datos todos aquellos registros que referencien a ese comentario como padre. Posteriormente, con esta lista de respuestas y con el uso de React, se renderizan de forma recursiva los mensajes que responden a otros. Es decir, un comentario incluye a otros dentro de él que corresponden a sus respuestas. 
+
+
+\begin{lstlisting}[language=html]
+  <div>
+    <div className="mt-4 pl-6 border-l-2 border-amber-300
+         dark:border-amber-600 rounded-b-2xl space-y-4">
+      {replies.map((child) => (
+        <Comment key={child.commentId} isPending={isReplying} comment={child}
+               videoId={videoId} viewer={viewer} depth={depth + 1} maxDepth={maxDepth} />
+        ))}
+    </div>
+    ...
+  </div>
+\end{lstlisting}
+
 
 
 % PONER EJEMPLO DE CODIGO DE COMO LO HAGO
 \section{Acceder y modificar datos de usuario}
 
+En esta sección se enseñan algunos de los fragmentos de código más importantes al momento de acceder y modificar los datos de un usuario. Dentro del archivo \\ \texttt{/src/modules/users/server/procedures.ts}, se encuentran los procedimientos relativos a la gestión de usuarios. Aquí, se realizan acciones cuyo objetivo es modificar o recuperar propiedades de los usuarios en la plataforma. Por ejemplo, este procedimiento encuentra a un usuario a partir de su identificador dentro de Clerk, verificando primero que se introducen datos válidos en la consulta. 
+
+\begin{lstlisting}[language=Typescript]
+    getByClerkId: protectedProcedure
+    .input(z.object({ clerkId: z.string().nullish() }))
+    .query(async ({ input }) => {
+      const { clerkId } = input;
+      const [user] = await db
+        .select()
+        .from(users)
+        .where(inArray(users.clerkId, clerkId ? [clerkId] : []));
+
+
+      if (!user) {
+        throw new TRPCError({
+          code: "NOT_FOUND",
+          message: `User with clerkId ${input.clerkId} not found`
+        });
+      }
+
+      return user;
+    }),
+\end{lstlisting}
+
+Componentes servidores invocan estos procedimientos para realizar una precarga y los clientes, recuperan la información de la caché. Estos son los datos, que el cliente recupera cuando necesita mostrar un perfil de usuario.
+
+\begin{lstlisting}[language=Typescript]
+  const { userId: clerkUserId } = useAuth();
+  const { user: clerkUser } = useUser();
+  const { openMessages } = useNotificationDropdown();
+  const [user] = trpc.users.getByUserId.useSuspenseQuery({ userId });
+  const [followers] = trpc.follows.getFollowersByUserId.useSuspenseQuery({ userId, });
+  const [userVideos] = trpc.users.getVideosByUserId.useSuspenseQuery({ userId, });
+  const [boostPoints] = trpc.xp.getBoostByUserId.useSuspenseQuery({ userId });
+  const [creatorViews] = trpc.videoViews.getAllViewsByUserId.useSuspenseQuery({ userId, });
+\end{lstlisting}
+
 \section{Acceder y modificar datos de video}
+
+De la misma forma que con un usuario, en \textit{Booster} se implementan procedimientos para realizar acciones que modifiquen o recuperen propiedades relacionadas con los videos dentro de la plataforma. Por ejemplo, este fragmento actualiza los datos de un video:
+
+\begin{lstlisting}[language=Typescript]
+ update: protectedProcedure
+    .input(
+      videoUpdateSchema.extend({
+        title: z.string().min(1).max(200).optional(),
+        description: z.string().max(5000).optional().nullable(),
+      })
+    )
+    .mutation(async ({ ctx, input }) => {
+      const { id: userId } = ctx.user;
+      if (!input.id) {
+        throw new TRPCError({ code: "NOT_FOUND" });
+      }
+
+      if (input.communityId) {
+        const [community] = await db
+          .select({ allowUserPosts: communities.allowUserPosts })
+          .from(communities)
+          .where(eq(communities.communityId, input.communityId));
+
+        if (!community) {
+          throw new TRPCError({
+            code: "NOT_FOUND",
+            message: "Community not found",
+          });
+        }
+
+        if (!community.allowUserPosts) {
+          const [isModerator] = await db
+            .select()
+            .from(communityModerators)
+            .where(
+              and(
+                eq(communityModerators.communityId, input.communityId),
+                eq(communityModerators.userId, userId)
+              )
+            );
+
+          if (!isModerator) {
+            throw new TRPCError({
+              code: "FORBIDDEN",
+              message: "Only moderators can post in this community",
+            });
+          }
+        }
+      }
+
+      const textToEmbed = `${input.title}\n${input.description}`;
+      const embedding = await embedText(textToEmbed);
+
+      const [updatedVideo] = await db
+        .update(videos)
+        .set({
+          title: input.title,
+          description: input.description,
+          categoryId: input.categoryId,
+          communityId: input.communityId,
+          visibility:
+            input.visibility === "private" || input.visibility === "public"
+              ? input.visibility
+              : undefined,
+          updatedAt: new Date(),
+          isAi: input.isAi,
+          embedding: embedding,
+          tags: input.tags,
+        })
+        .where(and(eq(videos.id, input.id), eq(videos.userId, userId)))
+        .returning();
+
+      if (!updatedVideo) {
+        throw new TRPCError({ code: "NOT_FOUND" });
+      }
+
+      return updatedVideo;
+    }),
+\end{lstlisting}
+
+Los componentes servidores realizan la precarga de datos y luego los clientes los consumen. 
+El servidor ejecuta este código:
+
+\begin{lstlisting}[language=Typescript]
+
+export default async function Page({ params }: PageProps) {
+  const { videoId } = await params;
+
+  void trpc.videos.getOne.prefetch({ id: videoId });
+
+  return (
+    <HydrateClient>
+      <VideoView videoId={videoId} />
+    </HydrateClient>
+  );
+}
+\end{lstlisting}
+
+Posteriormente, el cliente obtiene esos datos.
+
+
+\begin{lstlisting}[language=Typescript]
+const VideoSectionSuspense = ({ videoId }: VideoSectionProps) => {
+    const [video] = trpc.videos.getOne.useSuspenseQuery({ id: videoId });
+
+    ...
+
+}
+
+
+
+\end{lstlisting}
 
 
 % Lo de redis ratelimit, clerk route protection,...

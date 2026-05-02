@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  2 MAY 2026 18:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  2 MAY 2026 20:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1442,37 +1442,37 @@ Overfull \hbox (3.3943pt too wide) detected at line 110
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 111
- []\T1/pbk/l/n/10.95 159
+ []\T1/pbk/l/n/10.95 160
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 113
- []\T1/pbk/l/n/10.95 161
+ []\T1/pbk/l/n/10.95 163
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 114
- []\T1/pbk/l/n/10.95 161
+ []\T1/pbk/l/n/10.95 163
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 115
- []\T1/pbk/l/n/10.95 161
+ []\T1/pbk/l/n/10.95 163
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 116
- []\T1/pbk/l/n/10.95 161
+ []\T1/pbk/l/n/10.95 163
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 117
- []\T1/pbk/l/n/10.95 161
+ []\T1/pbk/l/n/10.95 163
  []
 
 
 Overfull \hbox (3.3943pt too wide) detected at line 118
- []\T1/pbk/l/n/10.95 161
+ []\T1/pbk/l/n/10.95 163
  []
 
 
@@ -1983,76 +1983,76 @@ LaTeX Info: Redefining \% on input line 256.
 <portada/comentarios.png, id=1093, 305.34074pt x 418.56375pt>
 File: portada/comentarios.png Graphic file (type png)
 <use portada/comentarios.png>
-Package pdftex.def Info: portada/comentarios.png  used on input line 262.
+Package pdftex.def Info: portada/comentarios.png  used on input line 264.
 (pdftex.def)             Requested size: 256.07741pt x 351.06104pt.
-LaTeX Info: Redefining \sptext on input line 268.
-LaTeX Info: Redefining \. on input line 268.
-LaTeX Info: Redefining \% on input line 268.
+LaTeX Info: Redefining \sptext on input line 270.
+LaTeX Info: Redefining \. on input line 270.
+LaTeX Info: Redefining \% on input line 270.
  [56 <./portada/comentarios.png>]
 <portada/channel-videos.png, id=1101, 596.82974pt x 503.481pt>
 File: portada/channel-videos.png Graphic file (type png)
 <use portada/channel-videos.png>
-Package pdftex.def Info: portada/channel-videos.png  used on input line 280.
+Package pdftex.def Info: portada/channel-videos.png  used on input line 282.
 (pdftex.def)             Requested size: 277.41176pt x 234.02405pt.
-LaTeX Info: Redefining \sptext on input line 288.
-LaTeX Info: Redefining \. on input line 288.
-LaTeX Info: Redefining \% on input line 288.
+LaTeX Info: Redefining \sptext on input line 290.
+LaTeX Info: Redefining \. on input line 290.
+LaTeX Info: Redefining \% on input line 290.
  [57 <./portada/channel-videos.png>]
 <portada/channel-viewer.png, id=1112, 453.49425pt x 320.99925pt>
 File: portada/channel-viewer.png Graphic file (type png)
 <use portada/channel-viewer.png>
-Package pdftex.def Info: portada/channel-viewer.png  used on input line 293.
+Package pdftex.def Info: portada/channel-viewer.png  used on input line 295.
 (pdftex.def)             Requested size: 256.07741pt x 181.26694pt.
 <portada/channel-boost.png, id=1115, 516.12825pt x 377.61075pt>
 File: portada/channel-boost.png Graphic file (type png)
 <use portada/channel-boost.png>
-Package pdftex.def Info: portada/channel-boost.png  used on input line 302.
+Package pdftex.def Info: portada/channel-boost.png  used on input line 304.
 (pdftex.def)             Requested size: 341.43437pt x 249.80005pt.
 <portada/channel-level.png, id=1116, 873.2625pt x 277.035pt>
 File: portada/channel-level.png Graphic file (type png)
 <use portada/channel-level.png>
-Package pdftex.def Info: portada/channel-level.png  used on input line 309.
+Package pdftex.def Info: portada/channel-level.png  used on input line 311.
 (pdftex.def)             Requested size: 426.79135pt x 135.39748pt.
 <portada/channel-leaderboard.png, id=1118, 581.7735pt x 364.9635pt>
 File: portada/channel-leaderboard.png Graphic file (type png)
 <use portada/channel-leaderboard.png>
-Package pdftex.def Info: portada/channel-leaderboard.png  used on input line 318.
+Package pdftex.def Info: portada/channel-leaderboard.png  used on input line 320.
 (pdftex.def)             Requested size: 341.43437pt x 214.1961pt.
-LaTeX Info: Redefining \sptext on input line 324.
-LaTeX Info: Redefining \. on input line 324.
-LaTeX Info: Redefining \% on input line 324.
+LaTeX Info: Redefining \sptext on input line 326.
+LaTeX Info: Redefining \. on input line 326.
+LaTeX Info: Redefining \% on input line 326.
  [58 <./portada/channel-viewer.png>]
-LaTeX Info: Redefining \sptext on input line 324.
-LaTeX Info: Redefining \. on input line 324.
-LaTeX Info: Redefining \% on input line 324.
+LaTeX Info: Redefining \sptext on input line 326.
+LaTeX Info: Redefining \. on input line 326.
+LaTeX Info: Redefining \% on input line 326.
  [59 <./portada/channel-boost.png> <./portada/channel-level.png>]
 <portada/channel-rewards.png, id=1136, 572.1375pt x 201.75375pt>
 File: portada/channel-rewards.png Graphic file (type png)
 <use portada/channel-rewards.png>
-Package pdftex.def Info: portada/channel-rewards.png  used on input line 329.
+Package pdftex.def Info: portada/channel-rewards.png  used on input line 331.
 (pdftex.def)             Requested size: 341.43437pt x 120.40053pt.
 <portada/channel-about.png, id=1138, 573.342pt x 160.1985pt>
 File: portada/channel-about.png Graphic file (type png)
 <use portada/channel-about.png>
-Package pdftex.def Info: portada/channel-about.png  used on input line 338.
+Package pdftex.def Info: portada/channel-about.png  used on input line 340.
 (pdftex.def)             Requested size: 426.79135pt x 119.25635pt.
-LaTeX Info: Redefining \sptext on input line 345.
-LaTeX Info: Redefining \. on input line 345.
-LaTeX Info: Redefining \% on input line 345.
+LaTeX Info: Redefining \sptext on input line 347.
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
  [60 <./portada/channel-leaderboard.png> <./portada/channel-rewards.png>]
 <portada/channel-chat.png, id=1149, 572.1375pt x 264.99pt>
 File: portada/channel-chat.png Graphic file (type png)
 <use portada/channel-chat.png>
-Package pdftex.def Info: portada/channel-chat.png  used on input line 348.
+Package pdftex.def Info: portada/channel-chat.png  used on input line 350.
 (pdftex.def)             Requested size: 426.79135pt x 197.67455pt.
-LaTeX Info: Redefining \sptext on input line 363.
-LaTeX Info: Redefining \. on input line 363.
-LaTeX Info: Redefining \% on input line 363.
+LaTeX Info: Redefining \sptext on input line 365.
+LaTeX Info: Redefining \. on input line 365.
+LaTeX Info: Redefining \% on input line 365.
  [61 <./portada/channel-about.png> <./portada/channel-chat.png>]
 <portada/leaderboard.png, id=1159, 976.8495pt x 406.51875pt>
 File: portada/leaderboard.png Graphic file (type png)
 <use portada/leaderboard.png>
-Package pdftex.def Info: portada/leaderboard.png  used on input line 373.
+Package pdftex.def Info: portada/leaderboard.png  used on input line 375.
 (pdftex.def)             Requested size: 426.79135pt x 177.60959pt.
 ) (secciones/requisitos.tex
 LaTeX Info: Redefining \sptext on input line 1.
@@ -3018,23 +3018,65 @@ LaTeX Info: Redefining \% on input line 717.
 LaTeX Info: Redefining \sptext on input line 776.
 LaTeX Info: Redefining \. on input line 776.
 LaTeX Info: Redefining \% on input line 776.
- [158]) (secciones/pruebas.tex
+ [158]
+Overfull \hbox (64.61365pt too wide) in paragraph at lines 797--798
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.21335pt too wide) in paragraph at lines 810--811
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (107.21408pt too wide) in paragraph at lines 811--812
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 825.
+LaTeX Info: Redefining \. on input line 825.
+LaTeX Info: Redefining \% on input line 825.
+[159]
+Overfull \hbox (37.61337pt too wide) in paragraph at lines 854--855
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.01315pt too wide) in paragraph at lines 855--856
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (64.61365pt too wide) in paragraph at lines 857--858
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+LaTeX Info: Redefining \sptext on input line 882.
+LaTeX Info: Redefining \. on input line 882.
+LaTeX Info: Redefining \% on input line 882.
+[160]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 939.
+LaTeX Info: Redefining \. on input line 939.
+LaTeX Info: Redefining \% on input line 939.
+ [161]) (secciones/pruebas.tex
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
- [159] [160
-
-]
+ [162]
 Cap\'{\i }tulo 8.
-) (secciones/conclusiones.tex [161] [162
+) (secciones/conclusiones.tex [163
+
+] [164
 
 ]
 Cap\'{\i }tulo 9.
-) (secciones/impacto.tex [163] [164
+) (secciones/impacto.tex [165] [166
 
 ]
 Cap\'{\i }tulo 10.
-) [165] [166
+) [167] [168
 
 ]
 Overfull \hbox (1.31523pt too wide) in paragraph at lines 263--263
@@ -3066,7 +3108,7 @@ Overfull \hbox (28.08347pt too wide) in paragraph at lines 263--263
 \T1/pbk/l/n/10.95 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
-[167
+[169
 
 ]
 Overfull \hbox (10.61328pt too wide) in paragraph at lines 263--263
@@ -3081,7 +3123,7 @@ Overfull \hbox (2.00604pt too wide) in paragraph at lines 263--263
 LaTeX Info: Redefining \sptext on input line 260.
 LaTeX Info: Redefining \. on input line 260.
 LaTeX Info: Redefining \% on input line 260.
-[168]
+[170]
 Overfull \hbox (7.54115pt too wide) in paragraph at lines 263--263
 \T1/pbk/l/n/10.95 abr. de 2026. di-rec-ción: []$\T1/pcr/m/n/10.95 https : / / nextjs . org / docs / app / api -[] reference /
  []
@@ -3089,11 +3131,11 @@ Overfull \hbox (7.54115pt too wide) in paragraph at lines 263--263
 LaTeX Info: Redefining \sptext on input line 264.
 LaTeX Info: Redefining \. on input line 264.
 LaTeX Info: Redefining \% on input line 264.
-[169] [170
+[171] [172
 
-] [171] [172] (secciones/anexo1.tex
+] [173] [174] (secciones/anexo1.tex
 Ap\'{e}ndice A.
-) [173
+) [175
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
@@ -3114,10 +3156,10 @@ Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi
 
  ) 
 Here is how much of TeX's memory you used:
- 44698 strings out of 467871
- 860129 string characters out of 5419344
- 1784383 words of memory out of 5000000
- 71165 multiletter control sequences out of 15000+600000
+ 44897 strings out of 467871
+ 863124 string characters out of 5419344
+ 1784444 words of memory out of 5000000
+ 71223 multiletter control sequences out of 15000+600000
  686514 words of font info for 171 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,131p,1412b,2656s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3125,9 +3167,9 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm_-7yLbThNsyMFwBvhRD0n2H9Y88pxZ3Fga6bCmtSnmdTtJHozG-i9YuuRnvPDI2SD5sjj_6QyX5} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (183 pages, 13213095 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (185 pages, 13238958 bytes).
 PDF statistics:
- 3511 PDF objects out of 3580 (max. 8388607)
- 1698 named destinations out of 1728 (max. 500000)
+ 3688 PDF objects out of 4296 (max. 8388607)
+ 1839 named destinations out of 2073 (max. 500000)
  1292 words of extra memory for PDF output out of 10000 (max. 10000000)
 

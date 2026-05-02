@@ -244,6 +244,7 @@ digraph ER_Moderacion_Gamificacion {
 
   Usuario -> realiza [label="(1,1)"]
   realiza -> DonacionXP [label="(0,n)"]
+  realiza -> creatorId
 
   Usuario -> recibe [label="(1,1)"]
   recibe -> DonacionXP [label="(0,n)"]
