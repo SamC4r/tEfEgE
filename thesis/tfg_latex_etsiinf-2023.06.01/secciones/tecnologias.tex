@@ -1,10 +1,10 @@
 \chapter{Tecnologías Empleadas}
 
-Debido a la facilidad de implementación y a sus ventajas, se ha empleado una arquitectura centralizada para el desarrollo del proyecto según se describe en \ref{2.3.1}. No obstante, sería interesante explorar soluciones distribuidas como posibles ampliaciones. 
+Debido a la facilidad de implementación y a sus ventajas, se ha empleado una arquitectura centralizada para el desarrollo del proyecto según se describe en \ref{2.3.1}. No obstante, como posible ampliación se podrían explorar soluciones distribuidas.
 
-En cuanto al procesamiento, transcodificación y entrega de video se probaron las tres alternativas mencionadas en \ref{2.2}. Para la solución propia se hizo uso de los servicios de Amazon Web Service con las tecnologías descritas en \ref{2.1}.
+En cuanto al procesamiento, transcodificación y entrega de video se probaron las tres alternativas mencionadas en \ref{2.2}. Para la solución propia se utilizaron los servicios de Amazon Web Service con las tecnologías descritas en \ref{2.1} pero finalmente, se optó por integrar los servicios de un proveedor debido a los costos elevados de las otras alternativas.
 
-Para la creación de un Producto Mínimo Viable se ha decido implementar una página web debido a su facilidad de acceso desde cualquier dispositivo y a la adecuación de los \textit{frameworks} y tecnologías web a los objetivos del proyecto. Por ese motivo, a continuación se presentan las tecnologías utilizadas.
+Para la creación de un Producto Mínimo Viable (MVP), se ha decido implementar una página web debido a su facilidad de acceso desde cualquier dispositivo y a la adecuación de los \textit{frameworks} y tecnologías web a los objetivos del proyecto. Por ese motivo, a continuación se presentan las tecnologías utilizadas.
 
 
 \section{Backend}
@@ -230,7 +230,7 @@ Durante el desarrollo de Booster se combinan las habilidades de los Server Compo
 
 En Booster, esto es extremadamente útil ya que permite concentrar en un mismo entorno diversas responsabilidades. Next.Js se encarga de mostrar la aplicación, gestionar la obtención de datos, la comunicación cliente-servidor junto con tRPC y definir rutas de API y direcciones URL. 
 
-Además Next.Js contiene métodos de optimización como: incorporación de cachés, revalidación, pre-carga de enlaces, optimizaciones de imágenes, optimizaciones de código css \todo{Poner ref a CSS, tailwindcss} y optimizaciones de navegación. 
+Además Next.Js contiene métodos de optimización como: incorporación de cachés, revalidación, pre-carga de enlaces, optimizaciones de imágenes, optimizaciones de código css y optimizaciones de navegación. 
 
 \textbf{Ventajas}
 
@@ -327,6 +327,7 @@ Booster utiliza Next.Js en el frontend para organizar los componentes y la aplic
 
 
 \subsection{TailwindCSS y Shadcn}
+\label{tailwind}
 
 Normalmente, las aplicaciones web suelen mejorar su interfaz de usuario mediante CSS (Cascading Style Sheets), un lenguaje de diseño gráfico para definir la apariencia y el estilo de los documentos HTML. Sin embargo, para este proyecto se ha optado por utilizar \textbf{TailwindCSS}, una herramienta más moderna basado en utilidades de CSS para aplicar estilos a componentes HTML. 
 

@@ -142,22 +142,22 @@ El proyecto emplea el principio de separación de funcionalidades dividiendo en 
     \item \textbf{/db:} Se encarga de la gestión de la base de datos \textit{NeonDB} y su ORM \textit{Drizzle-ORM}.
     \item \textbf{/components}: Recopila componentes de la interfaz de usuario que se reutilizan a lo largo de toda la aplicación.
     \item \textbf{/lib:} Contiene archivos de configuración de servicios externos. Además, incorpora funciones de utilidades (\texttt{utils.ts}) que implementa funciones específicas empleadas en distintas partes del proyecto. Por otro lado, se incluye un archivo \texttt{ratelimits.ts} que especifica los límites de uso de la aplicación para aliviar la carga en el servidor y proteger a la aplicación.
-    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento, como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte concreta de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos directorios se encuentra un subdirectorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. Además, existe otro subdirectorio \texttt{/server}, que se encarga de gestionar la lógica de negocio relativa a ese componente. Normalmente en esta sección es donde se, crean, recuperan, actualizan y eliminan registros en la based de datos. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
+    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento, como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte concreta de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos directorios se encuentra un subdirectorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. Además, existe otro subdirectorio \texttt{/server}, que se encarga de gestionar la lógica de negocio relativa a ese componente. Normalmente en esta sección es donde se crean, recuperan, actualizan y eliminan registros en la base de datos mediante procedimientos implementados en un archivo \texttt{procedures.ts}. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
     \item \textbf{/trpc:} Contiene los archivos de configuración de tRPC para establecer una comunicación entre el cliente y el servidor. 
 \end{itemize}
 
 \subsection{Rutas agrupadas en NextJS}
 
-En el directorio \texttt{/src/app}, como se observa en la figura \ref{fig:estructura-rutas-booster} se utilizan grupos de rutas mediante paréntesis, como  \texttt{(auth)}, \texttt{(home)}. Este método, permite organizar la lógica de las rutas de sin afectar directamente la URL final. De esta forma, distintos componentes que pertenezcan a una misma sección, se pueden organizar según su propósito funcional sin alterar el comportamiento de la aplicación. Esta es una buena práctica recomendada en la documentación de NextJS \cite{nextjs-parenthesis}. 
+En el directorio \texttt{/src/app}, como se observa en la figura \ref{fig:estructura-rutas-booster} se utilizan grupos de rutas mediante paréntesis, como  \texttt{(auth)}, \texttt{(home)}. Este método, permite organizar la lógica de las rutas sin afectar directamente la URL final. De esta forma, distintos componentes que pertenezcan a una misma sección, se pueden agrupar según su propósito funcional sin alterar el comportamiento de la aplicación. Esta es una buena práctica recomendada en la documentación de NextJS \cite{nextjs-parenthesis}. 
 
 
 \subsection{Acceso a datos mediante ORM}
 
-La interacción con la base de datos se realiza mediante una ORM, más concretamente, con \textit{Drizzle-ORM} como se analizó en \ref{drizzle}. Dentro de \texttt{/src/app/db} se encuentra un archivo \texttt{schema.ts} que permite definir el esquema de datos, tablas y relaciones de forma tipada con TypeScript, facilitando así la integración de los tipos de datos de las tablas, con lo utilizado en la aplicación. 
+La interacción con la base de datos se realiza mediante una ORM, más concretamente, con \textit{Drizzle-ORM} como se analizó en \ref{drizzle}. Dentro de \texttt{/src/app/db} se encuentra un archivo \texttt{schema.ts} que permite definir el esquema de datos, tablas y relaciones de forma tipada con TypeScript, facilitando así la integración con la aplicación. 
 
 \subsection{Esquemas de validación}
 
-Una buena práctica empleada en el desarrollo de \textit{Booster} consiste en la utilización de esquemas de validación para controlar los datos que se manejan en la aplicación. Antes de que se ejecuta la lógica del sistema, se comprueba que los datos cumplen con ciertas restricciones. Mediante la utilización de una herramienta conocida como \textbf{Zod}, se realiza esta validación, lo que permite reducir errores y entradas inválidas. 
+Una buena práctica empleada en el desarrollo de \textit{Booster} consiste en la utilización de esquemas de validación para controlar los datos que se manejan en la aplicación. Antes de que se ejecute la lógica del sistema, se comprueba que los datos cumplen con ciertas restricciones. Mediante la utilización de una herramienta conocida como \textbf{Zod}, se realiza esta validación, permitiendo reducir los errores y las entradas inválidas. 
 
 \begin{lstlisting}[language=TypeScript]
  getFollowersByUserId: baseProcedure
@@ -169,30 +169,30 @@ Una buena práctica empleada en el desarrollo de \textit{Booster} consiste en la
 
 \end{lstlisting}
 
-Este es el código del procedimiento \texttt{getFollowersByUserId} dentro del archivo \texttt{/src/modules/follows/server/procedure.ts} que comprueba que el identificador recibido por el procedimiento sea de tipo \texttt{uuid} y \texttt{string} antes de realizar la operación. 
+Este es un fragmento del código del procedimiento \texttt{getFollowersByUserId} dentro del archivo \texttt{/src/modules/follows/server/procedure.ts} que comprueba que el identificador recibido por el procedimiento sea de tipo \texttt{uuid} y \texttt{string} antes de realizar la operación. 
 
 \subsection{Centralización de integraciones externas}
 
-Los archivos de configuración de servicios externos se encuentran todos en \texttt{/src/lib} para mejorar la organización del código y facilitar su mantenibilidad. Estos archivos tienen información de conexión con los servicios de terceros y utilizan claves de API alojadas en el archivo \texttt{.env.local} 
+Los archivos de configuración de servicios externos se encuentran todos en \texttt{/src/lib} para mejorar la organización del código y facilitar su mantenibilidad. Estos ficheros contienen información de conexión con los servicios de terceros y utilizan claves de API alojadas en el archivo \texttt{.env.local} 
 
 \subsection{Seguridad mediante variables de entorno}
 
-El proyecto utiliza variables de entorno para almacenar información sensible. Se almacena en el archivo \texttt{.env.local} el cual contiene, claves de API, secretos de webhooks, claves públicas y privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público de código abierto y solo es conocido por el servicio de \textit{hosting}. 
+El proyecto utiliza variables de entorno para almacenar información sensible. Se almacenan en el archivo \texttt{.env.local} el cual contiene, claves de API, secretos de webhooks, claves públicas, claves privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público y solo es conocido por el servicio de \textit{hosting}. 
 
 \subsection{Middleware para control de accesos}
 
-Cada solicitud a ruta específicas del \textit{backend} pasan primero por un middleware implementado en el archivo \texttt{middleware.ts}. En \textit{Booster} esto permite proteger ciertas rutas y comprobar la sesión del usuario antes de ejecutar determinadas acciones. Gracias a esto, se evita reutilizar la misma lógica de validación en varias partes.
+Cada solicitud hacia una ruta específica del \textit{backend} pasa primero por un middleware, cuya implementación se encuentra en el fichero \texttt{middleware.ts}. En \textit{Booster} esto permite proteger rutas y comprobar la sesión del usuario antes de ejecutar determinadas acciones. Gracias a esto, se evita reutilizar la misma lógica de validación en varias partes.
 
 \subsection{Reutilización de componentes visuales}
 
-Al emplear React.Js para la interfaz de usuario se pueden crear componentes reutilizables. Estos se almacenan en la carpeta \texttt{/componenets} permitiendo así, manejar una apariencia visual coherente en toda la aplicación y evitar reutilizar el mismo código en múltiples partes. Además, esta decisión facilita la evolución del diseño de la aplicación. Cuando se desea actualizar un elemento visual, se modifica el componente y los cambios quedan reflejados en todas las parte donde se utilice.
+Al emplear React.Js (\ref{React.Js}) para la interfaz de usuario se pueden crear componentes reutilizables. Estos se almacenan en la carpeta \texttt{/componenets} permitiendo así, manejar una apariencia visual coherente en toda la aplicación y evitar reutilizar el mismo código en múltiples partes. Además, esta decisión facilita la evolución del diseño de la aplicación. Cuando se desea actualizar un elemento visual, se modifica el componente y los cambios quedan reflejados en todas las parte donde se utilice.
 
 \subsection{Prefetch de datos}
 \label{prefetch}
 
 En \textit{Booster}, se utiliza tRPC para optimizar la obtención de datos mediante técnicas de precarga. Esto permite recuperar la información desde el lado del servidor antes de que los componentes del cliente la necesiten, como se analizó en \ref{trpc}.  
 
-En esta implementación, los componentes del servidor encargados de la precarga (\textit{prefetch}) se encuentran dentro del directorio \texttt{/src/app}. Aquí, se ejecutan procedimientos tRPC y se preparan los datos correspondientes que posteriormente serán utilizados por el cliente. A continuación, los componentes cliente, organizados en \texttt{/src/modules} acceden a esos datos disponibles en la caché y por tanto, se reducen las solicitudes al servidor. Esto mejora la experiencia de usuario y disminuye los tiempos de carga, generando así, una navegación más fluida. 
+En esta implementación, los componentes del servidor encargados de la precarga (\textit{prefetch}) se encuentran dentro del directorio \texttt{/src/app}. Aquí, se ejecutan procedimientos tRPC y se preparan los datos correspondientes que posteriormente serán consumidos por el cliente. A continuación, los componentes cliente, organizados en \texttt{/src/modules} acceden a esos datos disponibles en la caché y por tanto, se reducen las solicitudes al servidor. Esto mejora la experiencia de usuario y disminuye los tiempos de carga, generando así, una navegación más fluida. 
 
 Además, mientras se realiza este proceso, se emplean elementos visuales de carga como \textit{Skeletons}. En caso de error, se muestra una indicación visual adecuada. 
 
@@ -1765,7 +1765,7 @@ En esta sección se presentan las alternativas posibles para desarrollar un serv
 \subsection{Arquitectura de procesamiento propia}
 \label{propio-aws}
 
-Esta primera solución se basa en implementar un flujo de procesamiento de videos asíncrono mediante el uso de servicios de Amazon Web Services \ref{aws}. Con esto, se consigue tener un registro del archivo de video y distribuirlo de forma eficiente, evitando que el \textit{backend} realice estas tareas. El proceso se ilustra en la figura \ref{amazon-arch}
+Esta primera solución se basa en implementar un flujo de procesamiento de videos asíncrono mediante el uso de servicios de Amazon Web Services (\ref{aws}). Con esto, se consigue tener un registro del archivo de video y distribuirlo de forma eficiente, evitando que el \textit{backend} realice estas tareas. El proceso se ilustra en la figura \ref{amazon-arch}
 
 \begin{figure}[H]
   \centering
@@ -1774,7 +1774,7 @@ Esta primera solución se basa en implementar un flujo de procesamiento de video
   \label{amazon-arch}
 \end{figure}
 
-El flujo comienza  cuando el usuario solicita al \textit{backend} un enlace para cargar un video. En lugar de enviar el video directamente al \textit{backend} y luego al servicio de procesamiento de videos, se envia un enlace de carga al usuario para que suba el video directamente al servicio de procesamiento. Por motivos de seguridad, este enlace de carga se pide a través del \textit{backend}. Además, esta técnica reduce la carga sobre el \textit{backend} y evita que tenga que manejar archivos de tamaño elevado. 
+El flujo comienza  cuando el usuario solicita al \textit{backend} un enlace para cargar un video. En lugar de enviar el video al \textit{backend} y luego al servicio de procesamiento de videos, se envia un enlace de carga al usuario para que suba el video directamente al servicio de procesamiento. Por motivos de seguridad, este enlace de carga se pide a través del \textit{backend}. Además, esta técnica reduce la carga sobre los servidores de \textit{Booster} y evita que tenga que manejar archivos de tamaño elevado. 
 
 Posteriormente, el archivo original cargado por el usuario se almacena en un \textit{bucket} de Amazon S3 denominado \textit{S3 Raw Bucket} que funciona como un \textit{Object Storage} explicado en \ref{bucket}. Este \textit{bucket} almacena el contenido en su estado original antes de procesarlo. Una vez que el archivo se ha sido subido correctamente, S3 genera un evento indicando que se ha creado un nuevo objeto.
 
@@ -1797,9 +1797,9 @@ Cuando el proceso finaliza, los archivos generados se almacenan en un segundo \t
 \subsection{Arquitectura de procesamiento con un proveedor}
 \label{bunny-arch-design}
 
-Otra alternativa para implementar el procesamiento de videos es delegar estas tareas a un proveedor externo especializado. En lugar de que \textit{Booster} tenga que descargar los archivos de videos, procesarlos, transcodificarlos, segmentarlos y almacenarlos en \textit{buckets} propios, se ha decidido utilizar \textit{Bunny.net}, más concretamente, el servicio de \textit{Bunny Stream} \ref{bunny}. Este se encarga de realizar todas las tareas de procesamiento de video, cuenta con una CDN que facilita su distribución y además, dispone de un gran número de opciones de personalización que se adaptan bien con los objetivos de la plataforma. 
+Otra alternativa para implementar el procesamiento de videos es delegar estas tareas a un proveedor externo especializado. En lugar de que \textit{Booster} tenga que descargar los archivos de videos, procesarlos, transcodificarlos, segmentarlos y almacenarlos en \textit{buckets} propios, se ha decidido utilizar \textit{Bunny.net}, más concretamente, el servicio de \textit{Bunny Stream} (\ref{bunny}). Este, se encarga de realizar todas las tareas de procesamiento de video, cuenta con una CDN que facilita su distribución y además, dispone de un gran número de opciones de personalización que se adaptan adecuadamente con los objetivos de la plataforma. 
 
-En la figura \ref{bunny-arch}, se observa un diagrama de secuencias que ilustra el proceso de carga de videos a la plataforma integrando \textit{Bunny.net}. El flujo comienza cuando un usuario selecciona la opción de subir video dentro del \texttt{/studio} y arrastra o selecciona un archivo de video. Antes de iniciar la carga, el cliente obtiene algunos metadatos del archivo como la duración y sus dimensiones. Esto se hace para evitar que se suban videos por encima de 10 minutos y así, reducir los costos de infraestructura y además, se detectan el ancho y alto para determinar si es un video vertical. Esto se debe a que los usuarios tienen la opción de filtrar los videos verticales en su perfil de recomendaciones. 
+En la figura \ref{bunny-arch}, se observa un diagrama de secuencias que ilustra el proceso de carga de videos a la plataforma integrando \textit{Bunny.net}. El flujo comienza cuando un usuario selecciona la opción de subir video dentro del \texttt{/studio} y arrastra o selecciona un archivo de video. Antes de iniciar la carga, el cliente obtiene algunos metadatos del archivo como la duración y sus dimensiones. Esto se hace para evitar que se suban videos por encima de 10 minutos y así, reducir los costos de infraestructura. Además, se detectan el ancho y el alto para determinar si un video está en formato vertical. Esto se debe a que los usuarios tienen la opción de filtrar los videos verticales en su perfil de recomendaciones. 
 
 \begin{figure}[H]
   \centering
@@ -1969,7 +1969,7 @@ Si ambos vectores apuntan en una dirección parecida, el valor del producto esca
 La búsqueda semántica, calcula el índice de similitud de la consulta con cada uno de los vectores almacenados en la base de datos para determinar los videos con un título y una descripción que se asemejan más a la búsqueda del usuario. Es decir, 
 
 \begin{equation}
-    \text{top}(x,\vec{\mathbf{q}}) = \max _{\vec{\mathbf{x}}_i \in V } s(\vec{\mathbf{q}},\vec{\mathbf{x}}_i)
+    \text{top}(x,\vec{\mathbf{q}}) = \arg \max _{\vec{\mathbf{x}}_i \in V } s(\vec{\mathbf{q}},\vec{\mathbf{x}}_i)
 \end{equation}
 
 Donde $V$ es el conjunto de \textit{embeddings} de los videos almacenados en la base de datos y $V \subset \mathbb{R} ^ d $

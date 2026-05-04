@@ -494,7 +494,7 @@ VideoTranscoder().process_video()
 
 Este programa se compone de varios métodos con finalidades distintas. La primera función ejecutada es \texttt{process\_video()}, la cual descarga el contenido desde el \textit{Raw Videos Bucket} de AWS. Luego, se analiza la duración y si es inferior a 10 minutos, comienza el procesamiento del video. 
 
-El método  \texttt{transcode\_video()} es el encargado de segmentar y transcodificar el video. Se utiliza la herramienta FFmpeg para generar distintas calidades de video con tasas de bits diferentes. Además, se incluye el audio en el resultado final y se segmenta el video en fragmentos de 6 segundos. En la implementación elegida, se emplea MPEG-DASH (\ref{dash}) como protocolo de streaming de video y por consiguiente, se debe particionar el video en partes con la extensión \texttt{.m4s} y, se debe generar un archivo \texttt{manifest.mpd} llamado MPD. Este, se encarga de informar al reproductor de videos en el cliente, información sobre el contenido como las calidades disponibles, las localizaciones de los segmentos \texttt{.m4s} en el servidor, cuándo se debe reproducir cada segmento y qué codec utilizar. Además, se genera un archivo de inicialización (\texttt{init- ... .m4s}) para reproducir los fragmentos del video \texttt{.m4s}. 
+El método  \texttt{transcode\_video()} es el encargado de segmentar y transcodificar el video. Se utiliza la herramienta FFmpeg para generar distintas calidades de video con tasas de bits diferentes. Además, se incluye el audio en el resultado final y se segmenta el video en fragmentos de 6 segundos. En la implementación elegida, se emplea MPEG-DASH (\ref{dash}) como protocolo de streaming de video y por consiguiente, se debe particionar el video en fragmentos con la extensión \texttt{.m4s} y, se debe generar un archivo \texttt{manifest.mpd} llamado MPD. Este, se encarga de informar al reproductor de videos en el cliente, información sobre el contenido como las calidades disponibles, las localizaciones de los segmentos \texttt{.m4s} en el servidor, cuándo se debe reproducir cada segmento y qué codec utilizar. Además, se genera un archivo de inicialización (\texttt{init- ... .m4s}) para reproducir los fragmentos del video \texttt{.m4s}. 
 
 Finalmente, los archivos de inicilizacion, los fragmentos y el manifesto (MPD), se cargan al \textit{bucket} que almacena los videos procesados para ser entregados al cliente.  
 
@@ -808,7 +808,8 @@ Con este diseño, para obtener las respuestas de un comentario, se busca en la b
          dark:border-amber-600 rounded-b-2xl space-y-4">
       {replies.map((child) => (
         <Comment key={child.commentId} isPending={isReplying} comment={child}
-               videoId={videoId} viewer={viewer} depth={depth + 1} maxDepth={maxDepth} />
+                          videoId={videoId} viewer={viewer} depth={depth + 1}
+                                                          maxDepth={maxDepth} />
         ))}
     </div>
     ...

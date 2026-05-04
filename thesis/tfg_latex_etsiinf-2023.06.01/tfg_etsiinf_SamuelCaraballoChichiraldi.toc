@@ -8,15 +8,16 @@
 \contentsline {chapter}{\numberline {2}Estado del Arte}{7}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Procesamiento, Transcodificación, Segmentación y Entrega de Video}{7}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}FFmpeg}{7}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}MPEG-DASH}{9}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}HLS}{10}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Object Storage}{11}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}CDN - Content Delivery Network}{12}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Colas de Procesamiento}{15}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.2}Docker}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}MPEG-DASH}{10}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}HLS}{11}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}Object Storage}{12}{subsection.2.1.5}%
+\contentsline {subsection}{\numberline {2.1.6}CDN - Content Delivery Network}{13}{subsection.2.1.6}%
+\contentsline {subsection}{\numberline {2.1.7}Colas de Procesamiento}{15}{subsection.2.1.7}%
 \contentsline {section}{\numberline {2.2}Análisis de Proveedores}{16}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Amazon Web Services}{16}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Mux.com}{18}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Bunny.net}{19}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Bunny.net}{20}{subsection.2.2.3}%
 \contentsline {subsection}{\numberline {2.2.4}Tabla comparativa de proveedores}{22}{subsection.2.2.4}%
 \contentsline {section}{\numberline {2.3}Modelos de Arquitectura}{22}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Modelo Centralizado}{23}{subsection.2.3.1}%
@@ -80,7 +81,7 @@
 \contentsline {subsection}{\numberline {6.1.2}Estructura general de archivos}{116}{subsection.6.1.2}%
 \contentsline {subsection}{\numberline {6.1.3}Separación de funcionalidades y Arquitectura modular}{118}{subsection.6.1.3}%
 \contentsline {subsection}{\numberline {6.1.4}Rutas agrupadas en NextJS}{118}{subsection.6.1.4}%
-\contentsline {subsection}{\numberline {6.1.5}Acceso a datos mediante ORM}{118}{subsection.6.1.5}%
+\contentsline {subsection}{\numberline {6.1.5}Acceso a datos mediante ORM}{119}{subsection.6.1.5}%
 \contentsline {subsection}{\numberline {6.1.6}Esquemas de validación}{119}{subsection.6.1.6}%
 \contentsline {subsection}{\numberline {6.1.7}Centralización de integraciones externas}{119}{subsection.6.1.7}%
 \contentsline {subsection}{\numberline {6.1.8}Seguridad mediante variables de entorno}{119}{subsection.6.1.8}%
@@ -118,6 +119,6 @@
 \contentsline {subsection}{\numberline {8.4.2}Limitaciones de uso (Rate Limits)}{163}{subsection.8.4.2}%
 \contentsline {chapter}{\numberline {9}Conclusiones}{165}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Análisis de Impacto}{167}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{169}{section*.77}%
-\contentsline {part}{Anexos}{175}{part*.79}%
+\contentsline {chapter}{Bibliografía}{169}{section*.76}%
+\contentsline {part}{Anexos}{175}{part*.78}%
 \contentsline {chapter}{\numberline {A}Primer anexo}{175}{appendix.Alph1}%

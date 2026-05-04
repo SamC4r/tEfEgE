@@ -62,6 +62,38 @@ FFmpeg es el ganador en términos de flexibilidad y control. Sin embargo, cuando
 \end{itemize}
 
 
+\subsection{Docker}
+
+\textit{Docker} es una herramienta que permite empaquetar una aplicación junto con sus dependencias, variables de entorno, librerías y configuraciones en contenedores o microservicios. Una aplicación contenedora es un paquete independiente y aislado que ejecuta un programa. De esta forma, el software se puede desplegar de manera portátil y compatible en distintos equipos o servidores. En definitiva, funciona como una máquina virtual que se despliega según unas instrucciones pero que presentan un menor peso \cite{docker-ibm}. 
+
+Para conseguir esto, se utiliza normalmente un archivo llamado \texttt{Dockerfile}, donde se definen las instrucciones, librerías y configuraciones necesarias para construir la imagen del servicio. Aquí, se instalan los paquetes y las dependencias necesarias para poner en marcha el programa, los archivos que deben copiarse al contenedor, el comando que se debe ejecutar al iniciar el servicio, entre otros.  
+
+\textbf{Ventajas}
+
+La principal ventaja de \textit{Docker} es su portabilidad. Un mismo contenedor puede construirse una vez y ejecutarse de forma consistente en un gran número de equipos. Esto reduce los errores por entorno, dependencias, configuraciones inconsistentes, entre otros.
+
+Además, cada contenedor se ejecuta de forma aislada sin interferir con otros sistemas. Esto resulta en \textit{Booster} ya que se puede implementar un microservicio que se encargue del procesamiento, transcodificación y segmentación de video sin alterar a otros servicios o funcionalidades. 
+
+Por otra parte, a diferencia de las máquinas virtuales tradicionales, \textit{Docker} es más ligero. Al compartir el kernel con el sistema que lo despliega (\textit{host}), se consiguen lanzar múltiples workers con menos infraestructura. 
+
+\textbf{Desventajas}
+
+A pesar de todos sus beneficios, \textit{Docker} añade complejidad adicional en la arquitectura de los servicios. Los contenedores se deben gestionar adecuadamente, orquestrar y configurar de forma correcta para garantizar que cumplen con sus objetivos funcionales. Además, requieren invertir esfuerzo en optimizar la carga de trabajo. Si no se diseña con cuidado, se pueden estar utilizando más recursos de los necesarios, afectando así los costos operativos. 
+
+Esto lo convierte en una tecnología con una curva de aprendizaje elevada, que requiere un buen conocimiento para aprovechar al máximo sus capacidades. 
+
+
+\textbf{Uso de Docker en Booster}
+
+En \textit{Booster}, \textit{Docker} se utiliza para lanzar un microservicio que se encarga del procesamiento, transcodificación y segmentación de video. Este utiliza, herramientas como FFmpeg \ref{ffmpeg} para generar distintas calidades y segmentar el contenido preparándolo para el streaming. Además, se utiliza otro microservicio llamado ''consumidor'' que recibe las peticiones de procesamiento de un video y se encarga de generar la tarea correspondiente. 
+\begin{figure}[h]
+    \centering
+\includegraphics[width=0.4\linewidth]{portada/docker.png} 
+\caption{Logo de Docker}
+\end{figure}
+
+
+
 \subsection{MPEG-DASH}
 \label{dash}
 
@@ -164,7 +196,7 @@ De este modo, las CDNs funcionan como una caché de contenido de los Object Stor
   \caption{Diagrama de un CDN}
   \label{fig:escudo}
 \end{figure}
-\pagebreak
+
 \textbf{Ventajas}
 
 Claramente, la principal ventaja de los CDNs es que reducen la latencia y mejoran el rendimiento del servicio. Como los servidores están distribuidos geográficamente, el usuario accede al servidor más cercano y esto, reduce el tiempo de carga, mejorando la experiencia de usuario.
@@ -255,7 +287,7 @@ En esta sección se hace un estudio de los principales proveedores de infraestru
 Amazon Web Services es una proveedor de infraestructura en la nube que permite al cliente implementar soluciones propias utilizando servicios modulares según la necesidad. Esto le aporta al cliente la posibilidad de crear desde cero la lógica para el almacenamiento, entrega de video, transcodificación y segmentación, generación de miniaturas y carga de videos al servidor. Esta solución, aunque es más compleja, permite un control total sobre el funcionamiento del servicio. 
 
 Las funcionalidades de este proveedor serán desarrolladas en detalle en el capítulo de arquitectura donde se describe el diseño de una pipeline propio mediante los servicios de AWS y con las tecnologías expuestas en el capítulo anterior.
- \todo{poner capitulo arquitectura y donde Explico Docker?}.
+% \todo{poner capitulo arquitectura y donde Explico Docker?}.
 
 
 \begin{figure}[h]
