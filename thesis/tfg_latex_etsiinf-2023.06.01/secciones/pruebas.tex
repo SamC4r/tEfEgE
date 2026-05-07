@@ -1,10 +1,41 @@
 \chapter{Pruebas, Despliegue y Riesgos de Seguridad}
 
+En este capítulo se recopilan algunos métodos de pruebas del funcionamiento de la aplicación. Además, se analiza cómo se ha conseguido el despliegue de la aplicación mediante el uso de \textit{Vercel} junto con sus ventajas y capacidades. Finalmente, se analizan los riesgos de seguridad detectados, mejores prácticas empleadas, vulnerabilidades sufridas y las medidas tomadas para mitigarlas. 
+
 \section{Pruebas de funcionamiento}
+
+
 
 \section{Despliegue}
 
+Para realizar el despliegue en internet de la plataforma y que esta sea accesible desde cualquier parte del mundo, se han utilizado dos proveedores de servicios de \textit{hosting}. Por un lado, \textit{Vercel} permite desplegar aplicaciones web y se integra bien con \textit{Next.Js} \ref{Next.Js backend}. Por otro, se han aprovechado las capacidades de \textit{Hostinger} para configurar los registros DNS y SMTP, logrando así dar de alta un dominio para la plataforma y habilitar un servicio de correo electrónico.  
+\subsection{Vercel}
 
+\textit{Vercel} es una plataforma centrada en despliegue y hosting de aplicaciones web, especialmente aquellas construidas con \textit{Next.Js} \ref{Next.Js backend}. Además, \textit{Vercel} permite conectar un repositorio de \textit{GitHub} y generar despliegues automáticos cuando se detectan cambios, facilitando el proceso de actualización e integración comúnmente referido como CI/CD (Continuos Integration and Continuos Deployment).  
+
+\textbf{Ventajas}
+
+La principal ventaja de \textit{Vercel} es su facilidad de despliegue. Como se mencionó anteriormente, se puede integrar con Git para monitorear los cambios en una rama específica y activar de forma automática un proceso de actualización. Más concretamente, en el caso de \textit{Booster}, se ejecuta el comando \texttt{npm run build} para generar los archivos estáticos de las páginas, optimizar el rendimiento y asegurar que el código no tiene errores. 
+
+Otra ventaja importante de \textit{Vercel} para \textit{Booster} es su integración natural con el framework de \textit{Next.Js}. No es necesario implementar procesos de \textit{build} complejos ya que lo detecta automáticamente \textit{Vercel} y aplica las configuraciones requeridas. Además, se encarga de optimizar el rendimiento de las distintas páginas dentro de la aplicación mejorando los tiempos de carga. 
+
+Asimismo, \textit{Vercel} cuenta con herramientas integradas que permiten visualizar el rendimiento que experimentan los usuarios con la página, analíticas de visitas, un \textit{log} de eventos, entre otros.
+
+\textbf{Desventajas}
+
+La principal desventaja de \textit{Vercel} es su costo de uso, que puede generar precios elevados. Aunque dispone de una versión gratuita, esta tiene límites que son rápidamente alcanzados. \textit{Vercel} factura por tiempo de cómputo, cantidad de datos transferidos y peticiones, de modo que una arquitectura mal optimizada puede encarecerse significativamente con altos volúmenes de usuarios y tráfico. 
+
+Otra desventaja es la dependencia del proveedor. Aunque el despliegue es rápido y sencillo, muchas funcionalidades están fuertemente vinculadas a \textit{Vercel} y requieren instalar sus librerías. Al integrar estas herramientas, el código queda ligado a su infraestructura, lo que dificultaría cambiar de proveedor en un futuro. 
+
+\textbf{Uso en Booster}
+
+Para \textit{Booster}, \textit{Vercel} es una opción ideal ya que permite desplegar, actualizar cambios y optimizar el rendimiento de las páginas de forma rápida. Además, su integración con \textit{Next Js} es frecuente y recomendada, convirtiéndola en la opción más favorable para adoptar como infraestructura de \textit{hosting} cuando se trabajo con este framework. Por estas razones, se ha empleado \textit{Vercel} para desplegar la aplicación en internet utilizando los dominios adquiridos en \textit{Hostinger}. 
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.3\linewidth]{portada/vercel.png}
+  \caption{Logo de Vercel}
+\end{figure}
 % 
 \section{Feedback de Usuarios}
 

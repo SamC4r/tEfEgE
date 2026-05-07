@@ -113,12 +113,13 @@
 \contentsline {chapter}{\numberline {8}Pruebas, Despliegue y Riesgos de Seguridad}{163}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Pruebas de funcionamiento}{163}{section.8.1}%
 \contentsline {section}{\numberline {8.2}Despliegue}{163}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Feedback de Usuarios}{163}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Vulnerabilidades detectadas y acciones tomadas}{163}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Protección acceso y modificación de videos}{163}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Limitaciones de uso (Rate Limits)}{163}{subsection.8.4.2}%
+\contentsline {subsection}{\numberline {8.2.1}Vercel}{163}{subsection.8.2.1}%
+\contentsline {section}{\numberline {8.3}Feedback de Usuarios}{164}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Vulnerabilidades detectadas y acciones tomadas}{164}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Protección acceso y modificación de videos}{164}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Limitaciones de uso (Rate Limits)}{164}{subsection.8.4.2}%
 \contentsline {chapter}{\numberline {9}Conclusiones}{165}{chapter.9}%
 \contentsline {chapter}{\numberline {10}Análisis de Impacto}{167}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{169}{section*.76}%
-\contentsline {part}{Anexos}{175}{part*.78}%
+\contentsline {chapter}{Bibliografía}{169}{section*.77}%
+\contentsline {part}{Anexos}{175}{part*.79}%
 \contentsline {chapter}{\numberline {A}Primer anexo}{175}{appendix.Alph1}%
