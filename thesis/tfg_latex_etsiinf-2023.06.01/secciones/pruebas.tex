@@ -1,9 +1,7 @@
-\chapter{Pruebas, Despliegue y Riesgos de Seguridad}
+\chapter{Despliegue y Riesgos de Seguridad}
 
-En este capítulo se recopilan algunos métodos de pruebas del funcionamiento de la aplicación. Además, se analiza cómo se ha conseguido el despliegue de la aplicación mediante el uso de \textit{Vercel} junto con sus ventajas y capacidades. Finalmente, se analizan los riesgos de seguridad detectados, mejores prácticas empleadas, vulnerabilidades sufridas y las medidas tomadas para mitigarlas. 
-
-\section{Pruebas de funcionamiento}
-
+En este capítulo se analiza cómo se ha conseguido desplegar la aplicación en internet mediante el uso de \textit{Vercel} junto con sus ventajas y capacidades. Además, se destina una sección para estudiar las opiniones de usuarios sobre la plataforma. A continuación, se examinan las valoraciones de usuarios reales quienes han aportado mejoras, detectado fallos e incluso encontrado vulnerabilidades.
+Finalmente, se analizan los riesgos de seguridad detectados, mejores prácticas empleadas, vulnerabilidades sufridas y las medidas tomadas para mitigarlas. 
 
 
 \section{Despliegue}
@@ -31,18 +29,141 @@ Otra desventaja es la dependencia del proveedor. Aunque el despliegue es rápido
 
 Para \textit{Booster}, \textit{Vercel} es una opción ideal ya que permite desplegar, actualizar cambios y optimizar el rendimiento de las páginas de forma rápida. Además, su integración con \textit{Next Js} es frecuente y recomendada, convirtiéndola en la opción más favorable para adoptar como infraestructura de \textit{hosting} cuando se trabajo con este framework. Por estas razones, se ha empleado \textit{Vercel} para desplegar la aplicación en internet utilizando los dominios adquiridos en \textit{Hostinger}. 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.3\linewidth]{portada/vercel.png}
   \caption{Logo de Vercel}
-\end{figure}
-% 
+\end{figure} 
+
+\clearpage
+
 \section{Feedback de Usuarios}
+
+A continuación, se exponen algunas opiniones de usuarios sobre la plataforma, primeras impresiones, sugerencias, cuestiones y quejas.
+
+\subsection{Opiniones positivas y sugerencias}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/positive1.png}
+  \caption{Opiniones positivas I}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/positive2.png}
+  \caption{Opiniones positivas II}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/positive3.png}
+  \caption{Opiniones positivas III}
+\end{figure}
+
+\clearpage
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/ai-votes.png}
+  \caption{Filtrar contenido por IA}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/parental-control.png}
+  \caption{Control parental}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/shorts.png}
+  \caption{Filtrar contenido corto \textit{shorts}}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/content-concern.png}
+  \caption{Falta de contenido en la plataforma}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/5-stars.png}
+  \caption{Contenido en la plataforma}
+\end{figure}
+
+
+\subsection{Opiniones negativas y preocupaciones}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/dark-theme.png}
+  \caption{Sugerencia tema oscuro I}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/positive/dark-theme2.png}
+  \caption{Sugerencia tema oscuro II}
+\end{figure}
+
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/costs.png}
+  \caption{Preocupación por los costos y abusos del sistema}
+\end{figure}
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/negatives.png}
+  \caption{Opiniones negativas I}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/negative2.png}
+  \caption{Opiniones negativas II}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/negative3.png}
+  \caption{Opiniones negativas III}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.9\linewidth]{opiniones/storage-question.png}
+  \caption{Preocupación por el almacenamiento}
+\end{figure}
+
+
 
 % Lo del acceso a un video de bunny. Le puse un /(hash) a la ruta
 
 \section{Vulnerabilidades detectadas y acciones tomadas}
 
-\subsection{Protección acceso y modificación de videos}
+En esta sección se analizan algunas de las vulnerabilidades detectadas durante el proceso de desarrollo y también las sufridas en producción junto con las medidas tomadas para mitigarlas. Estas acciones han hecho más segura la plataforma tanto desde el punto de vista del usuario como de las operaciones. 
+
+\subsection{Protección de accesos y modificación de videos}
+
+% clerk => Indicar lo que sufri por tener un procedimiento que no habia borrado y otro al que le faltaban comprobaciones. 
 
 \subsection{Limitaciones de uso (Rate Limits)}
+
+% REDIS rate limit
+
+\subsection{Inyección SQL detectada}
+
