@@ -368,6 +368,39 @@
       \verb https://gwern.net/doc/cs/hardware/2021-ranganathan.pdf
       \endverb
     \endentry
+    \entry{docker-ibm}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=45bd9614bc096bff44a5793096c06d9d}{%
+           family={{Stephanie Susnjara}},
+           familyi={S\bibinitperiod},
+           given={{Ian Smalley}},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{fullhash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{fullhashraw}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{bibnamehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authorbibnamehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authornamehash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authorfullhash}{45bd9614bc096bff44a5793096c06d9d}
+      \strng{authorfullhashraw}{45bd9614bc096bff44a5793096c06d9d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué es Docker?}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2026}
+      \field{year}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/es-es/think/topics/docker
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/es-es/think/topics/docker
+      \endverb
+    \endentry
     \entry{dash}{online}{}{}
       \name{author}{1}{}{%
         {{hash=9988b1d8a770677b8ba24111dbef6dc6}{%
@@ -637,8 +670,8 @@
       \strng{authornamehash}{446a1ae6601a5c59360c7d591c3992da}
       \strng{authorfullhash}{446a1ae6601a5c59360c7d591c3992da}
       \strng{authorfullhashraw}{446a1ae6601a5c59360c7d591c3992da}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{ActivityPub}
@@ -966,8 +999,8 @@
       \strng{authornamehash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhash}{8b36e9207c24c76e6719268e49201d94}
       \strng{authorfullhashraw}{8b36e9207c24c76e6719268e49201d94}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Implement Dark Theme}

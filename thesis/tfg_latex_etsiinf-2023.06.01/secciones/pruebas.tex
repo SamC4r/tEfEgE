@@ -161,9 +161,131 @@ En esta sección se analizan algunas de las vulnerabilidades detectadas durante 
 
 % clerk => Indicar lo que sufri por tener un procedimiento que no habia borrado y otro al que le faltaban comprobaciones. 
 
-\subsection{Limitaciones de uso (Rate Limits)}
+Durante el proceso de pruebas de la aplicación se detectaron que algunos procedimientos contenían fallos lógicos. Esto se detectó en los procedimientos correspondientes al \texttt{/studio}. Más específicamente, en \texttt{getOne} y \texttt{getMany}. En ellos, obtienen videos almacenados en la base de datos pero estos solo comprobaban el identificador del video. \texttt{getOne} recibía un identificador de video y recuperaba aquel registro con ese identificador. Además, este procedimiento actualizaba el estado del video y su miniatura. Realizar solo esta comprobación resultaba peligroso ya que cualquier usuario tenía la capacidad de invocar esta función, recuperar los datos de un video que no es suyo y cambiar la miniatura del video. Esto corresponde a una ruptura de control de acceso, permitiendo a los usuarios actuar fuera de sus permisos. 
 
-% REDIS rate limit
+Para solucionar estos fallos, se incluyeron las siguientes comprobaciones en los procedimientos que recuperan videos de un usuario en \texttt{/studio}. 
+Anteriormente se tenía incorrectamente:
 
+\clearpage
+
+\begin{lstlisting}[language=TypeScript]
+  getOne: baseProcedure
+    .input(z.object({ id: z.string().uuid() }))
+    .query(async ({ input }) => {
+
+      const [videos] = await db
+      .select({ ...getTableColumns(videos)})
+        .from(videos)
+        .where(eq(videos.userId, userId));
+
+        //...
+
+  })
+\end{lstlisting}
+
+Esto se actualizó a 
+\begin{lstlisting}[language=TypeScript]
+  getOne: protectedProcedure
+      .input(z.object({ id: z.string().uuid() }))
+        .query(async ({ input, ctx }) => {
+
+
+        const userId = ctx.user.id;
+
+        const [video] = await db
+            .select({...getTableColumns(videos)})
+            .from(videos)
+            .where(and(eq(videos.id, input.id), eq(videos.userId, userId)));
+
+            //...
+        })
+
+\end{lstlisting}
+
+Como se puede observar, se incluyó una nueva comprobación al recuperar el video: \texttt{eq(videos.userId, userId)}. Además, se convirtió el procedimiento en protegido para obtener la sesión del usuario que lo invoca. Con esto, se evita que usuarios no creadores de un video sean capaces de recuperar los datos dentro del contexto de \texttt{/studio} y actualizar su miniatura. 
+
+Estas mismas medidas fueron tomadas para otos procedimientos que sufrían este problema. 
+
+Algo similar sucedía en la lógica de negocio de los \textit{endpoints} de Bunny \ref{bunny-endpoints} donde se omitía la existencia de una sesión y un usuario válido provocando operaciones no deseadas en la aplicación. Esto se resolvió añadiendo una comprobación adicional antes de ejecutar cada acción, en donde se verifica la presencia de una sesión activa y un usuario legítimo. 
+\subsection{Webhook de Bunny}
+
+Cuando \textit{Bunny} termina de procesar un video este envía una notificación a un \textit{webhook} definido en el backend de la aplicación. Sin embargo, se debe comprobar que la petición recibida viene solamente de \textit{Bunny.net}. En caso contrario, cualquier atacante podría enviar una solicitud de actualización falsa y actualizaría datos de un video erróneamente. Este ha resultado ser el error de seguridad más grave ya que el \textit{webhook} actualiza un gran número de atributos del video incluyendo su enlace de reproducción. Por consiguiente, sin verificar quién envía la petición, un atacante conseguía cambiar el video por completo y arruinar seriamente el servicio. 
+
+Esto se solucionó incluyendo un parámetro variable en el \textit{webhook} conocido únicamente por \textit{Bunny} y \textit{Booster}. Cuando \textit{Bunny} envía una solicitud al \textit{webhook} incluye un token en la URL (Secreto de WebHook). Es decir, invoca a \texttt{/api/bunny/webhooks/[token]}. Como la petición viaja por HTTPS, un atacante no puede interceptar el token ya que está cifrado. Una vez el mensaje llega al servidor, este se encarga de verificar que el token es el mismo que él tiene. Como, solo lo saben \textit{Bunny} y el backend de \textit{Booster}, se entiende que la petición es legítima y se continúa con el proceso. En caso contrario, se aborta la operación. 
+
+Esto se implementó de la siguiente forma:
+
+\begin{lstlisting}[language=TypeScript]
+// app/api/bunny/webhooks/[token]/route.ts
+
+export async function POST( req: Request, { params }: { params: { token: string } }) {
+
+  //Verificar que es Bunny quien envía la petición
+  if (params.token !== process.env.BUNNY_WEBHOOK_SECRET) {
+    return new Response("Not found", { status: 404 });
+  }
+  //...
+}
+\end{lstlisting}
+
+
+  
 \subsection{Inyección SQL detectada}
 
+Durante el proceso de pruebas, se detectó una inyección SQL en el procedimiento \texttt{getMore} dentro de \texttt{/videos}. La inyección SQL se encontraba en esta parte del procedimiento:
+\begin{lstlisting}[language=TypeScript]
+sql.raw(`'{${currentTags.join(',')}}'`)
+\end{lstlisting}
+
+El problema es que se está construyendo manualmente un literal SQL de array con strings que vienen de un usuario. Debido al \texttt{join()}, cualquier valor dentro de \texttt{currentTags} entraba en el SQL final sin escapar de forma segura. \texttt{sql.raw()} no parametriza y no protege los fragmentos que se introducen. Si \texttt{currentTags} tiene caracteres especiales se puede romper el literal SQL e interpretar como instrucciones.
+
+Por ejemplo
+\begin{lstlisting}[language=TypeScript]
+currentTags = ["math", "finance'} OR true --"]
+\end{lstlisting}
+
+resultaba en 
+\begin{lstlisting}[language=TypeScript]
+videos.tags && '{math,finance'} OR true --}'
+\end{lstlisting}
+
+Para solucionar este problema, se hizo lo siguiente 
+
+\begin{lstlisting}[language=TypeScript]
+const tagsOverlapExpr =
+  currentTags && currentTags.length > 0
+    ? arrayOverlaps(videos.tags, currentTags)
+    : sql`false`
+\end{lstlisting}
+
+Aquí, \texttt{arrayOverlaps} permite que Drizzle construya la expresión de forma segura. 
+
+\clearpage
+\subsection{Limitaciones de uso (Rate Limits)}
+
+Para evitar abusos del servicio se ha adoptado un restrictor de uso (Rate Limit) mediante Redis. Con esto, se evita que se realicen un gran número de operaciones en poco tiempo y se alivia la carga del servidor y la base de datos. Todos estos límites de uso están definidos en \texttt{/src/lib/ratelimit.ts} y establecen el número máximos de operaciones durante un intervalo de tiempo que puede realizar un usuario. 
+
+Por ejemplo, en la aplicación solo se permiten subir 5 videos diarios a un único usuario. Esta limitación se define en \texttt{ratelimit.ts} de la siguiente forma:
+
+\begin{lstlisting}[language=TypeScript]
+export const uploadRateLimit = new Ratelimit({
+  redis: redis,
+  limiter: Ratelimit.slidingWindow(5, "1d"),
+  prefix: "@upstash/ratelimit/upload",
+});
+\end{lstlisting}
+
+Posteriormente, en el endpoint del \textit{backend} donde se intenta crear un nuevo registro de video se comprueba si se ha superado este límite en el tiempo establecido antes de continuar con la operación. En caso afirmativo, se devuelve un código de error 429 y se informa al usuario de ello. Por otro lado, se permite crear un nuevo video y Redis registra una petición de carga del usuario en la ventana deslizante de 1 día.
+\begin{lstlisting}[language=TypeScript]
+const { success } = await uploadRateLimit.limit(userId);
+if (!success) {
+  return NextResponse.json(
+    { error: "Daily upload limit reached" },
+    { status: 429 }
+  );
+}
+\end{lstlisting}
+
+Se implementan más límites de uso para evitar abusos hacia la plataforma y mejorar la seguridad de la misma. Por defecto, un usuario solo puede invocar 20 operaciones cada 10 segundos pero además, se establecen restricciones más específicas para otros casos como: cantidad de comentarios enviados (5 en 1 minuto), visitas a un video (1 cada 12 horas), entre otras.
+
+Además de estas restricciones, en todos los campos donde el usuario introduce texto, se ha incluido un límite de caracteres.  

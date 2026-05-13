@@ -118,10 +118,11 @@
 \contentsline {subsection}{\numberline {8.2.2}Opiniones negativas y preocupaciones}{168}{subsection.8.2.2}%
 \contentsline {section}{\numberline {8.3}Vulnerabilidades detectadas y acciones tomadas}{170}{section.8.3}%
 \contentsline {subsection}{\numberline {8.3.1}Protección de accesos y modificación de videos}{170}{subsection.8.3.1}%
-\contentsline {subsection}{\numberline {8.3.2}Limitaciones de uso (Rate Limits)}{170}{subsection.8.3.2}%
-\contentsline {subsection}{\numberline {8.3.3}Inyección SQL detectada}{170}{subsection.8.3.3}%
-\contentsline {chapter}{\numberline {9}Conclusiones}{171}{chapter.9}%
-\contentsline {chapter}{\numberline {10}Análisis de Impacto}{173}{chapter.10}%
-\contentsline {chapter}{Bibliografía}{175}{section*.92}%
-\contentsline {part}{Anexos}{181}{part*.94}%
-\contentsline {chapter}{\numberline {A}Primer anexo}{181}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {8.3.2}Webhook de Bunny}{171}{subsection.8.3.2}%
+\contentsline {subsection}{\numberline {8.3.3}Inyección SQL detectada}{172}{subsection.8.3.3}%
+\contentsline {subsection}{\numberline {8.3.4}Limitaciones de uso (Rate Limits)}{173}{subsection.8.3.4}%
+\contentsline {chapter}{\numberline {9}Conclusiones}{175}{chapter.9}%
+\contentsline {chapter}{\numberline {10}Análisis de Impacto}{177}{chapter.10}%
+\contentsline {chapter}{Bibliografía}{179}{section*.92}%
+\contentsline {part}{Anexos}{185}{part*.94}%
+\contentsline {chapter}{\numberline {A}Primer anexo}{185}{appendix.Alph1}%
