@@ -1,8 +1,8 @@
 \chapter{Innovaciones}
 
-En este capítulo se analizan con más detalle los problemas más significativos que tienen las plataformas de streaming de videos actuales y las soluciones que plantea Booster. En particular, se examinan las dificultades que experimentan algunos usuarios en encontrar comunidades de videos y usuarios destinadas a intereses específicos; la dependencia de los algoritmo de recomendación que suelen premiar contenido para maximizar retención y, la gran cantidad de anuncios que arruinan la experiencia de usuarios.  
+En este capítulo se analizan con más detalle los problemas más significativos que tienen las plataformas de streaming de videos actuales y las soluciones que plantea Booster. En particular, se examinan las dificultades que experimentan algunos usuarios para encontrar comunidades de videos destinadas a intereses específicos; la dependencia de los algoritmos de recomendación que suelen premiar contenido para maximizar la retención; y la gran cantidad de anuncios que arruinan la experiencia de los usuarios.
 
-Asimismo, se explican algunas de las mejoras y nuevas incorporaciones a este tipo de aplicaciones, tomando en cuenta nuevos enfoques a la moderación, la interacción en la plataforma e incorporando gamificación. 
+Asimismo, se explican algunas de las mejoras y nuevas incorporaciones a este tipo de aplicaciones, tomando en cuenta nuevos enfoques de moderación, la interacción en la plataforma e incorporando gamificación.
 
 %Mencionar problemas mas significativos y brevemente cómo se ha solucionado
 \section{Problemas detectados y la solución de Booster}
@@ -11,20 +11,20 @@ En esta sección se detallan algunos de los problemas más relevantes que presen
 
 \subsection{Problemas con el algoritmo de recomendación}
 
-Uno de los problemas más grandes que presentan las plataformas de videos actuales y motivo de discusiones y quejas por parte de los usuarios es el funcionamiento de los algoritmos de recomendación. En muchos servicios estos están diseñados para priorizar el contenido con mayor capacidad para generar \textit{clics} y tiempo de retención. Esto es discutido en gran medida porque puede favorecer la difusión de contenido adictivo o de baja calidad y ocultar otros que merecen más reconocimiento. 
+Uno de los problemas más grandes que presentan las plataformas de videos actuales, y motivo de discusiones y quejas por parte de los usuarios, es el funcionamiento de los algoritmos de recomendación. En muchos servicios, estos están diseñados para priorizar el contenido con mayor capacidad para generar \textit{clics} y tiempo de retención. Esto es objeto de debate porque puede favorecer la difusión de contenido adictivo o de baja calidad y ocultar otros que merecen más reconocimiento.
 
-En 2024, la comisión europea \cite{europa-alg} mencionó que las plataformas deben evaluar y mitigar los riesgos que surgen de sus sistemas de recomendación incluyendo riesgos a la salud mental y la difusión de contenido dañino debido al diseño de los algoritmos que promueven la retención. Además, indica que muchas plataformas usan estas técnicas sin ofrecer controles claros al usuarios y que se puede priorizar el contenido perjudicial generando efectos negativos, especialmente en menores. 
+En 2024, la Comisión Europea \cite{europa-alg} mencionó que las plataformas deben evaluar y mitigar los riesgos que surgen de sus sistemas de recomendación, incluyendo riesgos para la salud mental y la difusión de contenido dañino debido al diseño de los algoritmos que promueven la retención. Además, indica que muchas plataformas usan estas técnicas sin ofrecer controles claros a los usuarios y que se puede priorizar el contenido perjudicial, generando efectos negativos especialmente en menores.
 
-Desde el punto de vista del usuario, esto tiene implicaciones negativas. En primer lugar, puede encerrar al usuario en un bucle de consumo limitando así el descubrimiento de nuevos temas. Por otra parte, reduce la transparencia dado que no se demuestra por qué se recomiendo un tipo de contenido y no otro. 
+Desde el punto de vista del usuario, esto tiene implicaciones negativas. En primer lugar, puede encerrar al usuario en un bucle de consumo, limitando así el descubrimiento de nuevos temas. Por otra parte, reduce la transparencia dado que no se demuestra por qué se recomienda un tipo de contenido y no otro.
 
-Desde el punto de vista del creador de contenido, esto también puede generar varios problemas. Los creadores nuevos y pequeños son los más afectador por el algoritmo de recomendación ya que el contenido más popular o con mayores niveles de retención suele ser el que se muestre a los usuarios preferentemente. 
+Desde el punto de vista del creador de contenido, esto también puede generar varios problemas. Los creadores nuevos y pequeños son los más afectados por el algoritmo de recomendación, ya que el contenido más popular o con mayores niveles de retención suele ser el que se muestra a los usuarios preferentemente.
 
 \textbf{Soluciones}
 
 Booster plantea un modelo de recomendación más simple, transparente y comprensible. Para abordar estos problemas se introduce un nuevo concepto en la plataforma denominado \textbf{puntos de Boost} para darle otro enfoque a las sugerencias de contenido. 
 Los \textbf{puntos de Boost} permiten reflejar la valoración y el apoyo que reciben los videos de un creador de contenido. Esencialmente, este es el mecanismo con el que los usuarios apoyan activamente a creadores, canales y comunidades dentro de Booster. A diferencia de otros métodos que se basan en variables difíciles de interpretar, esta mejora permite que la participación de los espectadores tenga un rol más importante en la distribución de contenido. Estos puntos, determinados por los usuarios que han contribuido a un creador, definen su \textbf{Nivel de canal}. A medida que sube, se desbloquean beneficios para los seguidores y además, los videos de esos canales serán recomendados con mayor frecuencia en la plataforma y de esta forma, el usuario tiene un rol más importante en el descubrimiento de contenido. 
 
-Además, de los puntos de Boost y el nivel de canal, el algoritmo también tiene en cuenta otros factores como son: visualizaciones, valoraciones promedio del video según los usuarios, número de comentarios, categorías del video, antigüedad y si el usuario es seguidor del canal. Todo esto, se modela mediante una fórmula matemática que se adapta al espectador y el cual se publica en la plataforma. En capítulos posteriores se analizará más en detalle su funcionamiento \todo{poner ref a explicaicon del algo}. De esta forma, se consigue una mayor transparencia en los algoritmos de recomendación y se premia al contenido favorito del usuario.  
+Además de los puntos de Boost y el nivel de canal, el algoritmo también tiene en cuenta otros factores como visualizaciones, valoraciones promedio del video según los usuarios, número de comentarios, categorías del video, antigüedad y si el usuario es seguidor del canal. Todo esto se modela mediante una fórmula matemática que se adapta al espectador y que se publica en la plataforma. En capítulos posteriores se analizará más en detalle su funcionamiento \ref{algoritmo}. De esta forma se consigue una mayor transparencia en los algoritmos de recomendación y se premia el contenido favorito del usuario.
 
 \begin{figure}[h]
   \centering
@@ -38,13 +38,13 @@ Además, de los puntos de Boost y el nivel de canal, el algoritmo también tiene
 
 \subsection{Problemas en encontrar comunidades}
 
-Otro problema importante y ligado al anterior es la dificultad para encontrar comunidades específicas. Aunque la mayoría de estos sistemas permiten descubrir contenido mediante búsquedas o sugerencias, no siempre facilitan la localización de espacios centrados en intereses concretos. En muchos casos, estos videos aparecen dispersos y no existe una estructura comunitaria clara. 
+Otro problema importante y ligado al anterior es la dificultad para encontrar comunidades específicas. Aunque la mayoría de estos sistemas permiten descubrir contenido mediante búsquedas o sugerencias, no siempre facilitan la localización de espacios centrados en intereses concretos. En muchos casos, estos videos aparecen dispersos y no existe una estructura comunitaria clara.
 
-Este problema es significativo para creadores pequeños, comunidades emergentes o áreas de interés muy específicas porque los algoritmos de recomendación, priorizan el contenido con mayor facilidad para atraer a un gran número de audiencia. En consecuencia, ciertos usuarios se pueden ver en la dificultad para encontrar contenido de nicho en la plataforma. Igualmente, los creadores también sufren ya que les puede resultar más complejo encontrar a su público objetivo.  
+Este problema es significativo para creadores pequeños, comunidades emergentes o áreas de interés muy específicas, porque los algoritmos de recomendación priorizan el contenido con mayor facilidad para atraer a un gran número de audiencia. En consecuencia, ciertos usuarios pueden verse en la dificultad para encontrar contenido de nicho en la plataforma. Igualmente, los creadores también sufren, ya que les puede resultar más complejo encontrar a su público objetivo.
 
 \textbf{Soluciones}
 
-Booster propone una solución a esta problema mediante la incorporación de un \textbf{sistema de comunidades}. De esta manera, cualquier usuario es libre de crear su propia comunidad en torno a un tema o interés concreto, generando así un área dedicada a este tipo de contenido. Otros usuarios, pueden enlazar videos relacionados a la comunidad agrupando y organizando el material audiovisual lo cual facilita su descubrimiento. El creador de la comunidad tiene la habilidad de eliminar contenido que no esté relacionado y dotar a otros usuarios de esta capacidad, convirtiéndolos en moderadores del contenido en la comunidad.  
+Booster propone una solución a este problema mediante la incorporación de un \textbf{sistema de comunidades}. De esta manera, cualquier usuario es libre de crear su propia comunidad en torno a un tema o interés concreto, generando así un área dedicada a este tipo de contenido. Otros usuarios pueden enlazar videos relacionados a la comunidad, agrupando y organizando el material audiovisual, lo cual facilita su descubrimiento. El creador de la comunidad tiene la habilidad de eliminar contenido que no esté relacionado y dotar a otros usuarios de esta capacidad, convirtiéndolos en moderadores del contenido en la comunidad.
 \clearpage
 
 \begin{figure}[H]
@@ -59,15 +59,15 @@ Esta innovación añade una nueva forma de organizar los videos en la plataforma
 
 \subsection{Problemas con los anuncios}
 
-Uno de los problemas más grandes desde el punto de vista de los consumidores de contenido es la gran cantidad de anuncios con los que se ven bombardeados cada vez que utilizan la aplicación. Un estudio publicado por \textit{Raman Media Network} \cite{rmn-ad} señala que en YouTube, la sobre-exposición de anuncios aumenta la fatiga de los usuarios y daña significativamente la confianza en la empresa. Aquí se demuestra que los anuncios repetitivos causan descontento en los consumidores. Según se indica, ver un anuncio repetido 6 veces en una hora produce un 92\% de reconocimiento de la marca, existe un aumento del 48\% en sentimientos de molestias. En general, aunque los usuarios aceptan ver anuncios a cambio de un costo menor, la frecuencia excesiva de los mismos icnrementa las sensaciones negativas hacia la plataforma e incluso el abandono y la adopción de bloqueadores de anuncios. 
+Uno de los problemas más grandes desde el punto de vista de los consumidores de contenido es la gran cantidad de anuncios con los que se ven bombardeados cada vez que utilizan la aplicación. Un estudio publicado por \textit{Raman Media Network} \cite{rmn-ad} señala que en YouTube, la sobre-exposición de anuncios aumenta la fatiga de los usuarios y daña significativamente la confianza en la empresa. Aquí se demuestra que los anuncios repetitivos causan descontento en los consumidores. Según se indica, ver un anuncio repetido 6 veces en una hora produce un 92\% de reconocimiento de la marca y un aumento del 48\% en sentimientos de molestia. En general, aunque los usuarios aceptan ver anuncios a cambio de un costo menor, la frecuencia excesiva de los mismos incrementa las sensaciones negativas hacia la plataforma e incluso el abandono y el uso de bloqueadores de anuncios.
 
 Como se puede observar, el problema no solo reside en la existencia de la publicidad, sino que también, en la poca capacidad de elección que presenta el espectador aparte de su carácter intrusivo y forzado. Esto provoca una experiencia menos fluida y degrada la calidad del servicio percibida por los usuarios derivando en tasas de abandono o en la utilización de bloqueadores de anuncios.  
 
 \textbf{Soluciones}
 
-Aunque los anuncios no se pueden eliminar ya que son la fuente de ingresos principal de una plataforma de este estilo, Booster plantea una alternativa para mejorar la experiencia de los espectadores. Esta se trata en la incorporación de un sistema de anuncios voluntarios con recompensa. En lugar de basarse únicamente en anuncios forzados, la plataforma tiene un mecanismo por el cual los usuarios pueden decidir ver determinados anuncios de forma opcional y recibir un premio dentro de la plataforma. 
+Aunque los anuncios no se pueden eliminar, ya que son la fuente de ingresos principal de una plataforma de este estilo, Booster plantea una alternativa para mejorar la experiencia de los espectadores. Se trata de la incorporación de un sistema de anuncios voluntarios con recompensa. En lugar de basarse únicamente en anuncios forzados, la plataforma tiene un mecanismo por el cual los usuarios pueden decidir ver determinados anuncios de forma opcional y recibir un premio dentro de la plataforma.
 
-Esto se conecta y da lugar al sistema de \textbf{puntos de experiencia (XP)} de la plataforma. La \textbf{XP}, es una moneda virtual que se emplea en la plataforma y que cada usuario puede obtener mediante la visualización de anuncios voluntarios o integrados y utilizarlos después para adquirir elementos de personalización, apoyar a creadores y comunidades, obtener recompensas, adquirir preferencias de uso, entre otros. Por tanto, la solución consiste en convertir la experiencia forzada e intrusiva de los anuncios en un sistema más participativo, donde el usuario recibe una compensación que puede intercambiar para obtener premios dentro de la plataforma. 
+Esto se conecta y da lugar al sistema de \textbf{puntos de experiencia (XP)} de la plataforma. La \textbf{XP} es una moneda virtual que se emplea en la plataforma y que cada usuario puede obtener mediante la visualización de anuncios voluntarios o integrados. Después, la puede utilizar para adquirir elementos de personalización, apoyar a creadores y comunidades, obtener recompensas, adquirir preferencias de uso, entre otros. Por tanto, la solución consiste en convertir la experiencia forzada e intrusiva de los anuncios en un sistema más participativo, donde el usuario recibe una compensación que puede intercambiar a cambio de premios dentro de la plataforma.
 
 
 
@@ -93,7 +93,7 @@ Uno de los factores diferenciales de Booster es su interfaz moderna y consistent
 
 Un ejemplo claro de esto es la página principal. Aquí, se muestran videos en formato de cuadrícula, similar a otras plataformas. Sin embargo, también se emplea un componente para modificar la estructura. Con este, se puede filtrar por videos sugeridos por el algoritmo de recomendación, acceder a los videos más recientes añadidos a una comunidad y ver el contenido más actual de creadores de contenido específicos. 
 
-Por otra parte, el usuario también tiene un mayor grado de libertad al elegir la disposición de la interfaz. Por el momento, se ha implementando una función que ayuda a filtrar videos verticales y por tanto, estos no aparecerán en la página principal. Además, los anuncios voluntarios que se encuentran en la primera fila de la cuadrícula pueden ser ocultos mediante los ajustes de usuario. 
+Por otra parte, el usuario también tiene un mayor grado de libertad al elegir la disposición de la interfaz. Por el momento, se ha implementado una función que ayuda a filtrar videos verticales y, por tanto, estos no aparecerán en la página principal. Además, los anuncios voluntarios que se encuentran en la primera fila de la cuadrícula pueden ser ocultos mediante los ajustes de usuario.
 
 En la página principal se hace uso de un \textit{Carousel} para filtrar con mayor facilidad entre las distintas categorías de video más comunes. Cuando hay un elemento seleccionado, este se ve claramente reflejado mediante un botón llamativo con los colores de la plataforma. 
 
@@ -129,14 +129,14 @@ Es importante resaltar que esta sección es responsiva, es decir, se adapta la i
 
 \textbf{Vista de Videos}
 
-En otra sección donde se han incorporado numerosas mejoras ha sido en la vista de videos. Cuando un usuario mira un video, este aparece en modo ventana a la izquierda del monitor y ocupando aproximadamente $\frac{2}{3}$ de la anchura de la página en ese momento. El tercio restante, se aprovecha para incluir información adicional o relacionada. Las plataformas de video actuales suelen incorporar todos estos datos extra de forma desordenada y poco compacto. Booster intenta organizar las distintas partes consiguiendo así una interfaz más limpia y ordenada como se puede observar en la figura. 
+En otra sección donde se han incorporado numerosas mejoras ha sido en la vista de videos. Cuando un usuario mira un video, este aparece en modo ventana a la izquierda del monitor y ocupando aproximadamente $\frac{2}{3}$ de la anchura de la página en ese momento. El tercio restante, se aprovecha para incluir información adicional o relacionada. Las plataformas de video actuales suelen incorporar todos estos datos de forma desordenada y poco compacta. Booster intenta organizar las distintas partes, consiguiendo así una interfaz más limpia y ordenada como se puede observar en la figura.
 \begin{figure}[h]
   \centering
   \includegraphics[width=1\linewidth]{portada/video-view-1.png}
   \caption{Vista de Video - Descripción}
 \end{figure}
 
-A la derecha de un video aparece en primer lugar, el creador del mismo. Adicionalmente, se incluye información sobre el nivel del canal del usuario y los puntos de Boost que este tiene. Esto viene acompañado de un componente de barra de progreso para comunicar de forma más visual esta información. Abajo de este bloque comienza una sección donde el usuario puede filtrar por 
+A la derecha de un video aparece en primer lugar el creador del mismo. Adicionalmente, se incluye información sobre el nivel del canal del usuario y los puntos de Boost que este tiene. Esto viene acompañado de un componente de barra de progreso para comunicar de forma más visual esta información. Abajo de este bloque comienza una sección donde el usuario puede filtrar por:
 \begin{itemize}
   \item \textbf{Más Información}: Se muestran más detalles sobre el video como la descripción (la cual se puede colapsar), la fecha de carga del video y su popularidad.
   \item \textbf{Videos}: En esta sección aparecen videos similares al que ya se está reproduciendo. El algoritmo de recomendación toma en cuenta los datos del video actual y le muestra al usuario los mejores candidatos para ver a continuación.
@@ -179,7 +179,7 @@ Estos 6 componentes determinan el flujo habitual de uso de la aplicación. En la
 
 Finalmente, se incluyen apartados destinados a explicar el funcionamiento de la plataforma así como las reglas y las pautas de la comunidad. Asimismo, se ha implementado un apartado que permite realizar ajustes de usuario sobre el algoritmo de recomendación. Posteriormente, se ampliarán las opciones de tal forma que mediante esta sección, se cambien más opciones.
 
-Como se observa en la figura, la barra lateral tiene íconos para mejorar la usabilidad y además, el apartado seleccionado tiene señales visuales de activación con la paleta de color de la marca de la plataforma y con esquinas redondeadas.
+Como se observa en la figura, la barra lateral tiene íconos para mejorar la usabilidad y además el apartado seleccionado tiene señales visuales de activación con la paleta de color de la marca de la plataforma y con esquinas redondeadas.
 
 \textbf{Temas de interfaz}
 
@@ -223,7 +223,7 @@ El modo negro es el tema principal de la aplicación. Esta decisión se debe a q
 \end{figure}
 
 
-El tema oscuro es el principal en \textit{Booster}, aunque también se permite cambiar a un tema claro. El tema "retro", se puede adquirir con puntos de experiencia a través de la sección de \textit{marketplace}. 
+El tema oscuro es el principal en \textit{Booster}, aunque también se permite cambiar a un tema claro. El tema "retro" se puede adquirir con puntos de experiencia a través de la sección de \textit{marketplace}.
 
 
 
@@ -238,7 +238,7 @@ En Booster también se han hecho mejoras en los métodos de moderación. A difer
   \caption{Ventana flotante con opciones para reportar un video}
 \end{figure}
 
-A  continuación, después de que el usuario haya seleccionado el motivo que infringe el video, junto con una descripción opcional, se crea un evento de votación debajo de la descripción del video como se observa en la figura y queda registrado en el sistema. Esto, es visible para todos los usuarios que ingresan al video y se les permite votar si están de acuerdo. Particularmente, si un usuario observa que el video fue denunciado por contenido inapropiado, puede dar su opinión al respecto y votar a favor o en contra. 
+A continuación, después de que el usuario haya seleccionado el motivo por el que el video infringe una norma, junto con una descripción opcional, se crea un evento de votación debajo de la descripción del video, como se observa en la figura, y queda registrado en el sistema. Esto es visible para todos los usuarios que ingresan al video y se les permite votar si están de acuerdo. Particularmente, si un usuario observa que el video fue denunciado por contenido inapropiado, puede dar su opinión al respecto y votar a favor o en contra.
 
 Cuando una gran mayoría de usuarios están de acuerdo en una misma decisión, automáticamente se toma acción en algunos casos. En otros, se informa a los administradores del reporte y de esta forma, se puede tomar acción inmediata con videos que rompen las normas de comunidad.
 
@@ -267,7 +267,7 @@ Los comentarios de un video, también presentan mejoras visuales y estructurales
 
 Como se puede observar en la figura, los comentarios pueden tener respuestas. Esto requirió crear una estructura de árbol para modelar los mensajes que dependen de otros. En la implementación elegida, cada comentario principal es la raíz de un árbol. Al añadir una respuesta se crea un nuevo vértice, se indica el nodo ancestro y se añade una arista entre ellos. Al cargar la vista de los comentarios, la aplicación obtiene la raíz de cada árbol. Posteriormente, si el usuario quiere ver respuestas, selecciona la opción para desplegar los hijos adyacentes de un nodo y la aplicación obtiene de la base de datos los descendientes \footnote{Se ha considerado que el ancestro de un nodo raíz es él mismo.}. 
 
-Los comentarios se cargan bajo demanda, y también se ordenan y priorizan según su popularidad. Cada comentario dispone de un botón de \textit{like} lo cual cambia su relevancia. Al cargar los comentarios principales (nodos raíz), la aplicación los organiza por número de \textit{likes} en orden descendente. Las respuestas, se ordenan de la misma forma. Como futura ampliación, se podrían implementar algoritmos más sofisticados de recomendación de comentarios que tengan en cuenta el nivel de interacción, la antigüedad, el tono del mensaje, el contexto del mensaje, entre otros aspectos.
+Los comentarios se cargan bajo demanda y también se ordenan y priorizan según su popularidad. Cada comentario dispone de un botón de \textit{like}, lo cual cambia su relevancia. Al cargar los comentarios principales (nodos raíz), la aplicación los organiza por número de \textit{likes} en orden descendente. Las respuestas se ordenan de la misma forma. Como futura ampliación, se podrían implementar algoritmos más sofisticados de recomendación de comentarios que tengan en cuenta el nivel de interacción, la antigüedad, el tono del mensaje, el contexto del mensaje, entre otros aspectos.
 
 De esta forma, se consigue una interfaz más clara y moderna de los comentarios de los usuarios. Cabe destacar, que la profundidad máxima se ha limitado a 3 hijos para evitar que los componentes se superpongan y se desborden.
 
@@ -324,7 +324,7 @@ Al invertir puntos en un canal, el usuario entra automáticamente en una clasifi
 
 En la figura \ref{4.15} se muestra una clasificación de 7 usuarios. Además, si el usuario en sesión está dentro del ranking, se incluye una etiqueta que lo destaca de los demás y en la parte baja, se indica la posición, la cantidad de puntos de experiencia donados y el centil superior. 
 
-Cada canal de usuario tiene una indicación visual del nivel alcanzado junto con las recompensas desbloqueados hasta el momento. Esta información es accesible con la pestaña de \textit{Rewards} como se observa en la figura \ref{4.16}. Durante esta etapa de desarrollo no se han implementado premios asociados a un canal pero se contempla como ampliación para el futuro. 
+Cada canal de usuario tiene una indicación visual del nivel alcanzado junto con las recompensas desbloqueadas hasta el momento. Esta información es accesible con la pestaña de \textit{Rewards} como se observa en la figura \ref{4.16}. Durante esta etapa de desarrollo no se han implementado premios asociados a un canal, pero se contempla como ampliación para el futuro.
 
 \begin{figure}[htbp]
   \centering
@@ -357,18 +357,18 @@ Finalmente, una funcionalidad nueva que no presentan las plataformas de streamin
 %Leaderboards globales y de comunidad, XP, Donar XP
 \subsection{Incorporación de gamificación}
 
-En \textit{Booster} los métodos de gamificación juegan un papel importante. Es una capa estructural del servicio pensada para incrementar la participación y la retención. Para esto, se implementar distintos mecanismos inspirados en lógicas de videojuegos combinando recompensas y reconocimiento público. 
+En \textit{Booster} los métodos de gamificación juegan un papel importante. Es una capa estructural del servicio pensada para incrementar la participación y la retención. Para esto, se implementan distintos mecanismos inspirados en lógicas de videojuegos, combinando recompensas y reconocimiento público.
 
-Uno de los componentes principales son las tablas de clasificación. \textit{Booster} presenta una sección de \textit{leaderboard global} en donde se compara el desempeño de los 100 mejores usuarios de la plataforma teniendo en cuenta la cantidad de seguidores, los puntos de Boost y el nivel del canal (\ref{4.19}). Esto genera un entorno de competición y visibilizando los perfiles más activos. 
+Uno de los componentes principales son las tablas de clasificación. \textit{Booster} presenta una sección de \textit{leaderboard global} en donde se compara el desempeño de los 100 mejores usuarios de la plataforma teniendo en cuenta la cantidad de seguidores, los puntos de Boost y el nivel del canal (\ref{4.19}). Esto genera un entorno de competición y visibiliza los perfiles más activos.
 
 Además, se implementa un \textit{leaderboard de comunidad} el cual se encuentra dentro de todos los canales (\ref{4.15}). A diferencia de la clasificación anterior, en esta se reconocen a los seguidores más destacados de un usuario según la cantidad de puntos de experiencia invertidos. De esta manera, cada comunidad puede reconocer a sus miembros más fieles. 
 
 
-Otro mecanismo esencial es el sistema de puntos de experiencia o XP. Esta se obtiene principalmente por visualizaciones de anuncios dentro de la plataforma. En un futuro, se implementarán más métodos de obtención de puntos basadas en la interacción como comentar, participar, o consumir contenido. Esta moneda virtual, permite a los usuarios realizar compras de artículos de personalización e impulsar la visibilidad de los creadores de contenido en los algoritmos de recomendación. La opción de donar XP, posibilita a los seguidores, apoyar el contenido de otro usuario e invertir puntos para desbloquear nuevas funcionalidades y recompensas de la comunidad. A su vez, se posicionan en un ranking el cual destaca a los miembros más activos y fieles del canal.
+Otro mecanismo esencial es el sistema de puntos de experiencia o XP. Esta se obtiene principalmente por visualizaciones de anuncios dentro de la plataforma. En un futuro se implementarán más métodos de obtención de puntos basados en la interacción, como comentar, participar o consumir contenido. Esta moneda virtual permite a los usuarios realizar compras de artículos de personalización e impulsar la visibilidad de los creadores de contenido en los algoritmos de recomendación. La opción de donar XP posibilita a los seguidores apoyar el contenido de otro usuario e invertir puntos para desbloquear nuevas funcionalidades y recompensas de la comunidad. A su vez, se posicionan en un ranking que destaca a los miembros más activos y fieles del canal.
 
-A todo esto, se suma la sección de \textit{marketplace}. Aquí, los usuarios pueden comprar mediante el uso de XP, artículos de personalización, temas de interfaz, insignias, entre otras recompensas. Esto, convierte a los puntos de experiencia en algo deseable, generando una motivación adicional para conseguirlos. El usuario decide en qué gastar sus puntos y como administrar sus recursos dentro de la plataforma, convirtiendo así los puntos, en una moneda.  
+A todo esto, se suma la sección de \textit{marketplace}. Aquí, los usuarios pueden comprar mediante el uso de XP, artículos de personalización, temas de interfaz, insignias, entre otras recompensas. Esto convierte a los puntos de experiencia en algo deseable, generando una motivación adicional para conseguirlos. El usuario decide en qué gastar sus puntos y cómo administrar sus recursos dentro de la plataforma, convirtiendo así los puntos en una moneda.
 
-Otro mecanismo empleados son los anuncios recompensados. Este es un sistema inspirado en los videojuegos, donde una visualización de anuncios te premia con una cantidad de moneda virtual, en este caso, con puntos de experiencia. Este enfoque convierte una práctica percibida como intrusiva en una transacción beneficiosa para ambas partes. La plataforma monetiza, mientras el usuario recibe una compensación, lo que mejora la aceptación del formato publicitario. 
+Otro mecanismo empleado son los anuncios recompensados. Este es un sistema inspirado en los videojuegos, donde una visualización de anuncios premia al usuario con una cantidad de moneda virtual, en este caso, puntos de experiencia. Este enfoque convierte una práctica percibida como intrusiva en una transacción beneficiosa para ambas partes. La plataforma monetiza, mientras el usuario recibe una compensación, lo que mejora la aceptación del formato publicitario.
 
 \begin{figure}[htbp]
   \centering

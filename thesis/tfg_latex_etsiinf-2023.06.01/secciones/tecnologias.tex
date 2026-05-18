@@ -2,9 +2,9 @@
 
 Debido a la facilidad de implementación y a sus ventajas, se ha empleado una arquitectura centralizada para el desarrollo del proyecto según se describe en \ref{2.3.1}. No obstante, como posible ampliación se podrían explorar soluciones distribuidas.
 
-En cuanto al procesamiento, transcodificación y entrega de video se probaron las tres alternativas mencionadas en \ref{2.2}. Para la solución propia se utilizaron los servicios de Amazon Web Service con las tecnologías descritas en \ref{2.1} pero finalmente, se optó por integrar los servicios de un proveedor debido a los costos elevados de las otras alternativas.
+En cuanto al procesamiento, transcodificación y entrega de video se experimentó con las tres alternativas mencionadas en \ref{2.2}. Para la solución propia se utilizaron los servicios de Amazon Web Service con las tecnologías descritas en \ref{2.1} pero finalmente, se optó por integrar los servicios de un proveedor debido a los costos elevados de las otras alternativas.
 
-Para la creación de un Producto Mínimo Viable (MVP), se ha decido implementar una página web debido a su facilidad de acceso desde cualquier dispositivo y a la adecuación de los \textit{frameworks} y tecnologías web a los objetivos del proyecto. Por ese motivo, a continuación se presentan las tecnologías utilizadas.
+Para la creación de un Producto Mínimo Viable (MVP), se ha decidido implementar una página web debido a su facilidad de acceso desde cualquier dispositivo y a la adecuación de los \textit{frameworks} y tecnologías web a los objetivos del proyecto. Por ese motivo, a continuación se presentan las tecnologías utilizadas.
 
 
 \section{Backend}
@@ -13,7 +13,7 @@ El backend es el conjunto de componentes que gestionan la lógica de negocio de 
 
 \subsection{TypeScript como lenguaje de programación}
 
-TypeScript es un lenguaje de programación desarrollado por Microsoft y es una extensión de JavaScript. Lo especial de este es que incorpora tipado estático y mejores herramientas para detectar errores durante el desarrollo y no en producción. Esto ayuda a estructurar y crear proyectos software de forma más efectiva, permitiendo un mantenimiento del código más fácil.
+TypeScript es un lenguaje de programación desarrollado por Microsoft y es una extensión de JavaScript. Lo especial es que este lenguaje incorpora tipado estático y mejores herramientas para detectar errores durante el desarrollo y no en producción. Esto ayuda a estructurar y crear proyectos software de forma más efectiva, permitiendo un mantenimiento del código más sencillo.
 
 En el caso del proyecto Booster, TypeScript resulta una herramienta útil debido a que el sistema integra múltiples capas de lógica como gestión de usuario, publicación y edición de metadatos de videos, autenticación, creación de comunidades y relación con la base de datos y el servidor. Por tanto, en este tipo de aplicaciones con un gran número de objetos de datos estructurados y bien definidos (usuario, videos, comunidades), el uso de tipado fuerte ayuda a reducir inconsistencias, detectar errores más fácilmente y mejorar la mantenibilidad del código. 
 
@@ -42,7 +42,7 @@ Más técnicamente, a diferencia de JavaScript, en TypeScript se pueden definir 
 \end{lstlisting}
 
 
-De esta forma, se pueden detectar errores durante el desarrollo que por el contrario, serían más complejos de identificar. Es común, olvidarse del tipo de una variable e intentar hacer operaciones no permitidas para ese tipo. TypeScript, lo detecta automáticamente pero JavaScript, no es consciente de esto y en consecuencia se generan errores difíciles de detectar.  
+De esta forma se pueden detectar errores durante el desarrollo que, de otro modo, serían más complejos de identificar. Es común olvidarse del tipo de una variable e intentar hacer operaciones no permitidas para ese tipo. TypeScript lo detecta automáticamente, mientras que JavaScript no es consciente de esto y, en consecuencia, se generan errores difíciles de detectar.
 
 \begin{figure}[h]
   \centering
@@ -53,26 +53,26 @@ De esta forma, se pueden detectar errores durante el desarrollo que por el contr
 \pagebreak
 \textbf{Ventajas}
 
-Su principal ventaja es la detección temprana de errores. Esto es importante en proyectos con una base de código grande, donde un pequeño fallo en la estructura de datos puede provocar errores más importantes y arruinar el servicio. 
+Su principal ventaja es la detección temprana de errores. Esto es fundamental en proyectos con una base de código grande, donde un pequeño fallo en la estructura de datos puede provocar errores más grandes y arruinar el servicio. 
 
-Asimismo, el uso de typescript mejora la escalabilidad del proyecto permitiendo mantener un código más consistente y legible. 
+Asimismo, el uso de TypeScript mejora la escalabilidad del proyecto permitiendo mantener un código más consistente y legible. 
 
-El uso de TypeScript es importante en la industria y por esa razón, tiene una gran integración con herramientas modernas de desarrollo de aplicaciones web como Next.Js, Drizzle, tRPC, entre otros. 
+El uso de TypeScript es importante en la industria y por esa razón, tiene una gran integración con herramientas modernas de desarrollo de aplicaciones web como Next.js, Drizzle, tRPC, entre otros.
 
 \textbf{Desventajas}
 
 Emplear TypeScript, requiere destinar más tiempo a la definición de tipos, lo cual incrementa el tiempo de desarrollo porque requiere mantener precisión y consistencia en todo el proyecto. Por tanto, esto añade complejidad adicional en comparación con JavaScript.
 
-\textbf{Uso de Typescript}
+\textbf{Uso de TypeScript}
 
-TypeScript, se ha consolidad como una de las tecnologías más utilizadas en el desarrollo web actual. Es el lenguaje por excelencia para la capa \textit{backend} en plataformas SaaS, redes sociales y otras aplicaciones. La necesidad de compartir modelos de datos es un requerimiento frecuente en proyectos grandes y que utilizan tecnologías modernas como React.Js, Next.Js, Node.js, Express, entre otros. 
+TypeScript se ha consolidado como una de las tecnologías más utilizadas en el desarrollo web actual. Es el lenguaje por excelencia en la capa \textit{backend} en plataformas SaaS, redes sociales y otras aplicaciones. La necesidad de compartir modelos de datos es un requerimiento frecuente en proyectos grandes que utilizan tecnologías modernas como React.js, Next.js, Node.js y Express.
 
-En Booster, al ser un proyecto de código abierto, TypeScript se emplea como lenguaje principal de programación para la integración de las distintas tecnologías, garantizar precisión y consistencia, detectar errores tempranos, mejorar la mantenibilidad y mantener la coherencia entre \textit{backend} y \textit{frontend}. 
+En Booster, al ser un proyecto de código abierto, TypeScript se emplea como lenguaje principal de programación para la integración de las distintas tecnologías; garantizar precisión y consistencia; detectar errores tempranos; mejorar la mantenibilidad; y mantener la coherencia entre \textit{backend} y \textit{frontend}.
 \subsection{Base de Datos}
 
 La base de datos es uno de los componentes más importantes en las aplicaciones software. Esto se debe a que constituye el sistema encargado de almacenar, consultar y actualizar la información del servicio. Para los objetivos de Booster, la base de datos debe permitir realizar consultas complejas de forma eficiente, integrarse con tecnologías modernas y soportar funcionalidades avanzadas como embeddings para implementar la búsqueda semántica de videos. 
 
-Por estas razones, Booster integra una base de datos \textbf{PostgreSQL} como sistema principal. Este es un gestor de base de datos relacionales ampliamente utilizado en aplicaciones de todo tipo. Su funcionamiento está basado en el modelo relacional, donde la información se ordena y almacena en tablas, filas y columnas. Las relaciones, se modelas mediante claves primarias y foráneas. Este enfoque es el más adecuado para Booster ya que la información de usuarios, videos, comunidades es claramente estructurada. Además, este gestor de base de datos ofrece una gran cantidad de funcionalidades avanzadas, integridad referencial, un gran rendimiento en producción y una buena escalabilidad.
+Por estas razones, Booster integra \textbf{PostgreSQL} como sistema principal. Es un gestor de bases de datos relacionales ampliamente utilizado en aplicaciones de todo tipo. Su funcionamiento está basado en el modelo relacional, donde la información se ordena y almacena en tablas, filas y columnas. Las relaciones se modelan mediante claves primarias y foráneas. Este enfoque es el más adecuado para Booster, ya que la información de usuarios, videos y comunidades es claramente estructurada. Además, este gestor ofrece una gran cantidad de funcionalidades avanzadas, integridad referencial, alto rendimiento en producción y buena escalabilidad.
 
 
 \begin{figure}[h]
@@ -87,7 +87,7 @@ Por estas razones, Booster integra una base de datos \textbf{PostgreSQL} como si
 
 En Booster, PostgreSQL se integra a través de una plataforma de base de datos moderna y serverless diseñada para la nube conocida como \textbf{NeonDB}.
 
-NeonDB presenta una arquitectura que separa almacenamiento y cómputo para ofrecer un escalado más flexible y administrar mejor la base de datos. Además, está especialmente diseñada para soportar funcionalidades de \textbf{Inteligencia Artificial}. En el caso de Booster, se han empleado extensiones como \lstinline|pgvector| para almacenar embeddings y realizar búsquedas semánticas de los títulos y descripciones de los videos. \cite{pgvector} Esta capacidad, permite realizar búsquedas más inteligentes en comparación a las búsquedas literales. Con esto, se puede encontrar contenido relacionado por significado y mejorar el sistema de recomendación ante una búsqueda en lenguaje natural. 
+NeonDB presenta una arquitectura que separa almacenamiento y cómputo para ofrecer un escalado más flexible y administrar mejor la base de datos. Además, está especialmente diseñada para soportar funcionalidades de \textbf{Inteligencia Artificial}. En el caso de Booster, se han empleado extensiones como \lstinline|pgvector| para almacenar embeddings y realizar búsquedas semánticas de los títulos y descripciones de los videos \cite{pgvector}. Esta capacidad, permite realizar búsquedas más inteligentes en comparación con las búsquedas literales. Con esto, se puede encontrar contenido relacionado por significado y mejorar el sistema de recomendación ante una búsqueda en lenguaje natural. 
 
 
 \begin{figure}[h]
@@ -102,18 +102,18 @@ Implementar una base de datos PostgreSQL tiene diversas ventajas. Entre ellas, d
 
 \textbf{Desventajas}
 
-Aunque es muy versátil, cuando hay un volumen alto de datos se requiere un diseño cuidadoso y un mantenimiento constante, incrementando el esfuerzo de desarrollo y la complejidad. Con un flujo de datos grande, es necesario incluir índices y destinar más tiempo a realizar optimizaciones lo que puede requerir más recursos técnicos. 
+Aunque es muy versátil, cuando hay un volumen alto de datos se requiere un diseño cuidadoso y un mantenimiento constante, incrementando el esfuerzo de desarrollo y la complejidad. Con un flujo de datos grande, es necesario incluir índices y destinar más tiempo a realizar optimizaciones, consumiendo más recursos técnicos. 
 
 \pagebreak
 
-\textbf{SupaBase}
+\textbf{Supabase}
 
-De forma complementaria a NeonDB, se utiliza \textbf{SupaBase}, otra plataforma de \textit{backend} que implementa una base de datos PostgreSQL. Más concretamente, en Booster se hace uso de esta para implementar funcionalidades de chat en tiempo real. SupaBase Realtime permite transmitir eventos mediante WebSockets y estar pendiente a cambios en la base de datos en tiempo real, haciéndolo ideal para implementar chats en los canales para que sus seguidores puedan interactuar entre ellos y directamente con los creadores de contenido. 
+De forma complementaria a NeonDB, se utiliza \textbf{Supabase}, otra plataforma de \textit{backend} que implementa una base de datos PostgreSQL. Más concretamente, en Booster se hace uso de esta herramienta para implementar funcionalidades de chat en tiempo real. Supabase Realtime permite transmitir eventos mediante WebSockets y monitorizar cambios en la base de datos en tiempo real, haciéndolo ideal para implementar chats en los canales de usuario para que sus seguidores puedan interactuar entre ellos y con los creadores de contenido.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.4\linewidth]{portada/supabase.png  }
-  \caption{Logo de SupaBase}
+  \caption{Logo de Supabase}
 \end{figure}
 
 
@@ -128,9 +128,9 @@ El uso de ORMs es muy común en aplicaciones modernas y existen un gran número 
 
 
 \subsubsection{Drizzle}
-Drizzle ORM \cite{drizzle} es un ORM orientado al desarrollo con TypeScript caracterizada por ofrecer una experiencia similar a SQL y tipada. 
+Drizzle ORM \cite{drizzle} es un ORM orientado al desarrollo con TypeScript caracterizado por ofrecer una experiencia similar a SQL y tipada. 
 
-Drizzle permite definir el esquema de la base de datos con código TypeScript mediante un archivo llamada \lstinline|schema.ts|. A partir del misommo, un desarrollador es capaz de establecer relaciones entre tablas y definir los tipos de datos de las columnas para realizar consultas tipadas. Además, permite combinar consultas SQL en sus funciones haciéndolo útil para consultas complejas y con varios pasos. 
+Drizzle permite definir el esquema de la base de datos con código TypeScript mediante un archivo llamado \lstinline|schema.ts|. A partir del mismo, un desarrollador es capaz de establecer relaciones entre tablas y definir los tipos de datos de las columnas para realizar consultas tipadas. Además, permite combinar consultas SQL en sus funciones, lo que lo hace útil para consultas complejas y con varios pasos.
 
 La herramienta es ideal para el proyecto Booster. Esto se debe a que Drizzle permite realizar consultas avanzadas y específicas sobre bases de datos PostgreSQL.
 
@@ -141,11 +141,11 @@ La herramienta es ideal para el proyecto Booster. Esto se debe a que Drizzle per
 
 Su principal ventaja, es su tipado fuerte. Junto a TypeScript, ayuda a detectar errores durante el desarrollo y mantener la coherencia y precisión entre el esquema de base de datos y el \textit{backend}. A su vez, ayuda a prevenir inyecciones SQL mediante su capa de seguridad y mejores prácticas. 
 
-Por otra parte, según lo menciona la documentación, tiene un diseño ligero y eficiente lo cual es favorable para el rendimiento de la aplicación. 
+Por otra parte, según la documentación, tiene un diseño ligero y eficiente, lo cual es favorable para el rendimiento de la aplicación.
 
 \textbf{Desventajas}
 
-Drizzle es una herramienta nueva y además tiene una curva de aprendizaje elevada. Esto se debe a que requiere conocer bien el lenguaje SQL y tener experiencia con bases de datos relacionales antes de entender el funcionamiento del nivel de abstracción ofrecido por esta herramienta. Ofrece más control pero demanda un conocimiento técnico y completo.
+Drizzle es una herramienta nueva y además tiene una curva de aprendizaje elevada. Esto se debe a que requiere conocer bien el lenguaje SQL y tener experiencia con bases de datos relacionales antes de entender el funcionamiento del nivel de abstracción ofrecido por esta herramienta. Ofrece más control, pero demanda un conocimiento técnico y sólido.
 
 \textbf{Uso de Drizzle}
 
@@ -171,14 +171,14 @@ Esta alternativa se menciona como una herramienta importante que se podría habe
 
 \label{trpc}
 
-La comunicación cliente-servidor es esencial dentro de cualquier aplicación web moderna. En la plataforma Booster, esto permite que el \textit{frontend} se comunique con el \textit{backend} para recuperar datos, actualizarlos y ejecutar funciones como registro de usuario e inicio de sesión. Existen diversos enfoques, siendo APIs Rest o GraphQL las más conocidas. Sin embargo, para los efectos del proyecto se ha optado por una tecnología llamada \textbf{tRPC}. Esta, está orientada al desarrollo de RPCs (Remote Procedure Calls) con TypeScript que permite construir procedimientos de comunicación entre cliente y servidor respetando los tipos y garantizando coherencia y consistencia.
+La comunicación cliente-servidor es esencial dentro de cualquier aplicación web moderna. En la plataforma Booster, esto permite que el \textit{frontend} se comunique con el \textit{backend} para recuperar datos, actualizarlos y ejecutar funciones como registro de usuario e inicio de sesión. Existen diversos enfoques, siendo APIs Rest o GraphQL las más conocidas. Sin embargo, para los efectos del proyecto se ha optado por una tecnología llamada \textbf{tRPC}. Esta herramienta está orientada al desarrollo de RPCs (Remote Procedure Calls) con TypeScript, lo que permite construir procedimientos de comunicación entre cliente y servidor respetando los tipos y garantizando coherencia y consistencia.
 
-\textbf{tRPC} es una de las tecnologías fundamentales en este proyecto facilitando el intercambio de datos entre cliente y servidor. A diferencia de un enfoque REST, con tRPC se definen procedimientos en el servidor y el cliente se encarga de consumirlos sin necesidad de especificar un esquema de endpoints o capas adicionales de generación de tipos. Además, la utilización de esta biblioteca mejora la seguridad y la coherencia de tipos de extremo a extremo. Es decir, un tipo definido en el \textit{backend} se pueden compartir fácilmente hacia el \textit{frontend}, convirtiéndola en una herramienta ideal para el desarrollo \textit{full-stack}.
+\textbf{tRPC} es una de las tecnologías fundamentales en este proyecto facilitando el intercambio de datos entre cliente y servidor. A diferencia de un enfoque REST, con tRPC se definen procedimientos en el servidor y el cliente se encarga de consumirlos sin necesidad de especificar un esquema de endpoints o capas adicionales de generación de tipos. Además, la utilización de esta biblioteca mejora la seguridad y la coherencia de tipos de extremo a extremo. Es decir, un tipo definido en el \textit{backend} se puede compartir fácilmente hacia el \textit{frontend}, convirtiéndola en una herramienta ideal para el desarrollo \textit{full-stack}.
 
 Al trabajar con tRPC es conveniente distinguir los siguientes conceptos. \cite{trpc-concepts}
 
 \begin{itemize}
-  \item \textbf{Procedure}:  un \textit{endpoint} de una API. Representa una acción concreta clasificadas en: consultas, mutaciones o suscripciones.  
+  \item \textbf{Procedure}:  un \textit{endpoint} de una API. Representa una acción concreta clasificada en: consultas, mutaciones o suscripciones.  
   \item \textbf{Query}: Un procedimiento que obtiene datos.
   \item \textbf{Mutation}: Un procedimiento que modifica datos (create, update, delete).
   \item Suscripción: Un procedimiento que crea una conexión persistente y escucha cambios.
@@ -213,24 +213,24 @@ El \textit{prefetch} consiste en cargar datos por adelantados antes de que el cl
 Existen varias formas de aplicar el \textit{prefetch}. En el desarrollo de esta plataforma se ejecuta una pre-carga en el servidor antes de renderizar la página para que los datos estén disponibles cuando llegue al cliente. En Booster, esta técnica tiene un gran valor. Los usuarios están constantemente navegando entre listados de video, usuarios o comentarios por tanto, si los datos se cargan anticipadamente, el tiempo de espera disminuye creando la apariencia de una interfaz reactiva e inmediata. De esta forma tRPC tiene un doble uso: capa tipada de comunicación y un 'acelerador' de la interfaz de usuario. Por estas razones, se ha decidido utilizar tRPC para la comunicación cliente-servidor. 
 
 \subsection{Next.js - backend}
-\label{Next.Js backend}
+\label{nextjs-backend}
 
 
-\textbf{Next.js} es, junto con tRPC otra de las tecnologías fundamentales de este proyecto. Este es un framework de desarrollo web basado en \ref{React.Js} que permite construir aplicaciones \textit{full-stack} modernas, gestionando la interfaz de usuario y la lógica de negocio dentro de un mismo repositorio. En Booster, Next.Js se emplea para cumplir ambos de estos propósitos. Por un lado, se aprovechan sus habilidades de \textit{frontend} pero también, se hace uso de sus capacidades de backend facilitando la experiencia de desarrollo. 
+\textbf{Next.js} es, junto con tRPC, otra de las tecnologías fundamentales de este proyecto. Este es un framework de desarrollo web basado en \ref{React.Js} que permite construir aplicaciones \textit{full-stack} modernas, gestionando la interfaz de usuario y la lógica de negocio dentro de un mismo repositorio. En Booster, Next.js se emplea para cumplir ambos de estos propósitos. Por un lado, se aprovechan sus habilidades de \textit{frontend} pero también se hace uso de sus capacidades de backend, facilitando la experiencia de desarrollo. 
 
 Desde un punto de vista más técnico, para este proyecto se está empleando la versión moderna de Next.js que está basada en un \textbf{\textit{App Router}}. Este es un sistema de enrutamiento basado en el directorio \lstinline|/app|, en donde se gestionan las rutas de forma más eficiente. 
 Es importante distinguir los siguientes conceptos:
 
 \begin{itemize}
-  \item \textbf{Server Component}: Es un componente de \ref{React.Js} que se ejecuta y se renderiza \textbf{únicamente} en el servidor. Por tanto, pueden acceder directamente a recursos del \textit{backend}.
+  \item \textbf{Server Component}: Es un componente de \ref{React.Js} que se ejecuta y se renderiza \textbf{únicamente} en el servidor. Por tanto, puede acceder directamente a recursos del \textit{backend}.
   \item \textbf{Client Component}: Es un componente que se ejecuta solamente en el cliente (navegador). Normalmente, se suele reservar para interacciones con la interfaz de usuario donde la disposición de la página web puede variar.  
 \end{itemize}
 
-Durante el desarrollo de Booster se combinan las habilidades de los Server Components y los Client Components para mejorar la eficiencia y optimizar el rendimiento de la aplicación. Por otra parte, gracias al \textit{App Router} \cite{nextjs-app} se logran crear manejadores personalizados de peticiones HTTP, rutas de APIs estáticas y dinámica y crear queries de consulta. Todo esto se puede conseguir sin la necesidad de un servidor \textit{backend} separado lo cual facilita el desarrollo y ayuda a mejorar la coherencia en la aplicación. 
+Durante el desarrollo de Booster se combinan las habilidades de los Server Components y los Client Components para mejorar la eficiencia y optimizar el rendimiento de la aplicación. Por otra parte, gracias al \textit{App Router} \cite{nextjs-app} se logran crear manejadores personalizados de peticiones HTTP, rutas de APIs estáticas y dinámicas, y consultas. Todo esto se puede conseguir sin la necesidad de un servidor \textit{backend} separado, lo cual facilita el desarrollo y ayuda a mejorar la coherencia en la aplicación.
 
-En Booster, esto es extremadamente útil ya que permite concentrar en un mismo entorno diversas responsabilidades. Next.Js se encarga de mostrar la aplicación, gestionar la obtención de datos, la comunicación cliente-servidor junto con tRPC y definir rutas de API y direcciones URL. 
+En Booster, esto es extremadamente útil ya que permite concentrar en un mismo entorno diversas responsabilidades. Next.js se encarga de mostrar la aplicación, gestionar la obtención de datos, la comunicación cliente-servidor junto con tRPC y definir rutas de API y direcciones URL.
 
-Además Next.Js contiene métodos de optimización como: incorporación de cachés, revalidación, pre-carga de enlaces, optimizaciones de imágenes, optimizaciones de código css y optimizaciones de navegación. 
+Además, Next.js contiene métodos de optimización como incorporación de cachés, revalidación, pre-carga de enlaces, optimizaciones de imágenes, optimizaciones de código CSS y optimizaciones de navegación.
 
 \textbf{Ventajas}
 
@@ -238,18 +238,18 @@ Su principal ventaja es su integración \textit{full-stack}. Se puede construir 
 
 Contiene una gran variedad de elementos de optimización para mejorar el rendimiento de la aplicación. En una plataforma como Booster, esto es importante ya que mejora la experiencia de usuario de forma significativa. 
 
-Otro aspecto importante a destacar es que como Next.Js utiliza pre-renderizado estático (Static Site Generation SSG) \footnote{Se entiende por pre-renderizado estático (SSG) a aquel proceso de generación de páginas HTML en el momento de construcción (build time). Se ejecutan comandos como \lstinline|npm run build| para generar archivos estáticos (.html, .css, .js) y de esta forma, estas páginas cargan de forma instantánea al no necesitar un servidor para solicitar datos}, \todo{poner ref o citar a mas info} los motores de búsqueda pueden indexar de forma más sencilla el contenido de la página web. Así, se consigue mejorar su descubrimiento en internet e incrementar el tráfico: Se mejora el Search Engine Optimization (SEO)
+Otro aspecto importante a destacar es que, como Next.js utiliza pre-renderizado estático (Static Site Generation SSG) \footnote{Se entiende por pre-renderizado estático (SSG) a aquel proceso de generación de páginas HTML en el momento de construcción (build time). Se ejecutan comandos como \lstinline|npm run build| para generar archivos estáticos (.html, .css, .js) y de esta forma, estas páginas cargan de forma instantánea al no necesitar un servidor para solicitar datos}, los motores de búsqueda pueden indexar más fácilmente el contenido de la página web. Así, se consigue mejorar su descubrimiento en internet e incrementar el tráfico: se mejora el Search Engine Optimization (SEO).
 
 \textbf{Desventajas}
 
 Al concentrar \textit{frontend} y \textit{backend} en un mismo lugar, la complejidad de los proyectos suele aumentar de forma considerable. Por el contrario, si se separa la lógica de negocio con la interfaz de usuario podría ser más fácil gestionar el proyecto por separado. 
 
-Otro aspecto importante a mencionar es su elevada curva de aprendizaje. Con los años se han añadido un gran número de operaciones y optimizaciones incrementando la cantidad de conceptos y técnicas. Esto puede significar que dominar Next.Js sea una tarea difícil. 
+Otro aspecto importante a mencionar es su elevada curva de aprendizaje. Con los años se han añadido un gran número de operaciones y optimizaciones, incrementando la cantidad de conceptos y técnicas. Esto puede significar que dominar Next.js sea una tarea difícil.
 
 \begin{figure}[h]
   \centering
   \includegraphics[width=0.3\linewidth]{portada/nextjs.png}
-  \caption{Logo de Next.Js}
+  \caption{Logo de Next.js}
 \end{figure}
 
 \pagebreak
@@ -270,7 +270,7 @@ La autenticación de usuarios es también un proceso fundamental en cualquier ap
 
 \textbf{Ventajas}
 
-Su principal ventaja es su facilidad de incorporación en proyectos software. Permite añadir una autenticación completa y profesional en poco tiempo y es ideal para proyectos construidos con Next.Js. 
+Su principal ventaja es su facilidad de incorporación en proyectos software. Permite añadir una autenticación completa y profesional en poco tiempo y es ideal para proyectos construidos con Next.js.
 
 Gracias a su panel de control, la experiencia de administración es buena y fácil de realizar. Clerk permite revisar usuarios, eliminarlos, gestionar sus datos y aplicarles sanciones. Por otro lado, también cuenta con una gran variedad de opciones distintas y admite personalizar los componentes de inicio o registro de sesión que vienen por defecto, ahorrando así tiempo de desarrollo. 
 
@@ -294,7 +294,7 @@ En esta sección se presentan las tecnologías seleccionadas para diseñar esta 
 \subsection{React.Js}
 \label{React.Js}
 
-React.Js es una biblioteca de JavaScript desarrollada por FaceBook en 2013 utilizada en gran medida para la construcción de interfaces de usuario (UI) mediante componentes reutilizable. Esencialmente, se basa en dividir la interfaz en pequeñas partes independientes, cada una con su lógica y representación visual y por tanto, se consiguen crear páginas por componentes separados en lugar de hacerlo todo al mismo tiempo. Además, estos elementos pueden ser reutilizados en otras partes según sea necesario. Por ejemplo, es común construir componentes para barras de navegación, botones o formularios los cuales se combinan para formar la interfaz. 
+React.js es una biblioteca de JavaScript desarrollada por Facebook en 2013, utilizada en gran medida para la construcción de interfaces de usuario (UI) mediante componentes reutilizables. Esencialmente se basa en dividir la interfaz en pequeñas partes independientes, cada una con su lógica y representación visual y, por tanto, se crean páginas a partir de componentes separados en lugar de hacerlo todo al mismo tiempo. Además, estos elementos pueden ser reutilizados en otras partes según sea necesario. Por ejemplo, es común construir componentes para barras de navegación, botones o formularios, los cuales se combinan para formar la interfaz.
 
 \begin{figure}[h]
   \centering
@@ -317,13 +317,13 @@ Presenta una curva de aprendizaje significativa lo que puede resultar en un mayo
 En Booster, se emplea React.Js para el desarrollo de las interfaces de usuario. Gracias a esta herramienta, se pueden reutilizar por toda la aplicación elementos como el reproductor de video, comentarios y barras de navegación mejorando así, la organización del código 
 y su mantenibilidad.  
 
-\subsection{Next.Js - frontend}
+\subsection{Next.js - frontend}
 
-Next.Js es una tecnología muy poderosa que ya se analizó en secciones anteriores (\ref{Next.Js backend}). Aquí, se estudió su utilidad para tareas de \textit{backend} pero también se integra bien con tareas de \textit{frontend}. 
+Next.js es una tecnología muy poderosa que ya se analizó en secciones anteriores (\ref{nextjs-backend}). Aquí, se estudió su utilidad para tareas de \textit{backend} pero también se integra bien con tareas de \textit{frontend}.
 
 Su funcionamiento consiste en apoyarse en componentes de React pero además, añade herramientas nuevas para el enrutamiento, generación de páginas, distintas formas de renderizado, más optimizaciones, entre otros. En cuanto al \textit{frontend}, facilita algunas tareas y mejora la organización del proyecto ya que dispone de un sistema de rutas y páginas bien definidas con patrones claros y estructurados. Así, se consigue un código más legible, limpio y mantenible. 
 
-Booster utiliza Next.Js en el frontend para organizar los componentes y la aplicación de manera profesional y escalable. Con esto, se consigue gestionar la navegación entre vistas, mejorar el rendimiento general del sitio y su presencia en la web. Además, cuenta con una documentación extensa y clara. Otro aspecto positivo es que se integra bien con una amplia gama de tecnologías diferentes haciendo que el proyecto tenga mayor flexibilidad. 
+Booster utiliza Next.js en el frontend para organizar los componentes y la aplicación de manera profesional y escalable. Con esto se consigue gestionar la navegación entre vistas, mejorar el rendimiento general del sitio y su presencia en la web. Además, cuenta con una documentación extensa y clara. Otro aspecto positivo es que se integra bien con una amplia gama de tecnologías diferentes, haciendo que el proyecto tenga mayor flexibilidad.
 
 
 \subsection{TailwindCSS y Shadcn}
@@ -331,7 +331,7 @@ Booster utiliza Next.Js en el frontend para organizar los componentes y la aplic
 
 Normalmente, las aplicaciones web suelen mejorar su interfaz de usuario mediante CSS (Cascading Style Sheets), un lenguaje de diseño gráfico para definir la apariencia y el estilo de los documentos HTML. Sin embargo, para este proyecto se ha optado por utilizar \textbf{TailwindCSS}, una herramienta más moderna basado en utilidades de CSS para aplicar estilos a componentes HTML. 
 
-Su funcionamiento consiste en aplicar directamente en un atributo  \lstinline|class| o \lstinline|className| en HTML propiedades CSS (\textit{utiliy classes)} predefinidas que representan características visuales específicas. Por ejemplo, el siguiente código pone a rojo el color del texto a rojo
+Su funcionamiento consiste en aplicar directamente en un atributo \lstinline|class| o \lstinline|className| en HTML propiedades CSS (\textit{utility classes}) predefinidas que representan características visuales específicas. Por ejemplo, el siguiente código cambia el color del texto a rojo:
 
 \begin{lstlisting}[language=html]
   ...
@@ -345,7 +345,7 @@ La principal fortaleza de Tailwind es la rapidez con la que se pueden construir 
 
 A su vez, como los estilos se aplican directamente como atributo de los componentes HTML, esto evita tener archivos de estilos específicos para distintas partes de la aplicación. Esto mejora la organización del código en el proyecto. 
 
-Con este framework, es posible además mantener una paleta de colores consistentes con la marca a lo largo de toda la aplicación y de una forma clara y sencilla. Con estas clases además, se puede construir una aplicación visualmente responsiva para distintos tipos de dimensiones de dispositivos, mejorando así la experiencia de usuario en distintas plataformas.
+Con este framework es posible además mantener una paleta de colores consistente con la marca a lo largo de toda la aplicación de forma clara y sencilla. Con estas clases también se puede construir una aplicación visualmente responsiva para distintos tamaños de dispositivo, mejorando así la experiencia de usuario en diversas plataformas.
 
 \textbf{Desventajas}
 

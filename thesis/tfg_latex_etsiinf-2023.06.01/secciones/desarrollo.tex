@@ -21,7 +21,7 @@ interface PageProps {
 }
 
 
-const Page = async ({ params }: PageProps) => { // ser recibe el parámetro
+const Page = async ({ params }: PageProps) => { // se recibe el parámetro
                                                 // variable userId que se
                                                 // introduce en la ruta
     '''
@@ -800,7 +800,7 @@ En \ref{comentarios}, se explicaron las mejoras presentes en los comentarios de 
   }
 \end{lstlisting}
 
-Con este diseño, para obtener las respuestas de un comentario, se busca en la base de datos todos aquellos registros que referencien a ese comentario como padre. Posteriormente, con esta lista de respuestas y con el uso de React, se renderizan de forma recursiva los mensajes que responden a otros. Es decir, un comentario incluye a otros dentro de él que corresponden a sus respuestas. 
+Con este diseño, para obtener las respuestas de un comentario, se busca en la base de datos todos aquellos registros que referencien a ese comentario como padre. Posteriormente, con esta lista de respuestas y con el uso de React, se renderizan de forma recursiva los mensajes que responden a otros. Es decir, un comentario incluye a otros dentro de él, correspondientes a sus respuestas. 
 
 
 \begin{lstlisting}[language=html]

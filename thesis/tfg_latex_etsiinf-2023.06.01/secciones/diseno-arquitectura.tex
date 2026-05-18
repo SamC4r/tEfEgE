@@ -177,7 +177,7 @@ Los archivos de configuración de servicios externos se encuentran todos en \tex
 
 \subsection{Seguridad mediante variables de entorno}
 
-El proyecto utiliza variables de entorno para almacenar información sensible. Se almacenan en el archivo \texttt{.env.local} el cual contiene, claves de API, secretos de webhooks, claves públicas, claves privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público y solo es conocido por el servicio de \textit{hosting}. 
+El proyecto utiliza variables de entorno para almacenar información sensible. Se almacenan en el archivo \texttt{.env.local} el cual contiene, claves de API, secretos de webhooks, claves públicas, claves privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público y solo es conocido por el servicio de \textit{hosting} (servidor principal). 
 
 \subsection{Middleware para control de accesos}
 
@@ -258,7 +258,7 @@ Finalmente, la propiedad \texttt{matcher} indica sobre qué solicitudes debe eje
 
 \subsection{Usuario Clerk vs Usuario Interno}
 
-En la aplicación se debe coordinar la identificación de un usuario gestionado por \textit{Clerk} con su correspondiente usuario almacenado en la base de datos interna. Por esa razón, cada usuario de la tabla \texttt{users} contiene un identificador interno (\textit{id}) y, un atributo \textit{clerkId}. El \textit{id} se usa en la aplicación para identificar al usuario y realizar consultas con la base de datos, funcionando como clave primaria de la entidad usuario, mientras que \textit{clerkId}, funciona para asociar el usuario identificado por \textit{Clerk} al usuario interno. 
+En la aplicación se debe coordinar la identificación de un usuario gestionado por \textit{Clerk} con su correspondiente usuario almacenado en la base de datos interna. Por esa razón, cada usuario de la tabla \texttt{users} contiene un identificador interno (\textit{id}) y, un atributo \textit{clerkId}. El \textit{id} se usa en la aplicación para identificar al usuario y realizar consultas con la base de datos, funcionando como clave primaria de la entidad usuario, mientras que \textit{clerkId}, se utiliza para asociar el usuario identificado por \textit{Clerk} al usuario interno. 
 
 Esto permite que la aplicación tenga su propio modelo de datos sin depender del proveedor externo. 
 
@@ -1847,6 +1847,7 @@ Cuando llega un \textit{webhook} válido a la ruta anterior, el backend extrae e
 
 
 \section{Diseño del Algoritmo de Recomendación}
+\label{algoritmo}
 
 En \textit{Booster} se implementa un algoritmo de recomendación propio que decide qué videos enseñar según su popularidad dentro de la página, la calidad, la relación del usuario y el creador, el historial de visualización del usuario y su contexto de navegación. Las recomendaciones dentro de la sección de vista de videos aplican más filtros para sugerir contenido similar al que se está reproduciendo. 
 
