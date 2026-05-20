@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  18 MAY 2026 13:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  20 MAY 2026 13:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2465,9 +2465,9 @@ LaTeX Info: Redefining \sptext on input line 189.
 LaTeX Info: Redefining \. on input line 189.
 LaTeX Info: Redefining \% on input line 189.
  [119]
-LaTeX Info: Redefining \sptext on input line 213.
-LaTeX Info: Redefining \. on input line 213.
-LaTeX Info: Redefining \% on input line 213.
+LaTeX Info: Redefining \sptext on input line 217.
+LaTeX Info: Redefining \. on input line 217.
+LaTeX Info: Redefining \% on input line 217.
  [120]
 Overfull \hbox (27.23763pt too wide) in paragraph at lines 220--221
 \T1/pbk/l/n/10.95 ca-do por \T1/pbk/l/it/10.95 Clerk \T1/pbk/l/n/10.95 co-mo \T1/pcr/m/n/10.95 clerkMiddleware() \T1/pbk/l/n/10.95 y en-con-tra-do en el ar-chi-vo \T1/pcr/m/n/10.95 middleware.ts\T1/pbk/l/n/10.95 .
@@ -2478,14 +2478,10 @@ Overfull \hbox (4.24252pt too wide) in paragraph at lines 253--254
 []\T1/pbk/l/n/10.95 La cons-tan-te \T1/pcr/m/n/10.95 isProtectedRoute \T1/pbk/l/n/10.95 de-fi-ne co-mo ru-ta pro-te-gi-da so-lo a \T1/pcr/m/n/10.95 /studio(.*)\T1/pbk/l/n/10.95 .
  []
 
-LaTeX Info: Redefining \sptext on input line 254.
-LaTeX Info: Redefining \. on input line 254.
-LaTeX Info: Redefining \% on input line 254.
+LaTeX Info: Redefining \sptext on input line 256.
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
 [121]
-LaTeX Info: Redefining \sptext on input line 273.
-LaTeX Info: Redefining \. on input line 273.
-LaTeX Info: Redefining \% on input line 273.
- [122]
 Underfull \hbox (badness 10000) in paragraph at lines 273--273
 [][][][]$\T1/pcr/m/n/9 https : / / liambx . com / erd / p / github . com / SamC4r / Booster / blob / main / src / db /
  []
@@ -2495,6 +2491,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 273--273
 \T1/pcr/m/n/9 schema . ts ? showMode = ALL _ FIELDS & hidden = eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm _
  []
 
+LaTeX Info: Redefining \sptext on input line 274.
+LaTeX Info: Redefining \. on input line 274.
+LaTeX Info: Redefining \% on input line 274.
+[122]
 <diagrama-er/liamerd.png, id=2039, 982.26974pt x 504.08325pt>
 File: diagrama-er/liamerd.png Graphic file (type png)
 <use diagrama-er/liamerd.png>
@@ -2536,13 +2536,10 @@ Overfull \hbox (12.48262pt too wide) in alignment at lines 489--657
  [] [] [] [] [] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 LaTeX Info: Redefining \sptext on input line 657.
 LaTeX Info: Redefining \. on input line 657.
 LaTeX Info: Redefining \% on input line 657.
- [124]
+[124]
 secciones/diseno-arquitectura.tex:657: ignored error: Infinite glue shrinkage found in box being split
 LaTeX Info: Redefining \sptext on input line 657.
 LaTeX Info: Redefining \. on input line 657.
@@ -2856,18 +2853,18 @@ Overfull \hbox (5.21304pt too wide) in paragraph at lines 76--77
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Info: Redefining \sptext on input line 91.
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
+LaTeX Info: Redefining \sptext on input line 92.
+LaTeX Info: Redefining \. on input line 92.
+LaTeX Info: Redefining \% on input line 92.
 [144]
-<portada/skeleton-videos.png, id=2278, 916.02225pt x 500.46976pt>
+<portada/skeleton-videos.png, id=2279, 916.02225pt x 500.46976pt>
 File: portada/skeleton-videos.png Graphic file (type png)
 <use portada/skeleton-videos.png>
 Package pdftex.def Info: portada/skeleton-videos.png  used on input line 98.
 (pdftex.def)             Requested size: 426.79135pt x 233.18185pt.
-LaTeX Info: Redefining \sptext on input line 115.
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+LaTeX Info: Redefining \sptext on input line 117.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
  [145 <./portada/skeleton-videos.png>] (C:\Users\max\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
@@ -2888,10 +2885,7 @@ Overfull \hbox (53.21353pt too wide) in paragraph at lines 165--166
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Info: Redefining \sptext on input line 171.
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
-[146]
+
 Overfull \hbox (5.21304pt too wide) in paragraph at lines 171--172
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2901,7 +2895,10 @@ Overfull \hbox (17.21317pt too wide) in paragraph at lines 172--173
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
+LaTeX Info: Redefining \sptext on input line 173.
+LaTeX Info: Redefining \. on input line 173.
+LaTeX Info: Redefining \% on input line 173.
+[146]
 Overfull \hbox (23.21323pt too wide) in paragraph at lines 175--176
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2911,17 +2908,17 @@ Overfull \hbox (23.21323pt too wide) in paragraph at lines 181--182
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Info: Redefining \sptext on input line 219.
-LaTeX Info: Redefining \. on input line 219.
-LaTeX Info: Redefining \% on input line 219.
+LaTeX Info: Redefining \sptext on input line 223.
+LaTeX Info: Redefining \. on input line 223.
+LaTeX Info: Redefining \% on input line 223.
 [147]
 Overfull \hbox (137.21439pt too wide) in paragraph at lines 241--242
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-LaTeX Info: Redefining \sptext on input line 279.
-LaTeX Info: Redefining \. on input line 279.
-LaTeX Info: Redefining \% on input line 279.
+LaTeX Info: Redefining \sptext on input line 283.
+LaTeX Info: Redefining \. on input line 283.
+LaTeX Info: Redefining \% on input line 283.
 [148]
 Overfull \hbox (89.2139pt too wide) in paragraph at lines 305--306
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -2930,9 +2927,9 @@ Overfull \hbox (89.2139pt too wide) in paragraph at lines 305--306
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \sptext on input line 333.
-LaTeX Info: Redefining \. on input line 333.
-LaTeX Info: Redefining \% on input line 333.
+LaTeX Info: Redefining \sptext on input line 335.
+LaTeX Info: Redefining \. on input line 335.
+LaTeX Info: Redefining \% on input line 335.
  [149]
 Overfull \hbox (23.21323pt too wide) in paragraph at lines 368--369
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -2954,17 +2951,17 @@ Overfull \hbox (47.21347pt too wide) in paragraph at lines 381--382
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 385.
-LaTeX Info: Redefining \. on input line 385.
-LaTeX Info: Redefining \% on input line 385.
- [150]
 Overfull \hbox (17.21317pt too wide) in paragraph at lines 385--387
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \sptext on input line 387.
+LaTeX Info: Redefining \. on input line 387.
+LaTeX Info: Redefining \% on input line 387.
+ [150]
 Overfull \hbox (29.21329pt too wide) in paragraph at lines 414--415
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -2982,9 +2979,9 @@ Overfull \hbox (5.21304pt too wide) in paragraph at lines 435--436
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \sptext on input line 438.
-LaTeX Info: Redefining \. on input line 438.
-LaTeX Info: Redefining \% on input line 438.
+LaTeX Info: Redefining \sptext on input line 440.
+LaTeX Info: Redefining \. on input line 440.
+LaTeX Info: Redefining \% on input line 440.
  [151]
 Overfull \hbox (143.21445pt too wide) in paragraph at lines 452--453
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
@@ -2995,13 +2992,10 @@ Overfull \hbox (107.21408pt too wide) in paragraph at lines 484--485
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \sptext on input line 491.
-LaTeX Info: Redefining \. on input line 491.
-LaTeX Info: Redefining \% on input line 491.
- [152]
+LaTeX Info: Redefining \sptext on input line 496.
+LaTeX Info: Redefining \. on input line 496.
+LaTeX Info: Redefining \% on input line 496.
+[152]
 LaTeX Info: Redefining \sptext on input line 501.
 LaTeX Info: Redefining \. on input line 501.
 LaTeX Info: Redefining \% on input line 501.
@@ -3338,7 +3332,7 @@ L3 programming layer <2025-12-24>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `tfg_etsiinf_SamuelCaraballoChichiraldi.out' has not changed.
-(rerunfilecheck)             Checksum: 62432897C20E397C48F5D05D9D55ED3B;22702.
+(rerunfilecheck)             Checksum: 2E65A48A82AB0B9E6C92D1F82FADA971;22712.
 Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 \openout1 = `tfg_etsiinf_SamuelCaraballoChichiraldi.run.xml'.
 
@@ -3346,16 +3340,16 @@ Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi
 Here is how much of TeX's memory you used:
  45000 strings out of 467871
  866212 string characters out of 5419344
- 1780792 words of memory out of 5000000
+ 1782792 words of memory out of 5000000
  71238 multiletter control sequences out of 15000+600000
  686514 words of font info for 171 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 116i,12n,131p,1485b,2547s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 116i,12n,131p,1488b,2547s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm_-7yLbThNsyMFwBvhRD0n2H9Y88pxZ3Fga6bCmtSnmdTtJHozG-i9YuuRnvPDI2SD5sjj_6QyX5} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (194 pages, 14204448 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (194 pages, 14204133 bytes).
 PDF statistics:
  3872 PDF objects out of 4296 (max. 8388607)
  1927 named destinations out of 2073 (max. 500000)

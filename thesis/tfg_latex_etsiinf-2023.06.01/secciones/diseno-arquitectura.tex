@@ -1,14 +1,14 @@
 \chapter{Diseño y Arquitectura}
 
 
-% Explicar mono-repo de NextJS, /components poniendo archivos servidor fuera
+% Explicar mono-repo de Next.js, /components poniendo archivos servidor fuera
 \section{Patrones y mejores prácticas}
 
 En esta sección se describen los patrones de diseño y las mejores prácticas empleadas en el desarrollo de \textit{Booster}. El objetivo es analizar las decisiones de diseño adoptadas que permitieron crear una aplicación modular, mantenible, segura y escalable. 
 
-\subsection{Mono-Repositorio con NextJS}
-Se ha optado por utilizar un mono-repositorio \footnote{Se entiende por mono-repositorio a aquel proyecto software donde se utiliza un único repositorio para almacenar el código. Es decir, es un repositorio que contiene el código de todos los módulos de la aplicación que, aunque están relacionados, podrían funcionar de forma independiente.} mediante el framework NextJS, que permite una gestión centralizada del código. Además, la integración del \textit{Frontend} con el \textit{Backend} se realiza de forma más fluida gracias a las capacidades que ofrece NextJS. Ambos componentes están en el mismo repositorio mejorando así la experiencia de desarrollo y despliegue. 
-A continuación, se detalla la estructura de archivos del proyecto. 
+\subsection{Mono-Repositorio con Next.js}
+Se ha optado por utilizar un mono-repositorio \footnote{Se entiende por mono-repositorio a aquel proyecto software donde se utiliza un único repositorio para almacenar el código. Es decir, es un repositorio que contiene el código de todos los módulos de la aplicación que, aunque están relacionados, podrían funcionar de forma independiente.} mediante el framework Next.js, que permite una gestión centralizada del código. Además, la integración del \textit{Frontend} con el \textit{Backend} se realiza de forma más fluida gracias a las capacidades que ofrece Next.js. Ambos componentes están en el mismo repositorio, mejorando así la experiencia de desarrollo y despliegue.
+A continuación, se detalla la estructura de archivos del proyecto.
 
 \clearpage
 
@@ -130,7 +130,7 @@ A continuación, se detalla la estructura de archivos del proyecto.
 
 En la figura \ref{fig:estructura-general-booster} se observa la estructura de la aplicación. El directorio \texttt{/src} contiene el código fuente de la aplicación y se divide en varias subcarpetas. Por otra parte, el directorio \texttt{/public} contiene los archivos estáticos que se sirven directamente al cliente. En \textit{Booster} se ha utilizado exclusivamente para almacenar imágenes como logos de la aplicación. 
 
-En la raíz del proyecto se encuentran además archivos de configuración. El archivo \texttt{.env.local} se utiliza para almacenar variables de entorno y api-keys fundamentales para el correcto funcionamiento de los proveedores y para mejorar la seguridad. Otros archivos como \texttt{drizzle.conf.ts}, \texttt{next.config.ts}, \texttt{tailwind.config.ts} y \texttt{tsconfig.json} contienen configuraciones específicas para Drizzle, NextJS, TailwindCSS CSS y TypeScript respectivamente. 
+En la raíz del proyecto se encuentran además archivos de configuración. El archivo \texttt{.env.local} se utiliza para almacenar variables de entorno y api-keys fundamentales para el correcto funcionamiento de los proveedores y para mejorar la seguridad. Otros archivos como \texttt{drizzle.conf.ts}, \texttt{next.config.ts}, \texttt{tailwind.config.ts} y \texttt{tsconfig.json} contienen configuraciones específicas para Drizzle, Next.js, Tailwind CSS y TypeScript respectivamente.
 
 Las figuras \ref{fig:estructura-rutas-booster} y \ref{fig:estructura-tecnica-booster} detallan el contenido de la organización de rutas de la aplicación y de los componentes del \textit{backend} respectivamente. 
 
@@ -141,19 +141,19 @@ El proyecto emplea el principio de separación de funcionalidades dividiendo en 
 \begin{itemize}
     \item \textbf{/db:} Se encarga de la gestión de la base de datos \textit{NeonDB} y su ORM \textit{Drizzle-ORM}.
     \item \textbf{/components}: Recopila componentes de la interfaz de usuario que se reutilizan a lo largo de toda la aplicación.
-    \item \textbf{/lib:} Contiene archivos de configuración de servicios externos. Además, incorpora funciones de utilidades (\texttt{utils.ts}) que implementa funciones específicas empleadas en distintas partes del proyecto. Por otro lado, se incluye un archivo \texttt{ratelimits.ts} que especifica los límites de uso de la aplicación para aliviar la carga en el servidor y proteger a la aplicación.
-    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento, como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte concreta de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos directorios se encuentra un subdirectorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. Además, existe otro subdirectorio \texttt{/server}, que se encarga de gestionar la lógica de negocio relativa a ese componente. Normalmente en esta sección es donde se crean, recuperan, actualizan y eliminan registros en la base de datos mediante procedimientos implementados en un archivo \texttt{procedures.ts}. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar la información necesaria a mostrar en la página principal, como la lista de videos recomendados. 
+    \item \textbf{/lib:} Contiene archivos de configuración de servicios externos. Además, incorpora funciones de utilidades (\texttt{utils.ts}) que implementan funciones específicas empleadas en distintas partes del proyecto. También incluye un archivo \texttt{ratelimits.ts} que especifica los límites de uso de la aplicación para aliviar la carga en el servidor y proteger a la aplicación.
+    \item \textbf{/modules:} Contiene las implementaciones tanto del \textit{Frontend} como del \textit{Backend} de los distintos componentes de la aplicación. De esta forma, se consigue una \textbf{ arquitectura modular}, dividiendo cada elemento, como son el \textit{studio}, \textit{home}, \textit{videos}, \textit{video-view}, \textit{users}, en componentes independientes, cada uno con una funcionalidad específica. Esta decisión facilita la mantenibilidad del código debido a que cada módulo concentra la lógica de una parte concreta de la aplicación. Por tanto, cada funcionalidad puede evolucionar de forma independiente. Dentro de cada uno de estos directorios se encuentra un subdirectorio \texttt{/ui} que implementa la interfaz de usuario de este componente y su interacción con el \textit{backend}. Además, existe otro subdirectorio \texttt{/server} que se encarga de gestionar la lógica de negocio relativa a ese componente. Normalmente, en esta sección es donde se crean, recuperan, actualizan y eliminan registros en la base de datos mediante procedimientos implementados en un archivo \texttt{procedures.ts}. Por ejemplo, el \texttt{/server} de \textit{home} se encarga de recuperar la información necesaria para mostrar en la página principal, como la lista de videos recomendados.
     \item \textbf{/trpc:} Contiene los archivos de configuración de tRPC para establecer una comunicación entre el cliente y el servidor. 
 \end{itemize}
 
-\subsection{Rutas agrupadas en NextJS}
+\subsection{Rutas agrupadas en Next.js}
 
-En el directorio \texttt{/src/app}, como se observa en la figura \ref{fig:estructura-rutas-booster} se utilizan grupos de rutas mediante paréntesis, como  \texttt{(auth)}, \texttt{(home)}. Este método, permite organizar la lógica de las rutas sin afectar directamente la URL final. De esta forma, distintos componentes que pertenezcan a una misma sección, se pueden agrupar según su propósito funcional sin alterar el comportamiento de la aplicación. Esta es una buena práctica recomendada en la documentación de NextJS \cite{nextjs-parenthesis}. 
+En el directorio \texttt{/src/app}, como se observa en la figura \ref{fig:estructura-rutas-booster}, se utilizan grupos de rutas mediante paréntesis, como \texttt{(auth)} y \texttt{(home)}. Este método permite organizar la lógica de las rutas sin afectar directamente la URL final. De esta forma, distintos componentes que pertenezcan a una misma sección se pueden agrupar según su propósito funcional sin alterar el comportamiento de la aplicación. Esta es una buena práctica recomendada en la documentación de Next.js \cite{nextjs-parenthesis}.
 
 
 \subsection{Acceso a datos mediante ORM}
 
-La interacción con la base de datos se realiza mediante una ORM, más concretamente, con \textit{Drizzle-ORM} como se analizó en \ref{drizzle}. Dentro de \texttt{/src/app/db} se encuentra un archivo \texttt{schema.ts} que permite definir el esquema de datos, tablas y relaciones de forma tipada con TypeScript, facilitando así la integración con la aplicación. 
+La interacción con la base de datos se realiza mediante un ORM, más concretamente con \textit{Drizzle-ORM} como se analizó en \ref{drizzle}. Dentro de \texttt{/src/app/db} se encuentra un archivo \texttt{schema.ts} que permite definir el esquema de datos, tablas y relaciones de forma tipada con TypeScript, facilitando así la integración con la aplicación.
 
 \subsection{Esquemas de validación}
 
@@ -177,7 +177,7 @@ Los archivos de configuración de servicios externos se encuentran todos en \tex
 
 \subsection{Seguridad mediante variables de entorno}
 
-El proyecto utiliza variables de entorno para almacenar información sensible. Se almacenan en el archivo \texttt{.env.local} el cual contiene, claves de API, secretos de webhooks, claves públicas, claves privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público y solo es conocido por el servicio de \textit{hosting} (servidor principal). 
+El proyecto utiliza variables de entorno para almacenar información sensible. Se almacenan en el archivo \texttt{.env.local}, el cual contiene claves API, secretos de webhooks, claves públicas, claves privadas, credenciales, entre otros. Este archivo no se incluye en el repositorio público y solo es conocido por el servicio de \textit{hosting}.
 
 \subsection{Middleware para control de accesos}
 
@@ -185,14 +185,14 @@ Cada solicitud hacia una ruta específica del \textit{backend} pasa primero por 
 
 \subsection{Reutilización de componentes visuales}
 
-Al emplear React.Js (\ref{React.Js}) para la interfaz de usuario se pueden crear componentes reutilizables. Estos se almacenan en la carpeta \texttt{/componenets} permitiendo así, manejar una apariencia visual coherente en toda la aplicación y evitar reutilizar el mismo código en múltiples partes. Además, esta decisión facilita la evolución del diseño de la aplicación. Cuando se desea actualizar un elemento visual, se modifica el componente y los cambios quedan reflejados en todas las parte donde se utilice.
+Al emplear React.js (\ref{React.Js}) para la interfaz de usuario se pueden crear componentes reutilizables. Estos se almacenan en la carpeta \texttt{/components}, permitiendo así manejar una apariencia visual coherente en toda la aplicación y evitar repetir el mismo código en múltiples partes. Además, esta decisión facilita la evolución del diseño de la aplicación. Cuando se desea actualizar un elemento visual, se modifica el componente y los cambios quedan reflejados en todas las partes donde se utilice.
 
 \subsection{Prefetch de datos}
 \label{prefetch}
 
 En \textit{Booster}, se utiliza tRPC para optimizar la obtención de datos mediante técnicas de precarga. Esto permite recuperar la información desde el lado del servidor antes de que los componentes del cliente la necesiten, como se analizó en \ref{trpc}.  
 
-En esta implementación, los componentes del servidor encargados de la precarga (\textit{prefetch}) se encuentran dentro del directorio \texttt{/src/app}. Aquí, se ejecutan procedimientos tRPC y se preparan los datos correspondientes que posteriormente serán consumidos por el cliente. A continuación, los componentes cliente, organizados en \texttt{/src/modules} acceden a esos datos disponibles en la caché y por tanto, se reducen las solicitudes al servidor. Esto mejora la experiencia de usuario y disminuye los tiempos de carga, generando así, una navegación más fluida. 
+En esta implementación, los componentes del servidor encargados de la precarga (\textit{prefetch}) se encuentran dentro del directorio \texttt{/src/app}. Aquí, se ejecutan procedimientos tRPC y se preparan los datos correspondientes que posteriormente serán consumidos por el cliente. A continuación, los componentes cliente, organizados en \texttt{/src/modules}, acceden a esos datos disponibles en la caché y, por tanto, se reducen las solicitudes al servidor. Esto mejora la experiencia de usuario y disminuye los tiempos de carga, generando así una navegación más fluida.
 
 Además, mientras se realiza este proceso, se emplean elementos visuales de carga como \textit{Skeletons}. En caso de error, se muestra una indicación visual adecuada. 
 
@@ -200,26 +200,26 @@ Además, mientras se realiza este proceso, se emplean elementos visuales de carg
 
 El proyecto utiliza una estructura de carpetas clara y con nombres descriptivos para los módulos y las secciones. Esto facilita la navegación dentro del código y la mantenibilidad del mismo. 
 
-Asimismo, las variables dentro del proyecto siguen la convención \textit{camelCase} y empleando nombres descriptivos.  
+Asimismo, las variables dentro del proyecto siguen la convención \textit{camelCase} y emplean nombres descriptivos.
 
 \subsection{Procedimientos públicos y protegidos}
 
-En \textit{Booster} se implementan 2 tipos de procedimientos para interactuar con el servidor: público y privado. Un procedimiento público denotado como \textit{baseProcedure} pueden ser consumidos sin requerir una sesión autenticada. Por otro lado, un procedimiento privado (\textit{protectedProcedure}) requiere verificar la identidad del usuario antes de permitir la ejecución de una acción. 
+En \textit{Booster} se implementan dos tipos de procedimientos para interactuar con el servidor: público y privado. Un procedimiento público denotado como \textit{baseProcedure} puede ser consumido sin requerir una sesión autenticada. Por otro lado, un procedimiento privado (\textit{protectedProcedure}) requiere verificar la identidad del usuario antes de permitir la ejecución de una acción.
 
-Esto es útil para implementar mecanismos que requieran identificar previamente al usuario primero y además, evitar reutilizar el mismo código en distintos lugares. Basta con definir una vez las comprobaciones de sesión dentro de \textit{protectedProcedure} y tRPC se encarga de ejecutarlas en cada procedimiento protegido.
+Esto es útil para implementar mecanismos que requieran identificar previamente al usuario y, además, evitar repetir el mismo código en distintos lugares. Basta con definir una vez las comprobaciones de sesión dentro de \textit{protectedProcedure} y tRPC se encarga de ejecutarlas en cada procedimiento protegido.
 
 
 
 \section{Diseño de la Autenticación}
 
-Como se analizó en \ref{clerk}, \textit{Booster} utiliza \textit{Clerk}, un proveedor externo para la gestión de usuarios dentro de la aplicación. Además, se siguieron las recomendaciones y los pasos de integración descritos por la documentación oficial de \textit{Clerk} para NextJS \cite{clerk-nextjs-docs}. 
+Como se analizó en \ref{clerk}, \textit{Booster} utiliza \textit{Clerk}, un proveedor externo para la gestión de usuarios dentro de la aplicación. Además, se siguieron las recomendaciones y los pasos de integración descritos por la documentación oficial de \textit{Clerk} para Next.js \cite{clerk-nextjs-docs}.
 A continuación, se detallan los elementos más relevantes a tener en cuenta para la integración de este servicio de autenticación. 
 
 \subsection{Middleware}
 
-La protección de rutas se implementa mediante el uso de un middleware identificado por \textit{Clerk} como \texttt{clerkMiddleware()} y encontrado en el archivo \texttt{middleware.ts}. Esto permite interceptar solicitudes y comprobar si el usuario tiene un sesión válida antes de acceder a distintas partes de la aplicación. 
+La protección de rutas se implementa mediante el uso de un middleware identificado por \textit{Clerk} como \texttt{clerkMiddleware()} y encontrado en el archivo \texttt{middleware.ts}. Esto permite interceptar solicitudes y comprobar si el usuario tiene una sesión válida antes de acceder a distintas partes de la aplicación.
 
-Esto se emplea para proteger rutas que requieren un inicio de sesión previo del usuario como es el \textit{/studio}. El \textit{/studio}, es la sección donde un creador de contenido puede gestionar sus videos, por tanto, solo tiene sentido con una sesión activa del usuario.
+Esto se emplea para proteger rutas que requieren un inicio de sesión previo del usuario como es el \textit{/studio}. El \textit{/studio} es la sección donde un creador de contenido puede gestionar sus videos; por tanto, solo tiene sentido con una sesión activa del usuario.
 
 A continuación, se muestran fragmentos del archivo \texttt{middleware.ts}.
 
@@ -248,17 +248,17 @@ export const config = {
 
 \end{lstlisting}
 
-Aquí se observa como se implementa \textit{Clerk} para aplicar reglas de autenticación antes de permitir el acceso a ciertas rutas. Se importa \texttt{clerkMiddleware}, que integra el sistema de autenticación de Clerk en el NextJS, y \texttt{createRouteMatcher} para definir patrones de rutas a las cuales aplicar reglas.
+Aquí se observa cómo se implementa \textit{Clerk} para aplicar reglas de autenticación antes de permitir el acceso a ciertas rutas. Se importa \texttt{clerkMiddleware}, que integra el sistema de autenticación de Clerk en Next.js, y \texttt{createRouteMatcher} para definir patrones de rutas a las cuales aplicar reglas.
 
 La constante \texttt{isProtectedRoute} define como ruta protegida solo a \texttt{/studio(.*)}. Esto significa que cualquier acceso a una ruta que comience por \texttt{/studio} activará la lógica de protección de rutas, que en este caso, requiere una sesión activa del usuario.
 
 Dentro de \texttt{clerkMiddleware()}, se comprueba si la solicitud entrante coincide con una ruta protegida mediante \texttt{if(isProtectedRoute(req))}. Si la condición se cumple, se ejecuta \texttt{auth.protect()}, que impide el acceso a usuarios no autenticados. De esta forma, la lógica de protección no tiene que repetirse dentro de cada página.
 
-Finalmente, la propiedad \texttt{matcher} indica sobre qué solicitudes debe ejecutarse el middleware. La primera regla evita aplicar el middleware sobre archivos internos de NextJS y archivos estáticos, como imágenes, hojas de estilo, fuentes o documentos. La segunda regla hace que el middleware también se ejecute sobre rutas \texttt{/api} y \texttt{/trpc}. Es importante notar que esto no hace que todas estas rutas queden automáticamente protegidas. En cambio, esto solo indica que un acceso a ellas invoca una llamada al middleware. La protección se aplica cuando la ruta coincide con lo definido en \texttt{isProtectedRoute}, porque es el único caso donde se ejecuta \texttt{auth.protect()}.
+Finalmente, la propiedad \texttt{matcher} indica sobre qué solicitudes debe ejecutarse el middleware. La primera regla evita aplicar el middleware sobre archivos internos de Next.js y archivos estáticos, como imágenes, hojas de estilo, fuentes o documentos. La segunda regla hace que el middleware también se ejecute sobre rutas \texttt{/api} y \texttt{/trpc}. Es importante notar que esto no hace que todas estas rutas queden automáticamente protegidas. En cambio, esto solo indica que un acceso a ellas invoca una llamada al middleware. La protección se aplica cuando la ruta coincide con lo definido en \texttt{isProtectedRoute}, porque es el único caso donde se ejecuta \texttt{auth.protect()}.
 
 \subsection{Usuario Clerk vs Usuario Interno}
 
-En la aplicación se debe coordinar la identificación de un usuario gestionado por \textit{Clerk} con su correspondiente usuario almacenado en la base de datos interna. Por esa razón, cada usuario de la tabla \texttt{users} contiene un identificador interno (\textit{id}) y, un atributo \textit{clerkId}. El \textit{id} se usa en la aplicación para identificar al usuario y realizar consultas con la base de datos, funcionando como clave primaria de la entidad usuario, mientras que \textit{clerkId}, se utiliza para asociar el usuario identificado por \textit{Clerk} al usuario interno. 
+En la aplicación se debe coordinar la identificación de un usuario gestionado por \textit{Clerk} con su correspondiente usuario almacenado en la base de datos interna. Por esa razón, cada usuario de la tabla \texttt{users} contiene un identificador interno (\textit{id}) y un atributo \textit{clerkId}. El \textit{id} se usa en la aplicación para identificar al usuario y realizar consultas con la base de datos, funcionando como clave primaria de la entidad usuario, mientras que \textit{clerkId} se utiliza para asociar el usuario identificado por \textit{Clerk} al usuario interno.
 
 Esto permite que la aplicación tenga su propio modelo de datos sin depender del proveedor externo. 
 
@@ -278,7 +278,7 @@ El diagrama entidad relación con todos los atributos, relaciones, claves primar
   \caption{Diagrama Entidad Relación - LiamERD}
 \end{figure}
 
-Los datos, siempre están almacenados en tablas y está adaptado a un sistema \textit{PostgreSQL}. Además, para identificar una entidad, se emplean claves primarias y para establecer relaciones se utilizan claves foráneas.
+Los datos siempre están almacenados en tablas y el esquema está adaptado a un sistema \textit{PostgreSQL}. Además, para identificar una entidad se emplean claves primarias y para establecer relaciones se utilizan claves foráneas.
 
 
 
@@ -659,7 +659,7 @@ En esta sección se describen los tipos de datos que almacenan cada una de las t
 
 %Comunidades
 
-Las comunidades puede ser creadas por cualquier usuario. Además, un usuario puede pertenecer a varias y esto se modela mediante una tabla \textit{Miembros de Comunidad} llamada \textit{community\_members} que relaciona a un usuario con una comunidad y su rol en ella (miembro, moderador, administrador).
+Las comunidades pueden ser creadas por cualquier usuario. Además, un usuario puede pertenecer a varias y esto se modela mediante una tabla \textit{Miembros de Comunidad} llamada \textit{community\_members} que relaciona a un usuario con una comunidad y su rol en ella (miembro, moderador, administrador).
 
 \renewcommand{\arraystretch}{1.35}
 \setlength{\tabcolsep}{3pt}

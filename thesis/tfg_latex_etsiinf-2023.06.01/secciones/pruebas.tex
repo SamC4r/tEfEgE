@@ -1,21 +1,21 @@
 \chapter{Despliegue y Riesgos de Seguridad}
 
-En este capítulo se analiza cómo se ha conseguido desplegar la aplicación en internet mediante el uso de \textit{Vercel} junto con sus ventajas y capacidades. Además, se destina una sección para estudiar las opiniones de usuarios sobre la plataforma. A continuación, se examinan las valoraciones de usuarios reales quienes han aportado mejoras, detectado fallos e incluso encontrado vulnerabilidades.
-Finalmente, se analizan los riesgos de seguridad detectados, mejores prácticas empleadas, vulnerabilidades sufridas y las medidas tomadas para mitigarlas. 
+En este capítulo se analiza cómo se ha conseguido desplegar la aplicación en internet mediante el uso de \textit{Vercel} junto con sus ventajas y capacidades. Además, se destina una sección para estudiar las opiniones de usuarios sobre la plataforma. A continuación, se examinan las valoraciones de usuarios reales, quienes han aportado mejoras, detectado fallos e incluso encontrado vulnerabilidades.
+Finalmente, se analizan los riesgos de seguridad detectados, mejores prácticas empleadas, vulnerabilidades sufridas y las medidas tomadas para mitigarlas.
 
 
 \section{Despliegue}
 
-Para realizar el despliegue en internet de la plataforma y que esta sea accesible desde cualquier parte del mundo, se han utilizado dos proveedores de servicios de \textit{hosting}. Por un lado, \textit{Vercel} permite desplegar aplicaciones web y se integra bien con \textit{Next.Js} \ref{Next.Js backend}. Por otro, se han aprovechado las capacidades de \textit{Hostinger} para configurar los registros DNS y SMTP, logrando así dar de alta un dominio para la plataforma y habilitar un servicio de correo electrónico.  
+Para realizar el despliegue en internet de la plataforma y que esta sea accesible desde cualquier parte del mundo, se han utilizado dos proveedores de servicios de \textit{hosting}. Por un lado, \textit{Vercel} permite desplegar aplicaciones web y se integra bien con \textit{Next.js} \ref{Next.Js backend}. Por otro, se han aprovechado las capacidades de \textit{Hostinger} para configurar los registros DNS y SMTP, logrando así dar de alta un dominio para la plataforma y habilitar un servicio de correo electrónico.  
 \subsection{Vercel}
 
-\textit{Vercel} es una plataforma centrada en despliegue y hosting de aplicaciones web, especialmente aquellas construidas con \textit{Next.Js} \ref{Next.Js backend}. Además, \textit{Vercel} permite conectar un repositorio de \textit{GitHub} y generar despliegues automáticos cuando se detectan cambios, facilitando el proceso de actualización e integración comúnmente referido como CI/CD (Continuos Integration and Continuos Deployment).  
+\textit{Vercel} es una plataforma centrada en despliegue y hosting de aplicaciones web, especialmente aquellas construidas con \textit{Next.js} \ref{Next.Js backend}. Además, \textit{Vercel} permite conectar un repositorio de \textit{GitHub} y generar despliegues automáticos cuando se detectan cambios, facilitando el proceso de actualización e integración, comúnmente referido como CI/CD (integración continua y despliegue continuo).  
 
 \textbf{Ventajas}
 
 La principal ventaja de \textit{Vercel} es su facilidad de despliegue. Como se mencionó anteriormente, se puede integrar con Git para monitorear los cambios en una rama específica y activar de forma automática un proceso de actualización. Más concretamente, en el caso de \textit{Booster}, se ejecuta el comando \texttt{npm run build} para generar los archivos estáticos de las páginas, optimizar el rendimiento y asegurar que el código no tiene errores. 
 
-Otra ventaja importante de \textit{Vercel} para \textit{Booster} es su integración natural con el framework de \textit{Next.Js}. No es necesario implementar procesos de \textit{build} complejos ya que lo detecta automáticamente \textit{Vercel} y aplica las configuraciones requeridas. Además, se encarga de optimizar el rendimiento de las distintas páginas dentro de la aplicación mejorando los tiempos de carga. 
+Otra ventaja importante de \textit{Vercel} para \textit{Booster} es su integración natural con el framework de \textit{Next.js}. No es necesario implementar procesos de \textit{build} complejos ya que lo detecta automáticamente \textit{Vercel} y aplica las configuraciones requeridas. Además, se encarga de optimizar el rendimiento de las distintas páginas dentro de la aplicación, mejorando los tiempos de carga. 
 
 Asimismo, \textit{Vercel} cuenta con herramientas integradas que permiten visualizar el rendimiento que experimentan los usuarios con la página, analíticas de visitas, un \textit{log} de eventos, entre otros.
 
@@ -27,7 +27,7 @@ Otra desventaja es la dependencia del proveedor. Aunque el despliegue es rápido
 
 \textbf{Uso en Booster}
 
-Para \textit{Booster}, \textit{Vercel} es una opción ideal ya que permite desplegar, actualizar cambios y optimizar el rendimiento de las páginas de forma rápida. Además, su integración con \textit{Next Js} es frecuente y recomendada, convirtiéndola en la opción más favorable para adoptar como infraestructura de \textit{hosting} cuando se trabajo con este framework. Por estas razones, se ha empleado \textit{Vercel} para desplegar la aplicación en internet utilizando los dominios adquiridos en \textit{Hostinger}. 
+Para \textit{Booster}, \textit{Vercel} es una opción ideal ya que permite desplegar, actualizar cambios y optimizar el rendimiento de las páginas de forma rápida. Además, su integración con \textit{Next.js} es frecuente y recomendada, convirtiéndola en la opción más favorable para adoptar como infraestructura de \textit{hosting} cuando se trabaja con este framework. Por estas razones, se ha empleado \textit{Vercel} para desplegar la aplicación en internet utilizando los dominios adquiridos en \textit{Hostinger}. 
 
 \begin{figure}[H]
   \centering
@@ -204,14 +204,14 @@ Esto se actualizó a
 
 Como se puede observar, se incluyó una nueva comprobación al recuperar el video: \texttt{eq(videos.userId, userId)}. Además, se convirtió el procedimiento en protegido para obtener la sesión del usuario que lo invoca. Con esto, se evita que usuarios no creadores de un video sean capaces de recuperar los datos dentro del contexto de \texttt{/studio} y actualizar su miniatura. 
 
-Estas mismas medidas fueron tomadas para otos procedimientos que sufrían este problema. 
+Estas mismas medidas fueron tomadas para otros procedimientos que sufrían este problema. 
 
-Algo similar sucedía en la lógica de negocio de los \textit{endpoints} de Bunny \ref{bunny-endpoints} donde se omitía la existencia de una sesión y un usuario válido provocando operaciones no deseadas en la aplicación. Esto se resolvió añadiendo una comprobación adicional antes de ejecutar cada acción, en donde se verifica la presencia de una sesión activa y un usuario legítimo. 
+Algo similar sucedía en la lógica de negocio de los \textit{endpoints} de Bunny \ref{bunny-endpoints}, donde se omitía la existencia de una sesión y un usuario válido, provocando operaciones no deseadas en la aplicación. Esto se resolvió añadiendo una comprobación adicional antes de ejecutar cada acción, en la que se verifica la presencia de una sesión activa y un usuario legítimo. 
 \subsection{Webhook de Bunny}
 
-Cuando \textit{Bunny} termina de procesar un video este envía una notificación a un \textit{webhook} definido en el backend de la aplicación. Sin embargo, se debe comprobar que la petición recibida viene solamente de \textit{Bunny.net}. En caso contrario, cualquier atacante podría enviar una solicitud de actualización falsa y actualizaría datos de un video erróneamente. Este ha resultado ser el error de seguridad más grave ya que el \textit{webhook} actualiza un gran número de atributos del video incluyendo su enlace de reproducción. Por consiguiente, sin verificar quién envía la petición, un atacante conseguía cambiar el video por completo y arruinar seriamente el servicio. 
+Cuando \textit{Bunny} termina de procesar un video, este envía una notificación a un \textit{webhook} definido en el backend de la aplicación. Sin embargo, se debe comprobar que la petición recibida viene solamente de \textit{Bunny.net}. En caso contrario, cualquier atacante podría enviar una solicitud de actualización falsa y actualizaría datos de un video erróneamente. Este ha resultado ser el error de seguridad más grave, ya que el \textit{webhook} actualiza un gran número de atributos del video, incluyendo su enlace de reproducción. Por consiguiente, sin verificar quién envía la petición, un atacante conseguía cambiar el video por completo y arruinar seriamente el servicio. 
 
-Esto se solucionó incluyendo un parámetro variable en el \textit{webhook} conocido únicamente por \textit{Bunny} y \textit{Booster}. Cuando \textit{Bunny} envía una solicitud al \textit{webhook} incluye un token en la URL (Secreto de WebHook). Es decir, invoca a \texttt{/api/bunny/webhooks/[token]}. Como la petición viaja por HTTPS, un atacante no puede interceptar el token ya que está cifrado. Una vez el mensaje llega al servidor, este se encarga de verificar que el token es el mismo que él tiene. Como, solo lo saben \textit{Bunny} y el backend de \textit{Booster}, se entiende que la petición es legítima y se continúa con el proceso. En caso contrario, se aborta la operación. 
+Esto se solucionó incluyendo un parámetro variable en el \textit{webhook} conocido únicamente por \textit{Bunny} y \textit{Booster}. Cuando \textit{Bunny} envía una solicitud al \textit{webhook} incluye un token en la URL (secreto de webhook). Es decir, invoca a \texttt{/api/bunny/webhooks/[token]}. Como la petición viaja por HTTPS, un atacante no puede interceptar el token ya que está cifrado. Una vez el mensaje llega al servidor, este se encarga de verificar que el token es el mismo que él tiene. Como solo lo saben \textit{Bunny} y el backend de \textit{Booster}, se entiende que la petición es legítima y se continúa con el proceso. En caso contrario, se aborta la operación. 
 
 Esto se implementó de la siguiente forma:
 

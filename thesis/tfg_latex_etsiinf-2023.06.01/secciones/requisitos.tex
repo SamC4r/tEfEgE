@@ -1,23 +1,23 @@
 \chapter{Análisis}
 
-En esta sección se estudian las capacidades básicas que debe tener un producto mínimo viable de la aplicación, así como los actores que interactúan con el sistema y, los casos de uso y diagramas de secuencia más importantes. Finalmente, se describe el diagrama entidad relación de la base de datos.
+En esta sección se estudian las capacidades básicas que debe tener un producto mínimo viable de la aplicación, así como los actores que interactúan con el sistema y los casos de uso y diagramas de secuencia más importantes. Finalmente, se describe el diagrama entidad-relación de la base de datos.
 
 \section{Requisitos Funcionales}
 
 En esta sección se recopilan los requisitos funcionales más importantes que cumple el producto mínimo viable de la aplicación. Los requisitos funcionales son aquellos que definen los comportamientos, acciones y servicios que el sistema debe proporcionar al usuario. 
 
-En \textit{Booster} los requisitos funcionales se recopilan a continuación separados por distintos bloques. 
+En \textit{Booster}, los requisitos funcionales se recopilan a continuación separados por distintos bloques.
 
 \subsection{Gestión de usuario}
 
 \begin{enumerate}[label=\textbf{RF-GU \arabic*.}, leftmargin=*]
-    \item El sistema debe permitir a los usuarios registrarse en la plataforma con un correo o nombre de usuario.
-    \item El sistema debe enviar un código de verificación al correo proporcionado para completar el registro o, luego de un tiempo de inactividad de un usuario registrado. 
-    \item El sistema debe permitir a los usuarios iniciar sesión con un correo o nombre de usuario.
-    \item El sistema debe permitir a los usuarios cerrar sesión
+    \item El sistema debe permitir a los usuarios registrarse en la plataforma con un correo electrónico o nombre de usuario.
+    \item El sistema debe enviar un código de verificación al correo proporcionado para completar el registro o tras un periodo de inactividad de un usuario registrado.
+    \item El sistema debe permitir a los usuarios iniciar sesión con un correo electrónico o nombre de usuario.
+    \item El sistema debe permitir a los usuarios cerrar sesión.
     \item El sistema debe permitir a los usuarios recuperar su contraseña.
     \item El sistema debe permitir al usuario subir una foto de perfil. 
-    \item El sistema debe permitir a los usuarios editar foto de perfil, nombre, nombre de usuario y correo electrónico.
+    \item El sistema debe permitir a los usuarios editar la foto de perfil, nombre, nombre de usuario y correo electrónico.
     \item El sistema debe permitir al usuario registrarse e iniciar sesión con una cuenta de Google.
 
 \end{enumerate}
@@ -33,7 +33,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
     \item El sistema debe permitir al usuario asociar un video a una comunidad.
     \item El sistema debe permitir al usuario eliminar un video propio.
     \item El sistema debe almacenar la información del video y sus metadatos.
-    \item El sistema debe implementar un Adaptive Bitrate Streaming para la reproducción de video, lo que implica generar versiones de diferentes calidades.
+    \item El sistema debe implementar Adaptive Bitrate Streaming para la reproducción de video, lo que implica generar versiones de diferentes calidades.
     \item El sistema debe permitir al usuario reportar un video.
     \item El sistema debe permitir al usuario participar en votaciones para decidir si un video infringe las normas o no.
 \end{enumerate}
@@ -49,8 +49,8 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
     \item El sistema debe permitir al usuario reproducir videos en pantalla completa.
     \item El sistema debe registrar visualizaciones del video.
     \item El sistema debe permitir al usuario navegar al siguiente video desde la interfaz de visualización.
-    \item El sistema debe recomendar al usuario videos relacionados.
-    \item El sistema debe mostrar información del video, como título, descripción, número de visualizaciones, fecha de publicación, descripción y creador.
+    \item El sistema debe recomendar videos relacionados.
+    \item El sistema debe mostrar información del video, como título, descripción, número de visualizaciones, fecha de publicación y creador.
 \end{enumerate}
 
 \subsection{Exploración y búsqueda}
@@ -119,7 +119,7 @@ En \textit{Booster} los requisitos funcionales se recopilan a continuación sepa
 
 \section{Requisitos No Funcionales}
 
-Los requisitos no funcionales son aquellos que definen cómo debe comportarse el sistema en términos de rendimientos, seguridad, usabilidad, escalabilidad, en lugar de qué acciones se deben realizar.
+Los requisitos no funcionales son aquellos que definen cómo debe comportarse el sistema en términos de rendimiento, seguridad, usabilidad y escalabilidad, en lugar de qué acciones se deben realizar.
 
 \begin{enumerate}[label=\textbf{RNF \arabic*.}, leftmargin=*]
     \item \textbf{Rendimiento: } El sistema debe ser capaz de cargar las páginas en un tiempo aceptable (menos de 3 segundos) y reproducir videos sin interrupciones o buffering excesivo.
@@ -127,7 +127,7 @@ Los requisitos no funcionales son aquellos que definen cómo debe comportarse el
     \item \textbf{Usabilidad:} El sistema debe tener una interfaz intuitiva y fácil de usar. 
     \item \textbf{Disponibilidad:} El sistema debe estar activo la mayor cantidad de tiempo posible, minimizando el tiempo de inactividad.
     \item \textbf{Escalabilidad: } El sistema debe ser capaz de manejar un aumento en el número de usuarios, interacciones y contenido sin degradar el rendimiento.
-    \item \textbf{Compatibilidad: } El sistema debe funcionar correctamente en diferentes navegadores web y dispositivos. Esto incluye, navegadores populares como Chrome, Firefox, Safari y Edge, así como dispositivos móviles y de escritorio.
+    \item \textbf{Compatibilidad: } El sistema debe funcionar correctamente en diferentes navegadores web y dispositivos. Esto incluye navegadores populares como Chrome, Firefox, Safari y Edge, así como dispositivos móviles y de escritorio.
     \item \textbf{Mantenibilidad: } El sistema debe estar diseñado con patrones claros, utilizando buenas prácticas de desarrollo para facilitar su mantenimiento y evolución.
     \item \textbf{Modularidad: } El sistema debe estar diseñado de tal forma que sus componentes sean independientes y puedan evolucionar o ser reemplazados sin afectar al resto del sistema. 
 \end{enumerate}
@@ -137,16 +137,16 @@ Los requisitos no funcionales son aquellos que definen cómo debe comportarse el
 En un sistema software, los actores son entidades externas que interactúan con el sistema. Pueden ser usuarios humanos, otros sistemas o dispositivos. En el caso de \textit{Booster}, los actores principales son:
 
 \begin{itemize}
-    \item \textbf{Usuario visitante: } Un usuario que accede a la plataforma sin iniciar sesión. Este, puede explorar, buscar y consumir contenido, acceder a canales, acceder a los rankings, pero no puede interactuar con el sistema ni guardad sus preferencias.
+    \item \textbf{Usuario visitante: } Un usuario que accede a la plataforma sin iniciar sesión. Este puede explorar, buscar y consumir contenido, acceder a canales y rankings, pero no puede interactuar con el sistema ni guardar sus preferencias.
     \item \textbf{Usuario registrado: } Un usuario que ha creado una cuenta e iniciado sesión en la plataforma. Este, además de las capacidades de un usuario visitante, puede cargar videos, interactuar con el contenido, participar en comunidades, seguir canales, personalizar su experiencia y ganar puntos de experiencia.
-    \item \textbf{Creador de contenido: } Un usuario registrado que se dedica a crear videos en la plataforma. Además de consumir, puede gestionar su contenido y canal.   
+    \item \textbf{Creador de contenido: } Un usuario registrado que se dedica a crear videos en la plataforma. Además de consumir, puede gestionar su contenido y su canal.
     % \item \textbf{Sistema de backend: } Es el encargado de gestionar la lógica de negocio, el almacenamiento de datos, la autenticación, el recuento de puntos, el algoritmo de recomendación, entre otras funciones. Interactúa con los usuarios a través de la interfaz (\textit{frontend}).
-    \item \textbf{Sistema de procesamiento de videos: } Es el encargado de procesar los videos cargados por un usuario. Cuando un video es subido, este se encarga de la transcodificación, la implementación de Adaptive Bitrate Streaming, generación de miniaturas, para servir los videos.    
+    \item \textbf{Sistema de procesamiento de videos: } Es el encargado de procesar los videos cargados por un usuario. Cuando un video es subido, procesa la transcodificación, implementa Adaptive Bitrate Streaming y genera miniaturas para servir los videos.
 \end{itemize}
 
 \section{Casos de uso}
 
-Un caso de uso es una descripción de cómo un actor interactúa con el sistema para alcanzar un objetivo. A continuación se muestran los diagramas de caso de uso más importantes detectados y, posteriormente, una descripción de cada uno de ellos.
+Un caso de uso es una descripción de cómo un actor interactúa con el sistema para alcanzar un objetivo. A continuación se muestran los diagramas de caso de uso más importantes detectados y posteriormente una descripción de cada uno de ellos.
 
 \subsection{Gestión de usuarios}
 

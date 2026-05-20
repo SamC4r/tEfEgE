@@ -1,6 +1,6 @@
 \chapter{Desarrollo}
 
-Este capítulo está destinado a la explicación de la implementación de algunos de los componentes más importantes de la aplicación. En concreto se analizará el código utilizado para la precarga de datos con tRPC, la implementación del procesamiento de videos propio incluyendo código python y docker y la implementación de la integración con el proveedor de servicio de procesamiento de videos detallando el código de los endpoints y el TUS upload. Además se analizará la lógica detrás de los comentarios, y cómo se recuperan datos de los usuarios y videos desde el cliente.
+Este capítulo está destinado a explicar la implementación de algunos de los componentes más importantes de la aplicación. En concreto, se analizará el código utilizado para la precarga de datos con tRPC, la implementación del procesamiento de videos propio (incluyendo código Python y Docker) y la integración con el proveedor de servicios de video, estudiando los endpoints y el TUS upload. Además, se analizará la lógica detrás de los comentarios y cómo se recuperan datos de los usuarios y los videos desde el cliente.
 
 
 \section{Precarga de Datos con tRPC}
@@ -25,7 +25,7 @@ const Page = async ({ params }: PageProps) => { // se recibe el parámetro
                                                 // variable userId que se
                                                 // introduce en la ruta
     '''
-    Para obtener el id del usuario según NextJS,
+    Para obtener el id del usuario según Next.js,
     en la ruta, el directorio se debe llamar [userId],
     igual que la variable. 
     '''
@@ -76,7 +76,7 @@ const [user] = trpc.users.getByUserId.useSuspenseQuery({ userId });
 const [userVideos] = trpc.users.getVideosByUserId.useSuspenseQuery({ userId, });
 \end{lstlisting}
 
-Estos métodos recuperan la información depositada por el servidor en la caché. Como se puede observar, el servidor realiza una precarga de datos de los procedimientos de tRPC \texttt{getByUserId} y \texttt{getVideosByUserId}, por tanto, el cliente recupera la información mediante \texttt{useSuspenseQuery()} y los datos se almacenan como un objeto javascript dentro de la variable \texttt{user} y \texttt{userVideos}. 
+Estos métodos recuperan la información depositada por el servidor en la caché. Como se puede observar, el servidor realiza una precarga de datos de los procedimientos de tRPC \texttt{getByUserId} y \texttt{getVideosByUserId}, por tanto, el cliente recupera la información mediante \texttt{useSuspenseQuery()} y los datos se almacenan como un objeto JavaScript dentro de la variable \texttt{user} y \texttt{userVideos}.
 
 Como las operaciones de recuperación de datos desde un servidor pueden tardar un tiempo en procesarse, los componentes de la página web se pueden cargar antes de disponer de la información. Por lo tanto, es común emplear métodos visuales que indican estados de carga. Por ejemplo, en la sección de videos se realiza lo siguiente. 
 
@@ -101,13 +101,13 @@ Aquí, mientras la información correspondiente a un video no está disponible, 
 
 \section{Implementación del procesamiento de videos propio}
 
-En \ref{propio-aws} se analizó el funcionamiento de la arquitectura del procesamiento de videos con una solución personalizada utilizando los servicios de AWS. Aquí, se muestra el código en python y Dockerfile de los contenedores que ejecutan las tareas de consumidores de la cola de procesamiento y el procesamiento de videos.
+En \ref{propio-aws} se analizó el funcionamiento de la arquitectura del procesamiento de videos con una solución personalizada utilizando los servicios de AWS. Aquí, se muestra el código en Python y el Dockerfile de los contenedores que ejecutan las tareas de consumidores de la cola de procesamiento y el procesamiento de videos.
 
 \subsection{Consumidor}
 
 El consumidor, es el componente encargado de leer trabajos pendientes en la cola de procesamiento de Amazon SQS y generar trabajos de procesamiento de videos. Este, está constantemente observando la cola y esperando nuevas peticiones para crear procesos de transcodificación y segmentación de videos utilizando ECS, ECR y \textit{Fargate} de Amazon. Se implementa mediante un microservicio con Docker el cual también se despliega en los servicios de Amazon. 
 
-El siguiente código, es el \textit{Dockerfile} correspondiente al consumidor y que se ejecuta en Amazon. Este prepara el contenedor para ejecutar la tarea instalando los paquetes python almacenados en \texttt{requirements.txt} que son: \textit{boto3}, \textit{pydantic\_settings}, \textit{python-dotenv}
+El siguiente código es el \textit{Dockerfile} correspondiente al consumidor que se ejecuta en Amazon. Este prepara el contenedor para ejecutar la tarea instalando los paquetes de Python almacenados en \texttt{requirements.txt}: \textit{boto3}, \textit{pydantic\_settings} y \textit{python-dotenv}.
 
 \begin{lstlisting}[language=docker]
 FROM python:3.11-slim
@@ -212,9 +212,9 @@ if __name__ == "__main__":
 
 \end{lstlisting}
 
-Como se puede observar, el consumidor está dentro de un bucle infinito y espera a recibir mensajes en la cola. Se descartan los mensajes de Test y cuando llega una trabajo a la cola producido después de que un video se cargue al \textit{Raw Videos Bucket} S3 de Amazon, se lanza un contenedor docker para procesar el video. Esto se realiza mediante un cliente ECS (Elastic Container Service), un orquestador de contenedores que permite ejecutar tareas en AWS Fargate. Estas herramientas permiten enfocarse únicamente en diseñar y ejecutar las los programas de los contenedores, eliminando la necesidad de gestionar o escalar estos servicios. 
+Como se puede observar, el consumidor está dentro de un bucle infinito y espera a recibir mensajes en la cola. Se descartan los mensajes de prueba y, cuando llega un trabajo a la cola tras cargar un video en el \textit{Raw Videos Bucket} de S3 de Amazon, se lanza un contenedor Docker para procesar el video. Esto se realiza mediante un cliente ECS (Elastic Container Service), un orquestador de contenedores que permite ejecutar tareas en AWS Fargate. Estas herramientas permiten enfocarse únicamente en diseñar y ejecutar los programas de los contenedores, eliminando la necesidad de gestionar o escalar estos servicios.
 
-El código anterior, se apoya de un archivo \texttt{.env} y un \texttt{secret\_keys.py} para gestionar las claves de API y otra información sensible. 
+El código anterior se apoya en un archivo \texttt{.env} y en \texttt{secret\_keys.py} para gestionar las claves de API y otra información sensible.
 
 \begin{lstlisting}[language=Python]
 # secret_keys.py
@@ -249,7 +249,7 @@ CMD ["python","main.py"]
 \end{lstlisting}
 
 Como se puede observar, cuando se crea este contenedor, se instala en primer lugar FFmpeg, la herramienta que se utiliza para transcodificar y segmentar el video \ref{ffmpeg}.
-A continuación, de la misma forma que con el consumidor, se instalan los paquetes de python necesarios. Estos son los mismos que en el caso anterior pero sumando la libreria \textit{requests}. 
+A continuación, de la misma forma que con el consumidor, se instalan los paquetes de Python necesarios. Estos son los mismos que en el caso anterior, pero añadiendo la librería \textit{requests}.
 
 El procesamiento de videos ejecuta el siguiente código Python
 
@@ -494,9 +494,9 @@ VideoTranscoder().process_video()
 
 Este programa se compone de varios métodos con finalidades distintas. La primera función ejecutada es \texttt{process\_video()}, la cual descarga el contenido desde el \textit{Raw Videos Bucket} de AWS. Luego, se analiza la duración y si es inferior a 10 minutos, comienza el procesamiento del video. 
 
-El método  \texttt{transcode\_video()} es el encargado de segmentar y transcodificar el video. Se utiliza la herramienta FFmpeg para generar distintas calidades de video con tasas de bits diferentes. Además, se incluye el audio en el resultado final y se segmenta el video en fragmentos de 6 segundos. En la implementación elegida, se emplea MPEG-DASH (\ref{dash}) como protocolo de streaming de video y por consiguiente, se debe particionar el video en fragmentos con la extensión \texttt{.m4s} y, se debe generar un archivo \texttt{manifest.mpd} llamado MPD. Este, se encarga de informar al reproductor de videos en el cliente, información sobre el contenido como las calidades disponibles, las localizaciones de los segmentos \texttt{.m4s} en el servidor, cuándo se debe reproducir cada segmento y qué codec utilizar. Además, se genera un archivo de inicialización (\texttt{init- ... .m4s}) para reproducir los fragmentos del video \texttt{.m4s}. 
+El método  \texttt{transcode\_video()} es el encargado de segmentar y transcodificar el video. Se utiliza la herramienta FFmpeg para generar distintas calidades de video con tasas de bits diferentes. Además, se incluye el audio en el resultado final y se segmenta el video en fragmentos de 6 segundos. En la implementación elegida, se emplea MPEG-DASH (\ref{dash}) como protocolo de streaming de video y por consiguiente se debe particionar el video en fragmentos con la extensión \texttt{.m4s} y se debe generar un archivo \texttt{manifest.mpd} llamado MPD. Este se encarga de informar al reproductor de videos en el cliente sobre el contenido, como las calidades disponibles, las localizaciones de los segmentos \texttt{.m4s} en el servidor, cuándo se debe reproducir cada segmento y qué códec utilizar. Además, se genera un archivo de inicialización (\texttt{init-... .m4s}) para reproducir los fragmentos del video \texttt{.m4s}.
 
-Finalmente, los archivos de inicilizacion, los fragmentos y el manifesto (MPD), se cargan al \textit{bucket} que almacena los videos procesados para ser entregados al cliente.  
+Finalmente, los archivos de inicialización, los fragmentos y el manifiesto (MPD) se cargan al \textit{bucket} que almacena los videos procesados para ser entregados al cliente.
 
 \clearpage
 
@@ -581,7 +581,7 @@ export async function POST(req: Request) {
 }
 \end{lstlisting}
 
-Este fragmento de código corresponde a la lógica ejecutada una vez llega la petición por parte del cliente al endpoint \texttt{/create}. En primer lugar, se verifica que la petición corresponda a un usuario con una sesión válida. Gracias a Clerk y Next.Js, esta información está disponible en las \textit{cookies} y el método \texttt{auth()}, lo puede determinar directamente. Si no hay una sesión de usuario activa, se descarta la petición y la operación. En caso contrario, a partir del \texttt{clerkId} identificado de la sesión se obtiene una referencia en la base de datos al usuario correspondiente. Posteriormente, se aplican límites de uso y si todo funciona correctamente, se envía una petición POST al endpoint de Bunny para crear un objeto de video. Es importante destacar que en este caso, se utilizan las claves de API de \textit{Bunny} y además los identificadores de librería para enviar la solicitud. Por motivos de seguridad esto se almacena en \texttt{.env.local} y se hace a través del servidor. Cuando el video es creado, se obtiene en la respuesta el identificador del objeto de video en el servicio externo. 
+Este fragmento de código corresponde a la lógica ejecutada una vez llega la petición por parte del cliente al endpoint \texttt{/create}. En primer lugar, se verifica que la petición corresponda a un usuario con una sesión válida. Gracias a Clerk y Next.js, esta información está disponible en las \textit{cookies} y el método \texttt{auth()} puede determinarlo directamente. Si no hay una sesión de usuario activa, se descarta la petición y la operación. En caso contrario, a partir del \texttt{clerkId} identificado de la sesión se obtiene una referencia en la base de datos al usuario correspondiente. Posteriormente, se aplican límites de uso y, si todo funciona correctamente, se envía una petición POST al endpoint de Bunny para crear un objeto de video. Es importante destacar que, en este caso, se utilizan las claves de API de \textit{Bunny} y los identificadores de biblioteca para enviar la solicitud. Por motivos de seguridad, esto se almacena en \texttt{.env.local} y se hace a través del servidor. Cuando el video es creado, se obtiene en la respuesta el identificador del objeto de video en el servicio externo.
 
 Como se analizó anteriormente en \ref{bunny-arch-design}, el siguiente paso para cargar un archivo a \textit{Bunny} a través del protocolo TUS, es crear una firma digital. Esto se hace mediante el endpoint \texttt{/api/bunny/sign} que realiza los pasos recomendados por la documentación del servicio de procesamiento de videos:
 
@@ -792,7 +792,7 @@ Como se puede observar, se invoca a los endpoints \texttt{/create} y \texttt{/si
 
 \section{Implementación de los comentarios}
 
-En \ref{comentarios}, se explicaron las mejoras presentes en los comentarios de un video. Allí, se describió que los comentarios están estructurados en formato de árbol de respuestas. Dado este requerimiento, eso exigió modelar a los comentarios como nodos dentro de un árbol. Además, esto supuso añadir un atributo en formato de cláve foránea en la tabla de comentarios que indicara el padre de un nodo. Más específicamente, se creó del lado del cliente un componente \texttt{<Comment>} que recibe como propiedades el identificador del comentario a renderizar.
+En \ref{comentarios}, se explicaron las mejoras presentes en los comentarios de un video. Allí, se describió que los comentarios están estructurados en formato de árbol de respuestas. Dado este requerimiento, fue necesario modelar los comentarios como nodos dentro de un árbol. Además, esto supuso añadir un atributo en formato de clave foránea en la tabla de comentarios que indicara el padre de un nodo. Más específicamente, se creó del lado del cliente un componente \texttt{<Comment>} que recibe como propiedades el identificador del comentario a renderizar.
 
 \begin{lstlisting}[language=Typescript]
   export const Comment = ({ comment, videoId, viewer, depth, maxDepth }: CommentProps) => {
@@ -846,7 +846,7 @@ En esta sección se enseñan algunos de los fragmentos de código más important
     }),
 \end{lstlisting}
 
-Componentes servidores invocan estos procedimientos para realizar una precarga y los clientes, recuperan la información de la caché. Estos son los datos, que el cliente recupera cuando necesita mostrar un perfil de usuario.
+Los componentes servidores invocan estos procedimientos para realizar una precarga y los clientes recuperan la información de la caché. Estos son los datos que el cliente recupera cuando necesita mostrar un perfil de usuario.
 
 \begin{lstlisting}[language=Typescript]
   const { userId: clerkUserId } = useAuth();
