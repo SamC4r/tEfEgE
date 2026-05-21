@@ -495,10 +495,13 @@ INPUT .\secciones\resumen.tex
 INPUT secciones\resumen.tex
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8t.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8t.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8t.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkd8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkd8r.tfm
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkl8t.vf
 INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkl8r.tfm
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkli8t.vf
+INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8r.tfm
 INPUT .\tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 INPUT .\tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 INPUT tfg_etsiinf_SamuelCaraballoChichiraldi.toc
@@ -511,9 +514,6 @@ INPUT .\secciones\intro.tex
 INPUT .\secciones\intro.tex
 INPUT .\secciones\intro.tex
 INPUT secciones\intro.tex
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8t.tfm
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\bookman\pbkli8t.vf
-INPUT C:\Users\max\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\bookman\pbkli8r.tfm
 INPUT .\secciones\estado-arte.tex
 INPUT .\secciones\estado-arte.tex
 INPUT .\secciones\estado-arte.tex
