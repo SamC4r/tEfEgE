@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  21 MAY 2026 15:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.3.26)  4 JUN 2026 12:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1223,18 +1223,16 @@ LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <24.88> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `T1/pbk/b/n' in size <24.88> not available
 (Font)              Font shape `T1/pbk/db/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <10.95> not available
-(Font)              Font shape `T1/pbk/l/it' tried instead on input line 5.
  [1
 
 
-] [2
+] [2]
+LaTeX Info: Redefining \sptext on input line 77.
+LaTeX Info: Redefining \. on input line 77.
+LaTeX Info: Redefining \% on input line 77.
+) [3
 
-]
-LaTeX Info: Redefining \sptext on input line 59.
-LaTeX Info: Redefining \. on input line 59.
-LaTeX Info: Redefining \% on input line 59.
-) [3] [4
+] [4
 
 ] (tfg_etsiinf_SamuelCaraballoChichiraldi.toc
 LaTeX Info: Redefining \sptext on input line 1.
@@ -1536,6 +1534,8 @@ LaTeX Info: Redefining \% on input line 213.
 
 ] (secciones/intro.tex
 Cap\'{\i }tulo 1.
+LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <10.95> not available
+(Font)              Font shape `T1/pbk/l/it' tried instead on input line 10.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1585,7 +1585,7 @@ File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <10.95> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 24.
  [7]
-<portada/FFmpeg_icon.svg.png, id=718, 3854.4pt x 3854.4pt>
+<portada/FFmpeg_icon.svg.png, id=720, 3854.4pt x 3854.4pt>
 File: portada/FFmpeg_icon.svg.png Graphic file (type png)
 <use portada/FFmpeg_icon.svg.png>
 Package pdftex.def Info: portada/FFmpeg_icon.svg.png  used on input line 35.
@@ -1598,7 +1598,7 @@ LaTeX Info: Redefining \sptext on input line 78.
 LaTeX Info: Redefining \. on input line 78.
 LaTeX Info: Redefining \% on input line 78.
  [9]
-<portada/docker.png, id=735, 2342.9934pt x 533.1117pt>
+<portada/docker.png, id=737, 2342.9934pt x 533.1117pt>
 File: portada/docker.png Graphic file (type png)
 <use portada/docker.png>
 Package pdftex.def Info: portada/docker.png  used on input line 91.
@@ -1619,7 +1619,7 @@ LaTeX Info: Redefining \sptext on input line 190.
 LaTeX Info: Redefining \. on input line 190.
 LaTeX Info: Redefining \% on input line 190.
  [13]
-<portada/cdn_image.png, id=766, 1405.25pt x 790.955pt>
+<portada/cdn_image.png, id=768, 1405.25pt x 790.955pt>
 File: portada/cdn_image.png Graphic file (type png)
 <use portada/cdn_image.png>
 Package pdftex.def Info: portada/cdn_image.png  used on input line 195.
@@ -1636,7 +1636,7 @@ LaTeX Info: Redefining \sptext on input line 288.
 LaTeX Info: Redefining \. on input line 288.
 LaTeX Info: Redefining \% on input line 288.
  [16]
-<portada/aws.png, id=782, 10673.72308pt x 6003.96924pt>
+<portada/aws.png, id=784, 10673.72308pt x 6003.96924pt>
 File: portada/aws.png Graphic file (type png)
 <use portada/aws.png>
 Package pdftex.def Info: portada/aws.png  used on input line 295.
@@ -1645,7 +1645,7 @@ LaTeX Info: Redefining \sptext on input line 320.
 LaTeX Info: Redefining \. on input line 320.
 LaTeX Info: Redefining \% on input line 320.
  [17 <./portada/aws.png>]
-<portada/mux-logo.png, id=789, 192.72pt x 61.21872pt>
+<portada/mux-logo.png, id=791, 192.72pt x 61.21872pt>
 File: portada/mux-logo.png Graphic file (type png)
 <use portada/mux-logo.png>
 Package pdftex.def Info: portada/mux-logo.png  used on input line 348.
@@ -1662,7 +1662,7 @@ LaTeX Info: Redefining \sptext on input line 385.
 LaTeX Info: Redefining \. on input line 385.
 LaTeX Info: Redefining \% on input line 385.
  [19 <./portada/mux-logo.png>]
-<portada/bunnynet-logo.png, id=804, 333.6465pt x 101.178pt>
+<portada/bunnynet-logo.png, id=806, 333.6465pt x 101.178pt>
 File: portada/bunnynet-logo.png Graphic file (type png)
 <use portada/bunnynet-logo.png>
 Package pdftex.def Info: portada/bunnynet-logo.png  used on input line 401.
@@ -1687,7 +1687,7 @@ LaTeX Info: Redefining \% on input line 506.
  [22]
 LaTeX Font Info:    Font shape `T1/pbk/m/it' in size <9> not available
 (Font)              Font shape `T1/pbk/l/it' tried instead on input line 509.
-<portada/centralizado.png, id=826, 465.99094pt x 427.5975pt>
+<portada/centralizado.png, id=828, 465.99094pt x 427.5975pt>
 File: portada/centralizado.png Graphic file (type png)
 <use portada/centralizado.png>
 Package pdftex.def Info: portada/centralizado.png  used on input line 516.
@@ -1702,7 +1702,7 @@ LaTeX Info: Redefining \sptext on input line 551.
 LaTeX Info: Redefining \. on input line 551.
 LaTeX Info: Redefining \% on input line 551.
  [24]
-<portada/fediverse.png, id=839, 1505.625pt x 1505.625pt>
+<portada/fediverse.png, id=841, 1505.625pt x 1505.625pt>
 File: portada/fediverse.png Graphic file (type png)
 <use portada/fediverse.png>
 Package pdftex.def Info: portada/fediverse.png  used on input line 564.
@@ -1711,7 +1711,7 @@ LaTeX Info: Redefining \sptext on input line 574.
 LaTeX Info: Redefining \. on input line 574.
 LaTeX Info: Redefining \% on input line 574.
  [25 <./portada/fediverse.png>]
-<portada/peertubelogo.png, id=847, 84.315pt x 20.075pt>
+<portada/peertubelogo.png, id=849, 84.315pt x 20.075pt>
 File: portada/peertubelogo.png Graphic file (type png)
 <use portada/peertubelogo.png>
 Package pdftex.def Info: portada/peertubelogo.png  used on input line 602.
@@ -1720,7 +1720,7 @@ LaTeX Info: Redefining \sptext on input line 610.
 LaTeX Info: Redefining \. on input line 610.
 LaTeX Info: Redefining \% on input line 610.
  [26 <./portada/peertubelogo.png>]
-<portada/p2p.png, id=854, 566.115pt x 475.7775pt>
+<portada/p2p.png, id=856, 566.115pt x 475.7775pt>
 File: portada/p2p.png Graphic file (type png)
 <use portada/p2p.png>
 Package pdftex.def Info: portada/p2p.png  used on input line 617.
@@ -1729,7 +1729,7 @@ LaTeX Info: Redefining \sptext on input line 627.
 LaTeX Info: Redefining \. on input line 627.
 LaTeX Info: Redefining \% on input line 627.
  [27 <./portada/p2p.png>]
-<portada/odysee.png, id=861, 401.5pt x 120.45pt>
+<portada/odysee.png, id=863, 401.5pt x 120.45pt>
 File: portada/odysee.png Graphic file (type png)
 <use portada/odysee.png>
 Package pdftex.def Info: portada/odysee.png  used on input line 650.
@@ -1745,7 +1745,7 @@ Cap\'{\i }tulo 3.
 ]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 24.
-<portada/typescript.png, id=875, 1284.8pt x 1284.8pt>
+<portada/typescript.png, id=877, 1284.8pt x 1284.8pt>
 File: portada/typescript.png Graphic file (type png)
 <use portada/typescript.png>
 Package pdftex.def Info: portada/typescript.png  used on input line 49.
@@ -1757,7 +1757,7 @@ LaTeX Info: Redefining \sptext on input line 54.
 LaTeX Info: Redefining \. on input line 54.
 LaTeX Info: Redefining \% on input line 54.
  [30 <./portada/typescript.png>]
-<portada/PostgreSQL.png, id=901, 612.2875pt x 281.05pt>
+<portada/PostgreSQL.png, id=903, 612.2875pt x 281.05pt>
 File: portada/PostgreSQL.png Graphic file (type png)
 <use portada/PostgreSQL.png>
 Package pdftex.def Info: portada/PostgreSQL.png  used on input line 80.
@@ -1770,7 +1770,7 @@ LaTeX Info: Redefining \sptext on input line 88.
 LaTeX Info: Redefining \. on input line 88.
 LaTeX Info: Redefining \% on input line 88.
 [31]
-<portada/neondb.png, id=907, 451.6875pt x 149.8097pt>
+<portada/neondb.png, id=909, 451.6875pt x 149.8097pt>
 File: portada/neondb.png Graphic file (type png)
 <use portada/neondb.png>
 Package pdftex.def Info: portada/neondb.png  used on input line 95.
@@ -1782,7 +1782,7 @@ LaTeX Info: Redefining \sptext on input line 108.
 LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
  [32 <./portada/PostgreSQL.png> <./portada/neondb.png>]
-<portada/supabase.png, id=917, 200.75pt x 69.25874pt>
+<portada/supabase.png, id=919, 200.75pt x 69.25874pt>
 File: portada/supabase.png Graphic file (type png)
 <use portada/supabase.png>
 Package pdftex.def Info: portada/supabase.png  used on input line 115.
@@ -1794,7 +1794,7 @@ LaTeX Info: Redefining \sptext on input line 138.
 LaTeX Info: Redefining \. on input line 138.
 LaTeX Info: Redefining \% on input line 138.
  [33 <./portada/supabase.png>]
-<portada/drizzle-orm.png, id=928, 129.48375pt x 38.39343pt>
+<portada/drizzle-orm.png, id=930, 129.48375pt x 38.39343pt>
 File: portada/drizzle-orm.png Graphic file (type png)
 <use portada/drizzle-orm.png>
 Package pdftex.def Info: portada/drizzle-orm.png  used on input line 156.
@@ -1803,7 +1803,7 @@ LaTeX Info: Redefining \sptext on input line 175.
 LaTeX Info: Redefining \. on input line 175.
 LaTeX Info: Redefining \% on input line 175.
  [34 <./portada/drizzle-orm.png>]
-<portada/trpc-logo.png, id=937, 861.2175pt x 256.96pt>
+<portada/trpc-logo.png, id=939, 861.2175pt x 256.96pt>
 File: portada/trpc-logo.png Graphic file (type png)
 <use portada/trpc-logo.png>
 Package pdftex.def Info: portada/trpc-logo.png  used on input line 194.
@@ -1814,7 +1814,7 @@ LaTeX Info: Redefining \% on input line 200.
  [35 <./portada/trpc-logo.png>]
 LaTeX Font Info:    Font shape `T1/pbk/b/it' in size <10.95> not available
 (Font)              Font shape `T1/pbk/db/it' tried instead on input line 201.
-<portada/prefetch-diagram.png, id=945, 1806.75pt x 1606.0pt>
+<portada/prefetch-diagram.png, id=947, 1806.75pt x 1606.0pt>
 File: portada/prefetch-diagram.png Graphic file (type png)
 <use portada/prefetch-diagram.png>
 Package pdftex.def Info: portada/prefetch-diagram.png  used on input line 209.
@@ -1827,7 +1827,7 @@ LaTeX Info: Redefining \sptext on input line 238.
 LaTeX Info: Redefining \. on input line 238.
 LaTeX Info: Redefining \% on input line 238.
  [37]
-<portada/nextjs.png, id=961, 169.38281pt x 112.92188pt>
+<portada/nextjs.png, id=963, 169.38281pt x 112.92188pt>
 File: portada/nextjs.png Graphic file (type png)
 <use portada/nextjs.png>
 Package pdftex.def Info: portada/nextjs.png  used on input line 251.
@@ -1839,7 +1839,7 @@ LaTeX Info: Redefining \sptext on input line 256.
 LaTeX Info: Redefining \. on input line 256.
 LaTeX Info: Redefining \% on input line 256.
  [38 <./portada/nextjs.png>]
-<portada/clerk.png, id=970, 322.20375pt x 100.375pt>
+<portada/clerk.png, id=972, 322.20375pt x 100.375pt>
 File: portada/clerk.png Graphic file (type png)
 <use portada/clerk.png>
 Package pdftex.def Info: portada/clerk.png  used on input line 267.
@@ -1848,7 +1848,7 @@ LaTeX Info: Redefining \sptext on input line 286.
 LaTeX Info: Redefining \. on input line 286.
 LaTeX Info: Redefining \% on input line 286.
  [39 <./portada/clerk.png>]
-<portada/react.png, id=979, 1003.75pt x 709.65125pt>
+<portada/react.png, id=981, 1003.75pt x 709.65125pt>
 File: portada/react.png Graphic file (type png)
 <use portada/react.png>
 Package pdftex.def Info: portada/react.png  used on input line 301.
@@ -1869,12 +1869,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
-<portada/tailwindcss-logo.png, id=996, 401.5pt x 46.1725pt>
+<portada/tailwindcss-logo.png, id=998, 401.5pt x 46.1725pt>
 File: portada/tailwindcss-logo.png Graphic file (type png)
 <use portada/tailwindcss-logo.png>
 Package pdftex.def Info: portada/tailwindcss-logo.png  used on input line 364.
 (pdftex.def)             Requested size: 153.64441pt x 17.66971pt.
-<portada/shadcn.png, id=997, 475.7775pt x 106.3975pt>
+<portada/shadcn.png, id=999, 475.7775pt x 106.3975pt>
 File: portada/shadcn.png Graphic file (type png)
 <use portada/shadcn.png>
 Package pdftex.def Info: portada/shadcn.png  used on input line 369.
@@ -1888,7 +1888,7 @@ Cap\'{\i }tulo 4.
 [43
 
 ]
-<portada/alg-rec.png, id=1013, 483.0045pt x 191.5155pt>
+<portada/alg-rec.png, id=1015, 483.0045pt x 191.5155pt>
 File: portada/alg-rec.png Graphic file (type png)
 <use portada/alg-rec.png>
 Package pdftex.def Info: portada/alg-rec.png  used on input line 31.
@@ -1905,7 +1905,7 @@ LaTeX Info: Redefining \sptext on input line 48.
 LaTeX Info: Redefining \. on input line 48.
 LaTeX Info: Redefining \% on input line 48.
  [45 <./portada/alg-rec.png>]
-<portada/comunidades.png, id=1025, 634.16925pt x 419.76825pt>
+<portada/comunidades.png, id=1027, 634.16925pt x 419.76825pt>
 File: portada/comunidades.png Graphic file (type png)
 <use portada/comunidades.png>
 Package pdftex.def Info: portada/comunidades.png  used on input line 52.
@@ -1916,7 +1916,7 @@ LaTeX Info: Redefining \% on input line 68.
  [46
 
  <./portada/comunidades.png>]
-<portada/xp.png, id=1034, 259.56975pt x 36.73724pt>
+<portada/xp.png, id=1036, 259.56975pt x 36.73724pt>
 File: portada/xp.png Graphic file (type png)
 <use portada/xp.png>
 Package pdftex.def Info: portada/xp.png  used on input line 77.
@@ -1925,12 +1925,12 @@ LaTeX Info: Redefining \sptext on input line 96.
 LaTeX Info: Redefining \. on input line 96.
 LaTeX Info: Redefining \% on input line 96.
  [47 <./portada/xp.png>]
-<portada/explorer-1.png, id=1041, 958.782pt x 485.4135pt>
+<portada/explorer-1.png, id=1043, 958.782pt x 485.4135pt>
 File: portada/explorer-1.png Graphic file (type png)
 <use portada/explorer-1.png>
 Package pdftex.def Info: portada/explorer-1.png  used on input line 105.
 (pdftex.def)             Requested size: 426.79135pt x 216.07869pt.
-<portada/explorer-2.png, id=1042, 975.645pt x 487.8225pt>
+<portada/explorer-2.png, id=1044, 975.645pt x 487.8225pt>
 File: portada/explorer-2.png Graphic file (type png)
 <use portada/explorer-2.png>
 Package pdftex.def Info: portada/explorer-2.png  used on input line 110.
@@ -1939,12 +1939,12 @@ LaTeX Info: Redefining \sptext on input line 118.
 LaTeX Info: Redefining \. on input line 118.
 LaTeX Info: Redefining \% on input line 118.
  [48 <./portada/explorer-1.png> <./portada/explorer-2.png>]
-<portada/ia-video.png, id=1051, 237.88875pt x 240.9pt>
+<portada/ia-video.png, id=1053, 237.88875pt x 240.9pt>
 File: portada/ia-video.png Graphic file (type png)
 <use portada/ia-video.png>
 Package pdftex.def Info: portada/ia-video.png  used on input line 123.
 (pdftex.def)             Requested size: 213.39568pt x 216.1059pt.
-<portada/video-view-1.png, id=1052, 1144.87724pt x 513.117pt>
+<portada/video-view-1.png, id=1054, 1144.87724pt x 513.117pt>
 File: portada/video-view-1.png Graphic file (type png)
 <use portada/video-view-1.png>
 Package pdftex.def Info: portada/video-view-1.png  used on input line 135.
@@ -1961,7 +1961,7 @@ LaTeX Info: Redefining \sptext on input line 146.
 LaTeX Info: Redefining \. on input line 146.
 LaTeX Info: Redefining \% on input line 146.
  [50 <./portada/video-view-1.png>]
-<portada/sidebar.png, id=1067, 115.02975pt x 545.6385pt>
+<portada/sidebar.png, id=1069, 115.02975pt x 545.6385pt>
 File: portada/sidebar.png Graphic file (type png)
 <use portada/sidebar.png>
 Package pdftex.def Info: portada/sidebar.png  used on input line 171.
@@ -1981,24 +1981,24 @@ LaTeX Info: Redefining \sptext on input line 181.
 LaTeX Info: Redefining \. on input line 181.
 LaTeX Info: Redefining \% on input line 181.
 [51 <./portada/sidebar.png>]
-<portada/theme-selector.png, id=1076, 778.70924pt x 410.7345pt>
+<portada/theme-selector.png, id=1078, 778.70924pt x 410.7345pt>
 File: portada/theme-selector.png Graphic file (type png)
 <use portada/theme-selector.png>
 Package pdftex.def Info: portada/theme-selector.png  used on input line 192.
 (pdftex.def)             Requested size: 426.79135pt x 225.11499pt.
-<portada/dark.png, id=1079, 1126.80975pt x 496.85625pt>
+<portada/dark.png, id=1081, 1126.80975pt x 496.85625pt>
 File: portada/dark.png Graphic file (type png)
 <use portada/dark.png>
 Package pdftex.def Info: portada/dark.png  used on input line 203.
 (pdftex.def)             Requested size: 298.75264pt x 131.7345pt.
 LaTeX Font Info:    Font shape `T1/pbk/m/n' in size <10> not available
 (Font)              Font shape `T1/pbk/l/n' tried instead on input line 204.
-<portada/white.png, id=1080, 1121.3895pt x 495.65175pt>
+<portada/white.png, id=1082, 1121.3895pt x 495.65175pt>
 File: portada/white.png Graphic file (type png)
 <use portada/white.png>
 Package pdftex.def Info: portada/white.png  used on input line 209.
 (pdftex.def)             Requested size: 298.75264pt x 132.04288pt.
-<portada/retro.png, id=1081, 1124.40076pt x 495.0495pt>
+<portada/retro.png, id=1083, 1124.40076pt x 495.0495pt>
 File: portada/retro.png Graphic file (type png)
 <use portada/retro.png>
 Package pdftex.def Info: portada/retro.png  used on input line 217.
@@ -2011,7 +2011,7 @@ LaTeX Info: Redefining \sptext on input line 227.
 LaTeX Info: Redefining \. on input line 227.
 LaTeX Info: Redefining \% on input line 227.
  [53 <./portada/dark.png> <./portada/white.png> <./portada/retro.png>]
-<portada/report-modal.png, id=1098, 252.34274pt x 330.63525pt>
+<portada/report-modal.png, id=1100, 252.34274pt x 330.63525pt>
 File: portada/report-modal.png Graphic file (type png)
 <use portada/report-modal.png>
 Package pdftex.def Info: portada/report-modal.png  used on input line 237.
@@ -2020,7 +2020,7 @@ LaTeX Info: Redefining \sptext on input line 242.
 LaTeX Info: Redefining \. on input line 242.
 LaTeX Info: Redefining \% on input line 242.
  [54 <./portada/report-modal.png>]
-<portada/report-vote.png, id=1105, 258.9675pt x 335.45325pt>
+<portada/report-vote.png, id=1107, 258.9675pt x 335.45325pt>
 File: portada/report-vote.png Graphic file (type png)
 <use portada/report-vote.png>
 Package pdftex.def Info: portada/report-vote.png  used on input line 249.
@@ -2029,7 +2029,7 @@ LaTeX Info: Redefining \sptext on input line 256.
 LaTeX Info: Redefining \. on input line 256.
 LaTeX Info: Redefining \% on input line 256.
  [55 <./portada/report-vote.png>]
-<portada/comentarios.png, id=1112, 305.34074pt x 418.56375pt>
+<portada/comentarios.png, id=1114, 305.34074pt x 418.56375pt>
 File: portada/comentarios.png Graphic file (type png)
 <use portada/comentarios.png>
 Package pdftex.def Info: portada/comentarios.png  used on input line 264.
@@ -2038,7 +2038,7 @@ LaTeX Info: Redefining \sptext on input line 270.
 LaTeX Info: Redefining \. on input line 270.
 LaTeX Info: Redefining \% on input line 270.
  [56 <./portada/comentarios.png>]
-<portada/channel-videos.png, id=1120, 596.82974pt x 503.481pt>
+<portada/channel-videos.png, id=1122, 596.82974pt x 503.481pt>
 File: portada/channel-videos.png Graphic file (type png)
 <use portada/channel-videos.png>
 Package pdftex.def Info: portada/channel-videos.png  used on input line 282.
@@ -2047,22 +2047,22 @@ LaTeX Info: Redefining \sptext on input line 290.
 LaTeX Info: Redefining \. on input line 290.
 LaTeX Info: Redefining \% on input line 290.
  [57 <./portada/channel-videos.png>]
-<portada/channel-viewer.png, id=1131, 453.49425pt x 320.99925pt>
+<portada/channel-viewer.png, id=1133, 453.49425pt x 320.99925pt>
 File: portada/channel-viewer.png Graphic file (type png)
 <use portada/channel-viewer.png>
 Package pdftex.def Info: portada/channel-viewer.png  used on input line 295.
 (pdftex.def)             Requested size: 256.07741pt x 181.26694pt.
-<portada/channel-boost.png, id=1134, 516.12825pt x 377.61075pt>
+<portada/channel-boost.png, id=1136, 516.12825pt x 377.61075pt>
 File: portada/channel-boost.png Graphic file (type png)
 <use portada/channel-boost.png>
 Package pdftex.def Info: portada/channel-boost.png  used on input line 304.
 (pdftex.def)             Requested size: 341.43437pt x 249.80005pt.
-<portada/channel-level.png, id=1135, 873.2625pt x 277.035pt>
+<portada/channel-level.png, id=1137, 873.2625pt x 277.035pt>
 File: portada/channel-level.png Graphic file (type png)
 <use portada/channel-level.png>
 Package pdftex.def Info: portada/channel-level.png  used on input line 311.
 (pdftex.def)             Requested size: 426.79135pt x 135.39748pt.
-<portada/channel-leaderboard.png, id=1137, 581.7735pt x 364.9635pt>
+<portada/channel-leaderboard.png, id=1139, 581.7735pt x 364.9635pt>
 File: portada/channel-leaderboard.png Graphic file (type png)
 <use portada/channel-leaderboard.png>
 Package pdftex.def Info: portada/channel-leaderboard.png  used on input line 320.
@@ -2075,12 +2075,12 @@ LaTeX Info: Redefining \sptext on input line 326.
 LaTeX Info: Redefining \. on input line 326.
 LaTeX Info: Redefining \% on input line 326.
  [59 <./portada/channel-boost.png> <./portada/channel-level.png>]
-<portada/channel-rewards.png, id=1155, 572.1375pt x 201.75375pt>
+<portada/channel-rewards.png, id=1157, 572.1375pt x 201.75375pt>
 File: portada/channel-rewards.png Graphic file (type png)
 <use portada/channel-rewards.png>
 Package pdftex.def Info: portada/channel-rewards.png  used on input line 331.
 (pdftex.def)             Requested size: 341.43437pt x 120.40053pt.
-<portada/channel-about.png, id=1157, 573.342pt x 160.1985pt>
+<portada/channel-about.png, id=1159, 573.342pt x 160.1985pt>
 File: portada/channel-about.png Graphic file (type png)
 <use portada/channel-about.png>
 Package pdftex.def Info: portada/channel-about.png  used on input line 340.
@@ -2089,7 +2089,7 @@ LaTeX Info: Redefining \sptext on input line 347.
 LaTeX Info: Redefining \. on input line 347.
 LaTeX Info: Redefining \% on input line 347.
  [60 <./portada/channel-leaderboard.png> <./portada/channel-rewards.png>]
-<portada/channel-chat.png, id=1168, 572.1375pt x 264.99pt>
+<portada/channel-chat.png, id=1170, 572.1375pt x 264.99pt>
 File: portada/channel-chat.png Graphic file (type png)
 <use portada/channel-chat.png>
 Package pdftex.def Info: portada/channel-chat.png  used on input line 350.
@@ -2098,7 +2098,7 @@ LaTeX Info: Redefining \sptext on input line 365.
 LaTeX Info: Redefining \. on input line 365.
 LaTeX Info: Redefining \% on input line 365.
  [61 <./portada/channel-about.png> <./portada/channel-chat.png>]
-<portada/leaderboard.png, id=1178, 976.8495pt x 406.51875pt>
+<portada/leaderboard.png, id=1180, 976.8495pt x 406.51875pt>
 File: portada/leaderboard.png Graphic file (type png)
 <use portada/leaderboard.png>
 Package pdftex.def Info: portada/leaderboard.png  used on input line 375.
@@ -2132,7 +2132,7 @@ LaTeX Info: Redefining \sptext on input line 163.
 LaTeX Info: Redefining \. on input line 163.
 LaTeX Info: Redefining \% on input line 163.
  [68]
-<casos-uso/iniciar-sesion.png, id=1286, 1453.43pt x 1090.0725pt>
+<casos-uso/iniciar-sesion.png, id=1288, 1453.43pt x 1090.0725pt>
 File: casos-uso/iniciar-sesion.png Graphic file (type png)
 <use casos-uso/iniciar-sesion.png>
 Package pdftex.def Info: casos-uso/iniciar-sesion.png  used on input line 168.
@@ -2178,7 +2178,7 @@ LaTeX Info: Redefining \sptext on input line 571.
 LaTeX Info: Redefining \. on input line 571.
 LaTeX Info: Redefining \% on input line 571.
  [75]
-<casos-uso/subir-video.png, id=1414, 954.56625pt x 498.86375pt>
+<casos-uso/subir-video.png, id=1416, 954.56625pt x 498.86375pt>
 File: casos-uso/subir-video.png Graphic file (type png)
 <use casos-uso/subir-video.png>
 Package pdftex.def Info: casos-uso/subir-video.png  used on input line 577.
@@ -2216,7 +2216,7 @@ LaTeX Info: Redefining \sptext on input line 951.
 LaTeX Info: Redefining \. on input line 951.
 LaTeX Info: Redefining \% on input line 951.
  [81]
-<casos-uso/reproduccion-consumo.png, id=1518, 670.505pt x 617.30624pt>
+<casos-uso/reproduccion-consumo.png, id=1520, 670.505pt x 617.30624pt>
 File: casos-uso/reproduccion-consumo.png Graphic file (type png)
 <use casos-uso/reproduccion-consumo.png>
 Package pdftex.def Info: casos-uso/reproduccion-consumo.png  used on input line 968.
@@ -2244,7 +2244,7 @@ LaTeX Info: Redefining \sptext on input line 1139.
 LaTeX Info: Redefining \. on input line 1139.
 LaTeX Info: Redefining \% on input line 1139.
  [86]
-<casos-uso/exploracion-busqueda.png, id=1594, 466.74374pt x 547.04375pt>
+<casos-uso/exploracion-busqueda.png, id=1596, 466.74374pt x 547.04375pt>
 File: casos-uso/exploracion-busqueda.png Graphic file (type png)
 <use casos-uso/exploracion-busqueda.png>
 Package pdftex.def Info: casos-uso/exploracion-busqueda.png  used on input line 1144.
@@ -2271,7 +2271,7 @@ LaTeX Info: Redefining \sptext on input line 1318.
 LaTeX Info: Redefining \. on input line 1318.
 LaTeX Info: Redefining \% on input line 1318.
  [90]
-<casos-uso/interaccion-social.png, id=1652, 635.37375pt x 396.48125pt>
+<casos-uso/interaccion-social.png, id=1654, 635.37375pt x 396.48125pt>
 File: casos-uso/interaccion-social.png Graphic file (type png)
 <use casos-uso/interaccion-social.png>
 Package pdftex.def Info: casos-uso/interaccion-social.png  used on input line 1324.
@@ -2298,7 +2298,7 @@ LaTeX Info: Redefining \sptext on input line 1498.
 LaTeX Info: Redefining \. on input line 1498.
 LaTeX Info: Redefining \% on input line 1498.
  [94]
-<casos-uso/comunidades.png, id=1712, 486.81876pt x 526.96875pt>
+<casos-uso/comunidades.png, id=1714, 486.81876pt x 526.96875pt>
 File: casos-uso/comunidades.png Graphic file (type png)
 <use casos-uso/comunidades.png>
 Package pdftex.def Info: casos-uso/comunidades.png  used on input line 1514.
@@ -2320,7 +2320,7 @@ LaTeX Info: Redefining \sptext on input line 1663.
 LaTeX Info: Redefining \. on input line 1663.
 LaTeX Info: Redefining \% on input line 1663.
  [97]
-<casos-uso/canales.png, id=1758, 657.45625pt x 495.8525pt>
+<casos-uso/canales.png, id=1760, 657.45625pt x 495.8525pt>
 File: casos-uso/canales.png Graphic file (type png)
 <use casos-uso/canales.png>
 Package pdftex.def Info: casos-uso/canales.png  used on input line 1670.
@@ -2341,7 +2341,7 @@ LaTeX Info: Redefining \sptext on input line 1836.
 LaTeX Info: Redefining \. on input line 1836.
 LaTeX Info: Redefining \% on input line 1836.
  [100]
-<casos-uso/gamificacion.png, id=1807, 938.50626pt x 536.0025pt>
+<casos-uso/gamificacion.png, id=1809, 938.50626pt x 536.0025pt>
 File: casos-uso/gamificacion.png Graphic file (type png)
 <use casos-uso/gamificacion.png>
 Package pdftex.def Info: casos-uso/gamificacion.png  used on input line 1854.
@@ -2371,7 +2371,7 @@ LaTeX Info: Redefining \sptext on input line 2073.
 LaTeX Info: Redefining \. on input line 2073.
 LaTeX Info: Redefining \% on input line 2073.
  [105]
-<diagramas-secuencia/subir-video.png, id=1891, 1040.88875pt x 1102.1175pt>
+<diagramas-secuencia/subir-video.png, id=1893, 1040.88875pt x 1102.1175pt>
 File: diagramas-secuencia/subir-video.png Graphic file (type png)
 <use diagramas-secuencia/subir-video.png>
 Package pdftex.def Info: diagramas-secuencia/subir-video.png  used on input line 2083.
@@ -2382,7 +2382,7 @@ LaTeX Info: Redefining \% on input line 2089.
  [106
 
  <./diagramas-secuencia/subir-video.png>]
-<diagramas-secuencia/registro.png, id=1899, 990.70125pt x 984.67876pt>
+<diagramas-secuencia/registro.png, id=1901, 990.70125pt x 984.67876pt>
 File: diagramas-secuencia/registro.png Graphic file (type png)
 <use diagramas-secuencia/registro.png>
 Package pdftex.def Info: diagramas-secuencia/registro.png  used on input line 2095.
@@ -2394,7 +2394,7 @@ LaTeX Info: Redefining \sptext on input line 2101.
 LaTeX Info: Redefining \. on input line 2101.
 LaTeX Info: Redefining \% on input line 2101.
  [107 <./diagramas-secuencia/registro.png>]
-<diagramas-secuencia/inicio-sesion.png, id=1907, 1077.02374pt x 1088.065pt>
+<diagramas-secuencia/inicio-sesion.png, id=1909, 1077.02374pt x 1088.065pt>
 File: diagramas-secuencia/inicio-sesion.png Graphic file (type png)
 <use diagramas-secuencia/inicio-sesion.png>
 Package pdftex.def Info: diagramas-secuencia/inicio-sesion.png  used on input line 2106.
@@ -2406,7 +2406,7 @@ LaTeX Info: Redefining \sptext on input line 2112.
 LaTeX Info: Redefining \. on input line 2112.
 LaTeX Info: Redefining \% on input line 2112.
  [108 <./diagramas-secuencia/inicio-sesion.png>]
-<diagramas-secuencia/video-view.png, id=1915, 1147.28625pt x 914.41624pt>
+<diagramas-secuencia/video-view.png, id=1917, 1147.28625pt x 914.41624pt>
 File: diagramas-secuencia/video-view.png Graphic file (type png)
 <use diagramas-secuencia/video-view.png>
 Package pdftex.def Info: diagramas-secuencia/video-view.png  used on input line 2119.
@@ -2418,7 +2418,7 @@ LaTeX Info: Redefining \sptext on input line 2125.
 LaTeX Info: Redefining \. on input line 2125.
 LaTeX Info: Redefining \% on input line 2125.
  [109 <./diagramas-secuencia/video-view.png>]
-<diagrama-er/comunidades-usuarios-videos.png, id=1923, 1769.61125pt x 1301.86375pt>
+<diagrama-er/comunidades-usuarios-videos.png, id=1925, 1769.61125pt x 1301.86375pt>
 File: diagrama-er/comunidades-usuarios-videos.png Graphic file (type png)
 <use diagrama-er/comunidades-usuarios-videos.png>
 Package pdftex.def Info: diagrama-er/comunidades-usuarios-videos.png  used on input line 2137.
@@ -2427,7 +2427,7 @@ LaTeX Info: Redefining \sptext on input line 2143.
 LaTeX Info: Redefining \. on input line 2143.
 LaTeX Info: Redefining \% on input line 2143.
  [110 <./diagrama-er/comunidades-usuarios-videos.png>]
-<diagrama-er/interaccion-social.png, id=1931, 1801.73125pt x 1263.72125pt>
+<diagrama-er/interaccion-social.png, id=1933, 1801.73125pt x 1263.72125pt>
 File: diagrama-er/interaccion-social.png Graphic file (type png)
 <use diagrama-er/interaccion-social.png>
 Package pdftex.def Info: diagrama-er/interaccion-social.png  used on input line 2153.
@@ -2440,7 +2440,7 @@ LaTeX Info: Redefining \sptext on input line 2165.
 LaTeX Info: Redefining \. on input line 2165.
 LaTeX Info: Redefining \% on input line 2165.
  [112]
-<diagrama-er/gamificacion-reporte.png, id=1944, 1695.33376pt x 3313.37875pt>
+<diagrama-er/gamificacion-reporte.png, id=1946, 1695.33376pt x 3313.37875pt>
 File: diagrama-er/gamificacion-reporte.png Graphic file (type png)
 <use diagrama-er/gamificacion-reporte.png>
 Package pdftex.def Info: diagrama-er/gamificacion-reporte.png  used on input line 2170.
@@ -2521,7 +2521,7 @@ LaTeX Info: Redefining \sptext on input line 274.
 LaTeX Info: Redefining \. on input line 274.
 LaTeX Info: Redefining \% on input line 274.
 [122]
-<diagrama-er/liamerd.png, id=2041, 982.26974pt x 504.08325pt>
+<diagrama-er/liamerd.png, id=2043, 982.26974pt x 504.08325pt>
 File: diagrama-er/liamerd.png Graphic file (type png)
 <use diagrama-er/liamerd.png>
 Package pdftex.def Info: diagrama-er/liamerd.png  used on input line 277.
@@ -2820,7 +2820,7 @@ LaTeX Info: Redefining \sptext on input line 1758.
 LaTeX Info: Redefining \. on input line 1758.
 LaTeX Info: Redefining \% on input line 1758.
 [135]
-<arquitectura/amazon-arch.png, id=2122, 1145.27875pt x 522.95375pt>
+<arquitectura/amazon-arch.png, id=2124, 1145.27875pt x 522.95375pt>
 File: arquitectura/amazon-arch.png Graphic file (type png)
 <use arquitectura/amazon-arch.png>
 Package pdftex.def Info: arquitectura/amazon-arch.png  used on input line 1772.
@@ -2831,7 +2831,7 @@ LaTeX Info: Redefining \% on input line 1784.
  [136
 
  <./arquitectura/amazon-arch.png>]
-<arquitectura/bunny-arch.png, id=2135, 1617.04124pt x 1767.60374pt>
+<arquitectura/bunny-arch.png, id=2137, 1617.04124pt x 1767.60374pt>
 File: arquitectura/bunny-arch.png Graphic file (type png)
 <use arquitectura/bunny-arch.png>
 Package pdftex.def Info: arquitectura/bunny-arch.png  used on input line 1806.
@@ -2883,7 +2883,7 @@ LaTeX Info: Redefining \sptext on input line 92.
 LaTeX Info: Redefining \. on input line 92.
 LaTeX Info: Redefining \% on input line 92.
 [144]
-<portada/skeleton-videos.png, id=2281, 916.02225pt x 500.46976pt>
+<portada/skeleton-videos.png, id=2283, 916.02225pt x 500.46976pt>
 File: portada/skeleton-videos.png Graphic file (type png)
 <use portada/skeleton-videos.png>
 Package pdftex.def Info: portada/skeleton-videos.png  used on input line 98.
@@ -3119,7 +3119,7 @@ Cap\'{\i }tulo 8.
 [163
 
 ]
-<portada/vercel.png, id=3126, 3854.4pt x 882.29625pt>
+<portada/vercel.png, id=3128, 3854.4pt x 882.29625pt>
 File: portada/vercel.png Graphic file (type png)
 <use portada/vercel.png>
 Package pdftex.def Info: portada/vercel.png  used on input line 34.
@@ -3128,7 +3128,7 @@ LaTeX Info: Redefining \sptext on input line 38.
 LaTeX Info: Redefining \. on input line 38.
 LaTeX Info: Redefining \% on input line 38.
  [164 <./portada/vercel.png>]
-<opiniones/positive/positive1.png, id=3133, 549.85425pt x 458.31226pt>
+<opiniones/positive/positive1.png, id=3135, 549.85425pt x 458.31226pt>
 File: opiniones/positive/positive1.png Graphic file (type png)
 <use opiniones/positive/positive1.png>
 Package pdftex.def Info: opiniones/positive/positive1.png  used on input line 48.
@@ -3139,12 +3139,12 @@ LaTeX Info: Redefining \% on input line 52.
  [165
 
  <./opiniones/positive/positive1.png>]
-<opiniones/positive/positive2.png, id=3141, 561.89925pt x 331.2375pt>
+<opiniones/positive/positive2.png, id=3143, 561.89925pt x 331.2375pt>
 File: opiniones/positive/positive2.png Graphic file (type png)
 <use opiniones/positive/positive2.png>
 Package pdftex.def Info: opiniones/positive/positive2.png  used on input line 56.
 (pdftex.def)             Requested size: 384.1096pt x 226.43637pt.
-<opiniones/positive/positive3.png, id=3142, 549.252pt x 284.262pt>
+<opiniones/positive/positive3.png, id=3144, 549.252pt x 284.262pt>
 File: opiniones/positive/positive3.png Graphic file (type png)
 <use opiniones/positive/positive3.png>
 Package pdftex.def Info: opiniones/positive/positive3.png  used on input line 63.
@@ -3155,22 +3155,22 @@ LaTeX Info: Redefining \% on input line 67.
  [166
 
  <./opiniones/positive/positive2.png> <./opiniones/positive/positive3.png>]
-<opiniones/positive/ai-votes.png, id=3151, 555.2745pt x 443.85825pt>
+<opiniones/positive/ai-votes.png, id=3153, 555.2745pt x 443.85825pt>
 File: opiniones/positive/ai-votes.png Graphic file (type png)
 <use opiniones/positive/ai-votes.png>
 Package pdftex.def Info: opiniones/positive/ai-votes.png  used on input line 73.
 (pdftex.def)             Requested size: 384.1096pt x 307.04814pt.
-<opiniones/positive/parental-control.png, id=3152, 546.24075pt x 137.313pt>
+<opiniones/positive/parental-control.png, id=3154, 546.24075pt x 137.313pt>
 File: opiniones/positive/parental-control.png Graphic file (type png)
 <use opiniones/positive/parental-control.png>
 Package pdftex.def Info: opiniones/positive/parental-control.png  used on input line 80.
 (pdftex.def)             Requested size: 384.1096pt x 96.55843pt.
-<opiniones/positive/shorts.png, id=3153, 519.74174pt x 98.16675pt>
+<opiniones/positive/shorts.png, id=3155, 519.74174pt x 98.16675pt>
 File: opiniones/positive/shorts.png Graphic file (type png)
 <use opiniones/positive/shorts.png>
 Package pdftex.def Info: opiniones/positive/shorts.png  used on input line 87.
 (pdftex.def)             Requested size: 384.1096pt x 72.55087pt.
-<opiniones/content-concern.png, id=3154, 753.41475pt x 151.767pt>
+<opiniones/content-concern.png, id=3156, 753.41475pt x 151.767pt>
 File: opiniones/content-concern.png Graphic file (type png)
 <use opiniones/content-concern.png>
 Package pdftex.def Info: opiniones/content-concern.png  used on input line 93.
@@ -3184,22 +3184,22 @@ LaTeX Info: Redefining \% on input line 96.
  [167
 
  <./opiniones/positive/ai-votes.png> <./opiniones/positive/parental-control.png> <./opiniones/positive/shorts.png>]
-<opiniones/positive/5-stars.png, id=3165, 558.28575pt x 174.6525pt>
+<opiniones/positive/5-stars.png, id=3167, 558.28575pt x 174.6525pt>
 File: opiniones/positive/5-stars.png Graphic file (type png)
 <use opiniones/positive/5-stars.png>
 Package pdftex.def Info: opiniones/positive/5-stars.png  used on input line 99.
 (pdftex.def)             Requested size: 384.1096pt x 120.1639pt.
-<opiniones/positive/dark-theme.png, id=3166, 498.06075pt x 105.39375pt>
+<opiniones/positive/dark-theme.png, id=3168, 498.06075pt x 105.39375pt>
 File: opiniones/positive/dark-theme.png Graphic file (type png)
 <use opiniones/positive/dark-theme.png>
 Package pdftex.def Info: opiniones/positive/dark-theme.png  used on input line 108.
 (pdftex.def)             Requested size: 384.1096pt x 81.2853pt.
-<opiniones/positive/dark-theme2.png, id=3167, 554.67226pt x 151.16475pt>
+<opiniones/positive/dark-theme2.png, id=3169, 554.67226pt x 151.16475pt>
 File: opiniones/positive/dark-theme2.png Graphic file (type png)
 <use opiniones/positive/dark-theme2.png>
 Package pdftex.def Info: opiniones/positive/dark-theme2.png  used on input line 115.
 (pdftex.def)             Requested size: 384.1096pt x 104.68205pt.
-<opiniones/costs.png, id=3168, 756.426pt x 169.23225pt>
+<opiniones/costs.png, id=3170, 756.426pt x 169.23225pt>
 File: opiniones/costs.png Graphic file (type png)
 <use opiniones/costs.png>
 Package pdftex.def Info: opiniones/costs.png  used on input line 123.
@@ -3211,17 +3211,17 @@ LaTeX Info: Redefining \sptext on input line 126.
 LaTeX Info: Redefining \. on input line 126.
 LaTeX Info: Redefining \% on input line 126.
  [168 <./opiniones/content-concern.png> <./opiniones/positive/5-stars.png> <./opiniones/positive/dark-theme.png> <./opiniones/positive/dark-theme2.png>]
-<opiniones/negatives.png, id=3181, 540.21825pt x 405.31425pt>
+<opiniones/negatives.png, id=3183, 540.21825pt x 405.31425pt>
 File: opiniones/negatives.png Graphic file (type png)
 <use opiniones/negatives.png>
 Package pdftex.def Info: opiniones/negatives.png  used on input line 130.
 (pdftex.def)             Requested size: 384.1096pt x 288.20187pt.
-<opiniones/negative2.png, id=3182, 518.53725pt x 180.675pt>
+<opiniones/negative2.png, id=3184, 518.53725pt x 180.675pt>
 File: opiniones/negative2.png Graphic file (type png)
 <use opiniones/negative2.png>
 Package pdftex.def Info: opiniones/negative2.png  used on input line 136.
 (pdftex.def)             Requested size: 384.1096pt x 133.83524pt.
-<opiniones/negative3.png, id=3183, 552.8655pt x 269.808pt>
+<opiniones/negative3.png, id=3185, 552.8655pt x 269.808pt>
 File: opiniones/negative3.png Graphic file (type png)
 <use opiniones/negative3.png>
 Package pdftex.def Info: opiniones/negative3.png  used on input line 142.
@@ -3233,7 +3233,7 @@ LaTeX Info: Redefining \sptext on input line 145.
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
  [169 <./opiniones/costs.png> <./opiniones/negatives.png> <./opiniones/negative2.png>]
-<opiniones/storage-question.png, id=3194, 534.798pt x 120.45pt>
+<opiniones/storage-question.png, id=3196, 534.798pt x 120.45pt>
 File: opiniones/storage-question.png Graphic file (type png)
 <use opiniones/storage-question.png>
 Package pdftex.def Info: opiniones/storage-question.png  used on input line 148.
@@ -3281,44 +3281,44 @@ Cap\'{\i }tulo 10.
 ] [178
 
 ]
-Overfull \hbox (1.31523pt too wide) in paragraph at lines 271--271
+Overfull \hbox (1.31523pt too wide) in paragraph at lines 275--275
 []\T1/pbk/l/n/10.95 DataReportal. ^^S  Di-gi-tal 2025: Glo-bal Over-view Re-port^^T, vi-si-ta-do 12 de abr. de
  []
 
 
-Overfull \hbox (7.39021pt too wide) in paragraph at lines 271--271
+Overfull \hbox (7.39021pt too wide) in paragraph at lines 275--275
 \T1/pbk/l/n/10.95 di-rec-ción: [][]$\T1/pcr/m/n/10.95 https : / / s22 . q4cdn . com / 959853165 / files / doc _ financials /
  []
 
 
-Overfull \hbox (4.1522pt too wide) in paragraph at lines 271--271
+Overfull \hbox (4.1522pt too wide) in paragraph at lines 275--275
 \T1/pbk/l/n/10.95 sults^^T, vi-si-ta-do 26 de mar. de 2026. di-rec-ción: [][]$\T1/pcr/m/n/10.95 https : / / investor . atmeta .
  []
 
 
-Overfull \hbox (0.74391pt too wide) in paragraph at lines 271--271
+Overfull \hbox (0.74391pt too wide) in paragraph at lines 275--275
 \T1/pbk/l/n/10.95 ción: [][]$\T1/pcr/m/n/10.95 https : / / www . ofcom . org . uk / siteassets / resources / documents /
  []
 
 
-Overfull \hbox (1.00604pt too wide) in paragraph at lines 271--271
+Overfull \hbox (1.00604pt too wide) in paragraph at lines 275--275
 \T1/pcr/m/n/10.95 research -[] and -[] data / online -[] research / online -[] nation / 2025 / online -[]
  []
 
 
-Overfull \hbox (28.08347pt too wide) in paragraph at lines 271--271
+Overfull \hbox (28.08347pt too wide) in paragraph at lines 275--275
 \T1/pbk/l/n/10.95 2026. di-rec-ción: [][]$\T1/pcr/m/n/10.95 https : / / gwern . net / doc / cs / hardware / 2021 -[] ranganathan .
  []
 
 [179
 
 ]
-Overfull \hbox (10.61328pt too wide) in paragraph at lines 271--271
+Overfull \hbox (10.61328pt too wide) in paragraph at lines 275--275
 []\T1/pbk/l/n/10.95 H. P. G. T. F. Cas-per Haems Je-roen van der Hooft. ^^S  Hy-brid Uni-cast^^UBroadcast
  []
 
 
-Overfull \hbox (2.00604pt too wide) in paragraph at lines 271--271
+Overfull \hbox (2.00604pt too wide) in paragraph at lines 275--275
 \T1/pcr/m/n/10.95 information -[] youtube -[] snapchat -[] and -[] tiktok -[] recommender -[] systems -[]
  []
 
@@ -3326,16 +3326,14 @@ LaTeX Info: Redefining \sptext on input line 268.
 LaTeX Info: Redefining \. on input line 268.
 LaTeX Info: Redefining \% on input line 268.
 [180]
-Overfull \hbox (7.54115pt too wide) in paragraph at lines 271--271
+Overfull \hbox (7.54115pt too wide) in paragraph at lines 275--275
 \T1/pbk/l/n/10.95 abr. de 2026. di-rec-ción: [][]$\T1/pcr/m/n/10.95 https : / / nextjs . org / docs / app / api -[] reference /
  []
 
-LaTeX Info: Redefining \sptext on input line 272.
-LaTeX Info: Redefining \. on input line 272.
-LaTeX Info: Redefining \% on input line 272.
-[181] [182
-
-] [183] [184] (secciones/anexo1.tex) (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
+LaTeX Info: Redefining \sptext on input line 276.
+LaTeX Info: Redefining \. on input line 276.
+LaTeX Info: Redefining \% on input line 276.
+[181] (tfg_etsiinf_SamuelCaraballoChichiraldi.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -3354,10 +3352,10 @@ Package logreq Info: Writing requests to 'tfg_etsiinf_SamuelCaraballoChichiraldi
 
  ) 
 Here is how much of TeX's memory you used:
- 45018 strings out of 467871
- 866501 string characters out of 5419344
+ 45006 strings out of 467871
+ 866216 string characters out of 5419344
  1782906 words of memory out of 5000000
- 71255 multiletter control sequences out of 15000+600000
+ 71250 multiletter control sequences out of 15000+600000
  691445 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  116i,12n,131p,1488b,2547s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -3365,9 +3363,9 @@ Here is how much of TeX's memory you used:
 pdfTeX warning (dest): name{https://liambx.com/erd/p/github.com/SamC4r/Booster/blob/main/src/db/schema.ts?showMode=ALL_FIELDS&hidden=eJwNy9ENwzAIBcCFvBMimCRIBSwejtrtm_-7yLbThNsyMFwBvhRD0n2H9Y88pxZ3Fga6bCmtSnmdTtJHozG-i9YuuRnvPDI2SD5sjj_6QyX5} has been referenced but does not exist, replaced by a fixed one
 
 <C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkd8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkdi8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkl8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/bookman/ubkli8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/max/AppData/Local/Programs/MiKTeX/fonts/type1/urw/courier/ucrro8a.pfb>
-Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (194 pages, 14208212 bytes).
+Output written on tfg_etsiinf_SamuelCaraballoChichiraldi.pdf (191 pages, 14208788 bytes).
 PDF statistics:
- 3876 PDF objects out of 4296 (max. 8388607)
- 1927 named destinations out of 2073 (max. 500000)
+ 3863 PDF objects out of 4296 (max. 8388607)
+ 1923 named destinations out of 2073 (max. 500000)
  1401 words of extra memory for PDF output out of 10000 (max. 10000000)
 
