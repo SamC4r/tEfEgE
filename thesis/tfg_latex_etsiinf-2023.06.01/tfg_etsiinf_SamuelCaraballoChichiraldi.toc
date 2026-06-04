@@ -110,7 +110,7 @@
 \contentsline {section}{\numberline {7.4}Implementación de los comentarios}{159}{section.7.4}%
 \contentsline {section}{\numberline {7.5}Acceder y modificar datos de usuario}{159}{section.7.5}%
 \contentsline {section}{\numberline {7.6}Acceder y modificar datos de video}{160}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Despliegue y Riesgos de Seguridad}{163}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Despliegue, feedback de usuarios y riesgos de seguridad}{163}{chapter.8}%
 \contentsline {section}{\numberline {8.1}Despliegue}{163}{section.8.1}%
 \contentsline {subsection}{\numberline {8.1.1}Vercel}{163}{subsection.8.1.1}%
 \contentsline {section}{\numberline {8.2}Feedback de Usuarios}{165}{section.8.2}%
